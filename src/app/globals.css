@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Ensure Tailwind scans all app/components (v4); avoids missing utility output when files sit outside default inference. */
+@source "../**/*.{ts,tsx,mdx}";
+
+:root {
+  /* Brand tokens */
+  --brand-primary: #005691;
+  --brand-primary-hover: #0b6aa8;
+  --brand-accent: #0293d5;
+  --brand-accent-soft: #e9f3fa;
+  --background-main: #f4f8fc;
+  --surface-white: #ffffff;
+  --ink-dark: #1d252f;
+  --text-muted: #6f8799;
+  --border-soft: #d7e3ec;
+  --grey-logo: #8c8f95;
+  --footer-deep: #1f2746;
+
+  /* Semantic tokens */
+  --background: var(--background-main);
+  --foreground: var(--ink-dark);
+  --ring: color-mix(in oklab, var(--brand-accent) 40%, white);
+  --shadow-card: 0 1px 2px rgba(29, 37, 47, 0.06);
+  --shadow-soft: 0 12px 28px rgba(29, 37, 47, 0.10);
+  --shadow-float: 0 18px 44px rgba(29, 37, 47, 0.14);
+
+  /* Photography / illustration / logo corners — one radius site-wide (between 2xl and 3xl) */
+  --visual-image-radius: 1.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-soft: var(--brand-accent-soft);
+  --color-surface-white: var(--surface-white);
+  --color-ink-dark: var(--ink-dark);
+  --color-text-muted: var(--text-muted);
+  --color-border-soft: var(--border-soft);
+  --color-footer-deep: var(--footer-deep);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+  overflow-x: hidden;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand-accent) 20%, white);
+}
+
+/* Premium focus style */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}

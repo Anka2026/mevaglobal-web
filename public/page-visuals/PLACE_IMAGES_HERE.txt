@@ -1,0 +1,25 @@
+Place optional page header visuals here (PNG/JPG/WebP).
+
+The site will automatically show a premium fallback panel if a file is missing,
+so you can add these images gradually without breaking layouts.
+
+Expected files:
+- about.png
+- services.png
+- cbam.png
+- process.png
+- documents.png
+- insights.png
+- contact.png
+- statement-search.png
+
+Service detail visuals:
+- services/iso-14064-1.png
+- services/iso-14064-2.png
+- services/iso-14067.png
+- services/iso-14046.png
+- services/lca-review.png
+- services/epd-verification.png
+- services/cbam-verification-support.png
+- services/custom-verification.png
+
