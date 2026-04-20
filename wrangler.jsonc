@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Cloudflare Workers service name must match the actual service/project name
+  // shown in the Cloudflare dashboard. For this project, use: mevaglobal-web
+  "name": "mevaglobal-web",
+
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-04-20",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "mevaglobal-web"
+    }
+  ]
+}
