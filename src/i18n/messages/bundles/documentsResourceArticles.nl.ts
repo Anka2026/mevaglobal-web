@@ -13,7 +13,7 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
       {
         title: "Grenzen en installatielogica",
         body:
-          "Betrouwbaarheid begint met een grensmodel dat past bij hoe de installatie werkt en hoe emissies worden toegeschreven. Onduidelijkheid tussen hoofdactiviteit, hulpprocessen en gedeelde infrastructuur leidt vaak tot herzieningen. Een gecontroleerde review toetst of het grensverhaal, het datamodel en de fysieke realiteit zonder verborgen overlappingen of hiaten op elkaar aansluiten.",
+          "Betrouwbaarheid begint met een grensmodel dat past bij hoe de installatie werkt en hoe emissies worden toegeschreven. Onduidelijkheid tussen hoofdactiviteit, hulpprocessen en gedeelde infrastructuur leidt vaak tot herzieningen. Een systematische review toetst of het grensverhaal, het datamodel en de fysieke realiteit zonder verborgen overlappingen of hiaten op elkaar aansluiten.",
       },
       {
         title: "Bewijsdiepte en traceerbaarheid",
@@ -32,7 +32,7 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
       },
     ],
     closing:
-      "Samengevat is betrouwbaarheid voor CBAM-voorbereiding een systeemeigenschap—heldere grenzen, traceerbaar bewijs, transparante methodologie en gecontroleerde openbaarmaking—niet één kwaliteitsgetal op een voorblad.",
+      "Samengevat is betrouwbaarheid voor CBAM-voorbereiding een systeemeigenschap—heldere grenzen, traceerbaar bewijs, transparante methodologie en gedisciplineerde openbaarmaking—niet één kwaliteitsgetal op een voorblad.",
   },
   "carbon-verification-alignment": {
     category: "Koolstof",
@@ -50,12 +50,12 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
       {
         title: "Methodologie als besluitspoor",
         body:
-          "Methodologie is niet alleen formules; het is de gedocumenteerde onderbouwing voor activiteitsclassificatie, factorkeuze en omgaan met ontbrekende gegevens. Verificatieteams testen of keuzes stabiel over de periode zijn, gevoelige gevallen worden gemarkeerd en wijzigingen gecontroleerd verlopen. Dat spoor maakt een methodologie verdedigbaar in plaats van alleen bekend.",
+          "Methodologie is niet alleen formules; het is de gedocumenteerde onderbouwing voor activiteitsclassificatie, factorkeuze en omgaan met ontbrekende gegevens. Verificatieteams testen of keuzes stabiel over de periode zijn, gevoelige gevallen worden gemarkeerd en wijzigingen traceerbaar en onderbouwd verlopen. Dat spoor maakt een methodologie verdedigbaar in plaats van alleen bekend.",
       },
       {
         title: "Stakeholders zonder overclaim",
         body:
-          "Investeerders, inkopers en toezichthouders leggen vaak andere nadruk—volledigheid, vergelijkbaarheid of auditgereedheid. Afstemming betekent het verificatiedoel expliciet te mappen: welke claims worden ondersteund, welke niet, en wat nodig is voor een hoger assurance-niveau of een ander gebruikscontext.",
+          "Investeerders, inkopers en toezichthouders leggen vaak andere nadruk—volledigheid, vergelijkbaarheid of auditgereedheid. Afstemming betekent het verificatiedoel expliciet te mappen: welke claims worden ondersteund, welke niet, en wat nodig is voor een diepere externe toets of een andere gebruikscontext.",
       },
       {
         title: "Controlepunten die integriteit beschermen",

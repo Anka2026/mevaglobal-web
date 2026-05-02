@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     template: "%s | Meva Global Certification B.V.",
   },
   description:
-    "Independent verification, validation and assurance body for carbon, environmental claims and CBAM-related reporting contexts—delivered through structured technical review and evidence discipline.",
+    "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
   metadataBase: new URL("https://mevaglobalcertification.com"),
   openGraph: {
     type: "website",
     siteName: "Meva Global Certification B.V.",
     title: "Meva Global Certification B.V.",
     description:
-      "Independent verification, validation and assurance body for carbon, environmental claims and CBAM-related reporting contexts—delivered through structured technical review and evidence discipline.",
+      "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
     url: "/",
   },
 };
@@ -44,7 +44,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[color:var(--background)] text-[color:var(--foreground)]">
         {children}

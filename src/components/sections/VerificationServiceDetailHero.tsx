@@ -2,11 +2,19 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
-import { VisualAnchor } from "@/components/visual/VisualAnchor";
 import { cn } from "@/lib/cn";
 import type { ServiceHeroVisual } from "@/lib/verification/serviceHeroVisuals";
+import {
+  VerificationServiceDetailVisual,
+  verificationServiceDetailMediaColumnClassName,
+} from "@/components/verification/VerificationServiceDetailVisual";
+import { premiumHeroBackdrop } from "@/lib/premiumUi";
 
-/** Shared hero for premium verification service detail layouts (single webpack chunk for both 4- and 5-card variants). */
+/**
+ * Canonical hero shell for every `/verification-services/[slug]` layout:
+ * premium four-card, premium five-card, editorial, and standard detail branches all render here
+ * so backdrop, grid rhythm, media column sizing, and `VerificationServiceDetailVisual` wiring stay identical (all locales).
+ */
 export function VerificationServiceDetailHero({
   locale,
   backLabel,
@@ -28,10 +36,8 @@ export function VerificationServiceDetailHero({
   omitBackLink?: boolean;
   imageAlt?: string;
 }) {
-  const alt = (imageAlt ?? title).trim() || title;
-
   return (
-    <section className="border-b border-[color:var(--border-soft)] bg-white">
+    <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
       <Container className={omitBackLink ? "pb-8 pt-7 sm:pb-9 sm:pt-8 lg:pb-10 lg:pt-9" : "pb-8 pt-5 sm:pb-9 sm:pt-6 lg:pb-10 lg:pt-7"}>
         {omitBackLink ? null : (
           <Link
@@ -61,22 +67,8 @@ export function VerificationServiceDetailHero({
             </p>
           </div>
 
-          <div
-            className={cn(
-              "relative flex h-full min-w-0 flex-col lg:col-span-5 lg:min-h-0",
-              visual.editorialFit === "contain"
-                ? "min-h-[280px] sm:min-h-[320px] lg:min-h-0"
-                : "min-h-[260px] sm:min-h-[300px] lg:min-h-0",
-            )}
-          >
-            <VisualAnchor
-              src={visual.src}
-              alt={alt}
-              imageClassName={visual.imageClassName}
-              detailEditorial
-              detailEditorialFit={visual.editorialFit ?? "cover"}
-              className="w-full min-h-0 flex-1"
-            />
+          <div className={verificationServiceDetailMediaColumnClassName(visual)}>
+            <VerificationServiceDetailVisual visual={visual} title={title} imageAlt={imageAlt} />
           </div>
         </div>
       </Container>

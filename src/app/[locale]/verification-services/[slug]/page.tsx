@@ -3,10 +3,8 @@ import type { Metadata } from "next";
 import { isLocale, type Locale } from "@/i18n/locales";
 import type { Service } from "@/data/services";
 import { getDictionary } from "@/i18n/get-dictionary";
-import {
-  getVerificationDetailPayload,
-  getAllVerificationServiceSlugs,
-} from "@/lib/verification/verificationServicesData";
+import { getAllVerificationServiceSlugs } from "@/lib/verification/verificationServicesData";
+import { getVerificationDetailPayload } from "@/lib/verification/verificationDetailPayload";
 import {
   VerificationServiceDetailPage,
   isVerificationDetailRenderable,

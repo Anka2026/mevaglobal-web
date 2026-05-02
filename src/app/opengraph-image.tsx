@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { BRAND_POSITIONING_LINE } from "@/i18n/brandPositioning";
 
 export const size = {
   width: 1200,
@@ -33,7 +34,7 @@ export default function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            Independent Verification • Validation • Assurance
+            {BRAND_POSITIONING_LINE.en}
           </div>
           <div style={{ fontSize: 48, lineHeight: 1.1, fontWeight: 700 }}>
             Meva Global Certification B.V.

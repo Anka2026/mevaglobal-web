@@ -17,7 +17,7 @@ const B = {
   ],
   forWho: [
     "Dış paydaş beklentisi yüksek kurumsal ve teknik ekipler",
-    "Doğrulama, güvence veya üçüncü taraf incelemesine hazırlanan kuruluşlar",
+    "Doğrulama, bağımsız inceleme veya üçüncü taraf incelemesine hazırlanan kuruluşlar",
     "Sürdürülebilirlik, finans ve operasyonlar arasında tutarlılık arayan yönetim yapıları",
   ],
   typicalScope: [
@@ -54,7 +54,7 @@ export const newServiceDetailsTr = {
     heroEyebrow: "Hizmetler",
     title: "HPD (Health Product Declaration) Doğrulama İncelemesi",
     intro:
-      "HPD beyanlarının güvenilirliği; yalnızca içerik listesinin yayımlanmasına değil, aynı zamanda bileşen verilerinin doğruluğuna, açıklama sınırlarının netliğine, tehlike iletişiminin tutarlılığına, destekleyici kanıt yapısının yeterliliğine ve dış kullanıma esas beyan dilinin kontrollü biçimde kurulmasına bağlıdır. Meva Global, HPD çerçevesiyle ilişkili içerik şeffaflığı ve sağlık odaklı ürün beyanları için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; içerik verilerinin, destekleyici teknik dokümantasyonun, tedarikçi kaynaklarının ve açıklama mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha kontrollü ve daha profesyonel bir beyan zemini oluşturur.",
+      "HPD beyanlarının güvenilirliği; yalnızca içerik listesinin yayımlanmasına değil, aynı zamanda bileşen verilerinin doğruluğuna, açıklama sınırlarının netliğine, tehlike iletişiminin tutarlılığına, destekleyici kanıt yapısının yeterliliğine ve dış kullanıma esas beyan dilinin disiplinli biçimde kurulmasına bağlıdır. Meva Global, HPD çerçevesiyle ilişkili içerik şeffaflığı ve sağlık odaklı ürün beyanları için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; içerik verilerinin, destekleyici teknik dokümantasyonun, tedarikçi kaynaklarının ve açıklama mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha düzenli ve daha profesyonel bir beyan zemini oluşturur.",
     covers: {
       title: "Hizmetin Kapsamı",
       bullets: [
@@ -68,7 +68,7 @@ export const newServiceDetailsTr = {
       bullets: [
         "HPD beyanlarını daha güvenilir ve daha profesyonel biçimde sunmak isteyen üreticiler",
         "İçerik şeffaflığı, malzeme sağlığı ve sağlık odaklı ürün açıklamalarını güçlendirmek isteyen ekipler",
-        "Tedarikçi verilerini ve destekleyici kanıt yapısını daha kontrollü hale getirmek isteyen kuruluşlar",
+        "Tedarikçi verilerini ve destekleyici kanıt yapısını daha düzenli hale getirmek isteyen kuruluşlar",
       ],
     },
     typicalScope: {
@@ -82,7 +82,7 @@ export const newServiceDetailsTr = {
     whyMatters: {
       title: "Neden Önemlidir",
       bullets: [
-        "HPD beyanlarının güvenilirliğini ve savunulabilirliğini güçlendirir",
+        "HPD beyanlarında güvenilirlik ve teknik dosya tutarlılığını güçlendirir",
         "Eksik içerik açıklaması, zayıf kanıt yapısı ve açıklama riski kaynaklı sorunları azaltır",
         "Alıcı beklentileri, ürün şeffaflığı ve sağlık odaklı iletişim için daha sağlam temel oluşturur",
       ],
@@ -100,14 +100,14 @@ export const newServiceDetailsTr = {
       body: "Mevcut HPD dosyanızı, içerik verilerinizi ve destekleyici tedarikçi belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
       primaryButton: "Teklif Talep Et",
       secondaryButton: "Hizmetlere Dön",
-      detailLink: "Detaylar",
+      detailLink: "Detayları İncele",
     },
   },
   "material-health-composition-review": {
     heroEyebrow: "Hizmetler",
     title: "Malzeme Sağlığı ve İçerik Şeffaflığı Doğrulama İncelemesi",
     intro:
-      "Malzeme sağlığı ve içerik şeffaflığına ilişkin beyanların güvenilirliği; yalnızca içerik listesinin sunulmasına değil, aynı zamanda bileşen verilerinin doğruluğuna, tehlike iletişiminin açıklığına, destekleyici kanıt yapısının yeterliliğine, kullanılan terminolojinin tutarlılığına ve dış kullanıma esas açıklama çerçevesinin kontrollü olmasına bağlıdır. Meva Global, malzeme sağlığı ve içerik şeffaflığı odaklı teknik beyanlar için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; bileşim verilerinin, destekleyici belgelerin, tehlike iletişimi yaklaşımının ve açıklama mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha kontrollü ve daha profesyonel bir beyan zemini oluşturur.",
+      "Malzeme sağlığı ve içerik şeffaflığına ilişkin beyanların güvenilirliği; yalnızca içerik listesinin sunulmasına değil, aynı zamanda bileşen verilerinin doğruluğuna, tehlike iletişiminin açıklığına, destekleyici kanıt yapısının yeterliliğine, kullanılan terminolojinin tutarlılığına ve dış kullanıma esas açıklama çerçevesinin ölçülü olmasına bağlıdır. Meva Global, malzeme sağlığı ve içerik şeffaflığı odaklı teknik beyanlar için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; bileşim verilerinin, destekleyici belgelerin, tehlike iletişimi yaklaşımının ve açıklama mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha düzenli ve daha profesyonel bir beyan zemini oluşturur.",
     covers: {
       title: "Hizmetin Kapsamı",
       bullets: [
@@ -121,7 +121,7 @@ export const newServiceDetailsTr = {
       bullets: [
         "Malzeme içeriklerini dış paydaşlara daha güvenilir biçimde sunmak isteyen üreticiler",
         "Ürün şeffaflığı, sağlık odaklı içerik açıklamaları ve teknik dosya kalitesini güçlendirmek isteyen ekipler",
-        "Malzeme sağlığı beyanlarını daha kontrollü ve daha profesyonel bir yapıya oturtmak isteyen kuruluşlar",
+        "Malzeme sağlığı beyanlarını daha düzenli ve daha profesyonel bir yapıya oturtmak isteyen kuruluşlar",
       ],
     },
     typicalScope: {
@@ -153,14 +153,14 @@ export const newServiceDetailsTr = {
       body: "Mevcut içerik şeffaflığı dokümanlarınızı, bileşim verilerinizi ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
       primaryButton: "Teklif Talep Et",
       secondaryButton: "Hizmetlere Dön",
-      detailLink: "Detaylar",
+      detailLink: "Detayları İncele",
     },
   },
   "green-building-documentation-review": {
     heroEyebrow: "Hizmetler",
     title: "Yeşil Bina Teknik Dokümantasyon Doğrulama İncelemesi",
     intro:
-      "Yeşil bina sertifikasyon süreçlerinde kullanılan teknik dokümantasyonun güvenilirliği; yalnızca sunulan belgelerin varlığına değil, aynı zamanda kapsam bütünlüğüne, kanıt yapısının tutarlılığına, ilgili kredi veya kriterlerle ilişkisinin açıklığına ve destekleyici teknik dosyaların izlenebilirliğine bağlıdır. Meva Global, yeşil bina başvuruları ve ilgili teknik dosyalar için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; doküman paketlerinin, kanıt kayıtlarının, teknik beyanların ve başvuru mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha kontrollü ve daha profesyonel bir başvuru zemini oluşturur.",
+      "Yeşil bina sertifikasyon süreçlerinde kullanılan teknik dokümantasyonun güvenilirliği; yalnızca sunulan belgelerin varlığına değil, aynı zamanda kapsam bütünlüğüne, kanıt yapısının tutarlılığına, ilgili kredi veya kriterlerle ilişkisinin açıklığına ve destekleyici teknik dosyaların izlenebilirliğine bağlıdır. Meva Global, yeşil bina başvuruları ve ilgili teknik dosyalar için bağımsız ve yapılandırılmış bir doğrulama incelemesi sunar. Bu hizmet; doküman paketlerinin, kanıt kayıtlarının, teknik beyanların ve başvuru mantığının sistematik biçimde değerlendirilmesi yoluyla daha güvenilir, daha düzenli ve daha profesyonel bir başvuru zemini oluşturur.",
     covers: {
       title: "Hizmetin Kapsamı",
       bullets: [
@@ -174,7 +174,7 @@ export const newServiceDetailsTr = {
       bullets: [
         "Yeşil bina sertifikasyon başvurularını daha güvenilir teknik dosyalarla sunmak isteyen proje ekipleri",
         "Mimarlık, mühendislik, danışmanlık ve yatırım tarafında başvuru kalitesini güçlendirmek isteyen kuruluşlar",
-        "Kredi bazlı teknik dosyalarını daha kontrollü, daha izlenebilir ve daha profesyonel hale getirmek isteyen ekipler",
+        "Kredi bazlı teknik dosyalarını daha düzenli, izlenebilir ve profesyonel hale getirmek isteyen ekipler",
       ],
     },
     typicalScope: {
@@ -206,16 +206,16 @@ export const newServiceDetailsTr = {
       body: "Mevcut yeşil bina başvuru dosyanızı, teknik kayıtlarınızı ve destekleyici belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
       primaryButton: "Teklif Talep Et",
       secondaryButton: "Hizmetlere Dön",
-      detailLink: "Detaylar",
+      detailLink: "Detayları İncele",
     },
   },
   "responsible-mining-irma-readiness": mk(
-    "Sorumlu Madencilik Ve IRMA Doğrulama Hazırlığı",
-    "Sorumlu madencilik beklentileri için saha kanıtı, yönetişim temaları ve boşluk kapanışı üzerine doğrulama hazırlığı; resmi şema sahibi güvence sonuçlarının yerini almaz.",
+    "Sorumlu Madencilik ve IRMA Doğrulama Hazırlığı",
+    "Sorumlu madencilik beklentileri için saha kanıtı, yönetişim temaları ve boşluk kapanışı üzerine doğrulama hazırlığı; şema sahibinin resmi doğrulama çıktılarının yerini almaz.",
     "Saha ve kapsamınızı paylaşın",
   ),
   "textile-traceability-recycled-review": mk(
-    "Tekstil İzlenebilirliği Ve Geri Dönüştürülmüş Malzeme Doğrulaması",
+    "Tekstil İzlenebilirliği ve Geri Dönüştürülmüş Malzeme Doğrulaması",
     "Tekstil sürdürülebilirlik iddiaları için zincir yapıları, kütle dengesi mantığı ve sertifika çapraz kontrollerinin doğrulanması.",
     "Ürün ve tedarikçi katmanlarınızı paylaşın",
   ),

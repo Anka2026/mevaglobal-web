@@ -33,7 +33,7 @@ const HERO_VISUAL_BY_SLUG = {
   "ghg-protocol-review-support": {
     src: "/page-visuals/services/ghg-protocol.png",
     iconKey: "fileCheck",
-    imageClassName: "object-cover object-[52%_48%] sm:object-[50%_46%] lg:object-[48%_44%]",
+    imageClassName: "object-[52%_48%] sm:object-[50%_46%] lg:object-[48%_44%]",
   },
   "iso-14067": {
     src: "/page-visuals/services/iso-14067.png",

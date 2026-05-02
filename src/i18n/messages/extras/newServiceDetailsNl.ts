@@ -16,17 +16,17 @@ const B = {
   ],
   forWho: [
     "Organisaties met sterke externe stakeholderdruk",
-    "Teams die zich voorbereiden op verificatie, assurance of third-party review",
+    "Teams die zich voorbereiden op verificatie, externe review of third-party review",
     "Directies die consistentie zoeken tussen duurzaamheid, finance en operations",
   ],
   typicalScope: [
     "Steekproef- en dossiercontroles op materiële onderdelen",
     "Geprioriteerde bevindingen naar impact en risico",
-    "Concrete vervolgstappen voor sluiting en verbetering",
+    "Concrete acties voor afronding en verbetering",
   ],
   whyMatters: [
     "Zwak bewijs ondermijnt vertrouwen en vergroot claimrisico",
-    "Vroege correctie voorkomt dure verrassingen later in assurance-cycli",
+    "Vroege correctie voorkomt dure verrassingen later in externe reviewcycli",
     "Betere data- en methodediscipline maakt disclosures verdedigbaarder",
   ],
   approach: [
@@ -53,7 +53,7 @@ export const newServiceDetailsNl = {
     heroEyebrow: "Diensten",
     title: "HPD (Health Product Declaration) Verificatiebeoordeling",
     intro:
-      "De geloofwaardigheid van HPD-verklaringen hangt niet alleen af van het publiceren van een inhoudslijst, maar ook van de juistheid van samenstellingsdata, de duidelijkheid van disclosure-grenzen, de consistentie van gevarencommunicatie, de toereikendheid van ondersteunend bewijs en de gecontroleerde opbouw van verklaringen voor extern gebruik. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor HPD-gerelateerde ingrediëntentransparantie en gezondheidsgerichte productverklaringen. Deze dienst creëert via een systematische beoordeling van samenstellingsdata, ondersteunende technische documentatie, leveranciersbronnen en disclosure-logica een betrouwbaarder, gecontroleerder en professioneler verklaringskader.",
+      "De geloofwaardigheid van HPD-verklaringen hangt niet alleen af van het publiceren van een inhoudslijst, maar ook van de juistheid van samenstellingsdata, de duidelijkheid van disclosure-grenzen, de consistentie van gevarencommunicatie, de toereikendheid van ondersteunend bewijs en de gedisciplineerde opbouw van verklaringen voor extern gebruik. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor HPD-gerelateerde ingrediëntentransparantie en gezondheidsgerichte productverklaringen. Deze dienst creëert via een systematische beoordeling van samenstellingsdata, ondersteunende technische documentatie, leveranciersbronnen en disclosure-logica een betrouwbaarder, gedisciplineerder en professioneler verklaringskader.",
     covers: {
       title: "Reikwijdte van de dienst",
       bullets: [
@@ -67,7 +67,7 @@ export const newServiceDetailsNl = {
       bullets: [
         "Producenten die HPD-verklaringen geloofwaardiger en professioneler willen presenteren",
         "Teams die ingrediëntentransparantie, materiaalgezondheid en gezondheidsgerichte productclaims willen versterken",
-        "Organisaties die leveranciersdata en ondersteunende bewijsstructuren gecontroleerder willen maken",
+        "Organisaties die leveranciersdata en ondersteunende bewijsstructuren gedisciplineerder willen maken",
       ],
     },
     typicalScope: {
@@ -106,7 +106,7 @@ export const newServiceDetailsNl = {
     heroEyebrow: "Diensten",
     title: "Verificatiebeoordeling van materiaalgezondheid en transparantie van ingrediënten",
     intro:
-      "De geloofwaardigheid van verklaringen over materiaalgezondheid en transparantie van ingrediënten hangt niet alleen af van het tonen van een inhoudslijst, maar ook van de juistheid van samenstellingsdata, de helderheid van gevarencommunicatie, de toereikendheid van ondersteunend bewijs, de consistentie van terminologie en de gecontroleerde opbouw van disclosures voor extern gebruik. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor technische verklaringen gericht op materiaalgezondheid en transparantie van ingrediënten. Deze dienst creëert via een systematische beoordeling van samenstellingsdata, ondersteunende documentatie, gevarencommunicatie en disclosure-logica een betrouwbaarder, gecontroleerder en professioneler kader voor extern gebruik.",
+      "De geloofwaardigheid van verklaringen over materiaalgezondheid en transparantie van ingrediënten hangt niet alleen af van het tonen van een inhoudslijst, maar ook van de juistheid van samenstellingsdata, de helderheid van gevarencommunicatie, de toereikendheid van ondersteunend bewijs, de consistentie van terminologie en de gedisciplineerde opbouw van disclosures voor extern gebruik. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor technische verklaringen gericht op materiaalgezondheid en transparantie van ingrediënten. Deze dienst creëert via een systematische beoordeling van samenstellingsdata, ondersteunende documentatie, gevarencommunicatie en disclosure-logica een betrouwbaarder, gedisciplineerder en professioneler kader voor extern gebruik.",
     covers: {
       title: "Reikwijdte van de dienst",
       bullets: [
@@ -120,7 +120,7 @@ export const newServiceDetailsNl = {
       bullets: [
         "Producenten die materiaalinhoud geloofwaardiger aan externe stakeholders willen presenteren",
         "Teams die producttransparantie, gezondheidsgerichte inhoudsverklaringen en technische dossierkwaliteit willen versterken",
-        "Organisaties die materiaalgezondheidsclaims in een gecontroleerdere en professionelere structuur willen plaatsen",
+        "Organisaties die materiaalgezondheidsclaims in een gedisciplineerdere en professionelere structuur willen plaatsen",
       ],
     },
     typicalScope: {
@@ -159,7 +159,7 @@ export const newServiceDetailsNl = {
     heroEyebrow: "Diensten",
     title: "Verificatiebeoordeling van green building-documentatie",
     intro:
-      "De geloofwaardigheid van technische documentatie die wordt gebruikt in green building-certificeringsprocessen hangt niet alleen af van de aanwezigheid van ingediende documenten, maar ook van de volledigheid van de scope, de consistentie van bewijsstructuren, de duidelijkheid van de koppeling met relevante credits of criteria en de traceerbaarheid van ondersteunende technische registraties. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor green building-aanvragen en bijbehorende technische documentatie. Deze dienst creëert via een systematische beoordeling van documentpakketten, bewijsregistraties, technische disclosures en aanvraaglogica een betrouwbaarder, gecontroleerder en professioneler indieningskader.",
+      "De geloofwaardigheid van technische documentatie die wordt gebruikt in green building-certificeringsprocessen hangt niet alleen af van de aanwezigheid van ingediende documenten, maar ook van de volledigheid van de scope, de consistentie van bewijsstructuren, de duidelijkheid van de koppeling met relevante credits of criteria en de traceerbaarheid van ondersteunende technische registraties. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor green building-aanvragen en bijbehorende technische documentatie. Deze dienst creëert via een systematische beoordeling van documentpakketten, bewijsregistraties, technische disclosures en aanvraaglogica een betrouwbaarder, gedisciplineerder en professioneler indieningskader.",
     covers: {
       title: "Reikwijdte van de dienst",
       bullets: [
@@ -173,7 +173,7 @@ export const newServiceDetailsNl = {
       bullets: [
         "Projectteams die green building-certificatieaanvragen met sterkere technische dossiers willen indienen",
         "Organisaties die aanvraagkwaliteit willen versterken over architectuur, engineering, advies en investeerders heen",
-        "Teams die credit-gerichte technische dossiers gecontroleerder, traceerbaarder en professioneler willen maken",
+        "Teams die credit-gerichte technische dossiers gedisciplineerder, traceerbaarder en professioneler willen maken",
       ],
     },
     typicalScope: {

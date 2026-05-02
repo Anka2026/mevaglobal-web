@@ -23,7 +23,7 @@ export const serviceDetailsExtraTr: Record<
     eyebrow: "Hizmetler",
     title: "GHG Protocol İnceleme Desteği",
     intro:
-      "GHG Protocol ile hazırlanan sera gazı envanterleri ve ilgili açıklamaların güvenilirliği; yalnızca toplam emisyon sonuçlarına değil, aynı zamanda organizasyonel sınırların netliğine, kapsam seçiminin tutarlılığına, kategori yaklaşımının doğruluğuna, hesaplama mantığının savunulabilirliğine ve destekleyici kayıt yapısının izlenebilirliğine bağlıdır. Meva Global, GHG Protocol çerçevesinde hazırlanan envanter ve raporlar için bağımsız ve yapılandırılmış bir teknik inceleme desteği sunar. Bu hizmet, raporlama seviyenize ve dış kullanım bağlamınıza göre veri yapısının, metodolojik tercihlerin ve kanıt altyapısının sistematik biçimde gözden geçirilmesine yardımcı olur.",
+      "GHG Protocol ile hazırlanan sera gazı envanterleri ve ilgili açıklamaların güvenilirliği; yalnızca toplam emisyon sonuçlarına değil, aynı zamanda organizasyonel sınırların netliğine, kapsam seçiminin tutarlılığına, kategori yaklaşımının doğruluğuna, hesaplama mantığının gerekçelendirilmesine ve destekleyici kayıt yapısının izlenebilirliğine bağlıdır. Meva Global, GHG Protocol çerçevesinde hazırlanan envanter ve raporlar için bağımsız ve yapılandırılmış teknik inceleme sunar. Bu hizmet; raporlama seviyenize ve dış kullanım bağlamınıza göre veri yapısı, metodolojik tercihler ve kanıt altyapısının sistematik gözden geçirilmesini kapsar.",
     sections: [
       {
         title: "Hizmetin Kapsamı",
@@ -39,19 +39,19 @@ export const serviceDetailsExtraTr: Record<
       },
       {
         title: "Meva Yaklaşımı",
-        body: "Meva Global bu hizmeti; açık kapsam tanımı, metodoloji odaklı teknik değerlendirme, izlenebilir kanıt yapısı ve bağımsız inceleme mantığı üzerine kurar. Yaklaşımımız yalnızca eksik listesi çıkarmakla sınırlı değildir; hangi raporlama tercihlerinin güçlü olduğunu, hangi alanlarda boşluk bulunduğunu ve hangi iyileştirmelerin açıklama güvenilirliğini artıracağını net biçimde ortaya koyar. Bu sayede kuruluşlar hem mevcut envanter ve raporlarını daha savunulabilir hale getirir hem de resmi doğrulama, üçüncü taraf inceleme veya dış paydaş iletişimi için daha güçlü bir hazırlık düzeyi kazanır.",
+        body: "Meva Global bu hizmeti; açık kapsam tanımı, metodoloji odaklı teknik değerlendirme, izlenebilir kanıt yapısı ve bağımsız inceleme mantığı üzerine kurar. Yaklaşım yalnızca eksik listesi üretmek değildir; güçlü raporlama tercihleri, boşluklar ve güvenilirliği artıran iyileştirmeler net biçimde belirlenir. Böylece kuruluşlar mevcut envanter ve raporlarını dış incelemeye daha hazır hale getirir.",
       },
     ],
     bottomCta:
       "Organizasyonel sınırlarınızı, raporlama yılınızı, kapsamdaki kategorileri ve mevcut hesaplama yapınızı paylaşın; açıklama bağlamınıza uygun inceleme derinliğini birlikte netleştirelim.",
     primaryButton: "Teklif Talep Et",
     secondaryButton: "Hizmetlere Dön",
-    detailLink: "Detaylar",
+    detailLink: "Detayları İncele",
   },
   "eu-ets-mrv-assurance-support": {
-    title: "AB ETS ve MRV — Güvence Desteği",
+    title: "AB ETS ve MRV — Teknik İnceleme Desteği",
     intro:
-      "AB ETS kapsamında izleme, raporlama ve doğrulama (MRV) veri setleri için bağımsız, güvence odaklı teknik inceleme—metodoloji makullüğü, kanıt izlenebilirliği ve dokümantasyon disiplinine odaklanır. Yetkili merci kararlarının veya zorunlu doğrulayıcı rollerinin yerine geçmez.",
+      "AB ETS kapsamında izleme, raporlama ve doğrulama (MRV) veri setleri için bağımsız, yapılandırılmış teknik inceleme—metodoloji makullüğü, kanıt izlenebilirliği ve dokümantasyon disiplini. Yetkili merci kararlarının veya zorunlu doğrulayıcı rollerinin yerine geçmez.",
     covers: {
       title: "Kapsam",
       bullets: [
@@ -89,7 +89,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Kapsam; tesis veya filo segmenti, raporlama dönemi ve ilgili kural setine bağlanır",
         "Bağımsız değerlendirici bakış açısı: varsayımları sorgulama, izlenebilirliği doğrulama",
-        "Çıktılarda kontrollü dil—güvence desteği, zorunlu doğrulamanın yerine geçmez",
+        "Çıktılarda ölçülü dil—teknik inceleme desteği; zorunlu doğrulamanın yerine geçmez",
       ],
     },
     cta: {
@@ -114,7 +114,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Öğle raporları, bunker teslim notları ve BDN kanıtını birleştiren gemi işletmecileri ve yöneticileri",
         "Filolarını düzenleyici şablonlarla hizalayan teknik müdürlükler",
-        "Sefain veya otoriteler için güvenceye hazır dosya hazırlayan kuruluşlar",
+        "Sefain veya otoriteler için dış incelemeye hazır dosya hazırlayan kuruluşlar",
       ],
     },
     typicalScope: {
@@ -187,7 +187,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Talep ettiğiniz CORSIA ve AB ETS hazırlık konularının açık ayrımı",
         "Hukuki yorumun yerine geçmez—teknik izlenebilirlik ve dokümantasyona odak",
-        "Durum ve sonraki adımlar için ölçülü, profesyonel dil",
+        "Durum ve takip iletişimi için ölçülü, profesyonel dil",
       ],
     },
     cta: {
@@ -247,7 +247,7 @@ export const serviceDetailsExtraTr: Record<
   "data-evidence-readiness-review": {
     title: "Veri ve Kanıt Hazırlığı İncelemesi",
     intro:
-      "Emisyon, çevresel ve sürdürülebilirlik verilerinin nasıl üretildiği, dönüştürüldüğü ve saklandığına odaklı inceleme—ham kanıttan raporlanan rakamlara izlenebilirlik. Doğrulama, güvence veya büyük açıklamalardan önce uygundur.",
+      "Emisyon, çevresel ve sürdürülebilirlik verilerinin nasıl üretildiği, dönüştürüldüğü ve saklandığına odaklı inceleme—ham kanıttan raporlanan rakamlara izlenebilirlik. Doğrulama, bağımsız inceleme veya büyük açıklamalardan önce uygundur.",
     covers: {
       title: "Kapsam",
       bullets: [
@@ -268,7 +268,7 @@ export const serviceDetailsExtraTr: Record<
       title: "İncelemenin Odak Noktaları",
       bullets: [
         "Süreç yürüyüşü ve tek nokta arıza tespiti",
-        "Seçilen önemli veri akışlarında uçtan uca testler",
+        "Seçilen önemli veri akışlarında kayıttan rapora sistematik testler",
         "Kanıt paketlerini ve üst veriyi güçlendirme önerileri",
       ],
     },
@@ -285,7 +285,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "IT, operasyon ve sürdürülebilirlik liderleriyle işbirlikçi oturumlar",
         "Kapsamlı IT sertifikasyonu değil—önemli akışlara risk temelli odak",
-        "Ayrıca kararlaştırılmadıkça resmi ISAE tarzı güvencenin yerine geçmez",
+        "Ayrıca kararlaştırılmadıkça resmi ISAE tarzı bağımsız incelemenin yerine geçmez",
       ],
     },
     cta: {
@@ -326,13 +326,13 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Pasaport verisi alıcı ve otorite incelemesine açık—zayıf halkalar hızlı ortaya çıkar",
         "Erken yapılandırma kurallar kesildiğinde maliyetli yeniden işi önler",
-        "Yeşil yıkamadan kaçınarak ürün düzeyinde savunulabilir anlatıyı destekler",
+        "Yeşil yıkamadan kaçınarak ürün düzeyinde ölçülü beyanı destekler",
       ],
     },
     approach: {
       title: "Meva yaklaşımı",
       bullets: [
-        "Düzenleme bilincine sahip; hukuki danışmanlık değil—teknik savunulabilirlik odağı",
+        "Düzenleme bilincine sahip; hukuki danışmanlık değil—teknik dosya ve kanıt odağı",
         "Ön-doğrulamanın neyi sertifikalayıp neyi sertifikalamadığı açık ifade",
         "Uygun olduğunda mevcut ISO uyumlu çevresel çalışmalarla entegrasyon",
       ],
@@ -345,7 +345,7 @@ export const serviceDetailsExtraTr: Record<
   "sustainability-reporting-evidence-review": {
     title: "Sürdürülebilirlik Raporlaması — Kanıt İncelemesi",
     intro:
-      "Sürdürülebilirlik raporları, ekler ve seçili KPI açıklamaları için yapılandırılmış kanıt incelemesi—anlatı iddiaları ile temel hesaplamalar arasında tutarlılığı destekler. Aksi açıkça kararlaştırılmadıkça yasal güvence sunmaz.",
+      "Sürdürülebilirlik raporları, ekler ve seçili KPI açıklamaları için yapılandırılmış kanıt incelemesi—anlatı iddiaları ile temel hesaplamalar arasında tutarlılığı destekler. Aksi açıkça kararlaştırılmadıkça resmi bağımsız inceleme görüşü sunmaz.",
     covers: {
       title: "Kapsam",
       bullets: [
@@ -375,7 +375,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Paydaşlar anlatıyı rakamlarla karşılaştırır—tutarsızlık güveni zedeler",
         "Disiplinli dil ve kanıt ile yeşil yıkama riskini azaltır",
-        "İstenirse sonraki daha derin güvence döngülerine hazırlık",
+        "İstenirse sonraki daha derin bağımsız inceleme döngülerine hazırlık",
       ],
     },
     approach: {
@@ -481,7 +481,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Önce yönetişim: kriterler, çıkar çatışması ve eskalasyon yolları yazılı tanımlanır",
         "İzlenebilir bulgularla kanıta dayalı test",
-        "Çıktılar genellikle iç veya kontrollü dış kullanıma göre hizalanır",
+        "Çıktılar genellikle iç veya sınırlı dış kullanıma göre hizalanır",
       ],
     },
     cta: {
@@ -491,9 +491,9 @@ export const serviceDetailsExtraTr: Record<
   },
   "iso-14068-readiness-review": {
     heroEyebrow: "Karbon nötrlüğü ve net-sıfır beyanı",
-    title: "ISO 14068 — Karbon Nötrlüğü Ve Net-Sıfır Doğrulaması",
+    title: "ISO 14068 — Karbon Nötrlüğü ve Net-Sıfır Doğrulaması",
     intro:
-      "Karbon nötrlüğü ve net-sıfır beyanlarının güvenilirliği; yalnızca bildirilen emisyon sonuçlarına değil, aynı zamanda kapsam tanımına, azaltım stratejisinin tutarlılığına, dengeleme yaklaşımının uygunluğuna ve destekleyici kanıt yapısının açıklığına bağlıdır. Meva Global, ISO 14068 ile ilişkili karbon nötrlüğü ve net-sıfır beyanları için bağımsız ve yapılandırılmış bir teknik doğrulama yaklaşımı sunar. Bu hizmet; emisyon sınırlarının, azaltım mantığının, kullanılan destek mekanizmalarının ve ilgili beyan altyapısının sistematik biçimde değerlendirilmesi yoluyla açıklamaların güvenilirliğini ve savunulabilirliğini güçlendirir.",
+      "Karbon nötrlüğü ve net-sıfır beyanlarının güvenilirliği; yalnızca bildirilen emisyon sonuçlarına değil, aynı zamanda kapsam tanımına, azaltım stratejisinin tutarlılığına, dengeleme yaklaşımının uygunluğuna ve destekleyici kanıt yapısının açıklığına bağlıdır. Meva Global, ISO 14068 ile ilişkili karbon nötrlüğü ve net-sıfır beyanları için bağımsız ve yapılandırılmış bir teknik doğrulama yaklaşımı sunar. Bu hizmet; emisyon sınırlarının, azaltım mantığının, kullanılan destek mekanizmalarının ve ilgili beyan altyapısının sistematik biçimde değerlendirilmesi yoluyla açıklamaların güvenilirliğini ve teknik dosya tutarlılığını güçlendirir.",
     covers: {
       title: "Hizmet Kapsamı",
       bullets: [
@@ -539,7 +539,7 @@ export const serviceDetailsExtraTr: Record<
       body: "Beyan kapsamınızı, raporlama yaklaşımınızı ve mevcut kanıt yapınızı paylaşın; size uygun doğrulama kapsamını ve inceleme beklentilerini birlikte netleştirelim.",
       primaryButton: "Teklif Talep Et",
       secondaryButton: "Hizmetlere Dön",
-      detailLink: "Detaylar",
+      detailLink: "Detayları İncele",
     },
   },
   "mock-verification-review": {
@@ -558,7 +558,7 @@ export const serviceDetailsExtraTr: Record<
       title: "Kimler için",
       bullets: [
         "İlk kez doğrulama yapan ekipler ve karmaşık çok tesisli kuruluşlar",
-        "Tam döngüye bağlanmadan önce güvence isteyen yönetimler",
+        "Tam döngüye bağlanmadan önce bağımsız inceleme isteyen yönetimler",
         "Sürprize yer bırakmayan sıkı açıklama takvimleri olan durumlar",
       ],
     },
@@ -582,7 +582,7 @@ export const serviceDetailsExtraTr: Record<
       title: "Meva yaklaşımı",
       bullets: [
         "Şeffaf kapsam: mock inceleme formal doğrulamanın yerine geçmez",
-        "Güvence ilkeleriyle uyumlu bağımsız inceleme disiplini",
+        "Tarafsızlık ve kanıt standartlarıyla uyumlu bağımsız inceleme disiplini",
         "Uyumluluk gösterisinden çok öğrenmeye ayarlı çıktılar",
       ],
     },
@@ -616,7 +616,7 @@ export const serviceDetailsExtraTr: Record<
       bullets: [
         "Seçilen kanallar ve SKU’lar genelinde iddia envanteri",
         "Belirtilen sınırlara karşı kanıt yeterliliği incelemesi",
-        "Önerilen ifade güvenceleri ve eskalasyon maddeleri",
+        "Önerilen dil sınırları ve eskalasyon maddeleri",
       ],
     },
     whyMatters: {

@@ -13,6 +13,14 @@ export function PageHeader({
   denseHero,
   /** Wider text column for richer intros (e.g. services index). */
   wideIntro,
+  /** Taller hero visual slot with dense heroes (cover photography). */
+  prominentVisual,
+  /** Appended last — overrides default visual sizing (e.g. statement-search hero). */
+  visualWrapperClassName,
+  /** Override default `bg-white` (e.g. gradient hero behind editorial imagery). */
+  sectionSurfaceClassName,
+  headingTitleClassName,
+  headingDescriptionClassName,
 }: {
   eyebrow?: string;
   title: string;
@@ -23,6 +31,11 @@ export function PageHeader({
   compactVertical?: boolean;
   denseHero?: boolean;
   wideIntro?: boolean;
+  prominentVisual?: boolean;
+  visualWrapperClassName?: string;
+  sectionSurfaceClassName?: string;
+  headingTitleClassName?: string;
+  headingDescriptionClassName?: string;
 }) {
   const heroPadding = denseHero
     ? "py-6 sm:py-7 lg:py-8"
@@ -32,7 +45,7 @@ export function PageHeader({
   const heroGap = denseHero ? "gap-6 sm:gap-7" : compactVertical ? "gap-6 lg:gap-8" : "gap-8 lg:gap-10";
 
   return (
-    <section className="border-b border-[color:var(--border-soft)] bg-white">
+    <section className={cn("border-b border-[color:var(--border-soft)]", sectionSurfaceClassName ?? "bg-white")}>
       <Container className={heroPadding}>
         {visual ? (
           <div
@@ -49,6 +62,8 @@ export function PageHeader({
                 description={description}
                 descriptionVariant={descriptionVariant}
                 className="max-w-none"
+                titleClassName={headingTitleClassName}
+                descriptionClassName={headingDescriptionClassName}
               />
             </div>
             <div
@@ -60,9 +75,12 @@ export function PageHeader({
               <div
                 className={cn(
                   "flex h-full w-full max-w-[520px] min-h-[200px] flex-col sm:min-h-[220px] lg:min-h-0",
-                  denseHero
-                    ? "max-h-[min(22rem,44vh)] lg:max-h-[min(20rem,40vh)]"
-                    : "max-h-[min(28rem,52vh)] sm:min-h-[240px] lg:max-h-[min(26rem,46vh)]",
+                  denseHero && prominentVisual
+                    ? "max-h-[min(34rem,58vh)] sm:min-h-[260px] lg:max-h-[min(38rem,56vh)]"
+                    : denseHero
+                      ? "max-h-[min(22rem,44vh)] lg:max-h-[min(20rem,40vh)]"
+                      : "max-h-[min(28rem,52vh)] sm:min-h-[240px] lg:max-h-[min(26rem,46vh)]",
+                  visualWrapperClassName,
                 )}
               >
                 {visual}
@@ -76,6 +94,8 @@ export function PageHeader({
             title={title}
             description={description}
             descriptionVariant={descriptionVariant}
+            titleClassName={headingTitleClassName}
+            descriptionClassName={headingDescriptionClassName}
           />
         )}
       </Container>

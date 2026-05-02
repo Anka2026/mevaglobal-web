@@ -1,3 +1,4 @@
+import { BRAND_POSITIONING_LINE } from "../brandPositioning";
 import type { Dictionary } from "../types";
 import { documentsResourceArticlesNl } from "./bundles/documentsResourceArticles.nl";
 import { newServiceDetailsNl } from "./extras/newServiceDetailsNl";
@@ -7,63 +8,63 @@ export const nl: Dictionary = {
   meta: {
     siteName: "Meva Global Certification B.V.",
     siteDescription:
-      "Onafhankelijke organisatie voor verificatie, validatie en assurance rond carbon-, milieuclaims en CBAM-gerelateerde rapportagecontexten—geleverd via gestructureerde technische beoordeling en bewijsdiscipline.",
+      "Onafhankelijke organisatie voor verificatie, validatie en technische beoordeling rond carbon-, milieuclaims en CBAM-gerelateerde rapportagecontexten—geleverd via gestructureerde technische beoordeling en bewijsdiscipline.",
     pages: {
       home: {
-        title: "Onafhankelijke verificatie, validatie en assurance",
+        title: "Onafhankelijke verificatie, validatie en technische beoordeling",
         description:
-          "Onafhankelijke verificatie, validatie en assurance voor koolstof-, product- en duurzaamheidsverklaringen—methodologische strengheid, traceerbaar bewijs en geloofwaardige externe communicatie.",
+          "Onafhankelijke verificatie, validatie en technische beoordeling voor koolstof-, product- en duurzaamheidsverklaringen—methodologische strengheid, traceerbaar bewijs en geloofwaardige externe communicatie.",
       },
       about: {
         title: "Over Meva Global",
         description:
-          "Onafhankelijke verificatie, validatie en assurance—technische integriteit, onpartijdigheid en internationale leveringsdiscipline.",
+          "Onafhankelijke verificatie, validatie en technische beoordeling—technische integriteit, onpartijdigheid en internationale leveringsdiscipline.",
       },
       services: {
         title: "Diensten",
         description:
-          "Onafhankelijke verificatie en technische review: klimaatdata, productclaims, milieu-informatie, ketens en duurzaamheidsrapportage—met assurance als uitgangspunt.",
+          "Onafhankelijke verificatie en technische beoordeling voor klimaatdata, productclaims, milieu-informatie, ketens en duurzaamheidsrapportage.",
       },
       cbam: {
         title: "CBAM-oplossingen",
         description:
-          "Assurance-gerichte technische review voor CBAM-emissie-informatie—traceerbare installatielogica, leveranciersbewijs, strakke scope en verdedigbare disclosure.",
+          "Gestructureerde technische review voor CBAM-emissie-informatie—traceerbare installatielogica, leveranciersbewijs, strakke scope en verdedigbare disclosure.",
       },
       process: {
         title: "Accreditatie",
         description:
-          "Accreditatievoorbereiding en onafhankelijk verificatieproces—kwaliteitssystemen, bewijsdiscipline en gestructureerde technische beoordeling bij MEVA Global Certification.",
+          "Accreditatievoorbereiding en het governancekader voor verificatie bij Meva Global Certification—waaronder lopende ISO/IEC 17029-accreditatieactiviteiten, onder voorbehoud van de uitkomsten bij de bevoegde accreditatie-instelling—met gestructureerde technische beoordeling en bewijsdiscipline.",
       },
       statementSearch: {
-        title: "Verklaring Opzoeken",
+        title: "Verklaringsregister en statuscontrole",
         description:
-          "Publiek register voor verklaringen onder het onafhankelijke verificatie-, validatie- en assurance-pad van Meva Global—zoek op referentie of verklaringsvelden.",
+          "Controleer gepubliceerde verklaringen via referentiegegevens. Samenvatting en status dienen voor openbare referentiecontrole—geen juridisch advies of bindende beslissing.",
       },
       documents: {
-        title: "Bronnen",
+        title: "Kennisbank | Meva Global",
         description:
-          "Technische bronnen voor CBAM, koolstofverificatie, EPD/LCA critical review en assurance—strakke scope, traceerbaar bewijs, methodologie en governance van externe disclosures.",
+          "Regelmatige artikelen over bewijsdiscipline, documentatiekwaliteit en technische gereedheid voor verificatie, validatie, CBAM, productverklaringen en duurzaamheidsrapportage.",
       },
       insights: {
         title: "Inzichten",
         description:
-          "Korte technische notities over CBAM, carbonverificatie en assurance-ready rapportage—voor professionele stakeholders.",
+          "Korte technische notities over CBAM, carbonverificatie en rapportage die klaar is voor externe review—voor professionele stakeholders.",
       },
       contact: {
         title: "Contact",
         description:
-          "Neem contact op met het kantoor dat bij je vraag past. Deel scope, standaarden en planning voor onafhankelijke verificatie, validatie of assurance—met duidelijke vervolgstappen.",
+          "Neem contact op met het kantoor dat bij je vraag past. Deel scope, standaarden en planning voor onafhankelijke verificatie, validatie of technische beoordeling—we reageren met een heldere planning.",
       },
     },
   },
   brand: {
     name: "Meva Global",
     legalName: "Meva Global Certification B.V.",
-    taglineTopBar: "Onafhankelijke Verificatie • Validatie • Assurance",
+    taglineTopBar: BRAND_POSITIONING_LINE.nl,
   },
   shared: {
     offices: {
-      turkey: "Türkiye — kantoor Ankara",
+      turkey: "Turkije — kantoor Ankara",
       netherlands: "Nederland — kantoor Utrecht",
     },
     ui: {
@@ -77,72 +78,74 @@ export const nl: Dictionary = {
     services: "Diensten",
     cbam: "CBAM",
     process: "Accreditatie",
-    representations: "Onze Vertegenwoordigingen",
-    statementSearch: "Verklaring Opzoeken",
-    documents: "Bronnen",
+    representations: "Vertegenwoordigingen",
+    statementSearch: "Verklaring zoeken",
+    documents: "Kennisbank",
     insights: "Inzichten",
     contact: "Contact",
   },
   ctas: {
-    verifyStatement: "Verklaring Opzoeken",
+    verifyStatement: "Verklaring zoeken",
     requestQuote: "Offerte aanvragen",
     contact: "Contact",
-    learnMore: "Details",
-    exploreServices: "Diensten Bekijken",
+    learnMore: "Bekijk details",
+    exploreCbam: "Bekijk CBAM-oplossingen",
+    exploreServices: "Bekijk diensten",
     search: "Zoeken",
     submit: "Versturen",
   },
   footer: {
     description:
-      "Onafhankelijke organisatie voor verificatie, validatie en assurance rond carbon, milieuclaims en CBAM—geleverd via gestructureerde technische beoordeling en bewijsdiscipline.",
+      "Een onafhankelijke organisatie voor verificatie, validatie en technische beoordeling van koolstofgegevens, milieudeclaraties en CBAM-rapportage.",
     offices: "Onze kantoren",
     quickLinks: "Verkennen",
     contactTitle: "Contact",
+    trustFootnote:
+      "Kantoren in Utrecht en Ankara coördineren internationale levering met duidelijke lokale routing.",
     rights: "Alle rechten voorbehouden.",
   },
   home: {
     hero: {
-      eyebrow: "Onafhankelijke verificatie • Validatie • Assurance",
-      title:
-        "Onafhankelijke verificatie, validatie en assurance voor koolstof-, product- en duurzaamheidsverklaringen",
+      eyebrow: BRAND_POSITIONING_LINE.nl,
+      title: "Onafhankelijke Technische Beoordeling Voor Verdedigbare Rapportage",
       subtitle:
-        "Meva Global levert onafhankelijke verificatie-, validatie- en assurancegerichte technische diensten voor broeikasgasdata, product- en milieuverklaringen, duurzaamheidsinformatie, ketenbeoordelingen en CBAM-gerelateerde rapportage. Onze aanpak behandelt methodologische consistentie, datatraceerbaarheid, bewijsstructuren en de geloofwaardigheid van externe communicatie als één geheel—zodat organisaties niet alleen een beoordelingscyclus doorlopen, maar ook een sterkere, beter verdedigbare en volwassen rapportagebasis opbouwen.",
+        "Meva Global levert onafhankelijke verificatie, validatie en technische beoordeling voor broeikasgasinformatie, productverklaringen, CBAM-gerichte rapportage en duurzaamheidsinformatie—met traceerbaar bewijs, gedisciplineerde scope en verdedigbare uitkomsten.",
       heroImageAlt:
         "Technische beoordelaars van Meva Global die ter plaatse bewijsstukken, registraties en procescontroles op een industriële locatie beoordelen.",
-      primaryCta: "Offerte Aanvragen",
-      secondaryCta: "Diensten Bekijken",
+      primaryCta: "Offerte aanvragen",
+      secondaryCta: "Bekijk diensten",
     },
-    trustHighlightsTitle: "Waarom klanten onze aanpak vertrouwen",
+    trustHighlightsTitle: "De basis van vertrouwen",
     trustHighlights: [
       {
-        title: "Waarborgen voor onafhankelijkheid",
+        title: "Controles rond onpartijdigheid",
         description:
           "Een gedisciplineerd beoordelingsmodel met onafhankelijkheidscontroles, duidelijke rolscheiding en gedocumenteerde besluitroutes.",
       },
       {
         title: "Bewijsgerichte technische beoordeling",
         description:
-          "Gestructureerde beoordeling waarin methodologie, data, rekenlogica en onderliggende documentatie samen worden beoordeeld.",
+          "Gestructureerde review van methodologie, data, rekenlogica en onderliggende documentatie als samenhangend geheel.",
       },
       {
-        title: "Traceerbare registratie",
+        title: "Traceerbare documentatiestructuur",
         description:
           "Documentatie die dossiertrail, datastromen en de onderbouwing van kernaannames zichtbaar en verdedigbaar maakt.",
       },
       {
         title: "Internationale afstemming",
         description:
-          "Een op standaarden gerichte werkwijze die past bij grensoverschrijdende rapportage en verwachtingen van meerdere stakeholders.",
+          "Een op standaarden gerichte werkwijze die past bij grensoverschrijdende rapportage en meerdere stakeholders.",
       },
     ],
-    serviceAreasTitle: "Kerngebieden van onze diensten",
+    serviceAreasTitle: "Kerngebieden van dienstverlening",
     serviceAreasIntro:
-      "Wij organiseren verificatie, validatie, technische beoordeling en assurance rond klimaat- en koolstofbeheer, product- en milieuverklaringen, materiaalgezondheid, verantwoorde ketens en ESG-informatie.",
+      "We organiseren verificatie, validatie en technische review rond klimaat- en koolstofbeheer, product- en milieuverklaringen, materiaalgezondheid, verantwoorde ketens en ESG-informatie.",
     serviceAreas: [
       {
-        title: "Klimaat- en koolstofassurance",
+        title: "Technische Beoordeling: Klimaat En Koolstof",
         description:
-          "Verificatie verankerd in methodologie en bewijs—voor organisatie- en projectgebonden broeikasgasverklaringen, productkoolstofdata, ingebedde emissies en net-zero readiness.",
+          "Verificatie verankerd in methodologie en bewijs—voor organisatie- en projectgebonden broeikasgasverklaringen, productkoolstofdata, ingebedde emissies en net-zero-gereedheid.",
       },
       {
         title: "Product- en milieuclaimverificatie",
@@ -155,12 +158,12 @@ export const nl: Dictionary = {
           "Verificatiegerichte technische ondersteuning voor binnenluchtkwaliteit en VOC-data, HPD’s, materiaalsamenstelling en groene-bouwdocumentatie—met nadruk op emissieprofielen en disclosure-klaar bewijs.",
       },
       {
-        title: "Verantwoorde ketens en sectorale readiness",
+        title: "Verantwoorde ketens en sectorale gereedheid",
         description:
-          "Traceerbaarheid, herkomstclaims en technische readiness-beoordelingen in lijn met ASI, FSC, PEFC, EUDR en vergelijkbare sectorexpectaties.",
+          "Traceerbaarheid, herkomstclaims en technische gereedheidsbeoordelingen in lijn met ASI, FSC, PEFC, EUDR en vergelijkbare sectorexpectaties.",
       },
       {
-        title: "ESG- en rapportageassurance",
+        title: "Technische Beoordeling: ESG En Rapportage",
         description:
           "Beoordeling van beheersing en bewijsstructuren voor duurzaamheidsdata onder GRI en ESRS, KPI’s en niet-financiële verklaringen.",
       },
@@ -175,7 +178,7 @@ export const nl: Dictionary = {
       {
         title: "Grensoverschrijdende leveringsdiscipline",
         description:
-          "Met teams in Türkiye en Nederland leveren wij een gecontroleerd, professioneel model dat aansluit op internationale klantverwachtingen.",
+          "Met teams in Turkije en Nederland leveren wij een gedisciplineerd, professioneel model dat aansluit op internationale klantverwachtingen.",
       },
       {
         title: "Gedocumenteerde, traceerbare processen",
@@ -185,12 +188,12 @@ export const nl: Dictionary = {
       {
         title: "Beoordelingsdiepte passend bij de context",
         description:
-          "Scope en bewijseisen volgen risico, beoogd gebruik, datarijping en rapportagecontext—geen standaardmal zonder nuance.",
+          "Scope en bewijseisen volgen risico, beoogd gebruik, datarijping en rapportagecontext—altijd op maat, nooit generiek.",
       },
     ],
-    processTitle: "Onze werkwijze",
+    processTitle: "Technische beoordeling en reviewproces",
     processIntro:
-      "Elke opdracht volgt een gestructureerd technisch beoordelingstraject gericht op duidelijkheid, traceerbaarheid en verdedigbare uitkomsten.",
+      "Elke opdracht volgt een gedocumenteerd technisch beoordelingstraject gericht op helderheid, traceerbaar bewijs en verdedigbare uitkomsten.",
     processSteps: [
       {
         title: "Eerste aanvraag",
@@ -219,49 +222,52 @@ export const nl: Dictionary = {
       },
       {
         title: "Afronding",
-        description: "Verklaringen, opinies, bevindingen of andere afgesproken outputs worden gecontroleerd afgerond.",
+        description:
+          "Verklaringen, opinies, bevindingen of andere afgesproken outputs worden afgerond via gedocumenteerde technische review en vaststelling.",
       },
     ],
-    statementPreviewTitle: "Verklaring Opzoeken",
+    statementPreviewTitle: "Verklaring zoeken",
     statementPreviewIntro:
       "Zoek beschikbare verklaringen en certificaten op referentienummer en bekijk—waar gepubliceerd—de openbare scopesamenvatting.",
-    cbamTitle: "CBAM-gerichte ondersteuning voor exporteurs",
+    cbamEyebrow: "CBAM • Voorbereiding Op Pre-Verificatie",
+    cbamTitle: "Technische Voorbereiding Voor CBAM Pre-Verificatie",
     cbamIntro:
-      "CBAM-rapportage vereist strakkere discipline rond emissiedata, leveranciersinformatie, systeemgrenzen en onderliggende documentatie. Meva Global biedt assurancegerichte technische beoordeling om databetrouwbaarheid, traceerbaarheid en disclosure-infrastructuur voor extern gebruik te versterken. Dit is geen regelgevende goedkeuring; het helpt organisaties een gecontroleerdere, beter verdedigbare gereedheid te bereiken.",
+      "CBAM-rapportage vraagt om meer dan alleen het berekenen van emissies. Voorafgaand aan formele verificatie moeten bedrijfsgegevens, leveranciersbewijzen, systeemgrenzen, methodekeuzes en het rapportagedossier technisch consistent, traceerbaar en beoordelingsgereed worden opgebouwd.",
     cbamBullets: [
-      "Beoordeling van bewijs- en datagaps in een CBAM-rapportagecontext",
-      "Traceerbaarheid en plausibiliteit op leveranciers- en locatieniveau",
-      "Ondersteuning bij gecontroleerde documentatie- en disclosure-infrastructuur voor externe stakeholders",
+      "Beoordeling van systeemgrenzen, databronnen en berekeningsaanpak",
+      "Technische controle van leveranciersgegevens en ondersteunende bewijsstructuur",
+      "Consistentiebeoordeling van methodologie, emissielogica en rapportageopzet",
+      "Versterking van dossierstructuur en documentatiegereedheid vóór formele verificatie",
     ],
-    cbamCardTitle: "CBAM assurance-oplossingen",
+    cbamCardTitle: "Focus op pre-verificatie",
     cbamCardText:
-      "Technische beoordeling voor exporteurs en producenten die emissie-informatie voorbereiden die onder CBAM valt—met nadruk op datakwaliteit, traceerbaarheid, grensbewaking en documentatiediscipline.",
+      "Voor exporteurs en producenten beoordelen wij via onafhankelijke technische beoordeling de datakwaliteit, traceerbaarheid, methodologische helderheid en documentatiestructuur van CBAM-dossiers. Deze stap vervangt de formele verificatie niet; zij versterkt de voorbereiding op het formele traject.",
     globalTitle: "Onze kantoren",
     ctaTitle: "Vraag een afgebakende beoordeling aan",
     ctaIntro:
-      "Deel je scope, relevante standaarden en planning. We reageren met een gestructureerd beoordelingspad, bewijsverwachtingen en concrete vervolgstappen—afgestemd op je rapportagecontext en het beoogde externe gebruik.",
+      "Deel je scope, relevante standaarden en planning. We reageren met een gestructureerd beoordelingspad, bewijsverwachtingen en een heldere tijdlijn—afgestemd op je rapportagecontext en het beoogde externe gebruik.",
   },
   pages: {
     about: {
-      eyebrow: "Onafhankelijke Verificatie • Validatie • Assurance",
+      eyebrow: BRAND_POSITIONING_LINE.nl,
       title: "Over Meva Global",
       intro: [
-        "Meva Global Certification B.V. is een internationale organisatie die onafhankelijke verificatie-, validatie- en assurancediensten levert, gebaseerd op technische integriteit, onpartijdigheid en gecontroleerde besluitvorming.",
-        "Nu duurzaamheid, klimaat en ESG-verwachtingen steeds centraler staan in het bedrijfsleven, ondersteunen wij organisaties bij het versterken van koolstof-, milieu- en duurzaamheidsgerelateerde disclosures met betrouwbare data, traceerbaar bewijs en heldere methodologie.",
-        "Onze aanpak is gebaseerd op onafhankelijke beoordeling, steekproefgerichte review, duidelijke scopeafbakening en gedisciplineerde documentatie. Onze rol is niet alleen om een beoordeling uit te voeren, maar ook om organisaties te helpen hun verklaringen en outputs op een betrouwbaarder, gecontroleerder en professioneler niveau te presenteren.",
+        "Meva Global Certification B.V. is een internationale organisatie die onafhankelijke verificatie, validatie en technische beoordeling levert—technische integriteit, onpartijdigheid en gedocumenteerde besluitdiscipline.",
+        "Nu duurzaamheid, klimaat en ESG-verwachtingen steeds centraler staan in het bedrijfsleven, versterken wij koolstof-, milieu- en duurzaamheidsgerelateerde disclosures met betrouwbare data, traceerbaar bewijs en heldere methodologie.",
+        "Onze aanpak is gebaseerd op onafhankelijke beoordeling, steekproefgerichte review, duidelijke scopeafbakening en gedisciplineerde documentatie. Onze rol is niet alleen om een beoordeling uit te voeren, maar ook om organisaties te helpen hun verklaringen en outputs op een betrouwbaarder, verdedigbaarder en professioneler niveau te presenteren.",
       ],
       sectionTitle: "Over Meva Global",
       sections: [
         {
-          title: "Onafhankelijkheid En Onpartijdigheid",
+          title: "Onafhankelijkheid en onpartijdigheid",
           bullets: [
-            "Werkwijze ondersteund door waarborgen voor onpartijdigheid en beheersing van belangenconflicten",
+            "Werkwijze ondersteund door controles rond onpartijdigheid en belangenconflicten",
             "Duidelijke scheiding tussen review-, technische beoordelings- en beslissingsverantwoordelijkheden",
             "Gedocumenteerde besluitvormingslijnen die consistentie en betrouwbaarheid ondersteunen",
           ],
         },
         {
-          title: "Focus Op Duurzaamheid En ESG",
+          title: "Focus op duurzaamheid en ESG",
           bullets: [
             "Technische beoordelingsaanpak die de geloofwaardigheid van duurzaamheids- en ESG-disclosures versterkt",
             "Traceerbare bewijsstructuren die transparantie, verantwoording en stakeholdervertrouwen ondersteunen",
@@ -269,31 +275,31 @@ export const nl: Dictionary = {
           ],
         },
         {
-          title: "Internationale Leveringsdiscipline",
+          title: "Internationale leveringsdiscipline",
           bullets: [
-            "Gecontroleerd leveringsmodel ondersteund door onze structuur in Türkiye en Nederland",
+            "Gedisciplineerd leveringsmodel ondersteund door onze structuur in Türkiye en Nederland",
             "Heldere coördinatie en professioneel procesmanagement voor exporteurs, producenten en multi-stakeholdercontexten",
             "Governance, beoordelingsdiscipline en leveringskwaliteit in lijn met internationale verwachtingen",
           ],
         },
         {
-          title: "Bewijs En Traceerbaarheid",
+          title: "Bewijs en traceerbaarheid",
           bullets: [
             "Traceerbare bewijsafstemming en steekproefgerichte technische toetsing",
-            "Heldere scopeafbakening, transparante methodologie en gecontroleerde disclosure-taal",
-            "Gestructureerde documentatie die audit readiness en herhaalbaarheid ondersteunt",
+            "Heldere scopeafbakening, transparante methodologie en verdedigbare disclosure-taal",
+            "Gestructureerde documentatie die auditgereedheid en herhaalbaarheid ondersteunt",
           ],
         },
         {
-          title: "Vertrouwelijkheid En Gecontroleerde Toegang",
+          title: "Vertrouwelijkheid en toegangsdiscipline",
           bullets: [
-            "Gecontroleerde toegang tot klantdata, bewijsbestanden en ondersteunende documentatie",
+            "Gedocumenteerde toegang en autorisatie voor klantdata, bewijsbestanden en ondersteunende documentatie",
             "Veilige omgang met registraties, steekproefuitkomsten en technische documentatie",
             "Publieke informatieverstrekking beperkt tot het relevante dienstbereik en disclosure-niveau",
           ],
         },
         {
-          title: "Kwaliteit En Technische Integriteit",
+          title: "Kwaliteit en technische integriteit",
           bullets: [
             "Toewijzing van beoordelaars op basis van competentie en senior technisch toezicht",
             "Consistente criteria, robuuste steekproeflogica en methodologische discipline",
@@ -304,48 +310,56 @@ export const nl: Dictionary = {
     },
     services: {
       title: "Diensten",
-      heroEyebrow: "Onafhankelijke Technische Reviewdiscipline",
+      heroEyebrow: BRAND_POSITIONING_LINE.nl,
       intro:
-        "Meva Global levert onafhankelijke verificatie, technische review en assurancegerichte diensten voor klimaat, productclaims, milieu-informatie, verantwoorde ketens en duurzaamheidsdata. Methodologische consistentie, datatraceerbaarheid, bewijskwaliteit en geloofwaardige disclosure worden samengebracht in een gestructureerd dienstmodel dat is ingericht op extern vertrouwen.",
+        "Ons portfolio verenigt onafhankelijke verificatie, validatie en technische beoordeling rond klimaat- en koolstofdata, product- en milieuclaims, verantwoorde ketens en duurzaamheidsrapportage. Elke opdracht steunt op gedisciplineerde scope, traceerbaar bewijs, gedocumenteerde besluitvorming en uitkomsten die passen bij het beoogde externe gebruik.",
       introSupport:
-        "Ons aanbod loopt van organisatorische broeikasgasdata tot productgerichte milieuverklaringen, materiaalgezondheid en ESG-data-assurance—onder één technische discipline. In elke dienstregio ligt de nadruk op begrenzing, bewijskwaliteit, methodische passendheid en vertrouwen bij stakeholders.",
+        "Eén technische ruggengraat in plaats van losse checks: criteria schriftelijk verankeren, de bewijsketen toetsen, bevindingen ingetogen formuleren en disclosure-taal afstemmen op toezichthouders, inkopers en reviewers—van broeikasgasdossiers tot productverklaringen en ESG-datastructuren.",
       heroImageAlt:
-        "Premium assurance-beeldtaal voor klimaat, producten, binnenmilieu en materiaalgezondheid, verantwoorde ketens en ESG-rapportage.",
+        "Technische beeldtaal voor klimaat, producten, binnenmilieu en materiaalgezondheid, verantwoorde ketens en ESG-rapportage.",
       groups: {
         climateAndCarbonAssurance: {
-          title: "Klimaat- En Koolstofassurance",
+          title: "Technische Beoordeling: Klimaat En Koolstof",
           intro:
-            "Van organisatorische en projectgebonden broeikasgasverklaringen tot productkoolstofdata, ingebedde-emissiebeoordelingen en net-zero readiness: deze dienstengroep bekijkt methodologie, datakwaliteit en de geloofwaardigheid van externe toelichtingen als één samenhangend geheel.",
+            "Van organisatorische en projectgebonden broeikasgasverklaringen tot productkoolstofdata, ingebedde-emissiebeoordelingen en net-zero-gereedheid: deze dienstengroep bekijkt methodologie, datakwaliteit en de geloofwaardigheid van externe toelichtingen als één samenhangend geheel.",
         },
         productAndEnvironmentalClaims: {
-          title: "Product- En Milieuclaimverificatie",
+          title: "Product- en milieuclaimverificatie",
           intro:
             "Milieuprestaties op productniveau, inhoudsclaims en disclosure-structuren moeten niet alleen op uitkomsten worden beoordeeld, maar ook op databronnen, methodologische keuzes en de kwaliteit van onderbouwing. Deze groep richt zich op verificatie en technische beoordeling van productgerelateerde claims.",
         },
         builtEnvironmentAndMaterialHealth: {
-          title: "Binnenmilieu En Materiaalgezondheid",
+          title: "Binnenmilieu en materiaalgezondheid",
           intro:
             "Voor interieurproducten, oppervlakken, bouwmaterialen en gezondheidsgerichte productcommunicatie telt niet alleen milieuprestatie; ook emissieprofiel, transparantie van inhoud en kwaliteit van technische documentatie zijn bepalend. Deze dienstengroep biedt exporteurs en teams die projectgerichte technische dossiers voorbereiden een betrouwbaarder en professioneler kader voor externe verklaringen.",
         },
         responsibleSupplyChainsAndSectorSchemes: {
-          title: "Verantwoorde Ketenen En Sectorale Readiness",
+          title: "Verantwoorde ketenen en sectorale gereedheid",
           intro:
-            "Sectorschema’s en afnemerverwachtingen stellen steeds hogere eisen aan traceerbaarheid, herkomstclaims, verantwoorde productie en documentatiediscipline. Deze groep ondersteunt readiness-beoordelingen en technische review in uiteenlopende sectoren.",
+            "Sectorschema’s en afnemerverwachtingen stellen steeds hogere eisen aan traceerbaarheid, herkomstclaims, verantwoorde productie en documentatiediscipline. Deze groep ondersteunt gereedheidsbeoordelingen en technische review in uiteenlopende sectoren.",
         },
         esgAndReportingAssurance: {
-          title: "ESG- En Rapportageassurance",
+          title: "Technische Beoordeling: ESG En Rapportage",
           intro:
-            "De betrouwbaarheid van duurzaamheidsdata is nu niet alleen van belang voor rapportage, maar ook voor investeerdersverwachtingen, klantvereisten, financieringsprocessen en governance-volwassenheid. Deze groep biedt assurance-gerichte ondersteuning voor ESG-data, duurzaamheids-KPI’s en niet-financiële rapportagestructuren.",
+            "De betrouwbaarheid van duurzaamheidsdata is nu niet alleen van belang voor rapportage, maar ook voor investeerdersverwachtingen, klantvereisten, financieringsprocessen en governance-volwassenheid. Deze groep biedt gestructureerde technische ondersteuning voor ESG-data, duurzaamheids-KPI’s en niet-financiële rapportagestructuren.",
         },
       },
-      cardCta: "Details",
+      cardCta: "Bekijk details",
+      serviceGroupNav: {
+        ariaLabel: "Dienstengroepen",
+        climateCarbon: "Klimaat en koolstof",
+        productDeclarations: "Productverklaringen",
+        indoorMaterials: "Binnenmilieu en materiaal",
+        supplyChain: "Toeleveringsketen",
+        esgReporting: "ESG en rapportage",
+      },
       whyIndependent: {
-        title: "Waarom Onafhankelijke Assurance-Discipline Ertoe Doet",
+        title: "Waarom onafhankelijke technische beoordeling ertoe doet",
         items: [
           {
             title: "Geloofwaardigheid Bij Externe Stakeholders",
             description:
-              "Deliverables worden opgebouwd met de helderheid en discipline die toezichthouders, afnemers, finance en technische reviewers bij assurance verwachten.",
+              "Deliverables worden opgebouwd met de helderheid en discipline die toezichthouders, afnemers, finance en technische reviewers bij onafhankelijke review verwachten.",
           },
           {
             title: "Een Sterker Toelichtingskader",
@@ -358,7 +372,7 @@ export const nl: Dictionary = {
               "Bewijsgerichte toetsing maakt zwakke schakels zichtbaar van brondocumentatie via berekeningen tot gerapporteerde uitkomsten.",
           },
           {
-            title: "Gereedheid Voor De Volgende Assurance-Stap",
+            title: "Voorbereid Op De Volgende Technische Drempel",
             description:
               "Prioritaire thema’s worden vroeg benoemd—zodat verificatie, limited assurance of stakeholderreview minder late verrassingen geeft.",
           },
@@ -367,37 +381,37 @@ export const nl: Dictionary = {
       howWeWork: {
         title: "Hoe we werken",
         intro:
-          "Een beknopt trajectoverzicht—de pagina Verificatieproces beschrijft de volledige methodiek, rollen en onpartijdigheidswaarborgen.",
+          "Een beknopt trajectoverzicht—de pagina Verificatieproces beschrijft de volledige methodiek, rollen en onpartijdigheidscontroles.",
         steps: [
           {
-            title: "Scope- en risico-afstemming",
+            title: "Scope- En Risico-Afstemming",
             description:
               "Grenzen, standaarden, rapportageperiode en beoogd gebruik worden bevestigd; diepte sluit aan op disclosure-context en stakeholder-risico.",
           },
           {
-            title: "Technisch werkplan",
+            title: "Technisch Werkplan",
             description:
               "Steekproeflogica, bewijsverwachtingen en mijlpalen worden vóór diepgaande toetsing vastgelegd—inzet volgt materialiteit.",
           },
           {
-            title: "Bewijsgerichte review",
+            title: "Bewijsgerichte Review",
             description:
               "Gestructureerde beoordeling van dossiers, berekeningen en governance—traceerbaar van bewijs naar cijfers en statementtekst.",
           },
           {
-            title: "Onafhankelijke technische beoordeling",
+            title: "Onafhankelijke Technische Beoordeling",
             description:
               "Onpartijdige beoordeling van bevindingen, beperkingen en woordkeuze—de kern van verdedigbare conclusies.",
           },
           {
-            title: "Gecontroleerde outputs",
+            title: "Gedisciplineerde Outputs",
             description:
-              "Bevindingenlog, sluiting en—waar in scope—output die aansluit op het overeengekomen assurance-doel.",
+              "Bevindingenlog, sluiting en—waar in scope—output die aansluit op het overeengekomen reviewdoel.",
           },
         ],
       },
       listingRecoverableError: {
-        title: "Dienstencatalogus kan nu niet worden getoond",
+        title: "Dienstencatalogus Kan Nu Niet Worden Getoond",
         body:
           "We konden de verificatiedienstgroepen niet opbouwen op basis van de huidige registratiegegevens. De siteschaal werkt—ververs de pagina. Blijft dit zo, neem contact op zodat we de serviceconfiguratie kunnen controleren.",
       },
@@ -425,7 +439,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Data-infrastructuur, rekentools, emissiefactoren en activiteitsbronnen; documentatiespoor en interne beheersing als geheel",
             "Waar nodig steekproeven, herberekeningen, dossierafstemming en bewijstoetsing",
@@ -478,7 +492,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteit basisscenario, activiteitendefinitie, datastromen, monitoringscontroles, rekenlogica, aannames en documentatiespoor integraal",
             "Steekproeven, herberekeningen, data-afstemming en bewijstoetsing waar passend",
@@ -531,7 +545,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Samenhang van levenscyclusgrenzen, data-intensieve stappen en hotspots in het model",
             "Steekproeven en herberekeningen om de koppeling tussen data, factoren en methode te toetsen",
@@ -563,7 +577,7 @@ export const nl: Dictionary = {
         },
       },
       "iso-14046": {
-        heroEyebrow: "Assurance rond water footprint",
+        heroEyebrow: "Technische review: water footprint",
         title: "ISO 14046 — Verificatie water footprint",
         intro:
           "De betrouwbaarheid van water footprint-studies hangt niet alleen af van het berekende eindresultaat, maar ook van de helderheid van systeemgrenzen, de geschiktheid van databronnen, de conformiteit van de methodiek aan de norm, de robuustheid van de datastructuur rond watergebruik en -effecten, en de traceerbaarheid van het disclosure-kader. Meva Global biedt een onafhankelijke, gestructureerde technische verificatie voor water footprint-werk en bijbehorende uitlatingen conform ISO 14046. Deze dienst levert een betrouwbaarder en professioneler fundament voor kopersverwachtingen en extern gebruik door systematische beoordeling van kwantificatielogica, datastroom, aannames, rekenstructuur en ondersteunend bewijs.",
@@ -584,7 +598,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van systeemgrenzen, dataflow en water footprint-methodiek",
             "Steekproeven op activiteitsgegevens, karakteriseringsfactoren en aannames",
@@ -619,7 +633,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "LCA Technische Beoordeling",
         intro:
-          "De betrouwbaarheid van life cycle assessment-studies hangt niet alleen af van de uiteindelijke resultatentabel, maar ook van de helderheid van de doel- en scopebepaling, de geschiktheid van de functionele eenheid, de juistheid van systeemgrenzen, de kwaliteit van databronnen, de consistentie van modelleerkeuzes en de correctheid van de interpretatie van resultaten. Meva Global biedt een onafhankelijke en gestructureerde technische beoordelingsaanpak voor LCA-studies en gerelateerde milieuverklaringen. Deze dienst creëert via een systematische beoordeling van methodologisch kader, datastromen, aannames, modelleerlogica en ondersteunend bewijs een betrouwbaarder, gecontroleerder en professioneler kader voor extern gebruik.",
+          "De betrouwbaarheid van life cycle assessment-studies hangt niet alleen af van de uiteindelijke resultatentabel, maar ook van de helderheid van de doel- en scopebepaling, de geschiktheid van de functionele eenheid, de juistheid van systeemgrenzen, de kwaliteit van databronnen, de consistentie van modelleerkeuzes en de correctheid van de interpretatie van resultaten. Meva Global biedt een onafhankelijke en gestructureerde technische beoordelingsaanpak voor LCA-studies en gerelateerde milieuverklaringen. Deze dienst creëert via een systematische beoordeling van methodologisch kader, datastromen, aannames, modelleerlogica en ondersteunend bewijs een betrouwbaarder, gedisciplineerder en professioneler kader voor extern gebruik.",
         covers: {
           title: "Dienstomvang",
           bullets: [
@@ -672,7 +686,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "EPD Verificatie",
         intro:
-          "De betrouwbaarheid van Environmental Product Declarations hangt niet alleen af van de gepubliceerde resultatentabellen, maar ook van de naleving van PCR- en programmaregels, de kwaliteit van databronnen, de consistentie van modelleerkeuzes, de duidelijkheid van de gedeclareerde scope en de traceerbaarheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor EPD-studies en gerelateerde verklaringen. Deze dienst creëert via een systematische beoordeling van methodologisch kader, datastromen, rapportagestructuur en ondersteunende documentatie een betrouwbaarder, gecontroleerder en professioneler publicatiekader.",
+          "De betrouwbaarheid van Environmental Product Declarations hangt niet alleen af van de gepubliceerde resultatentabellen, maar ook van de naleving van PCR- en programmaregels, de kwaliteit van databronnen, de consistentie van modelleerkeuzes, de duidelijkheid van de gedeclareerde scope en de traceerbaarheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor EPD-studies en gerelateerde verklaringen. Deze dienst creëert via een systematische beoordeling van methodologisch kader, datastromen, rapportagestructuur en ondersteunende documentatie een betrouwbaarder, gedisciplineerder en professioneler publicatiekader.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -690,7 +704,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "PCR-conformiteit, systeemgrenzen en plausibiliteit van gedeclareerde indicatoren",
             "Steekproeven op kritieke inputs, databronnen, modelleerbenadering en berekeningsstructuur",
@@ -725,7 +739,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Verificatie van gerecyclede inhoud",
         intro:
-          "De geloofwaardigheid van verklaringen over gerecyclede inhoud hangt niet alleen af van het gedeclareerde percentage, maar ook van de juistheid van de massabalansbenadering, de discipline van chain-of-custody-traceerbaarheid, de toereikendheid van databronnen, de traceerbaarheid van ondersteunend bewijs en het gecontroleerde gebruik van disclosure-taal. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor percentages gerecyclede inhoud en gerelateerde claims. Deze dienst creëert via een systematische beoordeling van datastromen, massabalanslogica, documentatiestructuur en claimkader een betrouwbaarder, gecontroleerder en professioneler kader voor extern gebruik.",
+          "De geloofwaardigheid van verklaringen over gerecyclede inhoud hangt niet alleen af van het gedeclareerde percentage, maar ook van de juistheid van de massabalansbenadering, de discipline van chain-of-custody-traceerbaarheid, de toereikendheid van databronnen, de traceerbaarheid van ondersteunend bewijs en het gedisciplineerd gebruik van disclosure-taal. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor percentages gerecyclede inhoud en gerelateerde claims. Deze dienst creëert via een systematische beoordeling van datastromen, massabalanslogica, documentatiestructuur en claimkader een betrouwbaarder, gedisciplineerder en professioneler kader voor extern gebruik.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -739,11 +753,11 @@ export const nl: Dictionary = {
           bullets: [
             "Fabrikanten die het aandeel gerecyclede inhoud geloofwaardiger aan externe stakeholders willen presenteren",
             "Teams die claims op product-, verpakkings- of materiaalniveau willen versterken",
-            "Organisaties die chain-of-custody-discipline, leveranciersdata en gecontroleerde disclosure willen opbouwen",
+            "Organisaties die chain-of-custody-discipline, leveranciersdata en gedisciplineerde disclosure willen opbouwen",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van massabalanslogica, systeemgrenzen en chain-of-custody-structuur",
             "Steekproeven op leveranciersadministratie, materiaalinput, berekeningsstructuur en ondersteunende documentatie",
@@ -763,7 +777,7 @@ export const nl: Dictionary = {
           bullets: [
             "Onafhankelijke verificatie waarin massabalans, data-architectuur en ondersteunend bewijs integraal worden bezien",
             "Een reviewdiscipline die verder kijkt dan het percentage: welke documentatie en monitoring dragen het cijfer?",
-            "Professionele structuur die bestaande inhoudsclaims versterkt en organisaties helpt om gecontroleerder te werken",
+            "Professionele structuur die bestaande inhoudsclaims versterkt en organisaties helpt om gedisciplineerder te werken",
           ],
         },
         cta: {
@@ -778,7 +792,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Verificatie van biobased inhoud",
         intro:
-          "De geloofwaardigheid van verklaringen over biobased inhoud hangt niet alleen af van het gedeclareerde aandeel, maar ook van de geschiktheid van de gebruikte methodologie, de toereikendheid van leveranciersbewijs, de duidelijkheid van systeemgrenzen, de traceerbaarheid van databronnen en het gecontroleerde gebruik van disclosure-taal voor externe communicatie. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor percentages biobased inhoud en gerelateerde claims. Deze dienst creëert via een systematische beoordeling van datastructuur, methodologische keuzes, ondersteunend bewijs en claimkader een betrouwbaarder, gecontroleerder en professioneler kader voor extern gebruik.",
+          "De geloofwaardigheid van verklaringen over biobased inhoud hangt niet alleen af van het gedeclareerde aandeel, maar ook van de geschiktheid van de gebruikte methodologie, de toereikendheid van leveranciersbewijs, de duidelijkheid van systeemgrenzen, de traceerbaarheid van databronnen en het gedisciplineerd gebruik van disclosure-taal voor externe communicatie. Meva Global biedt een onafhankelijke en gestructureerde verificatieaanpak voor percentages biobased inhoud en gerelateerde claims. Deze dienst creëert via een systematische beoordeling van datastructuur, methodologische keuzes, ondersteunend bewijs en claimkader een betrouwbaarder, gedisciplineerder en professioneler kader voor extern gebruik.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -792,11 +806,11 @@ export const nl: Dictionary = {
           bullets: [
             "Producenten die het percentage biobased inhoud geloofwaardiger aan externe stakeholders willen presenteren",
             "Teams die claims over biobased inhoud op product-, verpakkings- of materiaalniveau willen versterken",
-            "Organisaties die leveranciersbewijs, methodediscipline en gecontroleerde claimtaal willen opbouwen",
+            "Organisaties die leveranciersbewijs, methodediscipline en gedisciplineerde claimtaal willen opbouwen",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van methodologische aanpak, systeemgrenzen en datastructuur",
             "Steekproeven op leveranciersregistraties, inhoudsberekeningen en ondersteunende documenten",
@@ -816,7 +830,7 @@ export const nl: Dictionary = {
           bullets: [
             "Onafhankelijke verificatie waarin methodiek, datastructuur en ondersteunend bewijs samen worden bezien",
             "Een reviewdiscipline gericht niet alleen op het gedeclareerde aandeel, maar op de documentatie- en rekenstructuur erachter",
-            "Een professionele structuur die bestaande claims versterkt en op termijn gecontroleerdere systemen ondersteunt",
+            "Een professionele structuur die bestaande claims versterkt en op termijn gedisciplineerdere systemen ondersteunt",
           ],
         },
         cta: {
@@ -831,7 +845,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "ASI (Aluminium Stewardship Initiative) Verificatiebeoordeling",
         intro:
-          "De geloofwaardigheid van ASI-gerelateerde verklaringen en voorbereidingsdossiers binnen de aluminiumwaardeketen hangt niet alleen af van de aanwezigheid van documenten, maar ook van de consistentie van bewijsstructuren, de duidelijkheid van de koppeling met relevante criteria, de discipline van documentatie en het gebruik van verdedigbare disclosure-taal. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor voorbereidings- en technische beoordelingsprocessen die verband houden met het ASI-kader. Deze dienst creëert via een systematische beoordeling van bestaande registraties, operationeel bewijs, supply-chain-koppelingen en criteriagebaseerde dossierstructuren een betrouwbaarder, gecontroleerder en professioneler voorbereidingskader. Dit vervangt geen formele ASI-certificeringsbeslissing of verificatie door de schema-eigenaar, maar helpt organisaties zich met een sterker en beter gestructureerd technisch fundament voor te bereiden.",
+          "De geloofwaardigheid van ASI-gerelateerde verklaringen en voorbereidingsdossiers binnen de aluminiumwaardeketen hangt niet alleen af van de aanwezigheid van documenten, maar ook van de consistentie van bewijsstructuren, de duidelijkheid van de koppeling met relevante criteria, de discipline van documentatie en het gebruik van verdedigbare disclosure-taal. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor voorbereidings- en technische beoordelingsprocessen die verband houden met het ASI-kader. Deze dienst creëert via een systematische beoordeling van bestaande registraties, operationeel bewijs, supply-chain-koppelingen en criteriagebaseerde dossierstructuren een betrouwbaarder, gedisciplineerder en professioneler voorbereidingskader. Dit vervangt geen formele ASI-certificeringsbeslissing of verificatie door de schema-eigenaar, maar helpt organisaties zich met een sterker en beter gestructureerd technisch fundament voor te bereiden.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -845,11 +859,11 @@ export const nl: Dictionary = {
           bullets: [
             "Aluminiumproducenten die zich met sterkere, beter georganiseerde technische dossiers willen voorbereiden op het ASI-traject",
             "Duurzaamheidsteams in multi-site structuren die bewijsdiscipline en criteria-afstemming willen versterken",
-            "Organisaties die supply chain, traceerbaarheid en verantwoorde productie in een gecontroleerder kader willen plaatsen",
+            "Organisaties die supply chain, traceerbaarheid en verantwoorde productie in een gedisciplineerder kader willen plaatsen",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Huidige situatie tegen criteria, bewijsmatching en plausibiliteit van de documentatiestructuur",
             "Steekproeven op locatieregistraties, beleidssets, supply-chain-data en ondersteunende documenten",
@@ -884,7 +898,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "FSC / PEFC / EUDR Voorbereidings- en Documentatieverificatiebeoordeling",
         intro:
-          "De geloofwaardigheid van verklaringen en voorbereidingsdossiers in relatie tot FSC, PEFC en EUDR hangt niet alleen af van de aanwezigheid van documenten, maar ook van de consistentie van de ketenbeheerstructuur, de duidelijkheid van de due diligence-aanpak, de traceerbaarheid van supply-chain-registraties en het gecontroleerde gebruik van disclosure-taal voor externe communicatie. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor voorbereidings- en technische beoordelingsprocessen binnen het FSC / PEFC / EUDR-kader. Deze dienst creëert via een systematische beoordeling van bestaande registraties, leveranciersdocumentatie, traceerbaarheidsarchitectuur en criteriagebaseerde dossierstructuur een betrouwbaarder, gecontroleerder en professioneler voorbereidingskader.",
+          "De geloofwaardigheid van verklaringen en voorbereidingsdossiers in relatie tot FSC, PEFC en EUDR hangt niet alleen af van de aanwezigheid van documenten, maar ook van de consistentie van de ketenbeheerstructuur, de duidelijkheid van de due diligence-aanpak, de traceerbaarheid van supply-chain-registraties en het gedisciplineerd gebruik van disclosure-taal voor externe communicatie. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor voorbereidings- en technische beoordelingsprocessen binnen het FSC / PEFC / EUDR-kader. Deze dienst creëert via een systematische beoordeling van bestaande registraties, leveranciersdocumentatie, traceerbaarheidsarchitectuur en criteriagebaseerde dossierstructuur een betrouwbaarder, gedisciplineerder en professioneler voorbereidingskader.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -898,11 +912,11 @@ export const nl: Dictionary = {
           bullets: [
             "Producenten en exporteurs die sterkere technische dossiers willen voor FSC / PEFC / EUDR-gerelateerde trajecten",
             "Duurzaamheidsteams die supply-chain traceerbaarheid en bewijsdiscipline willen versterken",
-            "Organisaties die bronclaims en regelgevingsgereedheid in een gecontroleerder kader willen plaatsen",
+            "Organisaties die bronclaims en regelgevingsgereedheid in een gedisciplineerder kader willen plaatsen",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van ketenbeheerstructuur, broninformatie en bestaande registratie-architectuur",
             "Steekproeven op leveranciersdocumenten, due diligence-pakketten en ondersteunende registraties",
@@ -937,7 +951,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "GRI / ESRS Dataverificatie",
         intro:
-          "De betrouwbaarheid van duurzaamheidsdata in relatie tot GRI en ESRS hangt niet alleen af van gepubliceerde indicatoren, maar ook van de consistentie van indicatordefinities, de duidelijkheid van databronnen, de toereikendheid van controlepunten, de traceerbaarheid van de rekenlogica en de afstemming van het disclosure-kader op standaardverwachtingen. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor duurzaamheidsdata binnen het GRI / ESRS-bereik. Deze dienst creëert via een systematische beoordeling van datastromen, indicatorlogica, ondersteunend bewijs en het rapportagekader een betrouwbaarder, gecontroleerder en professioneler kader voor externe communicatie.",
+          "De betrouwbaarheid van duurzaamheidsdata in relatie tot GRI en ESRS hangt niet alleen af van gepubliceerde indicatoren, maar ook van de consistentie van indicatordefinities, de duidelijkheid van databronnen, de toereikendheid van controlepunten, de traceerbaarheid van de rekenlogica en de afstemming van het disclosure-kader op standaardverwachtingen. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor duurzaamheidsdata binnen het GRI / ESRS-bereik. Deze dienst creëert via een systematische beoordeling van datastromen, indicatorlogica, ondersteunend bewijs en het rapportagekader een betrouwbaarder, gedisciplineerder en professioneler kader voor externe communicatie.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -955,7 +969,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van indicatordefinitie, dataflow en disclosure-afstemming",
             "Steekproeven op brongegevens, ondersteunende registraties, rekenstructuur en controlepunten",
@@ -1008,7 +1022,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van KPI-definitie, dataflow en rekenlogica",
             "Steekproeven op brongegevens, ondersteunende documenten en controlepunten",
@@ -1041,9 +1055,9 @@ export const nl: Dictionary = {
       },
       "limited-assurance-readiness": {
         heroEyebrow: "Diensten",
-        title: "Beoordeling Voor Limited Assurance Readiness",
+        title: "Beoordeling voor limited assurance-gereedheid",
         intro:
-          "De kwaliteit van de voorbereiding op limited assurance hangt niet alleen af van de aanwezigheid van te rapporteren data, maar ook van de toereikendheid van de beheersingsomgeving, de ordening van bewijsstructuren, de traceerbaarheid van brongegevens, de duidelijkheid van proceseigenaarschap en een disclosure-kader dat gecontroleerd is ingericht. Meva Global biedt een onafhankelijke en gestructureerde technische review gericht op gereedheid voor limited assurance-verificatie. Deze dienst creëert via een systematische beoordeling van de huidige data- en beheersingsstructuur, ondersteunende documenten, verantwoordelijkheidsstromen en gereedheid vóór verificatie een gecontroleerder en professioneler voorbereidingskader. Dit vervangt geen assurance-opdracht en impliceert geen formele limited assurance-conclusie.",
+          "De kwaliteit van de voorbereiding op limited assurance hangt niet alleen af van de aanwezigheid van te rapporteren data, maar ook van de toereikendheid van de beheersingsomgeving, de ordening van bewijsstructuren, de traceerbaarheid van brongegevens, de duidelijkheid van proceseigenaarschap en een disclosure-kader dat gedisciplineerd is ingericht. Meva Global biedt een onafhankelijke en gestructureerde technische review gericht op gereedheid voor limited assurance-verificatie. Deze dienst creëert via een systematische beoordeling van de huidige data- en beheersingsstructuur, ondersteunende documenten, verantwoordelijkheidsstromen en gereedheid vóór verificatie een gedisciplineerder en professioneler voorbereidingskader. Dit vervangt geen formele limited assurance-opdracht en impliceert geen limited assurance-conclusie.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1061,7 +1075,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van beheersingsomgeving, dataflow en bewijsstructuur",
             "Steekproeven op brongegevens, ondersteunende documenten en proceseigenaarschap",
@@ -1073,7 +1087,7 @@ export const nl: Dictionary = {
           bullets: [
             "Versterkt de gereedheid vóór verificatie",
             "Vermindert risico’s door ontbrekend bewijs, zwakke beheersing en gefragmenteerde processen",
-            "Draagt bij aan een gecontroleerder, voorspelbaarder en efficiënter assurance-traject",
+            "Draagt bij aan een gedisciplineerder, voorspelbaarder en efficiënter traject richting limited assurance",
           ],
         },
         approach: {
@@ -1081,7 +1095,7 @@ export const nl: Dictionary = {
           bullets: [
             "Onafhankelijke gereedheidsreview waarin data, beheersing en ondersteunend bewijs integraal worden bezien",
             "Beoordelingsdiscipline gericht niet alleen op de eind-disclosure, maar op de procesinfrastructuur erachter",
-            "Professionele aanpak die de assurance-gereedheid van de organisatie versterkt",
+            "Professionele aanpak die de gereedheid voor externe review versterkt",
           ],
         },
         cta: {
@@ -1096,7 +1110,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Verificatie Van Niet-financiële Datacontroles",
         intro:
-          "De betrouwbaarheid van niet-financiële gegevens hangt niet alleen af van de bekendgemaakte indicatoren, maar ook van de consistentie van gegevensdefinities, de adequaatheid van beheersingsmechanismen, steekproefdiscipline, traceerbaarheid van brongegevens en een gecontroleerde opzet van de disclosure-structuur. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor niet-financiële datacontroles. Via een systematische beoordeling van gegevensdefinities, controlepunten, ondersteunende registraties en het disclosure-kader legt deze dienst een betrouwbaardere en professionelere rapportagebasis.",
+          "De betrouwbaarheid van niet-financiële gegevens hangt niet alleen af van de bekendgemaakte indicatoren, maar ook van de consistentie van gegevensdefinities, de adequaatheid van beheersingsmechanismen, steekproefdiscipline, traceerbaarheid van brongegevens en een gedisciplineerde opzet van de disclosure-structuur. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor niet-financiële datacontroles. Via een systematische beoordeling van gegevensdefinities, controlepunten, ondersteunende registraties en het disclosure-kader legt deze dienst een betrouwbaardere en professionelere rapportagebasis.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1114,7 +1128,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van gegevensdefinitie, controlflow en steekproefdiscipline",
             "Steekproeven op brongegevens, ondersteunende documenten en invoerpunten",
@@ -1126,7 +1140,7 @@ export const nl: Dictionary = {
           bullets: [
             "Versterkt betrouwbaarheid en traceerbaarheid van niet-financiële gegevens",
             "Vermindert bezwaren door definitie-inconsistentie, zwakke beheersing en disclosure-risico",
-            "Legt een steviger basis voor rapportage, stakeholdercommunicatie en assurance-voorbereiding",
+            "Legt een steviger basis voor rapportage en stakeholdercommunicatie",
           ],
         },
         approach: {
@@ -1149,7 +1163,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Verificatiebeoordeling binnenluchtkwaliteit en VOC",
         intro:
-          "De geloofwaardigheid van verklaringen over indoor air quality en VOC-emissies hangt niet alleen af van het gerapporteerde testresultaat, maar ook van de geschiktheid van de testscope, de naleving van de relevante norm, de juistheid van de product- en monsterdefinitie, de traceerbaarheid van laboratoriumdata en de manier waarop resultaten naar externe disclosures worden vertaald. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor data over indoor air quality en VOC-emissies. Deze dienst creëert via een systematische beoordeling van testrapporten, technische datastromen, disclosure-taal en ondersteunend bewijs een betrouwbaarder, gecontroleerder en professioneler kader voor extern gebruik.",
+          "De geloofwaardigheid van verklaringen over indoor air quality en VOC-emissies hangt niet alleen af van het gerapporteerde testresultaat, maar ook van de geschiktheid van de testscope, de naleving van de relevante norm, de juistheid van de product- en monsterdefinitie, de traceerbaarheid van laboratoriumdata en de manier waarop resultaten naar externe disclosures worden vertaald. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor data over indoor air quality en VOC-emissies. Deze dienst creëert via een systematische beoordeling van testrapporten, technische datastromen, disclosure-taal en ondersteunend bewijs een betrouwbaarder, gedisciplineerder en professioneler kader voor extern gebruik.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1163,11 +1177,11 @@ export const nl: Dictionary = {
           bullets: [
             "Producenten die interieurproducten naar exportmarkten willen brengen met sterkere technische dossiers",
             "Teams die VOC-data voor bouwmaterialen, oppervlakken, meubilair of vergelijkbare producten verificatiegestuurd willen neerzetten",
-            "Organisaties die technische testresultaten willen ondersteunen met gecontroleerde disclosure-taal",
+            "Organisaties die technische testresultaten willen ondersteunen met gedisciplineerde disclosure-taal",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van testrapporten, meetscope en productdefinitie",
             "Steekproeven op laboratoriumdata, monstertraceerbaarheid, technische registraties en ondersteunende documenten",
@@ -1201,7 +1215,7 @@ export const nl: Dictionary = {
       "cbam-verification-support": {
         title: "CBAM Emissieverificatie",
         intro:
-          "De betrouwbaarheid van emissiedata die in de CBAM-context wordt gebruikt, hangt niet alleen af van het gerapporteerde resultaat, maar ook van de duidelijkheid van systeemgrenzen, de geschiktheid van databronnen, de traceerbaarheid van leveranciersinput, de consistentie van de rekenlogica en de kwaliteit van ondersteunende documentatie. Meva Global biedt een onafhankelijke en gestructureerde technische verificatieaanpak voor emissiedata en gerelateerde disclosures die zijn voorbereid voor CBAM-gerelateerde rapportage. Via een systematische beoordeling van datastromen, methodologische keuzes, rapportagelogica en bewijsstructuur ontstaat een betrouwbaarder, gecontroleerder en professioneler kader voor externe verantwoording.",
+          "CBAM-rapportage is niet alleen een berekening; ze vereist een beheerste keten van scope, installatiegegevens, leveranciersbewijs, methodiek en dossierdiscipline. Meva Global levert onafhankelijke technische verificatie-ondersteuning voor emissiedata en disclosures die voor CBAM-gerelateerde rapportage worden voorbereid—met beoordeling van datastromen, methodologie en documentatie zodat het dossier traceerbaar blijft.",
         covers: {
           title: "Dienstomvang",
           bullets: [
@@ -1219,7 +1233,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van systeemgrenzen, datastromen en rekenlogica",
             "Steekproeven op leveranciersinput, emissiefactoren en ondersteunende documenten",
@@ -1231,7 +1245,7 @@ export const nl: Dictionary = {
           bullets: [
             "Versterkt betrouwbaarheid en traceerbaarheid van emissiedata in de CBAM-context",
             "Vermindert methodologische grijze zones en disclosure-risico",
-            "Bouwt een gecontroleerdere datafundering op tegenover keten-, afnemer- en toezichtverwachtingen",
+            "Bouwt een gedisciplineerdere datafundering op tegenover keten-, afnemer- en toezichtverwachtingen",
           ],
         },
         approach: {
@@ -1254,7 +1268,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "EU ETS Emissieverificatiebeoordeling",
         intro:
-          "De betrouwbaarheid van emissiedata in het kader van de EU ETS hangt niet alleen af van gerapporteerde totalen, maar ook van de juistheid van installatiegrenzen, consistentie van de monitoringaanpak, traceerbaarheid van activiteitendata, helderheid van de rekenlogica en de toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor EU ETS-gerelateerde emissiedata en voorbereidingsdossiers. Via een systematische beoordeling van datastromen, monitoringplanlogica, installatiegebonden registraties en het disclosure-kader ontstaat een betrouwbaarder, gecontroleerder en professioneler voorbereidingskader. Dit vervangt geen formele verificatieconclusie; het helpt organisaties om met sterkere technische infrastructuur vervolgstappen in te gaan.",
+          "De betrouwbaarheid van emissiedata in het kader van de EU ETS hangt niet alleen af van gerapporteerde totalen, maar ook van de juistheid van installatiegrenzen, consistentie van de monitoringaanpak, traceerbaarheid van activiteitendata, helderheid van de rekenlogica en de toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor EU ETS-gerelateerde emissiedata en voorbereidingsdossiers. Via een systematische beoordeling van datastromen, monitoringplanlogica, installatiegebonden registraties en het disclosure-kader ontstaat een betrouwbaarder, gedisciplineerder en professioneler voorbereidingskader. Dit vervangt geen formele verificatieconclusie; het helpt organisaties om met sterkere technische infrastructuur vervolgreview en verificatie aan te pakken.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1272,7 +1286,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van installatiegrenzen, monitoringlogica en dataflow",
             "Steekproeven op activiteitendata, rekenstructuur, ondersteunende registraties en emissie-inputs",
@@ -1307,7 +1321,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "F-gassen Verificatiebeoordeling",
         intro:
-          "De betrouwbaarheid van registraties en verklaringen rond F-gassen hangt niet alleen af van apparatuurlijsten, maar ook van de juistheid van gas-soort en -hoeveelheid, traceerbaarheid van service- en lekregistraties, consistentie van de rapportagelogica en toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor F-gas-gerelateerde data en voorbereidingsdossiers. Via een systematische beoordeling van apparatuurregistraties, onderhouds- en servicesporen, gasbewegingen en het disclosure-kader ontstaat een betrouwbaarder, gecontroleerder en professioneler voorbereidingskader.",
+          "De betrouwbaarheid van registraties en verklaringen rond F-gassen hangt niet alleen af van apparatuurlijsten, maar ook van de juistheid van gas-soort en -hoeveelheid, traceerbaarheid van service- en lekregistraties, consistentie van de rapportagelogica en toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor F-gas-gerelateerde data en voorbereidingsdossiers. Via een systematische beoordeling van apparatuurregistraties, onderhouds- en servicesporen, gasbewegingen en het disclosure-kader ontstaat een betrouwbaarder, gedisciplineerder en professioneler voorbereidingskader.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1325,7 +1339,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van apparatuurinventaris, gasregistraties en rapportagelogica",
             "Steekproeven op serviceregistraties, technische documenten, ondersteunende bestanden en hoeveelheidsdata",
@@ -1360,7 +1374,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Maritime MRV Verificatiebeoordeling",
         intro:
-          "De betrouwbaarheid van emissie- en brandstofdata in het kader van Maritime MRV hangt niet alleen af van gerapporteerde totalen, maar ook van de juistheid van scheepsgebonden datastromen, consistentie van brandstofverbruiksregistraties, traceerbaarheid van reisinformatie, helderheid van de monitoringlogica en toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor Maritime MRV-gerelateerde data en voorbereidingsdossiers. Via een systematische beoordeling van scheepsgebonden registraties, brandstofsporen, reisdata en het disclosure-kader ontstaat een betrouwbaarder, gecontroleerder en professioneler voorbereidingskader.",
+          "De betrouwbaarheid van emissie- en brandstofdata in het kader van Maritime MRV hangt niet alleen af van gerapporteerde totalen, maar ook van de juistheid van scheepsgebonden datastromen, consistentie van brandstofverbruiksregistraties, traceerbaarheid van reisinformatie, helderheid van de monitoringlogica en toereikendheid van ondersteunend bewijs. Meva Global biedt een onafhankelijke en gestructureerde verificatiebeoordeling voor Maritime MRV-gerelateerde data en voorbereidingsdossiers. Via een systematische beoordeling van scheepsgebonden registraties, brandstofsporen, reisdata en het disclosure-kader ontstaat een betrouwbaarder, gedisciplineerder en professioneler voorbereidingskader.",
         covers: {
           title: "Reikwijdte van de dienst",
           bullets: [
@@ -1378,7 +1392,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van scheepsgebonden dataflow, brandstofverbruik en reisregistraties",
             "Steekproeven op ondersteunende documenten, brongegevens, rapportagelogica en rekenstructuur",
@@ -1412,7 +1426,7 @@ export const nl: Dictionary = {
       "custom-verification": {
         title: "Maatwerk- en Second-Party Verificatie",
         intro:
-          "Maatwerk onafhankelijke verificatie- en second‑party reviewmodellen voor niet-standaard scopes en afnemer-/stakeholderbehoeften—gericht op helderheid, governance en gecontroleerde publieke formuleringen.",
+          "Maatwerk onafhankelijke verificatie- en second‑party reviewmodellen voor niet-standaard scopes en afnemer-/stakeholderbehoeften—gericht op helderheid, governance en gedisciplineerde publieke formuleringen.",
         covers: {
           title: "Wat dit dekt",
           bullets: [
@@ -1424,13 +1438,13 @@ export const nl: Dictionary = {
         forWho: {
           title: "Voor wie",
           bullets: [
-            "Organisaties met second-party of bespoke assurance behoefte",
+            "Organisaties met second-party of maatwerk — onafhankelijke review behoefte",
             "Inkoop- en ketenprogramma’s met eigen criteria",
             "Teams die claims, methodiek en bewijspakketten reviewen",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Criteriadefinitie en boundarybevestiging",
             "Bewijs-mapping en plausibiliteitschecks",
@@ -1440,7 +1454,7 @@ export const nl: Dictionary = {
         whyMatters: {
           title: "Waarom dit belangrijk is",
           bullets: [
-            "Maakt assurance mogelijk waar standaarden alleen niet volstaan",
+            "Maakt technische review mogelijk waar standaarden alleen niet volstaan",
             "Verbetert transparantie en verdedigbaarheid voor stakeholders",
             "Ondersteunt consistente besluitvorming over programma’s heen",
           ],
@@ -1462,7 +1476,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "ISO 14064-3 — Ondersteuning Bij Broeikasgasverificatie En Validatie",
         intro:
-          "De betrouwbaarheid van processen voor broeikasgasverificatie en validatie hangt niet alleen af van de uiteindelijke verklaring, maar ook van de duidelijkheid van de scope, de juiste definiëring van criteria, de toereikendheid van bewijsstructuren, de geschiktheid van het procesontwerp en de consistentie van technische besluitvorming. Meva Global biedt een onafhankelijke en gestructureerde technische beoordelingsaanpak voor verificatie- en validatieprocessen in de context van ISO 14064-3. Deze dienst helpt een betrouwbaarder, gecontroleerder en professioneler assurancekader op te zetten via de systematische beoordeling van procesopzet, bewijsstromen, beoordelingslogica en ondersteunende documentatie.",
+          "De betrouwbaarheid van processen voor broeikasgasverificatie en validatie hangt niet alleen af van de uiteindelijke verklaring, maar ook van de duidelijkheid van de scope, de juiste definiëring van criteria, de toereikendheid van bewijsstructuren, de geschiktheid van het procesontwerp en de consistentie van technische besluitvorming. Meva Global biedt een onafhankelijke en gestructureerde technische beoordelingsaanpak voor verificatie- en validatieprocessen in de context van ISO 14064-3. Deze dienst helpt een betrouwbaarder, gedisciplineerder en professioneler reviewkader op te zetten via de systematische beoordeling van procesopzet, bewijsstromen, beoordelingslogica en ondersteunende documentatie.",
         covers: {
           title: "Reikwijdte Van De Dienst",
           bullets: [
@@ -1474,13 +1488,13 @@ export const nl: Dictionary = {
         forWho: {
           title: "Voor Wie",
           bullets: [
-            "Organisaties die broeikasgasverklaringen met een gecontroleerd assurance-raamwerk willen ondersteunen",
+            "Organisaties die broeikasgasverklaringen met een gedisciplineerd verificatieraamwerk willen ondersteunen",
             "Teams die zich voorbereiden op een verificatie- of validatieproces",
             "Programma-eigenaren en projectteams die technische dossiers, bewijsketens en procesontwerp versterken",
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Beoordeling van scope-definitie, criteriaset en proceslogica",
             "Steekproeven op bewijsdossiers, datastromen en technische evaluatiestructuur",
@@ -1491,7 +1505,7 @@ export const nl: Dictionary = {
           title: "Waarom Dit Belangrijk Is",
           bullets: [
             "Versterkt de betrouwbaarheid en technische consistentie van verificatie- en validatieprocessen",
-            "Ondersteunt gecontroleerd onderbouwing van bevindingen, besluiten en disclosure-output",
+            "Ondersteunt gedisciplineerde onderbouwing van bevindingen, besluiten en disclosure-output",
             "Bouwt een steviger procesfundament voor vervolgreview, verklaringen en externe stakeholdercommunicatie",
           ],
         },
@@ -1515,7 +1529,7 @@ export const nl: Dictionary = {
         heroEyebrow: "Diensten",
         title: "Net-Zero en SBTi Technische Verificatie",
         intro:
-          "De geloofwaardigheid van net-zero-roadmaps en SBTi-gerelateerde doelstructuren hangt niet alleen af van de geformuleerde doelstellingen, maar ook van de consistentie van het transitietraject, de geloofwaardigheid van de reductielogica, de duidelijkheid van de scopeafbakening, de toereikendheid van de onderliggende datastructuur en de transparantie van de bewijsbasis. Meva Global biedt een onafhankelijke en gestructureerde technische verificatieaanpak voor net-zero- en SBTi-gerelateerde doelstructuren. Deze dienst creëert via een systematische beoordeling van doelarchitectuur, reductietrajecten, databasis en ondersteunende disclosure-structuren een betrouwbaarder, gecontroleerder en professioneler kader voor externe toelichtingen. Het vervangt geen formeel target approval-proces, maar helpt organisaties hun verklaringen en paraatheid op een sterker technisch fundament te bouwen.",
+          "De geloofwaardigheid van net-zero-roadmaps en SBTi-gerelateerde doelstructuren hangt niet alleen af van de geformuleerde doelstellingen, maar ook van de consistentie van het transitietraject, de geloofwaardigheid van de reductielogica, de duidelijkheid van de scopeafbakening, de toereikendheid van de onderliggende datastructuur en de transparantie van de bewijsbasis. Meva Global biedt een onafhankelijke en gestructureerde technische verificatieaanpak voor net-zero- en SBTi-gerelateerde doelstructuren. Deze dienst creëert via een systematische beoordeling van doelarchitectuur, reductietrajecten, databasis en ondersteunende disclosure-structuren een betrouwbaarder, gedisciplineerder en professioneler kader voor externe toelichtingen. Het vervangt geen formeel target approval-proces, maar helpt organisaties hun verklaringen en paraatheid op een sterker technisch fundament te bouwen.",
         covers: {
           title: "Reikwijdte Van De Dienst",
           bullets: [
@@ -1533,7 +1547,7 @@ export const nl: Dictionary = {
           ],
         },
         typicalScope: {
-          title: "Focus Van De Beoordeling",
+          title: "Focus van de beoordeling",
           bullets: [
             "Plausibiliteitsbeoordeling van doelkader, scope en reductietraject",
             "Steekproeven op databronnen, aannames en technische ondersteuningsstructuur",
@@ -1545,7 +1559,7 @@ export const nl: Dictionary = {
           bullets: [
             "Versterkt de geloofwaardigheid van net-zero- en doelgerichte klimaatdisclosures",
             "Vermindert methodologische onduidelijkheid en disclosure-risico in doelframing",
-            "Bouwt een gecontroleerdere toelichtingsbasis richting investeerders, afnemers en andere stakeholders",
+            "Bouwt een gedisciplineerdere toelichtingsbasis richting investeerders, afnemers en andere stakeholders",
           ],
         },
         approach: {
@@ -1571,7 +1585,7 @@ export const nl: Dictionary = {
       heroEyebrow: "CBAM",
       title: "CBAM-oplossingen",
       intro:
-        "Het koolstofgrensinstrument leest emissie-informatie op installatie- en procesniveau—niet alleen als totaal. We ondersteunen exporteurs en producenten met assurance-gerichte technische review: scherpere scope, traceerbaarheid, leveranciersbewijs, installatiegebonden rekenpaden en de opbouw van externe CBAM-pakketten. Het doel is data-architectuur en disclosure-discipline te versterken vóór rapportagecycli en externe beoordeling. Dit is onafhankelijke technische review-ondersteuning; geen regelgevende goedkeuring en geen vervanging van formele verificatie waar die vereist is.",
+        "Het koolstofgrensinstrument leest emissie-informatie op installatie- en procesniveau—niet alleen als totaal. We ondersteunen exporteurs en producenten met gestructureerde technische review: scherpere scope, traceerbaarheid, leveranciersbewijs, installatiegebonden rekenpaden en de opbouw van externe CBAM-pakketten. Het doel is data-architectuur en disclosure-discipline te versterken vóór rapportagecycli en externe beoordeling. Dit is onafhankelijke technische review-ondersteuning; geen regelgevende goedkeuring en geen vervanging van formele verificatie waar die vereist is.",
       heroImageAlt:
         "Werkplek met CBAM-technische documenten, emissiegrafieken en havenlogistiek als context voor carbon border reporting",
       sections: [
@@ -1604,11 +1618,11 @@ export const nl: Dictionary = {
           bullets: [
             "Bewijs-matching en plausibiliteit op materiële leveranciersinputs",
             "Installatiegerichte review van activiteitsdata, proceslogica en rekenketens",
-            "Gestructureerde bevindingen om hiaten te sluiten vóór indiening, overdracht of diepere assurance-stappen",
+            "Gestructureerde bevindingen om hiaten te sluiten vóór indiening, overdracht of diepere reviewstappen",
           ],
         },
         {
-          title: "Meva’s assurance-gedreven samenwerkingsmodel",
+          title: "Meva’s model voor technische beoordeling en samenwerking",
           bullets: [
             "Onafhankelijke technische review-houding die aansluit bij hoe CBAM-informatie wordt verwacht te overtuigen",
             "Eén beoordelingslijn voor bewijskwaliteit, datastructuren en disclosure-grenzen",
@@ -1620,17 +1634,17 @@ export const nl: Dictionary = {
         title: "",
         body: "Deel uw actuele datasets, installatiegebonden rekenontwerp en leveranciersbewijs—we stemmen reviewediepte af op uw rapportagecontext en planning.",
         primaryLabel: "Offerte aanvragen",
-        secondaryLabel: "Diensten verkennen",
-        tertiaryLabel: "Details",
+        secondaryLabel: "Bekijk diensten",
+        tertiaryLabel: "Bekijk details",
       },
     },
     process: {
       accreditation: {
-        eyebrow: "Onafhankelijkheid • Technische Bekwaamheid • Institutionele Zekerheid",
+        eyebrow: "Onafhankelijkheid • Technische Bekwaamheid • Institutionele Discipline",
         title: "Accreditatie",
         status: "Accreditatievoorbereiding loopt",
         body:
-          "MEVA Global Certification versterkt haar internationale accreditatie-infrastructuur via gedisciplineerd werk op het gebied van kwaliteitsmanagement, methodologische consistentie, dossierdiscipline, waarborgen voor onpartijdigheid en technische bekwaamheid. Deze voorbereidingen ondersteunen dienstverlening die traceerbaarder, consistenter en sterker afgestemd is op relevante normverwachtingen. Na afronding van het accreditatieproces worden geldige scope-informatie en officiële documentatiedetails in dit gebied gepubliceerd.",
+          "MEVA Global Certification versterkt haar internationale accreditatie-infrastructuur via gedisciplineerd werk op het gebied van kwaliteitsmanagement, methodologische consistentie, dossierdiscipline, controles rond onpartijdigheid en technische bekwaamheid—waaronder ISO/IEC 17029-accreditatieactiviteiten die nog lopen en onderworpen zijn aan de formele vaststelling door de bevoegde accreditatie-instelling en de geldende openbaarmakingsregels. Deze voorbereidingen ondersteunen dienstverlening die traceerbaarder, consistenter en sterker afgestemd is op relevante normverwachtingen. Zodra accreditatieformeel is vastgesteld, worden geldige scope-informatie en officiële documentatie hier gepubliceerd.",
         heroImageAlt:
           "Verificatieprocesreview met professionele documentatie, checklist en procesflow in een corporate setting",
       },
@@ -1638,18 +1652,21 @@ export const nl: Dictionary = {
         navAriaLabel: "Pagina-secties accreditatie",
         accreditation: "Accreditatie",
         verificationProcess: "Verificatieproces",
-        documents: "Documenten",
+        documents: "Bedrijfsdocumenten",
       },
       corporateDocumentsSection: {
-        title: "Documenten",
+        title: "Bedrijfsdocumenten",
         intro:
-          "Gepubliceerde kerndocumenten van MEVA Global Certification met betrekking tot validatie, verificatie, onpartijdigheid, vertrouwelijkheid en gebruiksregels.",
+          "In deze sectie vindt u kern-documenten over verificatie, validatie, onpartijdigheid, vertrouwelijkheid en het gebruik van verklaringen.",
+        fileUnavailableNote:
+          "Het actuele PDF-bestand voor dit document is in deze omgeving niet beschikbaar. Gerelateerde materie kan via de kennisbank worden benaderd; u kunt ook contact opnemen voor ondersteuning.",
+        knowledgeHubLinkLabel: "Kennisbank bekijken",
         labels: {
           publicationStatus: "Publicatiestatus",
           firstPublished: "Eerste publicatie",
           documentLanguage: "Taal",
           view: "Document bekijken",
-          download: "Downloaden",
+          download: "PDF downloaden",
         },
         publicationStatusFirst: "Eerste publicatie",
         languageValue: "EN · TR · NL",
@@ -1657,7 +1674,7 @@ export const nl: Dictionary = {
       verification: {
         title: "Verificatieproces",
         body:
-          "Elke opdracht wordt uitgevoerd via een gestructureerde beoordelingsroute die de scope helder houdt, bewijs traceerbaar maakt en technische beslissingen verdedigbaar onderbouwt. Het proces verloopt onder duidelijke rollen, passende methodologie en waarborgen voor onpartijdigheid.",
+          "Elke opdracht wordt uitgevoerd via een gestructureerde beoordelingsroute die de scope helder houdt, bewijs traceerbaar maakt en technische beslissingen verdedigbaar onderbouwt. Het proces verloopt onder duidelijke rollen, passende methodologie en controles rond onpartijdigheid.",
       },
       steps: [
         {
@@ -1686,7 +1703,7 @@ export const nl: Dictionary = {
             "Waar passend worden de operationele flow, verantwoordelijke personen en controlepunten ter plaatse beoordeeld.",
         },
         {
-          title: "Onafhankelijke Interne Technische Review",
+          title: "Onafhankelijke interne technische beoordeling",
           description:
             "De conceptbeslissing en verklaring worden vóór definitieve afgifte onderworpen aan een onafhankelijke interne technische beoordeling.",
         },
@@ -1697,20 +1714,24 @@ export const nl: Dictionary = {
         },
       ],
       cta: {
-        eyebrow: "Onafhankelijke Verificatie • Validatie • Assurance",
-        title: "Vraag Een Gestructureerde Technische Beoordeling Aan",
+        eyebrow: BRAND_POSITIONING_LINE.nl,
+        title: "Vraag een gestructureerde technische beoordeling aan",
         body:
-          "Deel uw scope, toepasselijke normen en gewenste planning. Wij koppelen terug met een beoordelingsaanpak die past bij uw rapportagecontext, duidelijke verwachtingen ten aanzien van bewijs en heldere vervolgstappen.",
-        primaryLabel: "Offerte Aanvragen",
-        secondaryLabel: "Diensten Bekijken",
+          "Deel uw scope, toepasselijke normen en gewenste planning. Wij reageren met een beoordelingsaanpak die past bij uw rapportagecontext, met duidelijke bewijsverwachtingen en een vastgelegde tijdlijn.",
+        primaryLabel: "Offerte aanvragen",
+        secondaryLabel: "Bekijk diensten",
       },
     },
     statementSearch: {
-      title: "Verklaring Opzoeken",
+      title: "Verklaringsregister En Statuscontrole",
       intro:
-        "Zoek hier gepubliceerde registraties uit het onafhankelijke verificatie-, validatie- en assurance-pad van Meva Global. Getoonde velden volgen openbare registerregels en programmagrenzen.",
+        "Via dit register kunt u gepubliceerde verklaringsrecords controleren aan de hand van referentiegegevens. De samenvatting en statusvelden die hier worden getoond, dienen uitsluitend voor openbare referentiecontrole en vormen op zichzelf geen juridisch advies, formeel consultancy-oordeel of bindende beslissing.",
+      heroEyebrow: "Verklaringsregister • Statuscontrole • Referentiecontrole",
+      heroImageAlt:
+        "Werkplek met registerscherm voor verklaringen en samenvatting van openbare registratie-informatie.",
+      panelTitle: "Registerraadpleging",
       note:
-        "Registerinformatie ondersteunt transparantie en is beperkt tot openbare velden; het is geen juridisch advies en geen garantie van formele acceptatie. Vermeld het referentienummer in correspondentie.",
+        "Getoonde informatie ondersteunt transparantie en kan door programmaregels worden begrensd; het is geen juridisch advies en geen zelfstandige regelgevende vaststelling. Vermeld het referentienummer in correspondentie.",
       fields: {
         statementNumber: "Referentienr.",
         companyName: "Bedrijfsnaam",
@@ -1723,7 +1744,7 @@ export const nl: Dictionary = {
       },
       labels: {
         status: "Status",
-        verifiedValue: "Geverifieerde Waarde",
+        verifiedValue: "Geverifieerde waarde",
         office: "Kantoor",
         schemeType: "Type opdracht",
         clear: "Wissen",
@@ -1737,13 +1758,13 @@ export const nl: Dictionary = {
           Withdrawn: "Ingetrokken",
         },
         office: {
-          Türkiye: "Türkiye",
+          Türkiye: "Turkije",
           Netherlands: "Nederland",
         },
         schemeType: {
           verification: "Verificatie",
           validation: "Validatie",
-          assurance: "Assurance",
+          assurance: "Onafhankelijk onderzoek",
         },
       },
       resultTitle: "Resultaten",
@@ -1756,24 +1777,24 @@ export const nl: Dictionary = {
       },
     },
     documents: {
-      title: "Bronnen",
+      title: "Kennisbank",
       hero: {
-        eyebrow: "Technische Kennis • Methodologie • Governance Van Openbaarmaking",
-        title: "Bronnen",
+        eyebrow: "Kennisbronnen • Richtlijnen • Technische Notities",
+        title: "Kennisbank voor verificatie en regelgevingsvoorbereiding",
         body:
-          "Gestructureerde technische notities voor teams die op het snijvlak van regelgeving en externe rapportage werken—rond CBAM, koolstofverificatie, EPD/LCA critical review en assurance readiness. De nadruk ligt op verdedigbare scope, traceerbaar bewijs, bewuste methodologiekeuzes en het bestuur van cijfers en claims voor externe communicatie.",
+          "We delen regelmatig inhoud over bewijsdiscipline, documentatiekwaliteit en technische gereedheid rond verificatie, validatie, CBAM, productverklaringen en duurzaamheidsrapportage.",
         heroImageAlt:
           "Werkplek met standaardreferenties, ordners, LCA-materialen en analytische aantekeningen in een heldere kantooromgeving.",
       },
-      sectionLabel: "Uitgelichte technische notities",
+      sectionLabel: "Uitgelichte inhoud",
       cards: [
         {
           category: "CBAM",
           date: "2026-04-19",
           title: "Wat Betekent “Betrouwbare Emissiegegevens” Werkelijk Bij CBAM-Voorbereiding?",
           body:
-            "Een compact kader om grensdisiplines, bewijsvoldoendeheid en datakwaliteit technisch te beoordelen vóór CBAM-informatie voor aangifte wordt samengebracht.",
-          cta: "Notitie openen",
+            "Een compact kader om grensdiscipline, bewijsvoldoendeheid en datakwaliteit technisch te beoordelen vóór CBAM-informatie voor aangifte wordt samengebracht.",
+          cta: "Bekijk de technische notitie",
           href: "/documents/cbam-reliable-emissions-data",
         },
         {
@@ -1782,7 +1803,7 @@ export const nl: Dictionary = {
           title: "Hoe Breng Je Scope, Methodologie En Stakeholderverwachtingen Op Eén Lijn Bij Koolstofverificatie?",
           body:
             "Hoe traceerbare aannames, expliciete controlepunten en bewuste methodologiekeuzes leiden tot rapportage die technische beoordeling weerstaat.",
-          cta: "Notitie openen",
+          cta: "Bekijk de technische notitie",
           href: "/documents/carbon-verification-alignment",
         },
         {
@@ -1791,38 +1812,38 @@ export const nl: Dictionary = {
           title: "Veelvoorkomende Zwakke Punten In EPD- En LCA-Critical Review",
           body:
             "Terugkerende thema’s—PCR-afstemming, voorgrondtraceerbaarheid, allocatieverdedigbaarheid, scenariotransparantie en consistentie van model tot rapport.",
-          cta: "Notitie openen",
+          cta: "Bekijk de technische notitie",
           href: "/documents/epd-lca-critical-weaknesses",
         },
         {
-          category: "Assurance",
+          category: "Technische beoordeling",
           date: "2026-04-19",
-          title: "Waarom De Keuze Van Het Assurance-Niveau Belangrijk Is Bij Duurzaamheidsclaims",
+          title: "Waarom Reviewdiepte Belangrijk Is Bij Duurzaamheidsclaims",
           body:
-            "Beperkte en hogere assurance afstemmen op beslissingsrisico, derdenvertrouwen en de bewijsdiepte die uw assurance-taal impliciteert.",
-          cta: "Notitie openen",
+            "Beperkte en diepere onafhankelijke review afstemmen op beslissingsrisico, derdenvertrouwen en de bewijsdiepte die uw technische formulering impliciteert.",
+          cta: "Bekijk de technische notitie",
           href: "/documents/sustainability-assurance-levels",
         },
       ],
       bottomCta: {
-        eyebrow: "Technische Beoordeling • Onafhankelijke Benadering",
-        title: "Behoefte Aan Een Diepere Technische Beoordeling Over Een Specifiek Onderwerp?",
+        eyebrow: "Technische beoordeling • onafhankelijke benadering",
+        title: "Behoefte aan een diepere technische beoordeling over een specifiek onderwerp?",
         body:
-          "Deel uw rapportagecontext, toepasselijke norm en hoe de informatie extern wordt gebruikt—we stemmen reviewediepte, bewijsverwachtingen en vervolgstappen hierop af.",
-        primary: "Neem Contact Op",
-        secondary: "Bekijk Diensten",
+          "Deel uw rapportagecontext, toepasselijke norm en hoe de informatie extern wordt gebruikt—we stemmen reviewediepte, bewijsverwachtingen en tijdlijn hierop af.",
+        primary: "Contact",
+        secondary: "Bekijk diensten",
       },
       resourceArticles: documentsResourceArticlesNl,
     },
     insights: {
       title: "Inzichten",
-      intro: "Korte, technische notities over CBAM, carbonverificatie en assurance-ready rapportage—met focus op bewijs, grenzen en publicatiediscipline.",
+      intro: "Korte, technische notities over CBAM, carbonverificatie en rapportage die klaar is voor externe review—met focus op bewijs, grenzen en publicatiediscipline.",
       readMore: "Lees verder",
     },
     contact: {
       title: "Contact",
       intro:
-        "Neem contact op met het team dat bij je vraag past. Deel scope, standaarden en planning—of neem kort contact op—en we reageren met gestructureerde vervolgstappen voor onafhankelijke verificatie, validatie of assurance. Gebruikelijke reactietijd: één tot twee werkdagen.",
+        "Neem contact op met het kantoor dat het beste bij uw vraag past. Deel scope, toepasselijke normen of programmaregels en planning; we antwoorden op uw vraag over onafhankelijke verificatie, validatie of technische beoordeling—doorgaans binnen één à twee werkdagen.",
       heroImageAlt:
         "Zakelijke bureau-opstelling met contactnotities, telefoon en Meva Certification-materialen in een licht kantoor.",
       officesTitle: "Kantoren",
@@ -1868,7 +1889,7 @@ export const nl: Dictionary = {
         title: "Een voorstel op maat nodig?",
         body: "Deel scope en deadline. We doen een voorstel met beoordelingspad, bewijsverwachtingen en planning—afgestemd op het beoogde externe gebruik.",
         primaryLabel: "Offerte aanvragen",
-        secondaryLabel: "Diensten verkennen",
+        secondaryLabel: "Bekijk diensten",
       },
     },
   },
@@ -1877,6 +1898,7 @@ export const nl: Dictionary = {
     typicalUse: "Typische toepassingen",
     whatWeDo: "Wat we doen",
     deliverables: "Resultaten",
+    relatedServicesTitle: "Gerelateerde Diensten",
   },
 };
 

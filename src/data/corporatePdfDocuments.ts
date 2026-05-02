@@ -9,11 +9,23 @@ export type CorporatePdfId =
 
 type Localized = Record<Locale, string>;
 
+/**
+ * Canonical `/public/docs/` URLs for corporate PDFs.
+ * Codes use **P-VV-*** / **F-VV-*** / **T-VV-*** (hyphens). Never **PV-006** — that pattern 404s.
+ */
+export const CORPORATE_PDF_PUBLIC_PATHS = {
+  fVv026GeneralTerms: "/docs/F-VV-026-general-terms.pdf",
+  pVv006ComplaintAppeal: "/docs/P-VV-006-complaint-appeal.pdf",
+  pVv010Impartiality: "/docs/P-VV-010-impartiality.pdf",
+  pVv011Confidentiality: "/docs/P-VV-011-confidentiality.pdf",
+  tVv003LogoStatementUsage: "/docs/T-VV-003-logo-statement-usage.pdf",
+} as const;
+
 export type CorporatePdfDocument = {
   id: CorporatePdfId;
   code: string;
-  /** Public URL under `/public/docs`. */
-  file: `/${string}`;
+  /** Public URL under `public/docs/` (served as `/docs/...`). */
+  pdfUrl: `/${string}`;
   title: Localized;
   typeLabel: Localized;
   shortDescription: Localized;
@@ -26,9 +38,9 @@ export const CORPORATE_PDF_DOCUMENTS: readonly CorporatePdfDocument[] = [
   {
     id: "f-vv-026",
     code: "F.VV.026",
-    file: "/docs/F-VV-026-general-terms.pdf",
+    pdfUrl: CORPORATE_PDF_PUBLIC_PATHS.fVv026GeneralTerms,
     title: {
-      tr: "Genel Şartlar Ve Koşullar",
+      tr: "Genel Şartlar ve Koşullar",
       en: "General Terms And Conditions",
       nl: "Algemene Voorwaarden",
     },
@@ -47,9 +59,9 @@ export const CORPORATE_PDF_DOCUMENTS: readonly CorporatePdfDocument[] = [
   {
     id: "p-vv-006",
     code: "P.VV.006",
-    file: "/docs/P-VV-006-complaint-appeal.pdf",
+    pdfUrl: CORPORATE_PDF_PUBLIC_PATHS.pVv006ComplaintAppeal,
     title: {
-      tr: "Şikâyet Ve İtiraz Prosedürü",
+      tr: "Şikâyet ve İtiraz Prosedürü",
       en: "Complaint And Appeal Procedure",
       nl: "Klachten- En Beroepsprocedure",
     },
@@ -68,7 +80,7 @@ export const CORPORATE_PDF_DOCUMENTS: readonly CorporatePdfDocument[] = [
   {
     id: "p-vv-010",
     code: "P.VV.010",
-    file: "/docs/P-VV-010-impartiality.pdf",
+    pdfUrl: CORPORATE_PDF_PUBLIC_PATHS.pVv010Impartiality,
     title: {
       tr: "Tarafsızlık Prosedürü",
       en: "Impartiality Procedure",
@@ -82,14 +94,14 @@ export const CORPORATE_PDF_DOCUMENTS: readonly CorporatePdfDocument[] = [
     shortDescription: {
       tr: "Tarafsızlığın korunması, çıkar çatışmalarının yönetimi ve bağımsız karar yapısına ilişkin kurallar.",
       en: "Procedure describing safeguards for impartiality, conflict-of-interest management, and objective decision-making.",
-      nl: "Procedure voor het waarborgen van onpartijdigheid, het beheersen van belangenconflicten en objectieve besluitvorming.",
+      nl: "Procedure die maatregelen voor onpartijdigheid beschrijft, belangenconflicten beheerst en objectieve besluitvorming ondersteunt.",
     },
     firstPublished: "2026-04-18",
   },
   {
     id: "p-vv-011",
     code: "P.VV.011",
-    file: "/docs/P-VV-011-confidentiality.pdf",
+    pdfUrl: CORPORATE_PDF_PUBLIC_PATHS.pVv011Confidentiality,
     title: {
       tr: "Gizlilik Prosedürü",
       en: "Confidentiality Procedure",
@@ -110,9 +122,9 @@ export const CORPORATE_PDF_DOCUMENTS: readonly CorporatePdfDocument[] = [
   {
     id: "t-vv-003",
     code: "T.VV.003",
-    file: "/docs/T-VV-003-logo-statement-usage.pdf",
+    pdfUrl: CORPORATE_PDF_PUBLIC_PATHS.tVv003LogoStatementUsage,
     title: {
-      tr: "Logo Ve Beyan Kullanım Talimatı",
+      tr: "Logo ve Beyan Kullanım Talimatı",
       en: "Logo And Statement Usage Instruction",
       nl: "Instructie Voor Het Gebruik Van Logo En Verklaring",
     },

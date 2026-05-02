@@ -7,11 +7,8 @@ import { getService, services } from "@/data/services";
 import type { Locale } from "@/i18n/locales";
 import type { Dictionary } from "@/i18n/types";
 import type { VerificationIconKey } from "@/components/verification/VerificationServiceIcon";
-import { mergeServiceDetailWithEnglishFallback } from "@/lib/verification/mergeServiceDetailLocale";
-import { getServiceHeroVisual, type ServiceHeroVisual } from "@/lib/verification/serviceHeroVisuals";
 
 // --- Listing registry (canonical; verificationServiceRegistry re-exports for legacy imports) ---
-
 export type VerificationServicesListingGroupKey =
   | "climateAndCarbonAssurance"
   | "productAndEnvironmentalClaims"
@@ -22,6 +19,15 @@ export type VerificationServicesListingGroupKey =
 export type VerificationServicesListingGroup = {
   key: VerificationServicesListingGroupKey;
   slugs: readonly Service["slug"][];
+};
+
+/** Stable `id`s for in-page anchor navigation on `/verification-services`. */
+export const VERIFICATION_LISTING_GROUP_ANCHOR_IDS: Record<VerificationServicesListingGroupKey, string> = {
+  climateAndCarbonAssurance: "services-climate-carbon",
+  productAndEnvironmentalClaims: "services-product-declarations",
+  builtEnvironmentAndMaterialHealth: "services-indoor-materials",
+  responsibleSupplyChainsAndSectorSchemes: "services-supply-chain",
+  esgAndReportingAssurance: "services-esg-reporting",
 };
 
 /** Canonical group order + slug order for the verification-services index. */
@@ -206,9 +212,7 @@ export function verifyListingIconKeysMatchGroups(): void {
   }
 }
 
-// --- Listing + detail payloads for routes ---
-
-type ServiceDetails = Dictionary["pages"]["serviceDetails"][Service["slug"]];
+// --- Listing for routes (detail merge + `public/` image resolution: `verificationDetailPayload.ts` — server-only) ---
 
 export type VerificationListingCardModel = {
   slug: Service["slug"];
@@ -223,26 +227,6 @@ export type VerificationListingSectionModel = {
   groupKey: VerificationServicesListingGroupKey;
   cards: VerificationListingCardModel[];
 };
-
-function isRenderableDetail(d: ServiceDetails | undefined): boolean {
-  if (!d || typeof d !== "object") return false;
-  if ("variant" in d && (d as { variant?: string }).variant === "editorial") {
-    const e = d as { title?: unknown; intro?: unknown };
-    return (
-      typeof e.title === "string" &&
-      e.title.trim().length > 0 &&
-      typeof e.intro === "string" &&
-      e.intro.trim().length > 0
-    );
-  }
-  const m = d as { title?: unknown; intro?: unknown; covers?: unknown; cta?: { body?: unknown } };
-  if (typeof m.title !== "string" || !m.title.trim()) return false;
-  if (typeof m.intro !== "string" || !m.intro.trim()) return false;
-  if (!m.covers) return false;
-  const body = m.cta && typeof m.cta.body === "string" ? m.cta.body.trim() : "";
-  if (!body) return false;
-  return true;
-}
 
 /**
  * Build listing sections: one pass, no env modes, no diagnostics.
@@ -291,52 +275,22 @@ export function getVerificationGroupIconKey(groupKey: VerificationServicesListin
   return GROUP_LISTING_ICON_KEY[groupKey] ?? "fileCheck2";
 }
 
-export type VerificationDetailPayload =
-  | {
-      ok: true;
-      slug: Service["slug"];
-      merged: ServiceDetails;
-      visual: ServiceHeroVisual;
-    }
-  | { ok: false };
-
 /**
- * Single merge path for detail routes (same inputs as before, without extra wrappers).
+ * All `/verification-services/[slug]` static params: listing order first, then remaining catalog slugs.
+ * Aligns SSG with `sitemap` and avoids 404s for service detail URLs that exist in `services.ts` but
+ * are not on the index listing.
  */
-export function getVerificationDetailPayload(
-  slug: string,
-  locale: Locale,
-  dict: Dictionary,
-  dictEn: Dictionary,
-): VerificationDetailPayload {
-  const row = getService(slug as Service["slug"]);
-  if (!row) return { ok: false };
-
-  let merged: ServiceDetails | undefined;
-  try {
-    merged = mergeServiceDetailWithEnglishFallback(
-      row.slug,
-      dict.pages.serviceDetails[row.slug],
-      dictEn.pages.serviceDetails[row.slug],
-      locale,
-    );
-  } catch {
-    return { ok: false };
-  }
-
-  if (!merged || !isRenderableDetail(merged)) return { ok: false };
-
-  return {
-    ok: true,
-    slug: row.slug,
-    merged,
-    visual: getServiceHeroVisual(row.slug),
-  };
-}
-
-/** Slugs that produce `/verification-services/[slug]` — same order as the listing registry. */
 export function getAllVerificationServiceSlugs(): Service["slug"][] {
-  return getVerificationRegistrySlugsInOrder();
+  const fromListing = getVerificationRegistrySlugsInOrder();
+  const seen = new Set<string>(fromListing);
+  const rest: Service["slug"][] = [];
+  for (const s of services) {
+    if (!seen.has(s.slug)) {
+      seen.add(s.slug);
+      rest.push(s.slug);
+    }
+  }
+  return [...fromListing, ...rest];
 }
 
 /**

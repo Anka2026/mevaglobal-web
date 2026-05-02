@@ -8,7 +8,12 @@ import {
   dispatchResourcesImageChanged,
 } from "@/lib/resourcesImageStorage";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass, visualImageHeroShadowClass } from "@/lib/visualImage";
+import {
+  heroEditorialMatteBgClass,
+  visualImageClipClass,
+  visualImageHeroShadowClass,
+  visualImageInnerClipClass,
+} from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/page-visuals/resources-hero.png";
 
@@ -70,21 +75,23 @@ export function ResourcesHeroImage({ alt = "", imageNote = "", uploadLabel = "" 
         className={cn(
           visualImageClipClass,
           visualImageHeroShadowClass,
-          "relative aspect-[4/3] w-full bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_88%,white)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_12%,transparent)]",
+          "relative aspect-[4/3] w-full",
         )}
       >
         {displaySrc ? (
-          <Image
-            src={displaySrc}
-            alt={alt}
-            fill
-            sizes="(max-width: 1024px) 100vw, 520px"
-            className="object-contain object-center p-4 sm:p-5"
-            unoptimized={displaySrc.startsWith("data:")}
-            onError={() => {
-              if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
-            }}
-          />
+          <div className={cn(visualImageInnerClipClass, heroEditorialMatteBgClass)}>
+            <Image
+              src={displaySrc}
+              alt={alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 520px"
+              className="object-contain object-center"
+              unoptimized={displaySrc.startsWith("data:")}
+              onError={() => {
+                if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
+              }}
+            />
+          </div>
         ) : (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-[color:var(--brand-accent-soft)] via-white to-[#eef5fa] p-6 text-center"

@@ -3,6 +3,10 @@ import type { Dictionary } from "@/i18n/types";
 import { CORPORATE_PDF_DOCUMENTS, formatDocDate } from "@/data/corporatePdfDocuments";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
+import { premiumSectionMuted } from "@/lib/premiumUi";
+
+const btnView =
+  "inline-flex h-10 items-center justify-center rounded-2xl px-4 text-sm font-semibold bg-[color:var(--brand-primary)] text-white shadow-sm transition-colors hover:bg-[color:var(--brand-primary-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]";
 
 export function CorporateDocumentsSection({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const copy = dict.pages.process.corporateDocumentsSection;
@@ -10,25 +14,30 @@ export function CorporateDocumentsSection({ locale, dict }: { locale: Locale; di
   return (
     <section
       id="corporate-documents"
-      className="scroll-mt-[4.5rem] border-t border-[color:var(--border-soft)] bg-white py-8 sm:py-9 lg:py-10"
+      className={cn(
+        "scroll-mt-[4.5rem] border-t border-[color:var(--border-soft)] py-9 sm:py-10 lg:py-11",
+        premiumSectionMuted,
+      )}
     >
       <Container>
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="text-[1.5rem] font-semibold leading-tight tracking-tight text-[color:var(--ink-dark)] sm:text-[1.65rem]">
-            {copy.title}
-          </h2>
-          <p className="mx-auto mt-3 max-w-[48rem] text-sm leading-[1.78] text-[color:var(--text-muted)] sm:mt-4 sm:text-[1.0625rem] sm:leading-[1.74]">
-            {copy.intro}
-          </p>
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-[1.5rem] font-semibold leading-tight tracking-tight text-[color:var(--ink-dark)] sm:text-[1.65rem]">
+              {copy.title}
+            </h2>
+            <p className="mx-auto mt-3 text-sm leading-[1.78] text-[color:var(--text-muted)] sm:mt-4 sm:text-[1.0625rem] sm:leading-[1.74]">
+              {copy.intro}
+            </p>
+          </div>
         </div>
 
-        <div className="mx-auto mt-7 grid max-w-7xl grid-cols-1 gap-5 sm:mt-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
+        <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-5 sm:mt-9 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
           {CORPORATE_PDF_DOCUMENTS.map((doc) => {
             const title = doc.title[locale];
             const desc = doc.shortDescription[locale];
             const type = doc.typeLabel[locale];
             const dateStr = formatDocDate(doc.firstPublished, locale);
-            const pdfUrl = doc.file;
+            const pdfUrl = doc.pdfUrl;
 
             return (
               <article
@@ -75,29 +84,9 @@ export function CorporateDocumentsSection({ locale, dict }: { locale: Locale; di
                   </div>
                 </dl>
 
-                <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
-                  <a
-                    href={pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      "inline-flex h-10 items-center justify-center rounded-2xl px-4 text-sm font-semibold",
-                      "bg-[color:var(--brand-primary)] text-white shadow-sm transition-colors hover:bg-[color:var(--brand-primary-hover)]",
-                      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
-                    )}
-                  >
+                <div className="mt-5">
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className={cn(btnView, "w-full sm:w-auto")}>
                     {copy.labels.view}
-                  </a>
-                  <a
-                    href={pdfUrl}
-                    download
-                    className={cn(
-                      "inline-flex h-10 items-center justify-center rounded-2xl border border-[color:var(--border-soft)] bg-white px-4 text-sm font-semibold text-[color:var(--ink-dark)]",
-                      "shadow-[var(--shadow-card)] transition-colors hover:border-[color:color-mix(in_oklab,var(--brand-accent)_28%,var(--border-soft))] hover:bg-[color:var(--brand-accent-soft)]",
-                      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
-                    )}
-                  >
-                    {copy.labels.download}
                   </a>
                 </div>
               </article>

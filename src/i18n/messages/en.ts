@@ -1,3 +1,4 @@
+import { BRAND_POSITIONING_LINE } from "../brandPositioning";
 import type { Dictionary } from "../types";
 import { documentsResourceArticlesEn } from "./bundles/documentsResourceArticles.en";
 import { newServiceDetailsEn } from "./extras/newServiceDetailsEn";
@@ -7,59 +8,59 @@ export const en: Dictionary = {
   meta: {
     siteName: "Meva Global Certification B.V.",
     siteDescription:
-      "Independent verification, validation and assurance body for carbon, environmental claims and CBAM-related reporting contexts—delivered through structured technical review and evidence discipline.",
+      "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
     pages: {
       home: {
-        title: "Independent Verification, Validation & Assurance",
+        title: "Independent Verification, Validation And Technical Review",
         description:
-          "Independent verification, validation, and assurance for carbon, product, and sustainability disclosures—methodological rigour, traceable evidence, and credible outward-facing communication.",
+          "Independent verification and validation for carbon, product, and sustainability disclosures—methodological rigour, traceable evidence, and disciplined outward-facing communication.",
       },
       about: {
         title: "About Meva Global",
         description:
-          "Independent verification, validation, and assurance—built on technical integrity, impartiality, and international delivery discipline.",
+          "Independent verification and validation—technical integrity, impartiality, and international delivery discipline.",
       },
       services: {
         title: "Services",
         description:
-          "Independent verification and technical review for climate data, product claims, environmental disclosures, responsible supply chains, and sustainability reporting—assurance-led delivery.",
+          "Independent verification and technical review for climate data, product claims, environmental disclosures, responsible supply chains, and sustainability reporting.",
       },
       cbam: {
         title: "CBAM Solutions",
         description:
-          "Assurance-style technical review for CBAM-facing emissions information—traceable plant-level logic, supplier evidence, disciplined scope, and defensible disclosure packs.",
+          "Structured technical review for CBAM-facing emissions information—traceable plant-level logic, supplier evidence, disciplined scope, and defensible disclosure packs.",
       },
       process: {
         title: "Accreditation",
         description:
-          "Accreditation preparations and independent verification process—quality systems, evidence discipline, and structured technical review at MEVA Global Certification.",
+          "Accreditation preparations and the verification governance framework at Meva Global Certification—including ongoing ISO/IEC 17029 accreditation-related activities, subject to formal accreditation body outcomes—with structured technical review and evidence discipline.",
       },
       statementSearch: {
-        title: "Statement Lookup",
+        title: "Statement records and status review",
         description:
-          "Public registry lookup for statements issued under Meva Global’s independent verification, validation and assurance pathway—search by reference or statement fields.",
+          "Review published statement records via reference data. Summaries and status are for public reference checking only—not legal advice or a binding decision.",
       },
       documents: {
-        title: "Resources",
+        title: "Knowledge Hub | Meva Global",
         description:
-          "Technical resources for CBAM, carbon verification, EPD/LCA critical review, and assurance—disciplined scope, traceable evidence, methodology, and outward disclosure governance.",
+          "Regular content on evidence discipline, documentation quality and technical readiness for verification, validation, CBAM, product declarations and sustainability reporting.",
       },
       insights: {
         title: "Insights",
         description:
-          "Short technical notes on CBAM, carbon verification and assurance-ready reporting—written for professional stakeholders.",
+          "Short technical notes on CBAM, carbon verification, and reporting ready for external review—written for professional stakeholders.",
       },
       contact: {
         title: "Contact",
         description:
-          "Reach the office that fits your enquiry. Share scope, standards and timing for independent verification, validation or assurance—we respond with clear next steps.",
+          "Reach the office that fits your enquiry. Share scope, standards, and timing for independent verification, validation, or technical review—we respond on a clear timeline.",
       },
     },
   },
   brand: {
     name: "Meva Global",
     legalName: "Meva Global Certification B.V.",
-    taglineTopBar: "Independent Verification • Validation • Assurance",
+    taglineTopBar: BRAND_POSITIONING_LINE.en,
   },
   shared: {
     offices: {
@@ -77,90 +78,92 @@ export const en: Dictionary = {
     services: "Services",
     cbam: "CBAM",
     process: "Accreditation",
-    representations: "Our Representations",
-    statementSearch: "Statement Lookup",
-    documents: "Resources",
+    representations: "Representations",
+    statementSearch: "Statement Search",
+    documents: "Knowledge Hub",
     insights: "Insights",
     contact: "Contact",
   },
   ctas: {
-    verifyStatement: "Statement Lookup",
-    requestQuote: "Request a quote",
+    verifyStatement: "Statement Search",
+    requestQuote: "Request a Proposal",
     contact: "Contact",
-    learnMore: "Details",
+    learnMore: "Explore Details",
+    exploreCbam: "Explore CBAM Solutions",
     exploreServices: "Explore Services",
     search: "Search",
     submit: "Send",
   },
   footer: {
     description:
-      "Independent verification, validation and assurance body for carbon, environmental claims and CBAM-related reporting contexts—delivered through structured technical review and evidence discipline.",
+      "An independent verification, validation and technical review body for carbon data, environmental declarations and CBAM reporting.",
     offices: "Our offices",
     quickLinks: "Explore",
     contactTitle: "Contact",
+    trustFootnote:
+      "Utrecht and Ankara offices coordinate international delivery with clear local routing.",
     rights: "All rights reserved.",
   },
   home: {
     hero: {
-      eyebrow: "Independent Verification • Validation • Assurance",
-      title:
-        "Independent Verification, Validation, and Assurance for Carbon, Product, and Sustainability Disclosures",
+      eyebrow: BRAND_POSITIONING_LINE.en,
+      title: "Independent Technical Review For Defensible Reporting",
       subtitle:
-        "Meva Global delivers independent verification, validation, and assurance-oriented technical services for greenhouse gas data, product and environmental declarations, sustainability disclosures, supply chain assessments, and CBAM-related reporting needs. Our approach treats methodological consistency, data traceability, evidence structure, and the credibility of outward-facing disclosures as one integrated challenge—so organisations do more than complete a review cycle; they build a stronger, more defensible, and more mature reporting foundation.",
+        "Meva Global delivers independent verification, validation and technical review for greenhouse gas information, product declarations, CBAM-facing reporting and sustainability disclosures—with traceable evidence, disciplined scope and defensible outputs.",
       heroImageAlt:
         "Meva Global technical reviewers examining evidence, records, and process controls on site at an industrial facility.",
-      primaryCta: "Request Proposal",
+      primaryCta: "Request a Proposal",
       secondaryCta: "Explore Services",
     },
-    trustHighlightsTitle: "Why Clients Trust Our Review Approach",
+    trustHighlightsTitle: "The Basis Of Trust",
     trustHighlights: [
       {
-        title: "Impartiality safeguards",
+        title: "Impartiality Controls",
         description:
           "A disciplined review model backed by independence controls, clear role separation, and documented decision pathways.",
       },
       {
-        title: "Evidence-led technical assessment",
+        title: "Evidence-Based Technical Assessment",
         description:
           "Structured review that examines methodology, data, calculation logic, and supporting records as a coherent whole.",
       },
       {
-        title: "Traceable records",
+        title: "Traceable Record Structure",
         description:
           "Documentation that makes document trails, data flows, and the basis for key assumptions visible and defensible.",
       },
       {
-        title: "International alignment",
+        title: "International Alignment Discipline",
         description:
           "A standards-led working style suited to cross-border reporting and multi-stakeholder disclosure expectations.",
       },
     ],
-    serviceAreasTitle: "Core service areas",
+    serviceAreasTitle: "Core Service Areas",
     serviceAreasIntro:
-      "We organise verification, validation, technical review, and assurance around climate and carbon management, product and environmental declarations, material health, responsible supply chains, and ESG information.",
+      "We organise verification, validation, and technical review across climate and carbon management, product and environmental declarations, material health, responsible supply chains, and ESG information.",
     serviceAreas: [
       {
-        title: "Climate and carbon assurance",
+        title: "Climate And Carbon Technical Review",
         description:
           "Verification anchored in methodology and evidence—for corporate and project greenhouse gas statements, product carbon data, embedded emissions, and net-zero readiness.",
       },
       {
-        title: "Product and environmental claim verification",
+        title: "Product And Environmental Claim Verification",
         description:
           "Services focused on data traceability and programme alignment across EPDs, life-cycle assessment, recycled content, and product-level environmental claims.",
       },
       {
-        title: "Indoor quality and material health",
+        title: "Indoor Quality and Material Health",
         description:
           "Verification-led technical review for indoor air quality and VOC data, HPDs, material composition, and green-building documentation—with emphasis on emissions profiles and disclosure-ready evidence.",
       },
       {
-        title: "Responsible supply chains and sector readiness",
+        title: "Responsible Supply Chains and Sector Readiness",
         description:
           "Traceability, sourcing claims, and technical readiness assessments aligned with ASI, FSC, PEFC, EUDR, and comparable sector expectations.",
       },
       {
-        title: "ESG and reporting assurance",
+        title: "ESG And Reporting Technical Review",
         description:
           "Review of control structures and evidence trails for sustainability data under GRI and ESRS, KPIs, and non-financial disclosures.",
       },
@@ -175,7 +178,7 @@ export const en: Dictionary = {
       {
         title: "Cross-border delivery discipline",
         description:
-          "With teams in Türkiye and the Netherlands, we offer a controlled, professional delivery model aligned with international client expectations.",
+          "With teams in Türkiye and the Netherlands, we offer a disciplined, professional delivery model aligned with international client expectations.",
       },
       {
         title: "Documented, traceable processes",
@@ -185,12 +188,12 @@ export const en: Dictionary = {
       {
         title: "Review depth matched to context",
         description:
-          "Scope and evidence expectations reflect risk, intended use, data maturity, and reporting context—not a one-size template.",
+          "Scope and evidence expectations reflect risk, intended use, data maturity and reporting context—not generic boilerplate applied regardless of technical stakes.",
       },
     ],
-    processTitle: "How we work",
+    processTitle: "Technical Assessment And Review Process",
     processIntro:
-      "Every engagement follows a structured technical review path aimed at clarity, traceability, and defensible outcomes.",
+      "Every engagement follows a documented technical assessment pathway aimed at clarity, traceable evidence and defensible outcomes.",
     processSteps: [
       {
         title: "Initial request",
@@ -201,7 +204,7 @@ export const en: Dictionary = {
         description: "Boundaries, criteria, applicable standards, and how the statement will be used are confirmed in writing.",
       },
       {
-        title: "Document and data review",
+        title: "Document and Data Review",
         description: "Evidence packs, calculation structures, completeness checks, and data trails are reviewed systematically.",
       },
       {
@@ -218,49 +221,52 @@ export const en: Dictionary = {
       },
       {
         title: "Finalisation",
-        description: "Statements, opinions, findings, or other agreed outputs are completed in a controlled manner.",
+        description:
+          "Statements, opinions, findings, or other agreed outputs are finalised through documented technical review and sign-off.",
       },
     ],
-    statementPreviewTitle: "Statement Lookup",
+    statementPreviewTitle: "Statement Search",
     statementPreviewIntro:
       "Search statements and certificates by reference number and review the published public scope summary where available.",
-    cbamTitle: "CBAM-focused support for exporters",
+    cbamEyebrow: "CBAM • Pre-Verification Readiness",
+    cbamTitle: "Technical Preparation For CBAM Pre-Verification",
     cbamIntro:
-      "CBAM reporting requires tighter discipline on emissions data, supplier inputs, system boundaries, and supporting documentation. Meva Global provides assurance-oriented technical review to strengthen data reliability, traceability, and disclosure infrastructure for external use. This is not a regulatory approval; it helps organisations reach a more controlled, defensible state of readiness.",
+      "CBAM reporting requires more than calculating emissions. Before formal verification, facility data, supplier evidence, system boundaries, methodology choices, and the reporting file must be brought to a technically consistent, traceable and review-ready state.",
     cbamBullets: [
-      "Evidence and data-gap review in a CBAM reporting context",
-      "Traceability and plausibility assessment at supplier and site level",
-      "Support for controlled documentation and disclosure infrastructure for external audiences",
+      "Review of facility boundaries, data sources, and calculation approach",
+      "Technical check of supplier inputs and supporting evidence structure",
+      "Consistency review of methodology, emissions logic, and reporting setup",
+      "Improvement of file structure and documentation readiness before formal verification",
     ],
-    cbamCardTitle: "CBAM assurance solutions",
+    cbamCardTitle: "Pre-Verification Focus",
     cbamCardText:
-      "Technical review for exporters and manufacturers preparing emissions disclosures in scope for CBAM—emphasising data quality, traceability, boundary control, and documentation discipline.",
+      "For exporters and producers, we review data quality, traceability, methodological clarity, and documentation discipline in CBAM files through independent technical review. This work does not replace formal verification; it strengthens readiness before the formal process.",
     globalTitle: "Our offices",
     ctaTitle: "Request a scoped review",
     ctaIntro:
-      "Share your scope, applicable standards and timeline. We’ll respond with a structured review plan, evidence expectations and clear next steps—aligned to your reporting context and intended external use.",
+      "Share your scope, applicable standards, and timeline. We respond with a structured review plan, evidence expectations, and a clear schedule—aligned to your reporting context and intended external use.",
   },
   pages: {
     about: {
-      eyebrow: "Independent Verification • Validation • Assurance",
+      eyebrow: BRAND_POSITIONING_LINE.en,
       title: "About Meva Global",
       intro: [
-        "Meva Global Certification B.V. is an international organisation providing independent verification, validation, and assurance services built on technical integrity, impartiality, and controlled decision-making.",
-        "As sustainability, climate, and ESG expectations become increasingly central to business, we support organisations in strengthening carbon, environmental, and sustainability-related disclosures through reliable data, traceable evidence, and clear methodology.",
-        "Our approach is built on independent assessment, sampling-based review, clear scope definition, and disciplined documentation. Our role is not only to conduct a review, but to help organisations present their disclosures and outputs on a more reliable, more controlled, and more professional basis.",
+        "Meva Global Certification B.V. is an international organisation providing independent verification, validation, and technical review services—technical integrity, impartiality, and documented decision discipline.",
+        "As sustainability, climate, and ESG expectations become increasingly central to business, we strengthen carbon, environmental, and sustainability-related disclosures through reliable data, traceable evidence, and clear methodology.",
+        "Our approach is built on independent assessment, sampling-based review, clear scope definition, and disciplined documentation. Our role is not only to conduct a review, but to help organisations present their disclosures and outputs on a more reliable, more defensible, and more professional basis.",
       ],
       sectionTitle: "About Meva Global",
       sections: [
         {
-          title: "Independence And Impartiality",
+          title: "Independence and Impartiality",
           bullets: [
-            "Working model supported by impartiality safeguards and conflict-of-interest controls",
+            "Working model supported by impartiality and conflict-of-interest controls",
             "Clear separation of review, technical assessment, and decision responsibilities",
             "Documented decision pathways that support consistency and credibility",
           ],
         },
         {
-          title: "Sustainability And ESG Focus",
+          title: "Sustainability and ESG Focus",
           bullets: [
             "Technical review approach that strengthens the credibility of sustainability and ESG-related disclosures",
             "Traceable evidence structures that support transparency, accountability, and stakeholder confidence",
@@ -270,29 +276,29 @@ export const en: Dictionary = {
         {
           title: "International Delivery Discipline",
           bullets: [
-            "Controlled delivery model supported by our structure across Türkiye and the Netherlands",
+            "Disciplined delivery model supported by our structure across Türkiye and the Netherlands",
             "Clear coordination and professional process management for exporters, manufacturers, and multi-stakeholder contexts",
             "Governance, review discipline, and delivery quality aligned with international expectations",
           ],
         },
         {
-          title: "Evidence And Traceability",
+          title: "Evidence and Traceability",
           bullets: [
             "Traceable evidence matching and sampling-based technical testing",
-            "Clear scope definition, transparent methodology, and controlled disclosure language",
+            "Clear scope definition, transparent methodology, and defensible disclosure language",
             "Structured records that support audit readiness and repeatability",
           ],
         },
         {
-          title: "Confidentiality And Controlled Access",
+          title: "Confidentiality and Access Discipline",
           bullets: [
-            "Controlled-access approach for client data, evidence files, and supporting records",
+            "Documented access and authorisation practices for client data, evidence files, and supporting records",
             "Secure handling of records, sampling outputs, and technical documentation",
             "Public-facing disclosure limited to the relevant service scope and disclosure level",
           ],
         },
         {
-          title: "Quality And Technical Integrity",
+          title: "Quality and Technical Integrity",
           bullets: [
             "Competence-based evaluator assignment and senior technical oversight",
             "Consistent criteria, robust sampling logic, and methodological discipline",
@@ -303,16 +309,16 @@ export const en: Dictionary = {
     },
     services: {
       title: "Services",
-      heroEyebrow: "Independent Technical Review Discipline",
+      heroEyebrow: BRAND_POSITIONING_LINE.en,
       intro:
-        "Meva Global provides independent verification, technical review, and assurance-oriented services across climate, product claims, environmental disclosures, responsible supply chains, and sustainability data. Our approach combines methodological consistency, data traceability, evidence quality, and disclosure credibility in a structured service model designed for outward-facing trust.",
+        "Our portfolio brings independent verification, validation and technical review together across climate and carbon data, product and environmental claims, responsible supply chains and sustainability reporting. Engagements are anchored in disciplined scope, traceable evidence, documented decision discipline and outputs proportionate to intended external use.",
       introSupport:
-        "Our portfolio spans corporate greenhouse gas data through product-level environmental claims, material-health reviews, and ESG data assurance—held together by one technical discipline. In every service line we emphasise scope clarity, evidence quality, methodological fit, and stakeholder confidence.",
+        "One technical spine—not a loose catalogue: confirm criteria in writing, test the evidence chain, express findings with restraint, and align disclosure language with how regulators, buyers and reviewers will read the file—from corporate GHG inventories to product declarations and ESG data structures.",
       heroImageAlt:
-        "Assurance-oriented visual language across climate, products, indoor environmental quality and material health, responsible supply chains, and ESG reporting.",
+        "Technical review visual language across climate, products, indoor environmental quality and material health, responsible supply chains, and ESG reporting.",
       groups: {
         climateAndCarbonAssurance: {
-          title: "Climate And Carbon Assurance",
+          title: "Climate And Carbon Technical Review",
           intro:
             "From corporate and project greenhouse gas statements to product carbon data, embedded emissions review, and net-zero readiness, this service group focuses on methodology, data quality, and disclosure credibility as one connected system.",
         },
@@ -322,29 +328,37 @@ export const en: Dictionary = {
             "Product-level environmental performance, content claims, and disclosure structures must be assessed not only through results, but through data sources, methodological choices, and evidence quality. This group addresses product-focused verification and technical review needs.",
         },
         builtEnvironmentAndMaterialHealth: {
-          title: "Indoor Quality And Material Health",
+          title: "Indoor Quality and Material Health",
           intro:
             "Interior finishes, building materials, and health-oriented product communications require more than headline environmental performance. Emissions profiles, composition transparency, and technical documentation discipline are equally decisive. This service group helps exporters and teams preparing project-facing technical dossiers present clearer, more defensible disclosures.",
         },
         responsibleSupplyChainsAndSectorSchemes: {
-          title: "Responsible Supply Chains And Sector Readiness",
+          title: "Responsible Supply Chains and Sector Readiness",
           intro:
             "Sector programmes and buyer expectations now hinge on traceability, sourcing claims, responsible production, and documentation discipline. This group supports readiness assessments and technical review across industries.",
         },
         esgAndReportingAssurance: {
-          title: "ESG And Reporting Assurance",
+          title: "ESG And Reporting Technical Review",
           intro:
-            "The reliability of corporate sustainability data is now essential not only for reporting, but also for investor expectations, customer requirements, financing processes, and governance maturity. This group provides assurance-oriented support for ESG data, sustainability KPIs, and non-financial reporting structures.",
+            "The reliability of corporate sustainability data is now essential not only for reporting, but also for investor expectations, customer requirements, financing processes, and governance maturity. This group provides structured technical review support for ESG data, sustainability KPIs, and non-financial reporting structures.",
         },
       },
-      cardCta: "Details",
+      cardCta: "Explore Details",
+      serviceGroupNav: {
+        ariaLabel: "Service groups",
+        climateCarbon: "Climate & carbon",
+        productDeclarations: "Product declarations",
+        indoorMaterials: "Indoor & materials",
+        supplyChain: "Supply chain",
+        esgReporting: "ESG & reporting",
+      },
       whyIndependent: {
-        title: "Why Independent Assurance Discipline Matters",
+        title: "Why Independent Technical Review Discipline Matters",
         items: [
           {
             title: "Stakeholder-Grade Credibility",
             description:
-              "Deliverables are structured with the clarity and discipline that regulators, buyers, finance teams, and technical reviewers expect from assurance work.",
+              "Deliverables are structured with the clarity and discipline that regulators, buyers, finance teams, and technical reviewers expect from independent review work.",
           },
           {
             title: "A Stronger Disclosure Frame",
@@ -352,51 +366,51 @@ export const en: Dictionary = {
               "The review sharpens scope, method, data logic, and language—creating a more defensible basis for external use.",
           },
           {
-            title: "Traceability And Control",
+            title: "Traceability and Control",
             description:
               "Evidence-led testing surfaces weak links from source records through calculations to reported outcomes.",
           },
           {
-            title: "Readiness For The Next Assurance Step",
+            title: "Early Alignment Before External Review Cycles",
             description:
-              "Priority themes are addressed early—reducing late surprises in verification, limited assurance, or stakeholder review cycles.",
+              "Priority themes are surfaced early—reducing late friction through verification, limited assurance or stakeholder-led review.",
           },
         ],
       },
       howWeWork: {
-        title: "How we work",
+        title: "How We Work",
         intro:
-          "A concise pathway overview—the Verification Process page describes the full methodology, roles and impartiality safeguards.",
+          "A concise pathway overview—the Verification Process page describes the full methodology, roles, and impartiality controls.",
         steps: [
           {
-            title: "Scope and risk alignment",
+            title: "Scope and Risk Alignment",
             description:
               "Boundaries, standards, reporting period and intended use are confirmed so depth matches your disclosure context and stakeholder risk.",
           },
           {
-            title: "Technical workplan",
+            title: "Technical Workplan",
             description:
               "Sampling logic, evidence expectations and milestones are agreed before detailed testing—so effort tracks materiality.",
           },
           {
-            title: "Evidence-led review",
+            title: "Evidence-Led Review",
             description:
               "Structured examination of records, calculations and governance—traceable from evidence to reported numbers and statements.",
           },
           {
-            title: "Independent technical judgement",
+            title: "Independent Technical Judgement",
             description:
               "Impartial assessment of findings, limitations and wording—the core of defensible conclusions.",
           },
           {
-            title: "Controlled outputs",
+            title: "Defensible Outputs",
             description:
-              "Findings register, closure, and—where in scope—verification or review outputs aligned to the agreed assurance objective.",
+              "Findings register, closure, and—where in scope—verification or review outputs aligned to the agreed review objective.",
           },
         ],
       },
       listingRecoverableError: {
-        title: "Service catalogue could not be displayed",
+        title: "Service Catalogue Could Not Be Displayed",
         body:
           "We could not render verification service groups from the current registry data. The site shell is working—please refresh the page. If this persists, contact us so we can review the service configuration.",
       },
@@ -406,7 +420,7 @@ export const en: Dictionary = {
         heroEyebrow: "Corporate inventory verification",
         title: "ISO 14064-1 — Corporate Greenhouse Gas Verification",
         intro:
-          "The credibility of a corporate greenhouse gas inventory rests not only on the numbers reported, but on how organisational boundaries are drawn, how methodology is applied consistently, how data trace back to source, and how appropriate the emission factors are. Meva Global provides independent, structured technical verification for greenhouse gas statements prepared under ISO 14064-1. Reporting boundaries, calculation logic, data flows, and supporting evidence are reviewed in a disciplined way—strengthening the reliability of information shared with regulators, customers, investors, and other external audiences.",
+          "For a corporate greenhouse gas inventory to hold up under external scrutiny, credibility depends on more than the headline total. Organisational boundaries, emission sources, factor choices and the evidence chain behind each line must be governed with the same technical discipline. Meva Global provides independent, structured technical verification for greenhouse gas statements prepared under ISO 14064-1. Reporting boundaries, calculation logic, data flows and supporting evidence are reviewed as one system—supporting information regulators, customers, investors and other stakeholders can revisit with confidence.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -450,7 +464,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your organisational boundaries, reporting year, and current inventory architecture—we will align review depth and verification strategy with how you report to the outside world.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -459,7 +473,7 @@ export const en: Dictionary = {
         heroEyebrow: "Project-level GHG verification",
         title: "ISO 14064-2 — Project Greenhouse Gas Verification",
         intro:
-          "The credibility of project-level greenhouse gas statements rests not only on reported reduction or removal volumes, but on baseline robustness, clear project boundaries, consistent quantification, and a monitoring system capable of producing traceable evidence. Meva Global provides independent, structured technical verification for project statements prepared under ISO 14064-2. Project logic, monitoring design, calculation methodology, and supporting records are assessed in a systematic way—strengthening both the reliability and the defensibility of the figures you report.",
+          "Project-level greenhouse gas figures invite technical challenge unless baseline design, monitoring logic and supporting records tell the same story as the reported volumes. Meva Global provides independent, structured technical verification for project statements prepared under ISO 14064-2. Boundaries, monitoring design, calculation methodology and documentation are assessed as an integrated file—raising both reliability and defensibility for external use.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -503,13 +517,13 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your baseline scenario, monitoring plan, and reporting period—we will align verification scope and evidence expectations with the specifics of your project.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
       },
       "iso-14067": {
-        heroEyebrow: "Product carbon assurance",
+        heroEyebrow: "Product carbon technical review",
         title: "ISO 14067 — Product Carbon Footprint (PCF) Verification",
         intro:
           "A product carbon footprint should read as one coherent story—not a single figure pulled out of context. How you define the unit and boundaries, make allocation choices, source activity data, align emission factors with the calculation path, and translate results into customer-ready language determines whether the PCF holds up in procurement conversations. Meva Global provides independent verification for ISO 14067–aligned work, reviewing the model, the evidence trail, and the disclosure layer together so your product-level narrative stays clear and defensible under buyer and stakeholder scrutiny.",
@@ -550,22 +564,22 @@ export const en: Dictionary = {
           bullets: [
             "We treat the PCF as a chain—boundary, data line, and evidence—rather than a checklist of parts",
             "We focus on traceability and narrative integrity, not only the headline row in the results table",
-            "We articulate findings in a controlled way that matches your scope and intended use",
+            "We articulate findings in measured language that matches your scope and intended use",
           ],
         },
         cta: {
           title: "",
           body: "Share your PCF summary, data sources, and the disclosure format you plan to use; together we can shape review depth and verification strategy around your product and market context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
       },
       "iso-14046": {
-        heroEyebrow: "Water footprint assurance",
+        heroEyebrow: "Water footprint technical review",
         title: "ISO 14046 — Water Footprint Verification",
         intro:
-          "The reliability of water footprint studies depends not only on the final calculated result, but also on the clarity of system boundaries, the appropriateness of data sources, the conformity of methodology with the standard, the robustness of water-use and water-impact data structures, and the traceability of the disclosure framework. Meva Global provides an independent and structured technical verification approach for water footprint studies and related disclosures prepared in line with ISO 14046. This service creates a more reliable and more professional basis for buyer expectations and external use through the systematic review of quantification logic, data flow, assumptions, calculation structure, and supporting evidence.",
+          "Water footprint disclosures compress boundary choices, inventory structures and methodological decisions into a narrow set of published results. That only works if quantification logic, data flow and assumptions can be traced from inputs to outputs. Meva Global provides independent technical verification for water footprint studies and related disclosures prepared in line with ISO 14046—reviewing methodology, datasets and supporting evidence as one coherent technical file.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -609,7 +623,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your study's system boundaries, data structure, and current disclosure framework; together we can clarify verification scope aligned to your intended use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -618,7 +632,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "LCA Technical Review",
         intro:
-          "The reliability of life cycle assessment studies depends not only on the final results table, but also on the clarity of goal and scope definition, the appropriateness of the functional unit, the suitability of system boundaries, the quality of data sources, the consistency of modelling choices, and the correctness of result interpretation. Meva Global provides an independent and structured technical review approach for LCA studies and related environmental disclosures. This service creates a more reliable, more controlled, and more professional basis for external use through the systematic review of methodological framework, data flow, assumptions, modelling logic, and supporting evidence.",
+          "Buyers and reviewers rarely stop at the results table—they probe goal-and-scope design, allocation choices and whether interpretation language matches the datasets on file. Meva Global provides independent technical review for LCA studies and related environmental disclosures, examining methodological framework, modelling logic and evidence structure so outward-facing results remain faithful to the technical backbone.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -662,7 +676,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your LCA’s goal-and-scope structure, datasets, and current modelling framework; together we can clarify technical review scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -671,7 +685,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "EPD Verification",
         intro:
-          "The credibility of Environmental Product Declarations depends not only on the published results tables, but also on conformity with PCR and programme rules, the quality of data sources, the consistency of modelling choices, the clarity of declared scope, and the traceability of supporting evidence. Meva Global provides an independent and structured verification approach for EPD studies and related disclosures. This service creates a more reliable, more controlled, and more professional publication basis through the systematic review of methodological framework, data flow, reporting structure, and supporting records.",
+          "EPD credibility rests on programme rules, PCR alignment and traceability from datasets to declared indicators—not only on the tables in the published PDF. Meva Global provides independent verification-oriented review for EPD studies and related disclosures, examining methodological framework, data flow, reporting structure and supporting records so publication-ready content can withstand technical questioning.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -715,7 +729,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your PCR, declared scope, and current EPD model; together we can define verification scope suited to your publication context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -724,7 +738,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Recycled Content Verification",
         intro:
-          "The credibility of recycled content claims depends not only on the declared percentage, but also on the correctness of the mass-balance approach, the discipline of chain-of-custody traceability, the adequacy of data sources, the traceability of supporting evidence, and the controlled use of disclosure language. Meva Global provides an independent and structured verification approach for recycled content percentages and related claims. This service creates a more reliable, more controlled, and more professional basis for external disclosures through the systematic review of data flow, mass-balance logic, documentation structure, and supporting claim framework.",
+          "Recycled content percentages rest on mass-balance discipline, supplier evidence and how disclosure language matches the traceability story behind the figure. Meva Global provides independent verification-oriented review for recycled content claims—testing data flow, allocation logic, documentation structure and external-facing wording as one coherent evidence package.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -738,7 +752,7 @@ export const en: Dictionary = {
           bullets: [
             "Manufacturers that want to present recycled content rates to external stakeholders with greater credibility",
             "Teams strengthening material, packaging, or product-level content claims",
-            "Organisations building chain-of-custody discipline, supplier data structures, and controlled disclosure practice",
+            "Organisations building chain-of-custody discipline, supplier data structures, and disciplined disclosure practice",
           ],
         },
         typicalScope: {
@@ -762,13 +776,13 @@ export const en: Dictionary = {
           bullets: [
             "Independent verification that treats mass balance, data architecture, and supporting evidence as one integrated review",
             "A discipline that looks beyond the headline percentage to the documentation and monitoring backbone behind the figure",
-            "Professional structure that strengthens existing content claims and helps organisations institutionalise more controlled systems over time",
+            "Professional structure that strengthens existing content claims and helps organisations institutionalise more disciplined systems over time",
           ],
         },
         cta: {
           title: "",
           body: "Share your current content claim, mass-balance structure, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -777,7 +791,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Bio-based Content Verification",
         intro:
-          "The credibility of bio-based content claims depends not only on the declared share, but also on the suitability of the methodology used, the adequacy of supplier evidence, the clarity of system boundaries, the traceability of data sources, and the controlled use of disclosure language for external communication. Meva Global provides an independent and structured verification approach for bio-based content percentages and related claims. This service creates a more reliable, more controlled, and more professional basis for external disclosures through the systematic review of data structure, methodological choices, supporting evidence, and claim framework.",
+          "Bio-based share claims hinge on method choice, supplier statements and whether boundaries and datasets support the percentage communicated externally. Meva Global provides independent verification-oriented review for bio-based content claims—cross-checking methodology, evidence structure and disclosure framing before those figures reach customers or schemes.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -791,7 +805,7 @@ export const en: Dictionary = {
           bullets: [
             "Manufacturers that want to present bio-based content percentages to external stakeholders with greater credibility",
             "Teams strengthening bio-based content claims at product, packaging, or material level",
-            "Organizations building supplier evidence, methodology discipline, and controlled claim language",
+            "Organizations building supplier evidence, methodology discipline, and disciplined claim language",
           ],
         },
         typicalScope: {
@@ -815,13 +829,13 @@ export const en: Dictionary = {
           bullets: [
             "Independent verification that treats methodology, data architecture, and supporting evidence as one system",
             "A review discipline focused not only on the declared share, but on the documentation and calculation structure behind it",
-            "A professional structure that strengthens existing bio-based content claims and supports more controlled systems over time",
+            "A professional structure that strengthens existing bio-based content claims and supports more disciplined systems over time",
           ],
         },
         cta: {
           title: "",
           body: "Share your current bio-based content claim, methodological framework, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -830,7 +844,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "ASI (Aluminium Stewardship Initiative) Verification Review",
         intro:
-          "The credibility of ASI-related claims and readiness files across the aluminium value chain depends not only on the existence of documents, but also on the consistency of evidence structures, the clarity of alignment with relevant criteria, the discipline of documentation, and the use of defensible disclosure language. Meva Global provides an independent and structured verification review for readiness and technical assessment processes related to the ASI framework. This service creates a more reliable, more controlled, and more professional readiness basis through the systematic review of existing records, operational evidence, supply-chain linkages, and criteria-based file structures. It does not replace a formal ASI certification decision or scheme-owner verification, but it helps organisations prepare with a stronger and more disciplined technical foundation.",
+          "ASI readiness is less about collecting PDFs and more about mapping criteria to operational evidence across sites and suppliers—with disclosure language that matches what the files actually show. Meva Global provides independent verification review support for ASI-oriented readiness dossiers, examining records, traceability links and criteria alignment. This does not replace a formal ASI certification decision or scheme-owner verification; it strengthens the technical foundation before you enter those pathways.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -844,7 +858,7 @@ export const en: Dictionary = {
           bullets: [
             "Aluminium producers seeking to enter the ASI process with stronger, better organised technical files",
             "Sustainability teams in multi-site structures aiming to strengthen evidence discipline and criteria alignment",
-            "Organisations that want to place supply chain, traceability, and responsible production narratives on a more controlled footing",
+            "Organisations that want to place supply chain, traceability, and responsible production narratives on a more disciplined footing",
           ],
         },
         typicalScope: {
@@ -874,7 +888,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current ASI readiness file and policy and record sets; together we can clarify a verification review scope suited to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -883,7 +897,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "FSC / PEFC / EUDR Readiness and Documentation Verification Review",
         intro:
-          "The credibility of claims and readiness files related to FSC, PEFC, and EUDR depends not only on the presence of documents, but also on the consistency of chain-of-custody structure, the clarity of due diligence approach, the traceability of supply-chain records, and the controlled use of disclosure language for external communication. Meva Global provides an independent and structured verification review for readiness and technical assessment processes related to the FSC / PEFC / EUDR frameworks. This service creates a more reliable, more controlled, and more professional readiness basis through the systematic review of existing records, supplier documentation, traceability architecture, and criterion-based file structure.",
+          "FSC, PEFC and EUDR-facing files are tested on chain-of-custody logic, due diligence evidence and whether sourcing narratives match the records that sit behind them. Meva Global provides independent verification review for readiness work linked to these frameworks—reviewing supplier documentation, traceability architecture and criterion mapping as one dossier.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -897,7 +911,7 @@ export const en: Dictionary = {
           bullets: [
             "Manufacturers and exporters seeking stronger technical files for FSC / PEFC / EUDR-related processes",
             "Sustainability teams aiming to strengthen supply-chain traceability and evidence discipline",
-            "Organisations that want to place sourcing claims and regulatory readiness on a more controlled footing",
+            "Organisations that want to place sourcing claims and regulatory readiness on a more disciplined footing",
           ],
         },
         typicalScope: {
@@ -927,7 +941,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current FSC / PEFC / EUDR readiness files, supplier records, and traceability architecture; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -936,7 +950,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "GRI / ESRS Data Verification",
         intro:
-          "The credibility of sustainability data associated with GRI and ESRS depends not only on published indicators, but also on the consistency of indicator definitions, the clarity of data sources, the adequacy of control points, the traceability of calculation logic, and the alignment of the disclosure framework with standard expectations. Meva Global provides an independent and structured verification review for sustainability data within the GRI / ESRS scope. This service creates a more reliable, more controlled, and more professional disclosure basis through the systematic assessment of data flows, indicator logic, supporting evidence, and the reporting framework.",
+          "GRI- and ESRS-oriented disclosures break down when indicator definitions, controls and calculation trails diverge from what appears in the report. Meva Global provides independent verification review for sustainability data within the GRI / ESRS scope—testing indicator logic, source records and reporting structure so numeric and narrative layers stay aligned.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -980,7 +994,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your GRI / ESRS data sets, indicator definitions, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -989,7 +1003,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Sustainability KPI Evidence Verification",
         intro:
-          "The reliability of sustainability KPIs depends not only on published figures, but also on the clarity of KPI definitions, the appropriateness of data sources, the consistency of calculation logic, the adequacy of supporting evidence structures, and internal reporting discipline. Meva Global provides an independent and structured verification review for the data and evidence that underpin sustainability KPIs. This service creates a more reliable and more professional disclosure basis through the systematic assessment of KPI definitions, data flows, source documents, and supporting explanations.",
+          "KPI credibility is decided at the definition-and-evidence layer: how metrics are calculated, who owns the data trail and whether explanations match the supporting records. Meva Global provides independent verification review for sustainability KPI evidence—assessing definitions, data flows, source documents and control points behind the figures communicated externally.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1033,7 +1047,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your KPI definitions, source data sets, and supporting documents; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1042,7 +1056,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Limited Assurance Readiness Review",
         intro:
-          "The quality of preparation for limited assurance processes depends not only on the presence of data to be reported, but also on the adequacy of the control environment, the organisation of evidence structures, the traceability of source records, clarity of process ownership, and a disclosure framework established in a controlled manner. Meva Global provides an independent and structured technical review aimed at readiness for limited assurance verification. This service creates a more controlled and more professional preparation basis through the systematic assessment of the current data and control structure, supporting documents, accountability flows, and pre-verification readiness. It does not replace the assurance engagement or imply a formal limited assurance conclusion.",
+          "Limited assurance cycles surface gaps in controls, evidence ownership, and how reported figures connect to source records—not only in the narrative layer. Meva Global provides independent technical review aimed at readiness before a limited assurance engagement, assessing data architecture, evidence packs, and process accountability. This work does not replace a formal limited assurance engagement or imply a limited assurance conclusion.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1072,7 +1086,7 @@ export const en: Dictionary = {
           bullets: [
             "Strengthens pre-verification readiness",
             "Reduces risks from missing evidence, weak controls, and fragmented processes",
-            "Supports a more controlled, predictable, and efficient path through the assurance process",
+            "Supports a more disciplined, predictable, and efficient path through the limited assurance process",
           ],
         },
         approach: {
@@ -1080,13 +1094,13 @@ export const en: Dictionary = {
           bullets: [
             "Independent preparation review that addresses data, controls, and supporting evidence together",
             "Assessment discipline focused not only on the final disclosure, but on the process infrastructure that supports it",
-            "Professional approach that strengthens organisational assurance readiness",
+            "Professional approach that strengthens organisational readiness for external review",
           ],
         },
         cta: {
           title: "",
           body: "Share your current reporting structure, control points, and supporting documents; together we can clarify the scope of preparation ahead of limited assurance, matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1095,7 +1109,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Non-financial Data Control Verification",
         intro:
-          "The reliability of non-financial data depends not only on the metrics disclosed, but also on the consistency of data definitions, the adequacy of control mechanisms, sampling discipline, traceability of source records, and the controlled establishment of the disclosure structure. Meva Global provides an independent and structured verification review for non-financial data controls. Through the systematic assessment of data definitions, control points, supporting records, and the disclosure framework, this service establishes a more reliable and more professional reporting foundation.",
+          "Non-financial metrics fail scrutiny when definitions drift, controls are thin or sampling cannot be reconstructed from the records provided. Meva Global provides independent verification review focused on non-financial data controls—linking definitions, control points, source records and disclosure structure as one review object.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1125,7 +1139,7 @@ export const en: Dictionary = {
           bullets: [
             "Strengthens reliability and traceability of non-financial data",
             "Reduces challenges arising from definition inconsistency, weak controls, and disclosure risk",
-            "Creates a stronger foundation for corporate reporting, stakeholder communication, and assurance preparation",
+            "Creates a stronger foundation for corporate reporting and stakeholder communication",
           ],
         },
         approach: {
@@ -1139,7 +1153,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current non-financial data sets, control points, and supporting records; together we can clarify verification scope appropriate to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1148,7 +1162,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Indoor Air Quality and VOC Verification Review",
         intro:
-          "The credibility of indoor air quality and VOC emissions claims depends not only on the reported test result, but also on the appropriateness of the test scope, conformity with the relevant standard, the accuracy of product and sample definition, the traceability of laboratory data, and the way results are translated into external disclosures. Meva Global provides an independent and structured verification review for indoor air quality and VOC emissions data. This service creates a more reliable, more controlled, and more professional disclosure basis through the systematic review of test reports, technical data flow, disclosure language, and supporting evidence.",
+          "IAQ and VOC claims travel from laboratory scope to product definition to customer-facing wording—and weak links in that chain invite technical challenge. Meva Global provides independent verification review for indoor air quality and VOC data, examining test reports, sample traceability and how disclosed language reflects limitations and results.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1162,7 +1176,7 @@ export const en: Dictionary = {
           bullets: [
             "Manufacturers that want to present interior products to export markets with stronger technical dossiers",
             "Teams positioning VOC data for building materials, surface coatings, furniture, or comparable products on a verification-led basis",
-            "Organisations that want technical test results supported by controlled disclosure language",
+            "Organisations that want technical test results supported by disciplined disclosure language",
           ],
         },
         typicalScope: {
@@ -1192,7 +1206,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current VOC test reports, product definition, and disclosure framework; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1200,7 +1214,7 @@ export const en: Dictionary = {
       "cbam-verification-support": {
         title: "CBAM Emissions Verification",
         intro:
-          "The reliability of emissions data used in the CBAM context depends not only on the reported result, but also on the clarity of system boundaries, the appropriateness of data sources, the traceability of supplier inputs, the consistency of calculation logic, and the quality of supporting documentation. Meva Global provides an independent, structured technical verification approach for emissions data and related disclosures prepared for CBAM-related reporting. Through systematic assessment of data flow, methodological choices, reporting logic, and evidence structure, this service creates a more reliable, more controlled, and more professional basis for external disclosure.",
+          "CBAM reporting is not only a calculation exercise; it requires a disciplined chain of scope, plant data, supplier evidence, method choices and file discipline. Meva Global provides independent technical verification support for emissions data and disclosures prepared for CBAM-related reporting—reviewing data flow, methodology and documentation so the reporting pack stays traceable and proportionate to scrutiny.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1230,7 +1244,7 @@ export const en: Dictionary = {
           bullets: [
             "Strengthens the reliability and traceability of emissions data used in the CBAM context",
             "Reduces methodological ambiguity and disclosure risk",
-            "Builds a more controlled data foundation in the face of supply-chain, buyer, and regulatory expectations",
+            "Builds a more disciplined data foundation in the face of supply-chain, buyer, and regulatory expectations",
           ],
         },
         approach: {
@@ -1244,7 +1258,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your CBAM data architecture, supplier inputs, and current emissions calculation framework; together we can align verification scope with your intended use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1253,7 +1267,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "EU ETS Emissions Verification Review",
         intro:
-          "The reliability of emissions data under the EU ETS depends not only on reported totals, but also on the accuracy of installation boundaries, consistency of the monitoring approach, traceability of activity data, clarity of calculation logic, and the adequacy of supporting evidence. Meva Global provides an independent and structured verification review for EU ETS-related emissions data and preparation files. Through systematic assessment of data flows, monitoring plan logic, installation-level records, and the disclosure framework, this service establishes a more reliable, more controlled, and more professional preparation basis. It does not replace a formal verification opinion; it helps organisations enter subsequent processes with stronger technical infrastructure.",
+          "EU ETS files are judged on installation boundaries, monitoring plan logic and whether activity data, factors and evidence trails support the totals filed. Meva Global provides independent verification review support for EU ETS preparation dossiers—stress-testing data flows and records before statutory verification steps. This does not replace a formal verification opinion; it improves technical infrastructure and traceability.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1297,7 +1311,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current EU ETS data sets, monitoring plan, and supporting records; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1306,7 +1320,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "F-Gases Verification Review",
         intro:
-          "The reliability of records and declarations related to F-gases depends not only on equipment lists, but also on the accuracy of gas type and quantity data, traceability of service and leak records, consistency of reporting logic, and adequacy of supporting evidence. Meva Global provides an independent and structured verification review for F-gas-related data and preparation files. Through systematic assessment of equipment records, maintenance and service trails, gas movements, and the disclosure framework, this service establishes a more reliable, more controlled, and more professional preparation basis.",
+          "F-gas reporting ties equipment registers to service events, gas movements and quantities declared—any break in that chain becomes a finding risk. Meva Global provides independent verification review for F-gas preparation files, examining equipment records, maintenance trails and reporting logic against the evidence held on file.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1350,7 +1364,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current F-gas records, equipment inventory, and service documentation; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1359,7 +1373,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Maritime MRV Verification Review",
         intro:
-          "The reliability of emissions and fuel data related to Maritime MRV depends not only on reported totals, but also on the accuracy of ship-level data flows, consistency of fuel consumption records, traceability of voyage information, clarity of monitoring logic, and adequacy of supporting evidence. Meva Global provides an independent and structured verification review for Maritime MRV-related data and preparation files. Through systematic assessment of ship-based records, fuel trails, voyage data, and the disclosure framework, this service establishes a more reliable, more controlled, and more professional preparation basis.",
+          "Maritime MRV scrutiny follows fuel balances from bunker evidence through voyage allocation to reported totals; weak interfaces between operational data and templates drive findings. Meva Global provides independent verification review for Maritime MRV preparation files—testing ship-level records, fuel trails and reporting logic as one evidence system.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1403,7 +1417,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current Maritime MRV data sets, fuel records, and supporting documents; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1411,19 +1425,19 @@ export const en: Dictionary = {
       "custom-verification": {
         title: "Custom and Second-Party Verification",
         intro:
-          "Tailored independent verification and second‑party review models for non-standard scopes and buyer/stakeholder needs—focused on clarity, governance and controlled public-facing wording.",
+          "Tailored independent verification and second‑party review models for non-standard scopes and buyer or stakeholder needs—clarity, governance, and disciplined public-facing wording.",
         covers: {
           title: "What this covers",
           bullets: [
             "Custom scope definition, criteria and intended use",
             "Evidence-based technical assessment and sampling logic",
-            "Decision pathway and statement format aligned to controlled external use",
+            "Decision pathway and statement format aligned to disciplined external use",
           ],
         },
         forWho: {
           title: "Who it is for",
           bullets: [
-            "Organizations requiring second-party or bespoke assurance",
+            "Organizations requiring second-party or bespoke independent review",
             "Procurement and value chain programs with custom criteria",
             "Teams reviewing claims, methodologies and evidence packs",
           ],
@@ -1439,7 +1453,7 @@ export const en: Dictionary = {
         whyMatters: {
           title: "Why it matters",
           bullets: [
-            "Enables assurance where standards alone are not sufficient",
+            "Supports technical review where standards alone are not sufficient",
             "Improves transparency and defensibility for stakeholders",
             "Supports consistent decision-making across programs",
           ],
@@ -1459,9 +1473,9 @@ export const en: Dictionary = {
       },
       "iso-14064-3-review-support": {
         heroEyebrow: "Services",
-        title: "ISO 14064-3 — Greenhouse Gas Verification And Validation Support",
+        title: "ISO 14064-3 — Greenhouse Gas Verification and Validation Support",
         intro:
-          "The reliability of greenhouse gas verification and validation processes depends not only on the final statement, but also on the clarity of review scope, the correct definition of criteria, the sufficiency of evidence structures, the appropriateness of process design, and the consistency of technical decision-making. Meva Global provides an independent and structured technical review approach for verification and validation processes carried out in the context of ISO 14064-3. This service helps establish a more reliable, more controlled, and more professional assurance framework through the systematic review of process design, evidence flows, evaluation logic, and supporting documentation.",
+          "ISO 14064-3 engagements hinge on how criteria are set, evidence is evaluated and decisions are documented—not only on the headline conclusion issued. Meva Global provides independent technical review support for greenhouse gas verification and validation processes structured under ISO 14064-3, examining process design, evidence flows and decision infrastructure for consistency and traceability.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1473,7 +1487,7 @@ export const en: Dictionary = {
         forWho: {
           title: "Who It Is For",
           bullets: [
-            "Organizations seeking a more controlled assurance structure for greenhouse gas statements",
+            "Organizations seeking a more disciplined verification structure for greenhouse gas statements",
             "Teams preparing for a verification or validation process",
             "Programme owners and project teams strengthening technical files, evidence chains, and process design",
           ],
@@ -1490,7 +1504,7 @@ export const en: Dictionary = {
           title: "Why It Matters",
           bullets: [
             "Strengthens the reliability and technical consistency of verification and validation processes",
-            "Supports more controlled grounding of findings, decisions, and disclosure outputs",
+            "Supports more disciplined grounding of findings, decisions, and disclosure outputs",
             "Builds a stronger process foundation for subsequent review, statements, and external stakeholder communication",
           ],
         },
@@ -1505,7 +1519,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current verification or validation process, criteria architecture, and evidence files; together we can clarify review scope aligned to your intended use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1514,7 +1528,7 @@ export const en: Dictionary = {
         heroEyebrow: "Services",
         title: "Net-Zero and SBTi Technical Verification",
         intro:
-          "The credibility of net-zero roadmaps and SBTi-related target frameworks depends not only on the targets communicated, but also on the consistency of the transition pathway, the credibility of reduction logic, the clarity of scope definition, the adequacy of the supporting data structure, and the transparency of the evidence base. Meva Global provides an independent and structured technical verification approach for net-zero and SBTi-related target frameworks. This service creates a more reliable, more controlled, and more professional disclosure basis through the systematic review of target architecture, reduction pathways, data foundations, and supporting disclosure structures. It does not replace a formal target approval process, but it helps organisations strengthen their claims and readiness on a sounder technical foundation.",
+          "Net-zero and science-based target narratives are tested on scope choices, pathway maths and whether disclosed milestones match the underlying datasets. Meva Global provides independent technical verification review for net-zero and SBTi-oriented target frameworks—reviewing architecture, reduction logic and evidence structure before claims face capital-market or buyer scrutiny. This does not replace a formal target validation process; it improves technical defensibility and readiness.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -1528,7 +1542,7 @@ export const en: Dictionary = {
           bullets: [
             "Organisations seeking to present net-zero roadmaps on a more robust technical footing",
             "Teams strengthening SBTi-related target frameworks before communicating to internal and external stakeholders",
-            "Sustainability, finance, and operations teams seeking more controlled transition plans, data architecture, and reduction logic",
+            "Sustainability, finance, and operations teams seeking more disciplined transition plans, data architecture, and reduction logic",
           ],
         },
         typicalScope: {
@@ -1544,7 +1558,7 @@ export const en: Dictionary = {
           bullets: [
             "Strengthens the credibility of net-zero and target-based climate disclosures",
             "Reduces methodological ambiguity and disclosure risk in target framing",
-            "Builds a more controlled disclosure foundation against investor, buyer, and stakeholder expectations",
+            "Builds a more disciplined disclosure foundation against investor, buyer, and stakeholder expectations",
           ],
         },
         approach: {
@@ -1558,7 +1572,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your transition pathway, target framework, and existing technical foundations; together we can clarify verification scope aligned to your intended use context.",
-          primaryButton: "Request Proposal",
+          primaryButton: "Request a Proposal",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1570,7 +1584,7 @@ export const en: Dictionary = {
       heroEyebrow: "CBAM",
       title: "CBAM Solutions",
       intro:
-        "The Carbon Border Adjustment Mechanism tests emissions information at installation and process level—not only headline figures. We work with exporters and manufacturers through assurance-style technical review: sharpening scope, traceability, supplier evidence, plant-level calculation paths, and the structure of outward-facing CBAM packs. The intent is to strengthen data architecture and disclosure discipline before reporting cycles and external scrutiny. This is independent technical review support, not a regulatory approval and not a substitute for formal verification where that applies.",
+        "The Carbon Border Adjustment Mechanism tests emissions information at installation and process level—not only headline figures. We work with exporters and manufacturers through structured technical review: sharpening scope, traceability, supplier evidence, plant-level calculation paths, and the structure of outward-facing CBAM packs. The intent is to strengthen data architecture and disclosure discipline before reporting cycles and external scrutiny. This is independent technical review support, not regulatory approval and not a substitute for formal verification where that applies.",
       heroImageAlt:
         "Desk with CBAM technical documents, emissions charts, and port logistics context for carbon border reporting",
       sections: [
@@ -1603,11 +1617,11 @@ export const en: Dictionary = {
           bullets: [
             "Evidence matching and plausibility checks on material supplier inputs",
             "Plant-level review of activity data, process logic, and calculation chains",
-            "Structured findings to close gaps ahead of submission, handover, or deeper assurance steps",
+            "Structured findings to close gaps ahead of submission, handover, or deeper review steps",
           ],
         },
         {
-          title: "Meva’s assurance-led engagement model",
+          title: "Meva’s Technical Review Engagement Model",
           bullets: [
             "Independent technical review posture aligned with how CBAM information is expected to read",
             "One discipline across evidence quality, data structures, and disclosure boundaries",
@@ -1618,18 +1632,18 @@ export const en: Dictionary = {
       cta: {
         title: "",
         body: "Share your current datasets, installation-level calculation design, and supplier evidence posture—we can align review depth with your reporting context and timeline.",
-        primaryLabel: "Request Proposal",
+        primaryLabel: "Request a Proposal",
         secondaryLabel: "Explore Services",
-        tertiaryLabel: "Details",
+        tertiaryLabel: "Explore Details",
       },
     },
     process: {
       accreditation: {
-        eyebrow: "Independence • Technical Competence • Institutional Assurance",
+        eyebrow: "Independence • Technical Competence • Institutional Discipline",
         title: "Accreditation",
         status: "Accreditation preparations are underway",
         body:
-          "MEVA Global Certification is strengthening its international accreditation infrastructure through disciplined work across quality management, methodological consistency, records discipline, impartiality safeguards, and technical competence. These preparations support service delivery that is more traceable, more consistent, and more strongly aligned with relevant standard expectations. Upon completion of the accreditation process, valid scope information and official documentation details will be published in this area.",
+          "MEVA Global Certification is strengthening its international accreditation infrastructure through disciplined work across quality management, methodological consistency, records discipline, impartiality controls, and technical competence—including ISO/IEC 17029 accreditation-related activities that remain in progress and subject to formal accreditation body determination and applicable disclosure rules. These preparations support service delivery that is more traceable, more consistent, and more strongly aligned with relevant standard expectations. When accreditation outcomes are formally confirmed, valid scope information and official documentation will be published here.",
         heroImageAlt:
           "Structured verification process review with professional documentation, checklist, and process flow context",
       },
@@ -1637,18 +1651,21 @@ export const en: Dictionary = {
         navAriaLabel: "Accreditation page sections",
         accreditation: "Accreditation",
         verificationProcess: "Verification Process",
-        documents: "Documents",
+        documents: "Corporate Documents",
       },
       corporateDocumentsSection: {
-        title: "Documents",
+        title: "Corporate Documents",
         intro:
-          "Published core corporate documents of MEVA Global Certification related to validation, verification, impartiality, confidentiality, and rules of use.",
+          "Key corporate documents related to verification, validation, impartiality, confidentiality and statement usage are available in this section.",
+        fileUnavailableNote:
+          "The current PDF file for this document is not available in this deployment. Related orientation materials may be available through the Knowledge Hub, or you may contact us for assistance.",
+        knowledgeHubLinkLabel: "Explore Knowledge Hub",
         labels: {
           publicationStatus: "Publication status",
           firstPublished: "First published",
           documentLanguage: "Language",
-          view: "Open document",
-          download: "Download",
+          view: "View Document",
+          download: "Download PDF",
         },
         publicationStatusFirst: "First publication",
         languageValue: "EN · TR · NL",
@@ -1656,7 +1673,7 @@ export const en: Dictionary = {
       verification: {
         title: "Verification Process",
         body:
-          "Each engagement is carried out through a structured review pathway designed to keep scope clearly defined, evidence traceable, and technical decisions fully defensible. The process advances under defined roles, appropriate methodology, and impartiality safeguards.",
+          "Each engagement is carried out through a structured review pathway designed to keep scope clearly defined, evidence traceable, and technical decisions fully defensible. The process advances under defined roles, appropriate methodology, and impartiality controls.",
       },
       steps: [
         {
@@ -1665,12 +1682,12 @@ export const en: Dictionary = {
             "An initial technical suitability review is conducted against the request scope, applicable standards, and target timeline.",
         },
         {
-          title: "Scope And Criteria Definition",
+          title: "Scope and Criteria Definition",
           description:
             "System boundaries, reference criteria, assumptions, intended use, and expected outputs are formally defined in writing.",
         },
         {
-          title: "Document And Evidence Review",
+          title: "Document and Evidence Review",
           description:
             "The evidence package is reviewed systematically for completeness, consistency, audit trail integrity, and supporting records.",
         },
@@ -1679,7 +1696,7 @@ export const en: Dictionary = {
           description: "Sampling, recalculation, cross-checking, and reasonableness testing are applied to critical determinants.",
         },
         {
-          title: "Site Visit And Interviews",
+          title: "Site Visit and Interviews",
           description: "Where appropriate, operational flow, responsible personnel, and control points are reviewed on site.",
         },
         {
@@ -1694,20 +1711,24 @@ export const en: Dictionary = {
         },
       ],
       cta: {
-        eyebrow: "Independent Verification • Validation • Assurance",
-        title: "Request A Structured Technical Review",
+        eyebrow: BRAND_POSITIONING_LINE.en,
+        title: "Request a structured technical review",
         body:
-          "Share your scope, applicable standards, and target timeline. We will respond with a review approach aligned to your reporting context, clear evidence expectations, and well-defined next steps.",
-        primaryLabel: "Request A Proposal",
+          "Share your scope, applicable standards, and target timeline. We respond with a review approach aligned to your reporting context, explicit evidence expectations, and a clear schedule.",
+        primaryLabel: "Request a Proposal",
         secondaryLabel: "Explore Services",
       },
     },
     statementSearch: {
-      title: "Statement Lookup",
+      title: "Statement Records And Status Review",
       intro:
-        "Search published records issued through Meva Global’s independent verification, validation and assurance pathway. Displayed fields follow public-registry rules and programme boundaries.",
+        "Use this registry to review published statement records through reference information. The record summary and status fields displayed here are provided for public reference checking only; they do not constitute legal advice, formal consulting, or a binding decision on their own.",
+      heroEyebrow: "Statement Records • Status Review • Reference Check",
+      heroImageAlt:
+        "Desk scene with statement registry search on screen and verified record summary—institutional verification body context.",
+      panelTitle: "Registry search",
       note:
-        "Registry content is limited to information released for transparency. It does not constitute legal advice or formal regulatory acceptance. Quote the reference number in correspondence.",
+        "Displayed fields support transparency and may be limited by programme rules. This is not legal advice or a standalone regulatory determination. Quote the reference number in correspondence.",
       fields: {
         statementNumber: "Reference no.",
         companyName: "Company Name",
@@ -1740,63 +1761,63 @@ export const en: Dictionary = {
         schemeType: {
           verification: "Verification",
           validation: "Validation",
-          assurance: "Assurance",
+          assurance: "Independent examination",
         },
       },
       resultTitle: "Results",
       noResults: "No matching records under the current filters. Try adjusting your search criteria.",
       emptyState: {
         line1:
-          "You may search published records using a reference number or relevant statement details.",
-        line2: "Where no public record is available, you may contact us directly for further information.",
+          "Search published records using a reference number or relevant statement fields.",
+        line2: "If nothing appears in the public register, contact the office with your reference context.",
       },
     },
     documents: {
-      title: "Resources",
+      title: "Knowledge Hub",
       hero: {
-        eyebrow: "Technical Knowledge • Methodology • Disclosure Governance",
-        title: "Resources",
+        eyebrow: "Resources • Guidance • Technical Notes",
+        title: "Knowledge Hub — Technical Notes And Regulatory Readiness",
         body:
-          "Structured technical notes for teams operating at the boundary of regulation and disclosure—covering CBAM, carbon verification, EPD and LCA critical review, and assurance readiness. The focus is defensible scope, traceable evidence, sound methodology choices, and the governance of metrics and claims intended for external use.",
+          "Technical notes on evidence discipline, documentation quality and readiness across verification, validation, CBAM, product declarations and sustainability reporting.",
         heroImageAlt:
           "Desk with technical standards references, binders, LCA materials, and analytical notes in a bright corporate office.",
       },
-      sectionLabel: "Featured technical notes",
+      sectionLabel: "Featured Content",
       cards: [
         {
           category: "CBAM",
           date: "2026-04-19",
-          title: 'What Does “Reliable Emissions Data” Really Mean In CBAM Preparation?',
+          title: 'What Does “Reliable Emissions Data” Really Mean in CBAM Preparation?',
           body:
             "A concise framework for judging boundary discipline, evidence sufficiency, and data quality before CBAM-facing information is assembled for declaration.",
-          cta: "View note",
+          cta: "View Technical Note",
           href: "/documents/cbam-reliable-emissions-data",
         },
         {
           category: "Carbon",
           date: "2026-04-19",
-          title: "How To Align Scope, Methodology, And Stakeholder Expectations In Carbon Verification",
+          title: "How to Align Scope, Methodology, and Stakeholder Expectations in Carbon Verification",
           body:
             "How traceable assumptions, explicit control points, and deliberate methodology choices translate into reporting that withstands technical scrutiny.",
-          cta: "View note",
+          cta: "View Technical Note",
           href: "/documents/carbon-verification-alignment",
         },
         {
           category: "EPD / LCA",
           date: "2026-04-19",
-          title: "Common Weak Points In EPD And LCA Critical Review",
+          title: "Common Weak Points in EPD and LCA Critical Review",
           body:
             "Recurring review themes—PCR alignment, foreground traceability, allocation defensibility, scenario transparency, and consistency from model to report.",
-          cta: "View note",
+          cta: "View Technical Note",
           href: "/documents/epd-lca-critical-weaknesses",
         },
         {
-          category: "Assurance",
+          category: "Technical Review",
           date: "2026-04-19",
-          title: "Why Assurance Level Selection Matters In Sustainability Claims",
+          title: "Why Review Depth Selection Matters In Sustainability Claims",
           body:
-            "Mapping limited and higher assurance to decision risk, reliance by third parties, and the depth of evidence implied by the assurance language you intend to use.",
-          cta: "View note",
+            "Aligning limited and deeper independent review to decision risk, third-party reliance, and the evidence depth implied by the technical language you intend to use.",
+          cta: "View Technical Note",
           href: "/documents/sustainability-assurance-levels",
         },
       ],
@@ -1804,8 +1825,8 @@ export const en: Dictionary = {
         eyebrow: "Technical Review • Independent Approach",
         title: "Need A Deeper Technical Review On A Specific Topic?",
         body:
-          "Share your reporting context, applicable standard, and how the information will be used externally—we can align review depth, evidence expectations, and next steps.",
-        primary: "Contact Us",
+          "Share your reporting context, applicable standard, and how the information will be used externally—we align review depth, evidence expectations, and timeline.",
+        primary: "Contact",
         secondary: "Explore Services",
       },
       resourceArticles: documentsResourceArticlesEn,
@@ -1813,13 +1834,13 @@ export const en: Dictionary = {
     insights: {
       title: "Insights",
       intro:
-        "Short, technical notes on CBAM, carbon verification and assurance-ready reporting—focused on evidence, boundaries and disclosure discipline.",
+        "Short technical notes on CBAM, carbon verification, and externally oriented reporting—focused on evidence, boundaries, and documentation discipline.",
       readMore: "Read more",
     },
     contact: {
       title: "Contact",
       intro:
-        "Connect with the team that matches your enquiry. Share scope, standards and timing—or simply reach out—and we will respond with structured next steps for independent verification, validation or assurance. Typical reply time: one to two business days.",
+        "Contact the office best placed for your enquiry. Share scope, applicable standards or programme rules, and timing; we respond on independent verification, validation, or technical review—typically within one to two business days.",
       heroImageAlt:
         "Corporate desk with contact notebook, phone and Meva Certification materials in a bright office setting.",
       officesTitle: "Offices",
@@ -1874,6 +1895,7 @@ export const en: Dictionary = {
     typicalUse: "Typical use cases",
     whatWeDo: "What we do",
     deliverables: "Deliverables",
+    relatedServicesTitle: "Related Services",
   },
 };
 

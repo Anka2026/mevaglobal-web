@@ -11,6 +11,16 @@ import { cn } from "@/lib/cn";
 import { ButtonLink } from "@/components/ui/Button";
 import { BrandLogo } from "@/components/site/BrandLogo";
 
+/** Avoid false active states from pathname prefix collisions (e.g. services detail paths vs other top-level routes). */
+function isMainNavItemActive(pathname: string | null, fullHref: string, itemHref: string): boolean {
+  if (!pathname) return false;
+  if (pathname === fullHref) return true;
+  if (itemHref === "/verification-services") {
+    return pathname.startsWith(`${fullHref}/`);
+  }
+  return false;
+}
+
 export function MobileNavigation({
   locale,
   dict,
@@ -77,8 +87,7 @@ export function MobileNavigation({
               <nav className="mt-7 flex flex-col gap-1" aria-label="Main">
                 {headerNavItems.map((item) => {
                   const href = `/${locale}${item.href}`;
-                  const active =
-                    pathname === href || (item.href && pathname?.startsWith(href));
+                  const active = isMainNavItemActive(pathname, href, item.href);
                   return (
                     <Link
                       key={item.key}

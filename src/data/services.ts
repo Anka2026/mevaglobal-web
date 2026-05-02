@@ -118,7 +118,7 @@ export const services: Service[] = [
     slug: "iso-14068-readiness-review",
     title: {
       en: "ISO 14068 Carbon Neutrality And Net-Zero Verification",
-      tr: "ISO 14068 Karbon Nötrlüğü Ve Net-Sıfır Doğrulaması",
+      tr: "ISO 14068 Karbon Nötrlüğü ve Net-Sıfır Doğrulaması",
       nl: "ISO 14068 Koolstofneutraliteit En Net-Zero-Verificatie",
     },
     summary: {
@@ -162,7 +162,7 @@ export const services: Service[] = [
     whatWeDo: {
       en: ["Boundary, scope and consolidation review against Protocol expectations", "Evidence-led testing of activity data, factors and calculation logic", "Clear findings to support next review or verification steps"],
       tr: ["Protokol beklentilerine göre sınır, kapsam ve konsolidasyon incelemesi", "Aktivite verileri, faktörler ve hesaplama mantığı üzerinde kanıt odaklı test", "Sonraki inceleme veya doğrulama adımlarını destekleyen net bulgular"],
-      nl: ["Review van grens, scope en consolidatie tegen Protocol-verwachtingen", "Bewijsgerichte tests op activiteitsdata, factoren en rekenlogica", "Duidelijke bevindingen voor vervolgstappen in review of verificatie"],
+      nl: ["Review van grens, scope en consolidatie tegen Protocol-verwachtingen", "Bewijsgerichte tests op activiteitsdata, factoren en rekenlogica", "Duidelijke bevindingen ter ondersteuning van vervolgreview en verificatie"],
     },
     deliverables: {
       en: ["Structured review outputs aligned to agreed scope", "Findings register with improvement themes"],
@@ -291,7 +291,7 @@ export const services: Service[] = [
     },
     summary: {
       en: "Verification-oriented assessment of embedded emissions data and reporting logic for border carbon regimes—traceability, factors, and defensible submissions.",
-      tr: "Sınır karbon düzenlemeleri için gömülü emisyon verisi ve raporlama mantığında izlenebilirlik, faktör kalitesi ve savunulabilir beyan odağında doğrulama.",
+      tr: "Sınır karbon düzenlemeleri için gömülü emisyon verisi ve raporlama mantığında izlenebilirlik, faktör kalitesi ve ölçülü beyan dili odağında doğrulama.",
       nl: "Verificatiegerichte beoordeling van embedded emissions en rapportagelogica voor grenskoolstofregimes: traceerbaarheid, factoren en onderbouwde indiening.",
     },
     typicalUse: {
@@ -300,9 +300,9 @@ export const services: Service[] = [
       nl: ["Exporteursrapportage", "Leveranciersdata-mapping", "Aanscherping vóór indiening"],
     },
     whatWeDo: {
-      en: ["Methodology and boundary plausibility", "Evidence mapping and sampling", "Assurance-ready documentation guidance"],
-      tr: ["Metodoloji ve sınır makullüğü", "Kanıt eşleştirme ve örnekleme", "Güvenceye hazır dokümantasyon kurgusu"],
-      nl: ["Plausibiliteit methodiek en grens", "Bewijs-mapping en steekproef", "Richtlijn assurance-ready documentatie"],
+      en: ["Methodology and boundary plausibility", "Evidence mapping and sampling", "Documentation guidance for external review readiness"],
+      tr: ["Metodoloji ve sınır makullüğü", "Kanıt eşleştirme ve örnekleme", "Dış incelemeye hazır dokümantasyon kurgusu"],
+      nl: ["Plausibiliteit methodiek en grens", "Bewijs-mapping en steekproef", "Documentatiekader voor externe review"],
     },
     deliverables: {
       en: ["Verification readiness note", "Findings log and recommendations"],
@@ -370,7 +370,7 @@ export const services: Service[] = [
     slug: "maritime-mrv-verification-review",
     title: {
       en: "Maritime MRV Verification Review",
-      tr: "Maritime MRV Doğrulama İncelemesi",
+      tr: "Denizcilik MRV Doğrulama İncelemesi",
       nl: "Maritime MRV Verificatiebeoordeling",
     },
     summary: {
@@ -397,9 +397,9 @@ export const services: Service[] = [
   {
     slug: "eu-ets-mrv-assurance-support",
     title: {
-      en: "EU ETS & MRV — assurance support",
-      tr: "AB ETS ve MRV — güvence desteği",
-      nl: "EU ETS & MRV — assurance-ondersteuning",
+      en: "EU ETS & MRV — Technical review support",
+      tr: "AB ETS ve MRV — Teknik inceleme desteği",
+      nl: "EU ETS & MRV — Technische reviewondersteuning",
     },
     summary: {
       en: "Independent technical review support focused on data flows, control structure and evidence quality for emissions monitoring, reporting and verification processes, particularly in shipping and other regulated sectors.",
@@ -435,9 +435,9 @@ export const services: Service[] = [
       nl: "Technische beoordeling van monitoringplannen, datastructuur en rapportagelogica voor scheepvaartemissies binnen het EU-MRV-kader.",
     },
     typicalUse: {
-      en: ["Fleet fuel compilation", "BDN and operational records", "Assurance-ready files"],
-      tr: ["Filo yakıt derlemesi", "BDN ve operasyonel kayıtlar", "Güvenceye hazır dosyalar"],
-      nl: ["Brandstofcompilatie vloot", "BDN en operationele records", "Assurance-ready dossiers"],
+      en: ["Fleet fuel compilation", "BDN and operational records", "Review-ready evidence files"],
+      tr: ["Filo yakıt derlemesi", "BDN ve operasyonel kayıtlar", "İncelemeye hazır kanıt dosyaları"],
+      nl: ["Brandstofcompilatie vloot", "BDN en operationele records", "Reviewklare bewijsdossiers"],
     },
     whatWeDo: {
       en: ["Representative voyage sampling", "Plausibility of consumption and factors", "Governance and gap closure"],
@@ -525,7 +525,7 @@ export const services: Service[] = [
     },
     whatWeDo: {
       en: ["Lineage and control-point mapping", "Material stream end-to-end tests", "Metadata and versioning recommendations"],
-      tr: ["Soyut çizgi ve kontrol noktası haritalaması", "Önemli akışlarda uçtan uca testler", "Üst veri ve sürümleme önerileri"],
+      tr: ["Soyut çizgi ve kontrol noktası haritalaması", "Önemli akışlarda baştan sona testler", "Üst veri ve sürümleme önerileri"],
       nl: ["Mapping lineage en controles", "End-to-end tests materiële stromen", "Aanbevelingen metadata en versioning"],
     },
     deliverables: {
@@ -631,9 +631,9 @@ export const services: Service[] = [
       nl: "Beperkte onafhankelijke beoordeling bedoeld om de gereedheid te testen en zwakke punten vast te stellen vóór formele verificatie.",
     },
     typicalUse: {
-      en: ["Large first-time engagements", "New teams", "Board assurance requests"],
-      tr: ["İlk kez büyük kapsam", "Yeni ekipler", "Yönetim kurulu güvence talepleri"],
-      nl: ["Grote eerste trajecten", "Nieuwe teams", "Board-assurancevragen"],
+      en: ["Large first-time engagements", "New teams", "Board-level independent review requests"],
+      tr: ["İlk kez büyük kapsam", "Yeni ekipler", "Yönetim kurulu bağımsız inceleme talepleri"],
+      nl: ["Grote eerste trajecten", "Nieuwe teams", "Verzoeken vanuit bestuur om onafhankelijke review"],
     },
     whatWeDo: {
       en: ["Sampling on material streams", "Findings without formal statement", "Prioritized remediation"],
@@ -655,7 +655,7 @@ export const services: Service[] = [
     },
     summary: {
       en: "Independent verification review for ASI-related readiness—evidence structures, criteria alignment, documentation discipline, and defensible disclosure language across the aluminium value chain.",
-      tr: "Alüminyum değer zincirinde ASI ile ilişkili hazırlık için bağımsız doğrulama incelemesi; kanıt yapıları, kriter uyumu, dokümantasyon disiplini ve savunulabilir açıklama dili.",
+      tr: "Alüminyum değer zincirinde ASI ile ilişkili hazırlık için bağımsız doğrulama incelemesi; kanıt yapıları, kriter uyumu, dokümantasyon disiplini ve teknik dosya dili.",
       nl: "Onafhankelijke verificatiebeoordeling voor ASI-gerelateerde gereedheid—bewijsstructuren, criteria-afstemming, documentatiediscipline en verdedigbare disclosure-taal in de aluminiumketen.",
     },
     typicalUse: {
@@ -682,14 +682,14 @@ export const services: Service[] = [
       nl: "Maatwerk- en Second-Party Verificatie",
     },
     summary: {
-      en: "Tailored criteria, sampling and statements for non-standard scopes—governed review pathways for procurement programmes and stakeholder assurance needs.",
-      tr: "Standart dışı kapsamlar için uyarlanmış kriterler, örnekleme ve beyanlar—satın alma programları ve paydaş güvence ihtiyaçları için yönetişimli inceleme yolları.",
-      nl: "Maatwerkcriteria, steekproeven en statements voor niet-standaard scopes—governance review-paden voor inkoopprogramma’s en stakeholder assurance.",
+      en: "Tailored criteria, sampling and statements for non-standard scopes—governed review pathways for procurement programmes and stakeholder verification expectations.",
+      tr: "Standart dışı kapsamlar için uyarlanmış kriterler, örnekleme ve beyanlar—satın alma programları ve paydaş bağımsız inceleme ihtiyaçları için yönetişimli inceleme yolları.",
+      nl: "Maatwerkcriteria, steekproeven en statements voor niet-standaard scopes—governance review-paden voor inkoopprogramma’s en stakeholder-review.",
     },
     typicalUse: {
       en: ["Supplier programmes", "Methodology reviews", "Controlled external statements"],
-      tr: ["Tedarikçi programları", "Metodoloji incelemeleri", "Kontrollü dış beyanlar"],
-      nl: ["Leveranciersprogramma’s", "Methodiekreviews", "Gecontroleerde externe statements"],
+      tr: ["Tedarikçi programları", "Metodoloji incelemeleri", "Ölçülü dış beyanlar"],
+      nl: ["Leveranciersprogramma’s", "Methodiekreviews", "Gedisciplineerde externe statements"],
     },
     whatWeDo: {
       en: ["Criteria and intended-use definition", "Evidence-based assessment", "Statement pathway aligned to risk"],
@@ -715,9 +715,9 @@ export const services: Service[] = [
       nl: "Aangepast technisch beoordelingsmodel voor klantvereisten, verwachtingen in de waardeketen en second-party beoordelingscontexten.",
     },
     typicalUse: {
-      en: ["OEM supplier development", "Sector templates", "Quarterly assurance cycles"],
-      tr: ["OEM tedarikçi geliştirme", "Sektör şablonları", "Üç aylık güvence döngüleri"],
-      nl: ["OEM leveranciersontwikkeling", "Sectorsjablonen", "Kwartaal assurance-cycli"],
+      en: ["OEM supplier development", "Sector templates", "Quarterly review cycles"],
+      tr: ["OEM tedarikçi geliştirme", "Sektör şablonları", "Üç aylık değerlendirme döngüleri"],
+      nl: ["OEM leveranciersontwikkeling", "Sectorsjablonen", "Kwartaalreviewcycli"],
     },
     whatWeDo: {
       en: ["Pilot then scale design", "Calibration with suppliers", "Trend reporting for buyers"],
@@ -754,15 +754,15 @@ export const services: Service[] = [
     },
     deliverables: {
       en: ["Review memo", "Suggested wording safeguards"],
-      tr: ["İnceleme notu", "Önerilen ifade güvenceleri"],
-      nl: ["Reviewnotitie", "Voorgestelde woordkeuzes en waarborgen"],
+      tr: ["İnceleme notu", "Önerilen dil sınırları"],
+      nl: ["Reviewnotitie", "Voorgestelde taalbegrenzing"],
     },
   },
   {
     slug: "iso-14064-3-review-support",
     title: {
       en: "ISO 14064-3 — Greenhouse Gas Verification And Validation Support",
-      tr: "ISO 14064-3 — Sera Gazı Doğrulama Ve Geçerli Kılma Süreçleri",
+      tr: "ISO 14064-3 — Sera Gazı Doğrulama ve Geçerli Kılma Süreçleri",
       nl: "ISO 14064-3 — Ondersteuning Bij Broeikasgasverificatie En Validatie",
     },
     summary: {
@@ -771,9 +771,9 @@ export const services: Service[] = [
       nl: "Gestructureerde ondersteuning bij GHG-verificatie en -validatie: procesontwerp, bewijsketen en reviewer-ready documentatie.",
     },
     typicalUse: {
-      en: ["V&V teams", "Assurance programmes", "Accreditation preparation"],
-      tr: ["D&G ekipleri", "Güvence programları", "Akreditasyon hazırlığı"],
-      nl: ["V&V-teams", "Assurance-programma’s", "Accreditatievoorbereiding"],
+      en: ["V&V teams", "External review programmes", "Accreditation preparation"],
+      tr: ["D&G ekipleri", "Bağımsız inceleme programları", "Akreditasyon hazırlığı"],
+      nl: ["V&V-teams", "Programma’s voor externe review", "Accreditatievoorbereiding"],
     },
     whatWeDo: {
       en: ["Process design review", "Evidence chain testing", "Reviewer-ready documentation"],
@@ -823,7 +823,7 @@ export const services: Service[] = [
     },
     summary: {
       en: "Independent verification of recycled content claims—mass balance, chain of custody, evidence traceability, and disclosure discipline.",
-      tr: "Geri dönüştürülmüş içerik beyanlarında kütle dengesi, zincir izi, kanıt izlenebilirliği ve kontrollü beyan disiplinine yönelik bağımsız doğrulama.",
+      tr: "Geri dönüştürülmüş içerik beyanlarında kütle dengesi, zincir izi, kanıt izlenebilirliği ve disiplinli beyan yapısına yönelik bağımsız doğrulama.",
       nl: "Onafhankelijke verificatie van claims over gerecyclede inhoud: massabalans, chain of custody, bewijstraceerbaarheid en disclosure-discipline.",
     },
     typicalUse: {
@@ -977,9 +977,9 @@ export const services: Service[] = [
       nl: ["Mapping samenstelling", "Gevaarscommunicatie", "Claimgrenzen"],
     },
     deliverables: {
-      en: ["Technical review note", "Wording safeguards"],
-      tr: ["Teknik inceleme notu", "İfade güvenceleri"],
-      nl: ["Technische reviewnotitie", "Woordkeuzewaarborgen"],
+      en: ["Technical review note", "Documentation discipline for disclosure wording"],
+      tr: ["Teknik inceleme notu", "Önerilen dil sınırları"],
+      nl: ["Technische reviewnotitie", "Documentatiediscipline voor woordkeuze en disclosure"],
     },
   },
   {
@@ -1019,8 +1019,8 @@ export const services: Service[] = [
     },
     summary: {
       en: "Independent verification review of FSC / PEFC / EUDR-related readiness—traceability, due diligence files, supplier evidence, and controlled disclosure positioning.",
-      tr: "FSC / PEFC / EUDR ile ilişkili hazırlık için bağımsız doğrulama incelemesi; zincir izi, due diligence dosyaları, tedarikçi kanıtı ve kontrollü beyan konumlandırması.",
-      nl: "Onafhankelijke verificatiebeoordeling van FSC / PEFC / EUDR-gereedheid—traceerbaarheid, due diligence, leveranciersbewijs en gecontroleerde disclosure.",
+      tr: "FSC / PEFC / EUDR ile ilişkili hazırlık için bağımsız doğrulama incelemesi; zincir izi, due diligence dosyaları, tedarikçi kanıtı ve ölçülü beyan konumlandırması.",
+      nl: "Onafhankelijke verificatiebeoordeling van FSC / PEFC / EUDR-gereedheid—traceerbaarheid, due diligence, leveranciersbewijs en gedisciplineerde disclosure.",
     },
     typicalUse: {
       en: ["Paper & packaging", "EU trade", "Supplier evidence"],
@@ -1042,7 +1042,7 @@ export const services: Service[] = [
     slug: "responsible-mining-irma-readiness",
     title: {
       en: "Responsible Mining And IRMA Verification Readiness",
-      tr: "Sorumlu Madencilik Ve IRMA Doğrulama Hazırlığı",
+      tr: "Sorumlu Madencilik ve IRMA Doğrulama Hazırlığı",
       nl: "Verantwoorde Mijnbouw En IRMA Verificatiegereedheid",
     },
     summary: {
@@ -1070,7 +1070,7 @@ export const services: Service[] = [
     slug: "textile-traceability-recycled-review",
     title: {
       en: "Textile Traceability And Recycled Material Verification",
-      tr: "Tekstil İzlenebilirliği Ve Geri Dönüştürülmüş Malzeme Doğrulaması",
+      tr: "Tekstil İzlenebilirliği ve Geri Dönüştürülmüş Malzeme Doğrulaması",
       nl: "Textieltraceerbaarheid En Gerecycled Materiaal Verificatie",
     },
     summary: {
@@ -1182,18 +1182,18 @@ export const services: Service[] = [
     slug: "limited-assurance-readiness",
     title: {
       en: "Limited Assurance Readiness Review",
-      tr: "Sınırlı Güvence Doğrulama Hazırlığı",
-      nl: "Beoordeling Voor Limited Assurance Readiness",
+      tr: "Sınırlı Bağımsız İnceleme Hazırlığı",
+      nl: "Beoordeling voor limited assurance-gereedheid",
     },
     summary: {
       en: "Structured technical review of control environment, evidence, and process discipline ahead of limited assurance—not a substitute for the assurance engagement or a formal opinion.",
-      tr: "Sınırlı güvence öncesi kontrol ortamı, kanıt ve süreç disiplini için yapılandırılmış teknik inceleme; güvence sürecinin veya resmi görüşün yerine geçmez.",
+      tr: "Sınırlı bağımsız inceleme öncesi kontrol ortamı, kanıt ve süreç disiplini için yapılandırılmış teknik inceleme; resmi doğrulama görüşünün yerine geçmez.",
       nl: "Gestructureerde technische review van beheersing, bewijs en procesdiscipline vóór limited assurance—geen vervanging van de assurance-opdracht of formele conclusie.",
     },
     typicalUse: {
-      en: ["Pre-assurance preparation", "Control maturity", "Reporting teams"],
-      tr: ["Güvence öncesi hazırlık", "Kontrol olgunluğu", "Raporlama ekipleri"],
-      nl: ["Voorbereiding vóór assurance", "Volwassenheid beheersing", "Rapportageteams"],
+      en: ["Technical preparation ahead of limited assurance", "Control maturity", "Reporting teams"],
+      tr: ["Sınırlı bağımsız inceleme öncesi hazırlık", "Kontrol olgunluğu", "Raporlama ekipleri"],
+      nl: ["Technische voorbereiding op limited assurance", "Volwassenheid beheersing", "Rapportageteams"],
     },
     whatWeDo: {
       en: ["Readiness gap review", "Evidence structure", "Process ownership"],

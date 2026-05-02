@@ -11,10 +11,31 @@ const nextConfig: NextConfig = {
   /** Add permanent redirects here when a verification service slug is renamed (avoid stale bookmarks). */
   async redirects() {
     const locales = ["en", "tr", "nl"] as const;
-    return locales.flatMap((locale) => [
+    /** Corporate PDFs: stable public names under `public/docs/` (P-VV-*, not PV-006 typos). */
+    const corporatePdfTypos: { source: string; destination: string }[] = [
+      { source: "/docs/P-VV-006-compliant-appeal.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      { source: "/docs/PV-006-complaint-appeal.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      { source: "/docs/PV-006-compliant-appeal.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      { source: "/docs/P-VV.006-complaint-appeal.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      { source: "/docs/P.VV.006-complaint-appeal.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      /** Legacy double-extension filenames (if previously deployed). */
+      { source: "/docs/F-VV-026-general-terms.pdf.pdf", destination: "/docs/F-VV-026-general-terms.pdf" },
+      { source: "/docs/P-VV-006-complaint-appeal.pdf.pdf", destination: "/docs/P-VV-006-complaint-appeal.pdf" },
+      { source: "/docs/P-VV-010-impartiality.pdf.pdf", destination: "/docs/P-VV-010-impartiality.pdf" },
+      { source: "/docs/P-VV-011-confidentiality.pdf.pdf", destination: "/docs/P-VV-011-confidentiality.pdf" },
+      { source: "/docs/T-VV-003-logo-statement-usage.pdf.pdf", destination: "/docs/T-VV-003-logo-statement-usage.pdf" },
+    ];
+    return [
+      ...corporatePdfTypos.map((r) => ({ ...r, permanent: true as const })),
+      ...locales.flatMap((locale) => [
       {
         source: `/${locale}/services`,
         destination: `/${locale}/verification-services`,
+        permanent: true,
+      },
+      {
+        source: `/${locale}/services/:slug`,
+        destination: `/${locale}/verification-services/:slug`,
         permanent: true,
       },
       {
@@ -22,7 +43,8 @@ const nextConfig: NextConfig = {
         destination: `/${locale}/documents`,
         permanent: true,
       },
-    ]);
+    ]),
+    ];
   },
 
   /**

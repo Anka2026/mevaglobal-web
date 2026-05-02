@@ -3,6 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { cn } from "@/lib/cn";
 
+/** Navy icon well shared by homepage featured tiles, verification listing cards, and section headers. */
+export const SERVICE_CARD_ICON_WELL_CLASSNAME =
+  "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#005691] text-white shadow-[var(--shadow-card)] ring-1 ring-black/10 [&_svg]:!size-[22px]";
+
 export function ServiceCard({
   title,
   description,
@@ -20,7 +24,7 @@ export function ServiceCard({
   linkLabel?: string;
   className?: string;
   variant?: "default" | "featured";
-  /** Softer gradient icon well for services listing—distinct from homepage featured tiles. */
+  /** Dense listing layout (verification services grid); icon well matches homepage treatment. */
   listingTone?: boolean;
 }) {
   const featured = variant === "featured";
@@ -40,10 +44,7 @@ export function ServiceCard({
       {listingTone ? (
         <>
           <div className="flex min-w-0 items-start gap-3 sm:gap-3.5">
-            <div
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px] border border-[color:var(--border-soft)]/70 bg-[color:var(--brand-accent-soft)] text-[color:var(--brand-primary)] shadow-[0_1px_2px_rgba(37,99,235,0.06)] transition-colors group-hover:border-[color:var(--brand-accent)]/25"
-              aria-hidden="true"
-            >
+            <div className={SERVICE_CARD_ICON_WELL_CLASSNAME} aria-hidden="true">
               {icon}
             </div>
             <h3 className="min-w-0 flex-1 pt-0.5 text-[15px] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-base">
@@ -60,28 +61,23 @@ export function ServiceCard({
         </>
       ) : (
         <>
-          <div
-            className={cn(
-              "inline-flex items-center justify-center rounded-2xl transition-colors",
-              featured
-                ? "h-12 w-12 bg-[color:var(--brand-primary)] text-white shadow-[var(--shadow-card)] ring-1 ring-black/5 group-hover:bg-[color:var(--brand-primary)]"
-                : "h-11 w-11 bg-[color:var(--brand-accent-soft)] text-[color:var(--brand-primary)] ring-1 ring-[color:var(--border-soft)]/60 group-hover:bg-white",
-            )}
-          >
-            {icon}
+          <div className="flex min-w-0 items-start gap-3 sm:gap-3.5">
+            <div className={SERVICE_CARD_ICON_WELL_CLASSNAME} aria-hidden="true">
+              {icon}
+            </div>
+            <h3
+              className={cn(
+                "min-w-0 flex-1 font-semibold tracking-tight text-[color:var(--ink-dark)]",
+                featured ? "pt-0.5 text-base leading-snug sm:text-[1.0625rem]" : "pt-0.5 text-[15px] leading-6",
+              )}
+            >
+              {title}
+            </h3>
           </div>
-          <h3
-            className={cn(
-              "font-semibold tracking-tight text-[color:var(--ink-dark)]",
-              featured ? "mt-5 text-base leading-snug sm:text-[1.0625rem]" : "mt-5 text-[15px] leading-6",
-            )}
-          >
-            {title}
-          </h3>
           <p
             className={cn(
               "leading-7 text-[color:var(--text-muted)]",
-              featured ? "mt-2.5 text-[0.9375rem] leading-6" : "mt-2 text-sm",
+              featured ? "mt-3 text-[0.9375rem] leading-6" : "mt-2.5 text-sm",
             )}
           >
             {description}
@@ -109,4 +105,3 @@ export function ServiceCard({
     </Link>
   );
 }
-

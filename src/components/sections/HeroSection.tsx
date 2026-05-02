@@ -4,11 +4,34 @@ import type { Dictionary } from "@/i18n/types";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass, visualImageHeroShadowClass } from "@/lib/visualImage";
+import { publicFileExists } from "@/lib/publicFileExists";
+import { editorialPhotoShellClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { premiumHeroBackdrop } from "@/lib/premiumUi";
+
+/** Homepage hero candidates; first existing public file wins, then `file.svg`. */
+const HOME_HERO_CANDIDATES = [
+  "/page-visuals/meva-hero.png",
+  "/page-visuals/meva-hero.webp",
+  "/page-visuals/meva-hero.jpg",
+  "/page-visuals/meva-hero.jpeg",
+  "/hero/meva-hero.png",
+  "/hero/meva-hero.webp",
+  "/hero/meva-hero.jpg",
+  "/hero/meva-hero.jpeg",
+  "/page-visuals/home-hero.png",
+  "/page-visuals/home-hero.webp",
+  "/page-visuals/home-hero.jpg",
+  "/page-visuals/home-hero.jpeg",
+] as const;
+
+const HOME_HERO_FALLBACK = "/file.svg";
 
 export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  const heroSrc =
+    HOME_HERO_CANDIDATES.find((path) => publicFileExists(path)) ?? HOME_HERO_FALLBACK;
+
   return (
-    <section className="bg-[color:var(--background-main)]">
+    <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
       <Container className="py-14 sm:py-16 lg:py-[4.25rem]">
         <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-8">
           <div className="min-w-0 lg:col-span-6 lg:flex lg:flex-col lg:justify-center">
@@ -40,19 +63,20 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
           <div className="min-w-0 lg:col-span-6 lg:flex lg:h-full lg:items-stretch lg:pl-2">
             <div
               className={cn(
-                visualImageClipClass,
-                visualImageHeroShadowClass,
+                editorialPhotoShellClass,
                 "h-[260px] w-full sm:h-[320px] lg:h-full lg:min-h-[min(100%,28rem)]",
               )}
             >
-              <Image
-                src="/hero/meva-hero.png"
-                alt={dict.home.hero.heroImageAlt}
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+              <div className={visualImageInnerClipClass}>
+                <Image
+                  src={heroSrc}
+                  alt={dict.home.hero.heroImageAlt}
+                  fill
+                  priority
+                  className="object-cover brightness-[1.07]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -60,4 +84,3 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
     </section>
   );
 }
-

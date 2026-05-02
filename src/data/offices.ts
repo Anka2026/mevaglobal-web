@@ -13,7 +13,6 @@ export const offices: Office[] = [
     name: "Meva Global Certification B.V.",
     addressLines: ["Newtonlaan 115", "3584 BH Utrecht", "Netherlands"],
     email: "info@mevaglobalcertification.com",
-    phone: "+90 530 665 10 77",
     country: "Netherlands",
   },
   {

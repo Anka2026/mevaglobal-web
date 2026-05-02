@@ -49,9 +49,9 @@ export const serviceDetailsExtraNl: Record<
     detailLink: "Details",
   },
   "eu-ets-mrv-assurance-support": {
-    title: "EU ETS & MRV — assurance-ondersteuning",
+    title: "EU ETS & MRV — Technische Reviewondersteuning",
     intro:
-      "Onafhankelijke, assurance-georiënteerde technische review voor monitoring-, rapportage- en verificatiedatasets (MRV) in EU ETS-context—met focus op methodiekplausibiliteit, bewijstraceerbaarheid en documentatiediscipline. Geen vervanging van bevoegd gezag of wettelijke verificateursrollen.",
+      "Onafhankelijke, gestructureerde technische review voor monitoring-, rapportage- en verificatiedatasets (MRV) in EU ETS-context—methodiekplausibiliteit, bewijstraceerbaarheid en documentatiediscipline. Geen vervanging van bevoegd gezag of wettelijke verificateursrollen.",
     covers: {
       title: "Wat dit omvat",
       bullets: [
@@ -89,7 +89,7 @@ export const serviceDetailsExtraNl: Record<
       bullets: [
         "Scope gekoppeld aan installatie of vlootsegment, rapportageperiode en toepasselijke regelset",
         "Onafhankelijke reviewer mindset: aannames uitdagen, traceerbaarheid testen",
-        "Gecontroleerde woordkeuze—assurance-ondersteuning, geen vervanging van wettelijke verificatie",
+        "Ingetogen woordkeuze—technische reviewondersteuning; geen vervanging van wettelijke verificatie",
       ],
     },
     cta: {
@@ -114,7 +114,7 @@ export const serviceDetailsExtraNl: Record<
       bullets: [
         "Reders en managers die noon reports, bunker delivery notes en BDN-bewijs consolideren",
         "Technisch management dat vlootinstrumenten afstemt op regelgevende templates",
-        "Organisaties die assurance-ready dossiers voor charterpartijen of autoriteiten bouwen",
+        "Organisaties die reviewklare dossiers voor charterpartijen of autoriteiten bouwen",
       ],
     },
     typicalScope: {
@@ -187,7 +187,7 @@ export const serviceDetailsExtraNl: Record<
       bullets: [
         "Expliciete afbakening van CORSIA vs EU ETS-onderwerpen die je vraagt",
         "Geen vervanging van regelgevingsinterpretatie—focus op technische traceerbaarheid en documentatie",
-        "Professioneel ingetogen formulering van status en vervolgstappen",
+        "Professioneel ingetogen formulering van status en afronding",
       ],
     },
     cta: {
@@ -247,7 +247,7 @@ export const serviceDetailsExtraNl: Record<
   "data-evidence-readiness-review": {
     title: "Data- en bewijsgereedheidsreview",
     intro:
-      "Gerichte review van hoe emissie-, milieu- en duurzaamheidsdata worden verzameld, getransformeerd en bewaard—gericht op traceerbaarheid van ruw bewijs naar gerapporteerde cijfers. Geschikt vóór verificatie, assurance of grote disclosures.",
+      "Gerichte review van hoe emissie-, milieu- en duurzaamheidsdata worden verzameld, getransformeerd en bewaard—traceerbaarheid van ruw bewijs naar gerapporteerde cijfers. Geschikt vóór verificatie, externe review of grote disclosures.",
     covers: {
       title: "Wat dit omvat",
       bullets: [
@@ -345,13 +345,13 @@ export const serviceDetailsExtraNl: Record<
   "sustainability-reporting-evidence-review": {
     title: "Duurzaamheidsrapportage — bewijsreview",
     intro:
-      "Gestructureerde bewijsreview voor duurzaamheidsrapporten, bijlagen en geselecteerde KPI-disclosures—ondersteunt consistentie tussen narratieve claims en onderliggende berekeningen, zonder statutaire assurance tenzij formeel onder afgesproken criteria.",
+      "Gestructureerde bewijsreview voor duurzaamheidsrapporten, bijlagen en geselecteerde KPI-disclosures—consistentie tussen narratieve claims en onderliggende berekeningen, zonder formele rapportage van een onafhankelijke beoordelaar tenzij onder afgesproken criteria.",
     covers: {
       title: "Wat dit omvat",
       bullets: [
         "Kruiscontroles tussen gepubliceerde cijfers en werkboeken of derde partij-data",
         "Steekproeven op CO₂-, energie-, water- en afvalmetrics waar materieel",
-        "Narratieve afstemming: geen ongefundeerde superlatieven of overdreven zekerheid",
+        "Narratieve afstemming: geen ongefundeerde superlatieven of onterechte stelligheid",
       ],
     },
     forWho: {
@@ -375,7 +375,7 @@ export const serviceDetailsExtraNl: Record<
       bullets: [
         "Stakeholders vergelijken verhalen met cijfers—inconsistentie ondermijnt vertrouwen",
         "Vermindert greenwashing-risico door gedisciplineerde taal en bewijs",
-        "Bereidt voor op diepere assurance-cycli indien gewenst",
+        "Bereidt voor op diepere externe reviewcycli indien gewenst",
       ],
     },
     approach: {
@@ -481,7 +481,7 @@ export const serviceDetailsExtraNl: Record<
       bullets: [
         "Governance eerst: criteria, belangenverstrengeling en escalatie schriftelijk vastgelegd",
         "Bewijsgerichte tests met traceerbare bevindingen",
-        "Outputs afgestemd op beoogd gebruik—vaak intern of gecontroleerd extern",
+        "Outputs afgestemd op beoogd gebruik—vaak intern of met beperkte externe verspreiding",
       ],
     },
     cta: {
@@ -558,7 +558,7 @@ export const serviceDetailsExtraNl: Record<
       title: "Voor wie",
       bullets: [
         "Eerste verificatietrajecten en complexe multi-site organisaties",
-        "Programma’s waar leiding assurance wil vóór volledige inzet",
+        "Programma’s waar leiding eerst onafhankelijke review wil vóór volledige inzet",
         "Situaties met strakke disclosure-deadlines en weinig ruimte voor verrassing",
       ],
     },
@@ -582,7 +582,7 @@ export const serviceDetailsExtraNl: Record<
       title: "Zo werkt Meva",
       bullets: [
         "Transparante scope: mock is geen vervanging voor formele verificatie",
-        "Onafhankelijke reviewerdiscipline in lijn met assurance-principes",
+        "Onafhankelijke reviewerdiscipline in lijn met onpartijdigheids- en bewijsstandaarden",
         "Output gericht op leren, niet op compliance-theater",
       ],
     },

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { publicFileExists } from "@/lib/publicFileExists";
-import { visualImageClipClass } from "@/lib/visualImage";
+import { editorialPhotoShellClass, heroEditorialMatteBgClass, visualImageInnerClipClass } from "@/lib/visualImage";
 import { cn } from "@/lib/cn";
 
 const DEFAULT_HERO_SRC = "/page-visuals/accreditation-process-hero.png";
@@ -22,16 +22,12 @@ export function AccreditationHeroFrame({
   return (
     <div
       className={cn(
-        visualImageClipClass,
-        "relative w-full overflow-hidden",
-        "border border-[color:color-mix(in_oklab,var(--brand-primary)_12%,var(--border-soft))]",
-        "bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_48%,white)]",
-        "ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_6%,transparent)]",
+        editorialPhotoShellClass,
         "aspect-[16/10] max-h-[min(17rem,38vh)] w-full sm:max-h-[min(18rem,40vh)] lg:max-h-[min(16.5rem,36vh)]",
       )}
     >
       {hasImage ? (
-        <div className="absolute inset-0 p-2 sm:p-2.5">
+        <div className={cn(visualImageInnerClipClass, heroEditorialMatteBgClass)}>
           <Image
             src={src}
             alt={alt}
@@ -43,7 +39,10 @@ export function AccreditationHeroFrame({
         </div>
       ) : (
         <div
-          className="absolute inset-0 bg-[radial-gradient(100%_100%_at_15%_10%,color-mix(in_oklab,var(--brand-accent)_12%,transparent),transparent_55%),radial-gradient(90%_80%_at_90%_85%,color-mix(in_oklab,var(--brand-primary)_10%,transparent),transparent_50%),linear-gradient(165deg,color-mix(in_oklab,var(--brand-accent-soft)_90%,white),white)]"
+          className={cn(
+            visualImageInnerClipClass,
+            "bg-[radial-gradient(100%_100%_at_15%_10%,color-mix(in_oklab,var(--brand-accent)_12%,transparent),transparent_55%),radial-gradient(90%_80%_at_90%_85%,color-mix(in_oklab,var(--brand-primary)_10%,transparent),transparent_50%),linear-gradient(165deg,color-mix(in_oklab,var(--brand-accent-soft)_90%,white),color-mix(in_oklab,var(--brand-accent-soft)_22%,white))]",
+          )}
           aria-hidden
         />
       )}

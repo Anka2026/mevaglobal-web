@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { RESOURCE_ARTICLE_SLUGS } from "@/data/resourceArticleSlugs";
-import { services } from "@/data/services";
+import { getAllVerificationServiceSlugs } from "@/lib/verification/verificationServicesData";
 
 const baseUrl = "https://mevaglobalcertification.com";
 const locales = ["en", "tr", "nl"] as const;
@@ -29,8 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const serviceEntries = locales.flatMap((l) =>
-    services.map((s) => ({
-      url: `${baseUrl}/${l}/verification-services/${s.slug}`,
+    getAllVerificationServiceSlugs().map((slug) => ({
+      url: `${baseUrl}/${l}/verification-services/${slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,

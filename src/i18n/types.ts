@@ -60,6 +60,7 @@ export type Dictionary = {
     requestQuote: string;
     contact: string;
     learnMore: string;
+    exploreCbam: string;
     exploreServices: string;
     search: string;
     submit: string;
@@ -69,6 +70,7 @@ export type Dictionary = {
     offices: string;
     quickLinks: string;
     contactTitle: string;
+    trustFootnote: string;
     rights: string;
   };
   home: {
@@ -92,6 +94,7 @@ export type Dictionary = {
     processSteps: { title: string; description: string }[];
     statementPreviewTitle: string;
     statementPreviewIntro: string;
+    cbamEyebrow: string;
     cbamTitle: string;
     cbamIntro: string;
     cbamBullets: string[];
@@ -125,6 +128,15 @@ export type Dictionary = {
         esgAndReportingAssurance: { title: string; intro: string };
       };
       cardCta: string;
+      /** Compact anchor links to each service group on the verification-services index. */
+      serviceGroupNav: {
+        ariaLabel: string;
+        climateCarbon: string;
+        productDeclarations: string;
+        indoorMaterials: string;
+        supplyChain: string;
+        esgReporting: string;
+      };
       whyIndependent: { title: string; items: { title: string; description: string }[] };
       howWeWork: { title: string; intro: string; steps: { title: string; description: string }[] };
       /**
@@ -244,6 +256,10 @@ export type Dictionary = {
       corporateDocumentsSection: {
         title: string;
         intro: string;
+        /** Shown when the PDF asset is not present under `public/` (no misleading “open PDF” action). */
+        fileUnavailableNote: string;
+        /** Honest secondary route when the file is missing — not labelled as opening the PDF. */
+        knowledgeHubLinkLabel: string;
         labels: {
           publicationStatus: string;
           firstPublished: string;
@@ -271,6 +287,11 @@ export type Dictionary = {
     statementSearch: {
       title: string;
       intro: string;
+      /** Short hero eyebrow (distinct from nav label). */
+      heroEyebrow: string;
+      heroImageAlt: string;
+      /** Compact heading above filter controls. */
+      panelTitle: string;
       note: string;
       fields: {
         statementNumber: string;
@@ -393,6 +414,7 @@ export type Dictionary = {
     typicalUse: string;
     whatWeDo: string;
     deliverables: string;
+    relatedServicesTitle: string;
   };
 };
 

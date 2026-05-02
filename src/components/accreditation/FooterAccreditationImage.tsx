@@ -7,7 +7,7 @@ import {
   ACCREDITATION_IMAGE_STORAGE_KEY,
 } from "@/lib/accreditationImageStorage";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass } from "@/lib/visualImage";
+import { visualImageClipClass, visualImageInnerClipClass } from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/page-visuals/accreditation-hero.png";
 
@@ -49,21 +49,23 @@ export function FooterAccreditationImage({ alt }: Props) {
     <div
       className={cn(
         visualImageClipClass,
-        "relative mt-6 h-36 w-full max-w-[640px] border border-white/10 bg-white/5 sm:h-40",
+        "relative mt-6 h-36 w-full max-w-[640px] bg-white/[0.06] sm:h-40",
       )}
     >
       {displaySrc ? (
-        <Image
-          src={displaySrc}
-          alt={alt}
-          fill
-          sizes="(max-width: 1024px) 100vw, 640px"
-          className="object-contain object-center p-4"
-          unoptimized={displaySrc.startsWith("data:")}
-          onError={() => {
-            if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
-          }}
-        />
+        <div className={visualImageInnerClipClass}>
+          <Image
+            src={displaySrc}
+            alt={alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 640px"
+            className="object-contain object-center"
+            unoptimized={displaySrc.startsWith("data:")}
+            onError={() => {
+              if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
+            }}
+          />
+        </div>
       ) : null}
     </div>
   );

@@ -21,7 +21,7 @@ function includesInsensitive(haystack: string | undefined | null, needle: string
 }
 
 const filterCardClass =
-  "p-6 sm:p-7 shadow-[var(--shadow-card)] ring-1 ring-black/[0.04] transition-[box-shadow,border-color] motion-safe:hover:border-[color:color-mix(in_oklab,var(--brand-accent)_22%,var(--border-soft))] motion-safe:hover:shadow-[var(--shadow-soft)]";
+  "border border-[color:color-mix(in_oklab,var(--brand-primary)_11%,var(--border-soft))] p-6 sm:p-7 shadow-[var(--shadow-card)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_5%,transparent)] transition-[box-shadow,border-color] motion-safe:hover:border-[color:color-mix(in_oklab,var(--brand-accent)_24%,var(--border-soft))] motion-safe:hover:shadow-[var(--shadow-soft)]";
 
 const emptyInfoClass =
   "rounded-[1.0625rem] border border-[color:color-mix(in_oklab,var(--brand-accent)_18%,var(--border-soft))] bg-gradient-to-br from-white via-[#fafcfd] to-[#f4f9fc] p-6 sm:p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.92)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_7%,transparent)]";
@@ -141,37 +141,24 @@ export function StatementSearchClient({ dict }: { dict: Dictionary }) {
           </div>
         </div>
 
-        {hasRegistryData ? (
-          <div className="mt-4 flex flex-col gap-3 border-t border-[color:var(--border-soft)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-4 flex flex-col gap-3 border-t border-[color:var(--border-soft)] pt-4">
+          {hasRegistryData ? (
             <p className="text-xs tracking-[0.06em] text-[color:var(--text-muted)]">
               {labels.resultsCount}: <span className="font-semibold text-[color:var(--ink-dark)]">{results.length}</span>
             </p>
-            <div className="flex items-center gap-3">
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                onClick={() =>
-                  setFilters({ statementNumber: "", companyName: "", standard: "", reportingYear: "" })
-                }
-              >
-                {labels.clear}
-              </Button>
-            </div>
-          </div>
-        ) : (
-          <div className="mt-4 flex justify-end border-t border-[color:var(--border-soft)] pt-4">
+          ) : null}
+          <div className="flex flex-wrap items-center gap-3">
             <Button
               type="button"
               variant="secondary"
               size="sm"
-              disabled={!hasActiveFilters}
+              disabled={!hasRegistryData && !hasActiveFilters}
               onClick={() => setFilters({ statementNumber: "", companyName: "", standard: "", reportingYear: "" })}
             >
               {labels.clear}
             </Button>
           </div>
-        )}
+        </div>
 
         {ss?.note ? (
           <p className="mt-4 text-xs leading-relaxed text-[color:var(--text-muted)]">{ss.note}</p>
@@ -218,7 +205,7 @@ function ResultCard({ record, dict }: { record: StatementRecord; dict: Dictionar
   };
 
   return (
-    <Card className="p-6 sm:p-7 shadow-[var(--shadow-card)] ring-1 ring-black/[0.04]">
+    <Card className="border border-[color:color-mix(in_oklab,var(--brand-primary)_9%,var(--border-soft))] p-6 sm:p-7 shadow-[var(--shadow-card)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_4%,transparent)]">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
         <div className="min-w-0 flex-1">
           <h3 className="text-[15px] font-semibold leading-6 tracking-tight text-[color:var(--ink-dark)]">
@@ -251,7 +238,7 @@ function ResultCard({ record, dict }: { record: StatementRecord; dict: Dictionar
 function KV({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0">
-      <p className="text-xs font-semibold tracking-[0.14em] text-[color:var(--text-muted)]">{label}</p>
+      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]/85">{label}</p>
       <p className="mt-1 break-words text-sm font-semibold text-[color:var(--ink-dark)]">{value}</p>
     </div>
   );

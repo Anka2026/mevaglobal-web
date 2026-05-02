@@ -46,7 +46,7 @@ export const newServiceDetailsEn = {
     heroEyebrow: "Services",
     title: "HPD (Health Product Declaration) Verification Review",
     intro:
-      "The credibility of HPD disclosures depends not only on publishing a list of contents, but also on the accuracy of composition data, the clarity of disclosure boundaries, the consistency of hazard communication, the adequacy of supporting evidence, and the controlled structure of disclosures intended for external use. Meva Global provides an independent and structured verification review for HPD-related ingredient transparency and health-focused product disclosures. This service creates a more reliable, more controlled, and more professional disclosure basis through the systematic review of composition data, supporting technical documentation, supplier sources, and disclosure logic.",
+      "HPD strength lies in whether composition data, hazard communication and supplier evidence align with what the declaration states—not only in publishing an ingredient list. Meva Global provides independent verification review for HPD-oriented disclosures, examining composition structure, supporting documentation and disclosure boundaries as one technical file.",
     covers: {
       title: "Service Scope",
       bullets: [
@@ -60,7 +60,7 @@ export const newServiceDetailsEn = {
       bullets: [
         "Manufacturers that want to present HPD disclosures with greater credibility and a more professional structure",
         "Teams strengthening ingredient transparency, material health, and health-oriented product disclosures",
-        "Organisations that want supplier data and supporting evidence structures to become more controlled",
+        "Organisations that want supplier data and supporting evidence structures to become more disciplined",
       ],
     },
     typicalScope: {
@@ -90,7 +90,7 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current HPD file, composition data, and supporting supplier documents; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request Proposal",
+      primaryButton: "Request a Proposal",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
@@ -99,7 +99,7 @@ export const newServiceDetailsEn = {
     heroEyebrow: "Services",
     title: "Material Health and Ingredient Transparency Verification Review",
     intro:
-      "The credibility of material health and ingredient transparency claims depends not only on presenting a list of contents, but also on the accuracy of composition data, the clarity of hazard communication, the adequacy of supporting evidence, the consistency of terminology, and the controlled structure of disclosures intended for external use. Meva Global provides an independent and structured verification review for technical disclosures focused on material health and ingredient transparency. This service creates a more reliable, more controlled, and more professional basis for external disclosures through the systematic review of composition data, supporting documentation, hazard communication, and overall disclosure logic.",
+      "Material-health narratives fail when terminology, hazard explanations and supplier evidence diverge from the declared composition story. Meva Global provides independent verification review for ingredient transparency disclosures—testing composition data, hazard communication and supporting records before claims reach specifications or buyers.",
     covers: {
       title: "Service Scope",
       bullets: [
@@ -113,7 +113,7 @@ export const newServiceDetailsEn = {
       bullets: [
         "Manufacturers that want to present material ingredient content to external stakeholders with greater credibility",
         "Teams strengthening product transparency, health-oriented content explanations, and technical file quality",
-        "Organisations that want material health claims framed in a more controlled and more professional structure",
+        "Organisations that want material health claims framed in a more disciplined and professional structure",
       ],
     },
     typicalScope: {
@@ -143,7 +143,7 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current ingredient transparency documentation, composition data, and supporting records; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request Proposal",
+      primaryButton: "Request a Proposal",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
@@ -152,7 +152,7 @@ export const newServiceDetailsEn = {
     heroEyebrow: "Services",
     title: "Green Building Documentation Verification Review",
     intro:
-      "The credibility of technical documentation used in green building certification processes depends not only on the presence of submitted files, but also on the completeness of scope, the consistency of evidence structures, the clarity of alignment with relevant credits or criteria, and the traceability of supporting technical records. Meva Global provides an independent and structured verification review for green building submissions and related technical documentation. This service creates a more reliable, more controlled, and more professional submission basis through the systematic review of document packages, evidence records, technical disclosures, and application logic.",
+      "Green-building submissions succeed when credit narratives, calculations and product evidence point to the same criteria mapping—missing links trigger review comments and delays. Meva Global provides independent verification review for certification-oriented documentation packages, checking scope completeness, evidence consistency and criterion alignment before external assessment.",
     covers: {
       title: "Service Scope",
       bullets: [
@@ -196,14 +196,14 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current green building application file, technical records, and supporting documentation; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request Proposal",
+      primaryButton: "Request a Proposal",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
   },
   "responsible-mining-irma-readiness": standardServiceDetail(
     "Responsible mining and IRMA verification readiness",
-    "Verification readiness for responsible mining expectations—site evidence, governance themes, and gap closure. Not a substitute for formal assurance conclusions by scheme owners.",
+    "Verification readiness for responsible mining expectations—site evidence, governance themes, and gap closure. Not a substitute for formal conclusions issued by scheme owners.",
     { ...sec, ctaTitle: "Discuss site and scope" },
     {
       covers: [
@@ -229,7 +229,7 @@ export const newServiceDetailsEn = {
       approach: [
         "Scope anchored to sites, commodities and reporting period",
         "Independent reviewer discipline",
-        "Transparent limitations on assurance level",
+        "Transparent limitations on review depth",
       ],
     },
     "Share your sites, commodities and stakeholder expectations. We will propose a readiness assessment model.",

@@ -3,6 +3,7 @@ import { cn } from "@/lib/cn";
 export function SectionHeading({
   title,
   eyebrow,
+  eyebrowClassName,
   description,
   align = "left",
   className,
@@ -14,6 +15,7 @@ export function SectionHeading({
 }: {
   title: string;
   eyebrow?: string;
+  eyebrowClassName?: string;
   description?: string | string[];
   align?: "left" | "center";
   className?: string;
@@ -33,14 +35,19 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <p className="text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)]">
+        <p
+          className={cn(
+            "text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)]",
+            eyebrowClassName,
+          )}
+        >
           {eyebrow}
         </p>
       ) : null}
       {titleAs === "h1" ? (
         <h1
           className={cn(
-            "mt-2 text-[1.6rem] font-semibold leading-[1.15] tracking-tight text-[color:var(--ink-dark)] sm:text-[2rem]",
+            "mt-3.5 text-[1.6rem] font-semibold leading-[1.15] tracking-tight text-[color:var(--ink-dark)] sm:mt-4 sm:text-[2rem]",
             titleClassName,
           )}
         >
@@ -49,7 +56,7 @@ export function SectionHeading({
       ) : (
         <h2
           className={cn(
-            "mt-2 text-[1.6rem] font-semibold leading-[1.15] tracking-tight text-[color:var(--ink-dark)] sm:text-[2rem]",
+            "mt-3.5 text-[1.6rem] font-semibold leading-[1.15] tracking-tight text-[color:var(--ink-dark)] sm:mt-4 sm:text-[2rem]",
             titleClassName,
           )}
         >
@@ -59,7 +66,7 @@ export function SectionHeading({
       {description ? (
         <div
           className={cn(
-            "mt-3 space-y-3",
+            "mt-4 space-y-3 sm:mt-[1.125rem]",
             descriptionVariant === "lead-support" && "space-y-3.5 sm:space-y-4",
             descriptionVariant !== "lead-support" && "text-sm leading-7 text-[color:var(--text-muted)] sm:text-[1.05rem]",
             descriptionClassName,

@@ -35,7 +35,7 @@ export const insights: InsightPost[] = [
     },
     excerpt: {
       en: "How to keep reporting defensible with traceable assumptions and controls.",
-      tr: "İzlenebilir varsayımlar ve kontrollerle raporlamayı savunulabilir tutmak.",
+      tr: "İzlenebilir varsayımlar ve kontrollerle raporlamayı teknik incelemeye dayanıklı kılmak.",
       nl: "Hoe je reporting verdedigbaar houdt met traceerbare aannames en controls.",
     },
   },
@@ -57,16 +57,16 @@ export const insights: InsightPost[] = [
   {
     slug: "assurance-for-sustainability-claims",
     date: "2026-04-19",
-    tag: { en: "Assurance", tr: "Güvence", nl: "Assurance" },
+    tag: { en: "Technical Review", tr: "Teknik İnceleme", nl: "Technische Review" },
     title: {
-      en: "Assurance for sustainability claims: when limited assurance is not enough",
-      tr: "Sürdürülebilirlik iddiaları için güvence: sınırlı güvence ne zaman yetmez",
-      nl: "Assurance voor duurzaamheidsclaims: wanneer limited assurance niet volstaat",
+      en: "Independent Review For Sustainability Claims: When Limited Assurance Is Not Enough",
+      tr: "Sürdürülebilirlik İddialarında Bağımsız İnceleme: Sınırlı Bağımsız İnceleme (Limited Assurance) Ne Zaman Yetmez",
+      nl: "Onafhankelijke Review Voor Duurzaamheidsclaims: Wanneer Limited Assurance Niet Volstaat",
     },
     excerpt: {
-      en: "A pragmatic view of assurance levels, decision risk and public disclosure.",
-      tr: "Güvence seviyeleri, karar riski ve kamu açıklaması üzerine pragmatik bir bakış.",
-      nl: "Een pragmatische blik op assurance levels, decisierisico en publieke disclosure.",
+      en: "A pragmatic view of review depth, decision risk, and public disclosure.",
+      tr: "İnceleme derinliği, karar riski ve kamu açıklaması üzerine pragmatik bir bakış.",
+      nl: "Een pragmatische blik op reviewediepte, beslissingsrisico en publieke disclosure.",
     },
   },
 ];

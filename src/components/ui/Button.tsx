@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cn } from "@/lib/cn";
+import { twMerge } from "tailwind-merge";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md";
@@ -9,9 +9,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "border-transparent bg-[color:var(--brand-primary)] text-white shadow-sm hover:bg-[color:var(--brand-primary-hover)] hover:shadow-[var(--shadow-soft)]",
+    "border-transparent bg-[color:var(--brand-primary)] text-white !text-white shadow-sm hover:bg-[color:var(--brand-primary-hover)] hover:shadow-[var(--shadow-soft)]",
   secondary:
-    "border-[color:var(--border-soft)] bg-white text-[color:var(--ink-dark)] shadow-[var(--shadow-card)] hover:border-[color:var(--brand-accent)]/35 hover:bg-[color:var(--brand-accent-soft)]",
+    "border-[color:var(--border-soft)] bg-white text-[color:var(--ink-dark)] !text-[color:var(--ink-dark)] shadow-[var(--shadow-card)] hover:border-[color:var(--brand-accent)]/35 hover:bg-[color:var(--brand-accent-soft)]",
   ghost:
     "border-transparent bg-transparent text-[color:var(--ink-dark)] hover:bg-[color:var(--brand-accent-soft)]",
 };
@@ -31,7 +31,7 @@ export function Button({
   size?: Size;
 }) {
   return (
-    <button className={cn(base, variants[variant], sizes[size], className)} {...props} />
+    <button className={twMerge(base, variants[variant], sizes[size], className)} {...props} />
   );
 }
 
@@ -49,7 +49,7 @@ export function ButtonLink({
   return (
     <Link
       href={href}
-      className={cn(base, variants[variant], sizes[size], className)}
+      className={twMerge(base, variants[variant], sizes[size], className)}
       {...props}
     />
   );

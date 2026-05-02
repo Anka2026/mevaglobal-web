@@ -5,7 +5,8 @@ import type { Service } from "@/data/services";
 import { getService } from "@/data/services";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { mergeServiceDetailWithEnglishFallback } from "@/lib/verification/mergeServiceDetailLocale";
-import { getServiceHeroVisual, type ServiceHeroVisual } from "@/lib/verification/serviceHeroVisuals";
+import type { ServiceHeroVisual } from "@/lib/verification/serviceHeroVisuals";
+import { resolveServiceHeroVisual } from "@/lib/verification/resolveServiceHeroVisual";
 import { logVerificationIssue } from "@/lib/verification/log";
 
 type ServiceDetails = Dictionary["pages"]["serviceDetails"][Service["slug"]];
@@ -110,7 +111,7 @@ export async function loadVerificationServiceDetailSafe(
       slug: canonical,
       dict,
       merged,
-      visual: getServiceHeroVisual(canonical),
+      visual: resolveServiceHeroVisual(canonical),
     };
   } catch (e) {
     console.error("[verification-services] loadVerificationServiceDetailSafe failed", canonical, e);

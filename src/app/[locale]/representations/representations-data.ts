@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/locales";
+import { resolvePartnerLogoPath } from "@/lib/resolvePublicImage";
 import type { OrganizationEntity, RepresentationsUiCopy } from "./RepresentationsCards";
 
 export type RepresentationsPageBundle = {
@@ -15,19 +16,24 @@ export type RepresentationsPageBundle = {
 
 const bundles: Record<Locale, RepresentationsPageBundle> = {
   tr: {
-    title: "Temsilciliklerimiz",
+    title: "Temsilcilikler ve uluslararası teknik koordinasyon",
     intro:
-      "Uluslararası doğrulama, teknik değerlendirme ve sürdürülebilirlik ekosistemindeki temsil yapılarımız ve çözüm ortaklıklarımızı tek bir sayfada sunuyoruz. Bu yapı, müşterilerimize daha güçlü uzmanlık ağı, daha geniş coğrafi erişim ve daha bütüncül hizmet kabiliyeti sağlamamıza katkı sunar.",
+      "Temsilcilik yapısı yerel iletişim ve dokümantasyon koordinasyonunu destekler; teknik değerlendirme, karar disiplini ve kurumsal yönetişim Meva Global’in merkezi süreçleri altında yürütülür.",
     representationsTitle: "Temsilciliklerimiz",
     representationsBody:
-      "Uluslararası doğrulama, teknik değerlendirme ve kurumsal iş birliği ekosistemindeki temsil ağımızı ve iş birliklerimizi yansıtır.",
-    solutionTitle: "Çözüm Ortaklarımız",
+      "Temsilcilik ve iş birliği kanallarımız üzerinden yerel erişim, dokümantasyon koordinasyonu ve uluslararası teknik hizalanma.",
+    solutionTitle: "İş Birliği Kanalları ve Ortaklar",
     solutionBody:
-      "Tamamlayıcı uzmanlık alanlarıyla daha bütüncül bir hizmet yapısına katkı sağlayan çözüm ortaklarımızı içerir.",
+      "Tamamlayıcı uzmanlık alanlarıyla iş birliği yürütülen ortak yapılar.",
     ui: {
-      viewDetails: "Detayları Gör",
+      viewDetails: "Temsilcilik Detaylarını İncele",
       close: "Kapat",
       summaryHeading: "Kısa Özet",
+      regionLabel: "Bölge / pazar",
+      networkRoleLabel: "Rol özeti",
+      technicalFocusLabel: "Teknik odak",
+      judgementBoundaryNote:
+        "Temsilcilik yapısı yerel iletişim ve dokümantasyon koordinasyonunu kolaylaştırır; teknik değerlendirme, karar mantığı ve çıktılar Meva Global’in merkezi süreçleri ve kurumsal yönetişimi altında yürütülür.",
       corporateProfile: "Kurumsal Profil",
       serviceAndCompetenceAreas: "Hizmet ve Yetkinlik Alanları",
       accreditationAndCompetence: "Akreditasyon ve Yetkinlik",
@@ -43,6 +49,12 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "emicert",
         name: "EmiCert",
         logoSrc: "/partner-logos/emicert.png",
+        region:
+          "Yunanistan, İrlanda, Bulgaristan ve Kıbrıs; Avrupa genelinde müşteri erişimi",
+        networkRole:
+          "Sera gazı doğrulaması ve emisyon raporlaması süreçlerinde temsil ve koordinasyon kanalı",
+        technicalFocus:
+          "Endüstriyel emisyonlar, havacılık (EU ETS, CORSIA), denizcilik MRV, F-Gas ve ilişkili doğrulama bağlamları",
         cardSummary:
           "Sera gazı doğrulaması, emisyon raporlaması ve regülasyon uyumu alanlarında güçlü uzmanlığa sahip uluslararası bir doğrulama kuruluşudur.",
         modalSummary:
@@ -69,26 +81,32 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
+        region:
+          "Amerika, Asya, Avrupa ve Orta Doğu başta olmak üzere çok bölgeli yapı; Türkiye dahil",
+        networkRole:
+          "Sürdürülebilirlik doğrulaması, denetim koordinasyonu ve uygunluk değerlendirmelerinde iş birliği kanalı",
+        technicalFocus:
+          "ASI Performans Standardı ve Gözetim Zinciri, tedarik zinciri ön değerlendirmeleri, çevresel ve sürdürülebilirlik değerlendirmeleri",
         cardSummary:
-          "Sürdürülebilirlik doğrulaması, denetim ve değerlendirme hizmetlerinde farklı coğrafyalarda faaliyet gösteren uluslararası bir uygunluk ve güvence kuruluşudur.",
+          "Sürdürülebilirlik doğrulaması, denetim ve uygunluk değerlendirmelerinde çok bölgeli çalışan uluslararası bir kuruluştur.",
         modalSummary:
           "Cetizion Verifica; denetim, değerlendirme ve doğrulama hizmetlerinde Hindistan, Amerika, Avrupa, Orta Doğu ve Afrika’da faaliyet gösteren uluslararası bir kuruluştur.",
         corporateProfile:
-          "Kuruluş, sürdürülebilirlik, tedarik zinciri, çevresel performans ve kurumsal güvence alanlarında geniş hizmet kapsamına sahiptir.",
+          "Kuruluş; sürdürülebilirlik, tedarik zinciri, çevresel performans ve kurumsal uygunluk değerlendirmeleri alanlarında geniş hizmet kapsamına sahiptir.",
         serviceAreas: [
           "ASI Performans Standardı denetimleri",
           "ASI Chain of Custody (CoC) denetimleri",
           "Su verimliliği ve çevresel performans değerlendirmeleri",
           "Ürün yaşam döngüsü değerlendirmesi",
           "Geri dönüşüm içeriği ve sıfır atık yaklaşımları",
-          "Karbon tarafsızlığı ve sürdürülebilirlik raporu güvencesi",
+          "Karbon tarafsızlığı ve sürdürülebilirlik raporu doğrulaması",
           "Tedarik zinciri durum tespiti",
           "CDP ve EcoVadis ön değerlendirmeleri",
           "CAHRA durum tespiti",
           "ISO 26000 boşluk analizi",
         ],
         accreditationAndCompetence:
-          "Cetizion Verifica, ASI tarafından akredite denetim kuruluşu olarak tanınmakta ve geniş bir coğrafyada ASI Performans Standardı ile Gözetim Zinciri (CoC) denetimleri gerçekleştirmektedir. Bu yetkinlik, özellikle alüminyum ve ilişkili tedarik zincirlerinde sürdürülebilirlik güvencesi arayan kuruluşlar açısından önemli bir uzmanlık alanı oluşturmaktadır.",
+          "Cetizion Verifica, ASI tarafından akredite denetim kuruluşu olarak tanınmakta ve geniş bir coğrafyada ASI Performans Standardı ile Gözetim Zinciri (CoC) denetimleri gerçekleştirmektedir. Bu yetkinlik, özellikle alüminyum ve ilişkili tedarik zincirlerinde sürdürülebilirlik doğrulaması ve denetimi arayan kuruluşlar için belirgin bir uzmanlık alanı oluşturur.",
         geographicScope:
           "Cetizion Verifica; Amerika, Asya, Avrupa ve Orta Doğu’da geniş bir coğrafi kapsam içinde hizmet sunmaktadır. Türkiye dahil birçok ülkede sürdürülebilirlik ve uygunluk değerlendirme faaliyetleri yürütmektedir.",
         referenceWorks:
@@ -100,6 +118,11 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "anka-sustainability",
         name: "ANKA Sustainability",
         logoSrc: "/partner-logos/anka-sustainability.png",
+        region: "Hollanda (Utrecht); Türkiye (İstanbul ofis yapılanması)",
+        networkRole:
+          "MEVA görev yollarıyla uyumlu sürdürülebilirlik danışmanlığı, uygulama desteği ve dijital çözüm ortağı",
+        technicalFocus:
+          "ESG raporlaması, karbon ve iklim yönetimi, regülasyon uyumu, sertifikasyon ve izlenebilirlik hazırlığı",
         cardSummary:
           "Raporlama, uyum, karbon yönetimi ve uygulama süreçlerini güçlendirmeye odaklanan stratejik sürdürülebilirlik danışmanlığı ve dijital çözüm ortağıdır.",
         modalSummary:
@@ -115,26 +138,31 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
           "Sertifikasyon ve izlenebilirlik yapıları",
         ],
         sectorExperience:
-          "İmalat ve sanayi, ambalaj, inşaat, alüminyum ve metaller, gıda ve tarım, kimyasallar, enerji ve çok uluslu kurumsal yapılar dahil farklı sektörlerde uzmanlaşmış destek sunmaktadır.",
+          "İmalat ve sanayi, ambalaj, inşaat, alüminyum ve metaller, gıda ve tarım, kimyasallar, enerji ve çok uluslu kurumsal yapılar dahil çok sektörlü danışmanlık deneyimi.",
         corporateStructure:
           "Şirketin merkezi Hollanda’nın Utrecht şehrindedir. Türkiye’de ise İstanbul Ümraniye’de genel merkez ve Avcılar Teknopark’ta şube yapılanması bulunmaktadır.",
       },
     ],
   },
   en: {
-    title: "Our Representations",
+    title: "Representations and international technical coordination",
     intro:
-      "We present our representation structures and solution partnerships across the international verification, technical assessment, and sustainability ecosystem on a single page. This structure helps us deliver a stronger expert network, broader geographic reach, and more holistic service capability for our clients.",
-    representationsTitle: "Our Representations",
+      "Representatives support local communication and documentation coordination. Technical assessment, decision discipline and governance follow Meva Global’s central technical processes.",
+    representationsTitle: "Representations",
     representationsBody:
-      "Reflects our representation network and collaborations across the international verification, technical assessment, and institutional cooperation ecosystem.",
-    solutionTitle: "Solution Partners",
+      "Representation and cooperation channels for local access, documentation coordination and alignment with central technical review.",
+    solutionTitle: "Cooperation Partners And Channels",
     solutionBody:
-      "Includes solution partners whose complementary expertise contributes to a more holistic service structure.",
+      "Partners engaged where complementary expertise supports delivery while technical judgement follows Meva Global’s defined pathways.",
     ui: {
-      viewDetails: "View Details",
+      viewDetails: "View Representation Details",
       close: "Close",
       summaryHeading: "Summary",
+      regionLabel: "Region / market",
+      networkRoleLabel: "Role summary",
+      technicalFocusLabel: "Technical focus",
+      judgementBoundaryNote:
+        "Representatives facilitate communication and documentation coordination; technical assessment, decision logic and outputs are managed under Meva Global’s central processes and governance.",
       corporateProfile: "Corporate Profile",
       serviceAndCompetenceAreas: "Service and Competence Areas",
       accreditationAndCompetence: "Accreditation and Competence",
@@ -150,6 +178,10 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "emicert",
         name: "EmiCert",
         logoSrc: "/partner-logos/emicert.png",
+        region: "Greece, Ireland, Bulgaria and Cyprus; European delivery footprint",
+        networkRole: "Cooperation channel for greenhouse gas verification and emissions-reporting coordination",
+        technicalFocus:
+          "Industrial emissions, aviation (EU ETS, CORSIA), maritime MRV, F-Gas reports and related verification contexts",
         cardSummary:
           "An international verification body with strong expertise in greenhouse gas verification, emissions reporting, and regulatory compliance.",
         modalSummary:
@@ -176,26 +208,31 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
+        region: "Multi-region presence across the Americas, Asia, Europe and the Middle East, including Türkiye",
+        networkRole:
+          "Cooperation channel for sustainability verification, audit coordination and conformity-related assessments",
+        technicalFocus:
+          "ASI Performance Standard and Chain of Custody, supply-chain due diligence, environmental and sustainability assessments",
         cardSummary:
-          "An international conformity and assurance organization operating across geographies in sustainability verification, audit, and assessment services.",
+          "An international conformity assessment organization operating across geographies in sustainability verification, audit, and technical assessment services.",
         modalSummary:
           "Cetizion Verifica is an international organization providing audit, assessment, and verification services in India, the Americas, Europe, the Middle East, and Africa.",
         corporateProfile:
-          "The organization has a broad service scope across sustainability, supply chain, environmental performance, and corporate assurance.",
+          "The organization has a broad service scope across sustainability, supply chain, environmental performance, and corporate reporting verification.",
         serviceAreas: [
           "ASI Performance Standard audits",
           "ASI Chain of Custody (CoC) audits",
           "Water efficiency and environmental performance assessments",
           "Product life cycle assessment",
           "Recycled content and zero-waste approaches",
-          "Carbon neutrality and sustainability report assurance",
+          "Carbon neutrality programmes and sustainability report verification",
           "Supply chain due diligence",
           "CDP and EcoVadis pre-assessments",
           "CAHRA due diligence",
           "ISO 26000 gap analysis",
         ],
         accreditationAndCompetence:
-          "Cetizion Verifica is recognized by ASI as an accredited audit organization and conducts ASI Performance Standard and Chain of Custody (CoC) audits across a wide geography. This competence forms a significant area of expertise for organizations seeking sustainability assurance in aluminium and related supply chains.",
+          "Cetizion Verifica is recognized by ASI as an accredited audit organization and conducts ASI Performance Standard and Chain of Custody (CoC) audits across a wide geography. This competence forms a significant area of expertise for organizations seeking independent verification and audit support in aluminium and related supply chains.",
         geographicScope:
           "Cetizion Verifica delivers services across a broad geographic scope in the Americas, Asia, Europe, and the Middle East. It carries out sustainability and conformity assessment activities in many countries, including Türkiye.",
         referenceWorks:
@@ -207,6 +244,11 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "anka-sustainability",
         name: "ANKA Sustainability",
         logoSrc: "/partner-logos/anka-sustainability.png",
+        region: "Netherlands (Utrecht); Türkiye (Istanbul offices)",
+        networkRole:
+          "Solution partner for sustainability advisory, implementation support and digital tooling aligned with MEVA engagement pathways",
+        technicalFocus:
+          "ESG reporting, carbon and climate management, regulatory compliance, certification and traceability readiness",
         cardSummary:
           "A strategic sustainability advisory and digital solutions partner focused on strengthening reporting, compliance, carbon management, and implementation processes.",
         modalSummary:
@@ -229,19 +271,24 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
     ],
   },
   nl: {
-    title: "Onze Vertegenwoordigingen",
+    title: "Vertegenwoordigingen en internationale technische coördinatie",
     intro:
-      "Wij presenteren onze vertegenwoordigingsstructuren en oplossingspartnerschappen binnen het internationale ecosysteem van verificatie, technische beoordeling en duurzaamheid op één pagina. Deze structuur draagt bij aan een sterkere expertisenetwerk, bredere geografische dekking en een holistischere dienstverleningscapaciteit voor onze klanten.",
-    representationsTitle: "Onze Vertegenwoordigingen",
+      "Vertegenwoordigers ondersteunen lokale communicatie en documentatiecoördinatie. Technische beoordeling, besluitdiscipline en governance worden centraal door Meva Global uitgevoerd.",
+    representationsTitle: "Vertegenwoordigingen",
     representationsBody:
-      "Weerspiegelt ons vertegenwoordigingsnetwerk en samenwerkingen binnen het internationale ecosysteem van verificatie, technische beoordeling en institutionele samenwerking.",
-    solutionTitle: "Oplossingspartners",
+      "Vertegenwoordigings- en samenwerkingskanalen voor lokale toegang, documentatiecoördinatie en afstemming op centrale technische beoordeling.",
+    solutionTitle: "Samenwerkingspartners en -kanalen",
     solutionBody:
-      "Omvat oplossingspartners waarvan de aanvullende expertise bijdraagt aan een meer holistische dienstverleningsstructuur.",
+      "Partners waar aanvullende expertise de uitvoering ondersteunt, met technisch oordeel volgens de vastgelegde routes van Meva Global.",
     ui: {
-      viewDetails: "Details Bekijken",
+      viewDetails: "Bekijk vertegenwoordigingsdetails",
       close: "Sluiten",
       summaryHeading: "Korte samenvatting",
+      regionLabel: "Regio / markt",
+      networkRoleLabel: "Rol (kern)",
+      technicalFocusLabel: "Technische focus",
+      judgementBoundaryNote:
+        "Vertegenwoordigers vergemakkelijken communicatie en documentatiecoördinatie; technische beoordeling, beslislogica en outputs worden centraal onder de processen en governance van Meva Global beheerd.",
       corporateProfile: "Bedrijfsprofiel",
       serviceAndCompetenceAreas: "Dienstverlening en competentiegebieden",
       accreditationAndCompetence: "Accreditatie en competentie",
@@ -257,6 +304,11 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "emicert",
         name: "EmiCert",
         logoSrc: "/partner-logos/emicert.png",
+        region: "Griekenland, Ierland, Bulgarije en Cyprus; Europese leveringsvoetafdruk",
+        networkRole:
+          "Samenwerkingskanaal voor broeikasgasverificatie en coördinatie rond emissierapportage",
+        technicalFocus:
+          "Industriële emissies, luchtvaart (EU ETS, CORSIA), maritieme MRV, F-gasrapporten en verwante verificatiecontexten",
         cardSummary:
           "Een internationale verificatie-instelling met sterke expertise op het gebied van broeikasgasverificatie, emissierapportage en regelgevingsnaleving.",
         modalSummary:
@@ -283,26 +335,32 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
+        region:
+          "Aanwezigheid in meerdere regio’s, waaronder Amerika, Azië, Europa en het Midden-Oosten, inclusief Türkiye",
+        networkRole:
+          "Samenwerkingskanaal voor duurzaamheidsverificatie, auditcoördinatie en conformiteitsgerelateerde beoordelingen",
+        technicalFocus:
+          "ASI Performance Standard en Chain of Custody, due diligence in ketens, milieu- en duurzaamheidsbeoordelingen",
         cardSummary:
-          "Een internationale conformiteits- en assurance-organisatie die in verschillende regio’s actief is in duurzaamheidsverificatie, audit en beoordeling.",
+          "Een internationale conformiteitsbeoordelingsorganisatie die in verschillende regio’s actief is in duurzaamheidsverificatie, audit en technische beoordeling.",
         modalSummary:
           "Cetizion Verifica is een internationale organisatie die audit-, beoordelings- en verificatiediensten levert in India, de Amerika’s, Europa, het Midden-Oosten en Afrika.",
         corporateProfile:
-          "De organisatie heeft een breed dienstverleningsbereik op het gebied van duurzaamheid, toeleveringsketen, milieuprestaties en corporate assurance.",
+          "De organisatie heeft een breed dienstverleningsbereik op het gebied van duurzaamheid, toeleveringsketen, milieuprestaties en bedrijfsmatige rapportageverificatie.",
         serviceAreas: [
           "Audits tegen de ASI Performance Standard",
           "ASI Chain of Custody (CoC) audits",
           "Beoordelingen van waterefficiëntie en milieuprestaties",
           "Levenscyclusbeoordeling van producten",
           "Gerecycled gehalte en zero-waste-benaderingen",
-          "Koolstofneutraliteit en assurance van duurzaamheidsrapporten",
+          "Koolstofneutraliteit en verificatie van duurzaamheidsrapporten",
           "Due diligence van toeleveringsketens",
           "Voorbeoordelingen voor CDP en EcoVadis",
           "CAHRA due diligence",
           "ISO 26000 gap-analyse",
         ],
         accreditationAndCompetence:
-          "Cetizion Verifica wordt door ASI erkend als geaccrediteerde auditorganisatie en voert ASI Performance Standard- en Chain of Custody (CoC)-audits uit in een brede geografische spreiding. Deze competentie vormt een belangrijk expertisegebied voor organisaties die duurzaamheidsassurance zoeken in aluminium en gerelateerde toeleveringsketens.",
+          "Cetizion Verifica wordt door ASI erkend als geaccrediteerde auditorganisatie en voert ASI Performance Standard- en Chain of Custody (CoC)-audits uit in een brede geografische spreiding. Deze competentie vormt een belangrijk expertisegebied voor organisaties die onafhankelijke verificatie en auditondersteuning zoeken in aluminium en gerelateerde toeleveringsketens.",
         geographicScope:
           "Cetizion Verifica levert diensten binnen een brede geografische dekking in de Amerika’s, Azië, Europa en het Midden-Oosten. Zij voert duurzaamheids- en conformiteitsbeoordelingen uit in vele landen, waaronder Türkiye.",
         referenceWorks:
@@ -314,6 +372,11 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "anka-sustainability",
         name: "ANKA Sustainability",
         logoSrc: "/partner-logos/anka-sustainability.png",
+        region: "Nederland (Utrecht); Türkiye (kantoren in Istanbul)",
+        networkRole:
+          "Oplossingspartner voor duurzaamheidsadvies, implementatieondersteuning en digitale tooling in lijn met MEVA-opdrachtroutes",
+        technicalFocus:
+          "ESG-rapportage, koolstof- en klimaatbeheer, regelgevingsnaleving, certificatie- en traceerbaarheidsgereedheid",
         cardSummary:
           "Een strategische duurzaamheidsadvies- en digitale oplossingspartner gericht op het versterken van rapportage, naleving, koolstofbeheer en implementatieprocessen.",
         modalSummary:
@@ -337,6 +400,15 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
   },
 };
 
+function mapLogos(entities: OrganizationEntity[]): OrganizationEntity[] {
+  return entities.map((e) => ({ ...e, logoSrc: resolvePartnerLogoPath(e.id, e.logoSrc) }));
+}
+
 export function getRepresentationsPageBundle(locale: Locale): RepresentationsPageBundle {
-  return bundles[locale];
+  const b = bundles[locale];
+  return {
+    ...b,
+    representations: mapLogos(b.representations),
+    partners: mapLogos(b.partners),
+  };
 }

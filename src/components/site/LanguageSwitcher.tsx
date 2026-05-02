@@ -67,7 +67,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
           "[&::-webkit-details-marker]:hidden",
         )}
       >
-        <span className="relative h-4 w-5 overflow-hidden rounded-sm bg-white ring-1 ring-black/5">
+        <span className="relative h-4 w-5 overflow-hidden rounded-[min(0.375rem,var(--visual-image-radius))] bg-white ring-1 ring-black/5">
           <Image src={flagSrc[locale]} alt="" fill sizes="40px" className="object-contain object-center" />
         </span>
         <span className="pr-0.5">{labels[locale]}</span>
@@ -92,7 +92,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
               if (detailsRef.current) detailsRef.current.open = false;
             }}
           >
-            <span className="relative h-4 w-5 overflow-hidden rounded-sm bg-white ring-1 ring-black/5">
+            <span className="relative h-4 w-5 overflow-hidden rounded-[min(0.375rem,var(--visual-image-radius))] bg-white ring-1 ring-black/5">
               <Image src={flagSrc[o.value]} alt="" fill sizes="40px" className="object-contain object-center" />
             </span>
             <span>{o.label}</span>

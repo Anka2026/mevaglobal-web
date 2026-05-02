@@ -4,11 +4,9 @@ import type { Locale } from "@/i18n/locales";
 import type { Dictionary } from "@/i18n/types";
 import type { Service } from "@/data/services";
 import { Container } from "@/components/ui/Container";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { Card } from "@/components/ui/Card";
+import { VerificationServiceDetailHero } from "@/components/sections/VerificationServiceDetailHero";
 import { ButtonLink } from "@/components/ui/Button";
-import { cn } from "@/lib/cn";
-import { VisualAnchor } from "@/components/visual/VisualAnchor";
 import {
   PremiumFourCardServiceDetail,
   type PremiumFourCardServiceDetailContent,
@@ -26,7 +24,8 @@ import {
   type StandardDetail,
 } from "@/lib/verification/detailShapeGuards";
 import { isPremiumFiveCardSlug } from "@/lib/verification/registry";
-import { VerificationServiceIcon } from "@/components/verification/VerificationServiceIcon";
+import { VerificationRelatedServices } from "@/components/verification/VerificationRelatedServices";
+import { getRelatedVerificationServiceSlugs } from "@/lib/verification/relatedVerificationServices";
 
 type MergedServiceDetail = Dictionary["pages"]["serviceDetails"][Service["slug"]];
 
@@ -54,29 +53,37 @@ export function VerificationServiceDetailPage({
   content: MergedServiceDetail;
   visual: ServiceHeroVisual;
 }) {
+  const relatedSlugs = getRelatedVerificationServiceSlugs(slug);
+
   if (isEditorialDetail(content)) {
     return (
-      <EditorialServiceDetail
-        l={l}
-        content={content}
-        visual={visual}
-        backLabel={dict.serviceDetail.backToServices}
-        processLinkLabel={dict.nav.process}
-      />
+      <>
+        <EditorialServiceDetail
+          l={l}
+          content={content}
+          visual={visual}
+          backLabel={dict.serviceDetail.backToServices}
+          processLinkLabel={dict.nav.process}
+        />
+        <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
+      </>
     );
   }
 
   if (isPremiumFourCardDetail(content)) {
     return (
-      <PremiumFourCardServiceDetail
-        l={l}
-        content={content as PremiumFourCardServiceDetailContent}
-        visual={visual}
-        backLabel={dict.serviceDetail.backToServices}
-        eyebrowFallback={dict.nav.services}
-        ctas={dict.ctas}
-        taglineTopBar={dict.brand.taglineTopBar}
-      />
+      <>
+        <PremiumFourCardServiceDetail
+          l={l}
+          content={content as PremiumFourCardServiceDetailContent}
+          visual={visual}
+          backLabel={dict.serviceDetail.backToServices}
+          eyebrowFallback={dict.nav.services}
+          ctas={dict.ctas}
+          taglineTopBar={dict.brand.taglineTopBar}
+        />
+        <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
+      </>
     );
   }
 
@@ -84,18 +91,26 @@ export function VerificationServiceDetailPage({
     const standard = content as StandardDetail;
     if (isPremiumFiveCardSlug(slug)) {
       return (
-        <PremiumFiveCardServiceDetail
-          l={l}
-          content={standard as PremiumFiveCardServiceDetailContent}
-          visual={visual}
-          backLabel={dict.serviceDetail.backToServices}
-          eyebrowFallback={dict.nav.services}
-          ctas={dict.ctas}
-          taglineTopBar={dict.brand.taglineTopBar}
-        />
+        <>
+          <PremiumFiveCardServiceDetail
+            l={l}
+            content={standard as PremiumFiveCardServiceDetailContent}
+            visual={visual}
+            backLabel={dict.serviceDetail.backToServices}
+            eyebrowFallback={dict.nav.services}
+            ctas={dict.ctas}
+            taglineTopBar={dict.brand.taglineTopBar}
+          />
+          <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
+        </>
       );
     }
-    return <StandardServiceDetailLayout l={l} dict={dict} content={standard} visual={visual} />;
+    return (
+      <>
+        <StandardServiceDetailLayout l={l} dict={dict} content={standard} visual={visual} />
+        <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
+      </>
+    );
   }
 
   return null; // unreachable when used after `isVerificationDetailRenderable` in the route
@@ -114,19 +129,14 @@ function StandardServiceDetailLayout({
 }) {
   return (
     <>
-      <PageHeader
+      <VerificationServiceDetailHero
+        locale={l}
+        backLabel={dict.serviceDetail.backToServices}
+        eyebrow={dict.nav.services}
         title={content.title}
-        description={content.intro}
-        visual={
-          <VisualAnchor
-            src={visual.src}
-            icon={<VerificationServiceIcon name={visual.iconKey} className="h-6 w-6" />}
-            eyebrow={dict.nav.services}
-            imageClassName={visual.imageClassName}
-            detailEditorial
-            detailEditorialFit={visual.editorialFit ?? "cover"}
-          />
-        }
+        intro={content.intro}
+        visual={visual}
+        omitBackLink
       />
       <Container className="py-14">
         <div className="flex items-center justify-between gap-4">
@@ -201,49 +211,14 @@ function EditorialServiceDetail({
 }) {
   return (
     <>
-      <section className="border-b border-[color:var(--border-soft)] bg-white">
-        <Container className="pb-8 pt-5 sm:pb-9 sm:pt-6 lg:pb-10 lg:pt-7">
-          <Link
-            href={`/${l}/verification-services`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--brand-primary)] hover:underline"
-          >
-            <ArrowLeft className="h-4 w-4 shrink-0" aria-hidden="true" />
-            {backLabel}
-          </Link>
-
-          <div className="mt-5 grid items-stretch gap-6 lg:mt-5 lg:grid-cols-12 lg:gap-8 xl:gap-10">
-            <div className="flex min-w-0 flex-col gap-2.5 sm:gap-3 lg:col-span-7">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-xs">
-                {content.eyebrow}
-              </p>
-              <h1 className="text-[1.75rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.125rem] lg:text-[2.35rem]">
-                {content.title}
-              </h1>
-              <p className="max-w-[44rem] text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[1.0625rem] sm:leading-[1.74]">
-                {content.intro}
-              </p>
-            </div>
-
-            <div
-              className={cn(
-                "relative flex h-full min-w-0 flex-col lg:col-span-5 lg:min-h-0",
-                visual.editorialFit === "contain"
-                  ? "min-h-[280px] sm:min-h-[320px] lg:min-h-0"
-                  : "min-h-[260px] sm:min-h-[300px] lg:min-h-0",
-              )}
-            >
-              <VisualAnchor
-                src={visual.src}
-                alt={content.title}
-                imageClassName={visual.imageClassName}
-                detailEditorial
-                detailEditorialFit={visual.editorialFit ?? "cover"}
-                className="w-full min-h-0 flex-1"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
+      <VerificationServiceDetailHero
+        locale={l}
+        backLabel={backLabel}
+        eyebrow={content.eyebrow}
+        title={content.title}
+        intro={content.intro}
+        visual={visual}
+      />
 
       <Container className="py-7 sm:py-8 lg:py-9">
         <div className="mx-auto max-w-[50rem] space-y-7 lg:space-y-8">

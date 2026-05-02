@@ -23,7 +23,7 @@ export const serviceDetailsExtraEn: Record<
     eyebrow: "Services",
     title: "GHG Protocol Review Support",
     intro:
-      "The reliability of greenhouse gas inventories and related disclosures prepared under the GHG Protocol depends not only on total reported emissions, but also on the clarity of organisational boundaries, the consistency of scope selection, the accuracy of category treatment, the defensibility of calculation logic, and the traceability of supporting records. Meva Global provides independent and structured technical review support for inventories and reports prepared in line with the GHG Protocol. This service is designed to help organisations systematically assess their data structure, methodological choices, and evidence base in line with their reporting level and intended external use.",
+      "GHG Protocol inventories are challenged at boundaries, scope selections and whether category treatments match the evidence trail—not only at the emissions total. Meva Global provides independent technical review support for inventories prepared along GHG Protocol guidance, helping teams stress-test data architecture, methodological choices and documentation depth against intended external use.",
     sections: [
       {
         title: "Service Scope",
@@ -44,14 +44,14 @@ export const serviceDetailsExtraEn: Record<
     ],
     bottomCta:
       "Share your organisational boundaries, reporting year, included categories, and current calculation structure with us, and we will define an appropriate review depth for your disclosure context.",
-    primaryButton: "Request Proposal",
+    primaryButton: "Request a Proposal",
     secondaryButton: "Back To Services",
     detailLink: "Details",
   },
   "eu-ets-mrv-assurance-support": {
-    title: "EU ETS & MRV — Assurance Support",
+    title: "EU ETS & MRV — Technical Review Support",
     intro:
-      "Independent assurance-oriented technical review for monitoring, reporting and verification (MRV) datasets under EU ETS expectations—focused on methodology plausibility, evidence traceability and documentation discipline. This is technical assurance support; it does not replace competent authority decisions or statutory verifier roles.",
+      "Independent structured technical review for monitoring, reporting and verification (MRV) datasets under EU ETS expectations—methodology plausibility, evidence traceability, and documentation discipline. This is technical review support; it does not replace competent authority decisions or statutory verifier roles.",
     covers: {
       title: "What this covers",
       bullets: [
@@ -89,7 +89,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Scope tied to installation or fleet segment, reporting period and applicable rule set",
         "Independent reviewer mindset: challenge assumptions, verify traceability",
-        "Controlled wording on outputs—assurance support, not a substitute for statutory verification",
+        "Measured wording on outputs—technical review support, not a substitute for statutory verification",
       ],
     },
     cta: {
@@ -114,7 +114,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Ship operators and managers consolidating noon reports, bunker delivery notes and BDN evidence",
         "Technical managers aligning fleet tools with regulatory reporting templates",
-        "Organizations preparing assurance-ready files for charterers or authorities",
+        "Organizations preparing review-ready files for charterers or authorities",
       ],
     },
     typicalScope: {
@@ -187,7 +187,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Explicit delineation of CORSIA vs EU ETS readiness topics you request",
         "No substitute for regulatory interpretation—focus on technical traceability and documentation",
-        "Professional, restrained wording on status and next steps",
+        "Professional, restrained wording on status and closure sequencing",
       ],
     },
     cta: {
@@ -247,7 +247,7 @@ export const serviceDetailsExtraEn: Record<
   "data-evidence-readiness-review": {
     title: "Data & Evidence Readiness Review",
     intro:
-      "Focused review of how emissions, environmental and sustainability data are sourced, transformed and retained—aimed at traceability from raw evidence to reported figures. Suited before verification, assurance exercises or major disclosures.",
+      "Focused review of how emissions, environmental and sustainability data are sourced, transformed and retained—traceability from raw evidence to reported figures. Suited before verification, external review exercises, or major disclosures.",
     covers: {
       title: "What this covers",
       bullets: [
@@ -268,7 +268,7 @@ export const serviceDetailsExtraEn: Record<
       title: "Review Focus",
       bullets: [
         "Process walkthrough and identification of single points of failure",
-        "Tests on selected material data flows end-to-end",
+        "Tests on selected material data flows from source records through to reported figures",
         "Recommendations to strengthen evidence packs and metadata",
       ],
     },
@@ -345,7 +345,7 @@ export const serviceDetailsExtraEn: Record<
   "sustainability-reporting-evidence-review": {
     title: "Sustainability Reporting — Evidence Review",
     intro:
-      "Structured evidence review for sustainability reports, annexes and selected KPI disclosures—supporting consistency between narrative claims and underlying calculations, without presenting statutory assurance unless formally engaged under agreed criteria.",
+      "Structured evidence review for sustainability reports, annexes and selected KPI disclosures—consistency between narrative claims and underlying calculations, without issuing a formal independent practitioner's report unless engaged under agreed criteria.",
     covers: {
       title: "What this covers",
       bullets: [
@@ -375,7 +375,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Stakeholders compare narratives to numbers—inconsistency erodes trust",
         "Reduces greenwashing risk through disciplined wording and evidence",
-        "Prepares the organization for deeper assurance cycles if desired later",
+        "Prepares the organization for deeper external review cycles if desired later",
       ],
     },
     approach: {
@@ -481,7 +481,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Governance first: criteria, conflicts of interest and escalation paths defined in writing",
         "Evidence-led testing with traceable findings",
-        "Outputs aligned to intended use—often internal or controlled external",
+        "Outputs aligned to intended use—often internal or restricted external circulation",
       ],
     },
     cta: {
@@ -537,7 +537,7 @@ export const serviceDetailsExtraEn: Record<
     cta: {
       title: "",
       body: "Share your statement scope, reporting approach, and existing evidence base—we will align verification scope and review expectations with your context.",
-      primaryButton: "Request Proposal",
+      primaryButton: "Request a Proposal",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
@@ -558,7 +558,7 @@ export const serviceDetailsExtraEn: Record<
       title: "Who it is for",
       bullets: [
         "First-time verification teams and complex multi-site organizations",
-        "Programs where leadership wants assurance before committing to a full cycle",
+        "Programs where leadership wants independent review before committing to a full cycle",
         "Situations with tight disclosure deadlines and limited room for surprises",
       ],
     },
@@ -582,7 +582,7 @@ export const serviceDetailsExtraEn: Record<
       title: "How Meva approaches it",
       bullets: [
         "Transparent scoping: mock review is not a substitute for formal verification",
-        "Independent reviewer discipline consistent with assurance principles",
+        "Independent reviewer discipline consistent with impartiality and evidence standards",
         "Outputs tuned to learning, not compliance theatre",
       ],
     },
@@ -616,7 +616,7 @@ export const serviceDetailsExtraEn: Record<
       bullets: [
         "Claim inventory across selected channels and SKUs",
         "Evidence sufficiency review against stated boundaries",
-        "Suggested wording safeguards and escalation items",
+        "Suggested language guardrails and escalation items",
       ],
     },
     whyMatters: {

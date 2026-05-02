@@ -7,7 +7,12 @@ import { navItems } from "@/lib/nav";
 import { offices } from "@/data/offices";
 import { cn } from "@/lib/cn";
 
+/** Stable NL then TR so both jurisdictions read consistently in the footer. */
+const OFFICE_ORDER: Record<(typeof offices)[number]["id"], number> = { nl: 0, tr: 1 };
+
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  const orderedOffices = [...offices].sort((a, b) => OFFICE_ORDER[a.id] - OFFICE_ORDER[b.id]);
+
   return (
     <footer className="mt-8 border-t border-white/[0.07] bg-[color:var(--footer-deep)] text-white">
       <Container className="py-10 sm:py-11 lg:py-12">
@@ -53,7 +58,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <div className="min-w-0 lg:col-span-6">
             <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">{dict.footer.offices}</h3>
             <div className="mt-3 grid min-w-0 gap-5 sm:grid-cols-2 sm:gap-6">
-              {offices.map((o) => (
+              {orderedOffices.map((o) => (
                 <div key={o.id} className="min-w-0 rounded-xl border border-white/[0.09] bg-white/[0.03] px-5 py-5 sm:px-6 sm:py-5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/55">
                     {o.id === "tr" ? dict.shared.offices.turkey : dict.shared.offices.netherlands}
@@ -87,8 +92,19 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-5 text-xs leading-relaxed text-white/55">
-          © {new Date().getFullYear()} {dict.brand.legalName}. {dict.footer.rights}
+        <div className="mt-8 border-t border-white/10 pt-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+            <p className="max-w-2xl text-xs leading-relaxed text-white/60">{dict.footer.trustFootnote}</p>
+            <Link
+              href={`/${locale}/contact`}
+              className="shrink-0 text-xs font-semibold text-white/78 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              {dict.footer.contactTitle} →
+            </Link>
+          </div>
+          <p className="mt-4 text-xs leading-relaxed text-white/55">
+            © {new Date().getFullYear()} {dict.brand.legalName}. {dict.footer.rights}
+          </p>
         </div>
       </Container>
     </footer>

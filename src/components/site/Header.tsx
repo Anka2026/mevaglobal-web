@@ -40,7 +40,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               size="sm"
               className="h-9 px-3 text-[0.9375rem] font-semibold text-[color:var(--ink-dark)]/80 hover:text-[color:var(--ink-dark)]"
             >
-              {dict.ctas.contact}
+              {dict.nav.contact}
             </ButtonLink>
             <LanguageSwitcher locale={locale} />
           </div>

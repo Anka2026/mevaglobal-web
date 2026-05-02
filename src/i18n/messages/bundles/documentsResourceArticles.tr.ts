@@ -13,12 +13,12 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
       {
         title: "Sınırlar ve tesis mantığı",
         body:
-          "Güvenilirlik; tesisin nasıl çalıştığı ve emisyonların nasıl izlendiğiyle tutarlı bir sınır modeliyle başlar. Ana faaliyet, yardımcı süreçler ve paylaşılan altyapı arasındaki belirsizlik, sık rastlanan düzeltme nedenidir. Kontrollü bir inceleme; sınır anlatımının, veri modelinin ve tesisin fiziksel gerçekliğinin gizli örtüşme veya boşluk olmadan uyumlu olduğunu doğrular.",
+          "Güvenilirlik; tesisin nasıl çalıştığı ve emisyonların nasıl izlendiğiyle tutarlı bir sınır modeliyle başlar. Ana faaliyet, yardımcı süreçler ve paylaşılan altyapı arasındaki belirsizlik, sık rastlanan düzeltme nedenidir. Yapılandırılmış teknik inceleme; sınır anlatımının, veri modelinin ve tesisin fiziksel gerçekliğinin gizli örtüşme veya boşluk olmadan uyumlu olduğunu doğrular.",
       },
       {
         title: "Kanıt derinliği ve izlenebilirlik",
         body:
-          "Rakamlar kaynak kayıtlarıyla bağlantılı olmalıdır: uygun olduğunda ölçüm, aksi halde satın alma ve süreç verisi ve tahminlerin kontrollü işlenmesi. İnceleyen taraf; her malzeme ve enerji akışının nasıl yakalandığını, dönüştürüldüğünü ve toplandığını bağımsız biri tarafından tahmin yürütmeden yeniden kurulabilecek bir denetim iziyle görmek ister.",
+          "Rakamlar kaynak kayıtlarıyla bağlantılı olmalıdır: uygun olduğunda ölçüm, aksi halde satın alma ve süreç verisi ve tahminlerin disiplinli işlenmesi. İnceleyen taraf; her malzeme ve enerji akışının nasıl yakalandığını, dönüştürüldüğünü ve toplandığını bağımsız biri tarafından tahmin yürütmeden yeniden kurulabilecek bir denetim iziyle görmek ister.",
       },
       {
         title: "Metodoloji, faktörler ve varsayımlar",
@@ -32,7 +32,7 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
       },
     ],
     closing:
-      "Özetle SKDM hazırlığında güvenilirlik tek bir kapak metrisi değil; sınır netliği, izlenebilir kanıt, şeffaf metodoloji ve kontrollü açıklama birlikte oluşturduğu sistem özelliğidir.",
+      "Özetle SKDM hazırlığında güvenilirlik tek bir kapak metrisi değil; sınır netliği, izlenebilir kanıt, şeffaf metodoloji ve ölçülü açıklama birlikte oluşturduğu sistem özelliğidir.",
   },
   "carbon-verification-alignment": {
     category: "Karbon",
@@ -50,12 +50,12 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
       {
         title: "Metodoloji karar kaydıdır",
         body:
-          "Metodoloji yalnızca formül değildir; aktivite sınıflandırması, faktör seçimi ve eksik veri işleme için belgelenmiş gerekçedir. Doğrulama ekipleri; seçimlerin dönem boyunca tutarlı olup olmadığını, hassas durumların işaretlenip işaretlenmediğini ve değişikliklerin kontrollü olup olmadığını test eder. Savunulabilir metodoloji, yalnızca tanıdık olanı değil, izlenebilir kararı ifade eder.",
+          "Metodoloji yalnızca formül değildir; aktivite sınıflandırması, faktör seçimi ve eksik veri işleme için belgelenmiş gerekçedir. Doğrulama ekipleri; seçimlerin dönem boyunca tutarlı olup olmadığını, hassas durumların işaretlenip işaretlenmediğini ve değişikliklerin disiplinli biçimde yönetilip yönetilmediğini test eder. Savunulabilir metodoloji, yalnızca tanıdık olanı değil, izlenebilir kararı ifade eder.",
       },
       {
         title: "Paydaş beklentileri ve abartısız iddia",
         body:
-          "Yatırımcı, alıcı ve düzenleyici okuyucular genelde farklı vurgu bekler—bütünlük, karşılaştırılabilirlik veya denetime hazırlık. Hizalama; doğrulama amacını bu beklentilere açıkça eşler: hangi iddiaları desteklediğini, hangilerini desteklemediğini ve daha güçlü bir güvence düzeyi veya farklı kullanım için nelerin gerekli olduğunu netleştirir.",
+          "Yatırımcı, alıcı ve düzenleyici okuyucular genelde farklı vurgu bekler—bütünlük, karşılaştırılabilirlik veya denetime hazırlık. Hizalama; doğrulama amacını bu beklentilere açıkça eşler: hangi iddiaları desteklediğini, hangilerini desteklemediğini ve daha derin bir bağımsız inceleme düzeyi veya farklı kullanım için nelerin gerekli olduğunu netleştirir.",
       },
       {
         title: "Bütünlüğü koruyan kontrol noktaları",
@@ -99,35 +99,35 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
       "Güçlü kritik inceleme sonuçları tabloları cilalamaktan çok; kamusal paydaşlara ulaşmadan önce hedef ve kapsamdan veriye ve yoruma giden mantıksal zinciri sıkılaştırmaya bağlıdır.",
   },
   "sustainability-assurance-levels": {
-    category: "Güvence",
+    category: "Teknik İnceleme",
     date: "2026-04-19",
     eyebrow: "Teknik not",
-    title: "Sürdürülebilirlik İddialarında Güvence Seviyesi Seçimi",
+    title: "Sürdürülebilirlik İddialarında İnceleme Derinliği Seçimi",
     intro:
-      "Güvence düzeyleri bağımsız uygulayıcının ne kadar çalışma yürüttüğünü ve hangi tür sonuca mesafeli biçimde varılabileceğini gösterir. Yüksek riskli dış kullanım için çok düşük seviye seçmek itibar ve düzenleyici sürtüşmeyi davet eder; kanıt hazırlığı olmadan çok yüksek seçmek ise kaynak israfıdır. Karar kullanım durumu, önemlilik ve kitleye göre verilmeli—alışkanlık veya şablon dile göre değil.",
+      "Bağımsız inceleme düzeyleri (ör. limited assurance ile reasonable assurance); uygulayıcının kanıt derinliğini ve ifade edilebilecek sonuç türünü çerçeveler. Yüksek riskli dış kullanımda yüzeysel bir paket itibar ve düzenleyici sürtüşme riskini artırır; kanıt altyapısı olmadan aşırı iddialı bir paket ise kaynak kaybına yol açar. Seviye; kullanım durumu, önemlilik ve paydaş beklentilerine göre seçilmeli—şablona veya pazarlama diline göre değil.",
     sections: [
       {
-        title: "Sınırlı güvence ile makul güvence—fark ne",
+        title: "Limited assurance ile reasonable assurance",
         body:
-          "Sınırlı güvence sorgu ve analitik prosedürler üzerine kurulur; makul güvence yüksek ancak mutlak olmayan bir güven düzeyi için tasarlanmış daha derin kanıt ve testleri ekler. Aralık sermaye piyasaları, tedarik zinciri programları ve raporu birincil kanıt olarak gören kamu açıklamaları için anlamlıdır.",
+          "Limited assurance (sınırlı bağımsız inceleme) sorgu ve analitik prosedürlerle sınırlı kanıt derinliğini ifade eder. Reasonable assurance (makul düzeyde bağımsız inceleme) daha derin test ve kanıt genişliği hedefler; mutlak kesinlik değildir. Aralık sermaye piyasaları, tedarik zinciri programları ve raporu birincil kanıt olarak kullanan kamu açıklamalarında bu ayrım pratikte belirleyicidir.",
       },
       {
         title: "Kullanım bağlamı ve karar riski",
         body:
-          "Aynı veri seti iç yönetim için sınırlı güvenceyi haklı çıkarırken, ihraç belgesi tarzı bir iddia veya alıcı sertifikasyon kapısı için daha yüksek çubuğu gerektirebilir. Finansal maruziyet, marka etkisi ve düzenleyici ilgiyi haritalamak, kuruluşun gerçek riskine uygun güvence seviyesini netleştirir.",
+          "Aynı veri seti iç yönetim için sınırlı paketi gerektirirken; ihraç belgesi tarzı bir iddia veya alıcı sertifikasyon kapısı daha derin kanıt ve kontrol olgunluğu isteyebilir. Finansal maruziyet, marka etkisi ve düzenleyici ilgiyi haritalamak, kuruluşun gerçek riskine uygun inceleme derinliğini netleştirir.",
       },
       {
         title: "Kamu açıklaması ve üçüncü taraf güveni",
         body:
-          "Sürdürülebilirlik bilgisi müşteri, kredi veren veya düzenleyici tarafından atıfta bulunulduğunda güven artar. Güvence metni incelenenlerle eşleşmelidir: hangi tesisler, dönemler, metrikler ve sınırlar. Pazarlama dilinin güvence raporuna göre abartılması sık uyuşmazlık kaynağıdır.",
+          "Sürdürülebilirlik bilgisi müşteri, kredi veren veya düzenleyici tarafından atıfta bulunulduğunda güven artar. Yayımlanan inceleme metni ile operasyonel gerçeklik uyumlu olmalıdır: hangi tesisler, dönemler, metrikler ve sınırlar. Pazarlama dilinin teknik çıktıya göre abartılması sık uyuşmazlık kaynağıdır.",
       },
       {
         title: "Çalışma öncesi hazırlık",
         body:
-          "Daha yüksek güvence daha güçlü kontroller, daha net dokümantasyon ve çoğu zaman daha fazla zaman ister. Önce seviye seçip kanıtı sonradan uyduran kuruluşlar temiz sonuç almakta zorlanır. Veri soy ağacı, kontrol tasarımı ve yönetişim sahipliği disiplinli bir hazırlık görünümü hem verimli güvenceyi hem inandırıcı dış iletişimi destekler.",
+          "Daha derin bağımsız inceleme daha güçlü kontroller, daha net dokümantasyon ve çoğu zaman daha fazla zaman ister. Önce seviye seçip kanıtı sonradan uyduran kuruluşlar temiz sonuç almakta zorlanır. Veri soy ağacı, kontrol tasarımı ve yönetişim sahipliği disiplinli bir hazırlık görünümü hem verimli süreci hem inandırıcı dış iletişimi destekler.",
       },
     ],
     closing:
-      "Güvence seviyesi bilinçli bir açıklama stratejisinin parçası olarak seçilir: ne söylenmeli, kime, hangi inceleme altında—ve bu duruşu kanıt mimarisi gerçekten taşıyabilir mi.",
+      "İnceleme derinliği bilinçli bir açıklama stratejisinin parçası olarak seçilir: ne söylenmeli, kime, hangi teknik çerçevede—ve bu duruşu kanıt mimarisi gerçekten taşıyabilir mi.",
   },
 };
