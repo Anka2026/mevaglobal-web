@@ -10,7 +10,6 @@ import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
 import { offices } from "@/data/offices";
 import type { Office } from "@/data/offices";
 import { ButtonLink } from "@/components/ui/Button";
-import { publicFileExists } from "@/lib/publicFileExists";
 import { cn } from "@/lib/cn";
 import { CONTACT_PAGE_COPY } from "@/app/[locale]/contact/contact-page-copy";
 import { premiumHeroBackdrop } from "@/lib/premiumUi";
@@ -18,24 +17,10 @@ import { premiumHeroBackdrop } from "@/lib/premiumUi";
 /** Published inbox used across the site; enquiry form opens mailto with prefilled body (no server POST). */
 const CONTACT_EMAIL = "info@mevaglobalcertification.com";
 
-const CONTACT_HERO_CANDIDATES = [
-  "/page-visuals/contact-hero.png",
-  "/page-visuals/contact-hero.webp",
-  "/page-visuals/contact-hero.jpg",
-  "/page-visuals/contact-hero.jpeg",
-  "/page-visuals/contact.png",
-  "/page-visuals/contact.webp",
-  "/page-visuals/contact.jpg",
-  "/page-visuals/contact.jpeg",
-] as const;
-
-const CONTACT_HERO_FALLBACK = "/file.svg";
+const CONTACT_HERO_SRC = "/assets/page-visuals/contact-hero.png";
 
 function resolveContactHeroSrc(): string {
-  for (const p of CONTACT_HERO_CANDIDATES) {
-    if (publicFileExists(p)) return p;
-  }
-  return CONTACT_HERO_FALLBACK;
+  return CONTACT_HERO_SRC;
 }
 
 function isTurkeyPhone(phone?: string) {

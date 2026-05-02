@@ -5,30 +5,14 @@ import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { VisualAnchor } from "@/components/visual/VisualAnchor";
-import { publicFileExists } from "@/lib/publicFileExists";
 import { cn } from "@/lib/cn";
 import { premiumHeroBackdrop, premiumSectionMuted } from "@/lib/premiumUi";
 
-/** Local to this page only; first existing public file wins, then `file.svg`. */
-const CBAM_HERO_CANDIDATES = [
-  "/page-visuals/cbam-hero.png",
-  "/page-visuals/cbam-hero.webp",
-  "/page-visuals/cbam-hero.jpg",
-  "/page-visuals/cbam-hero.jpeg",
-  "/page-visuals/cbam.png",
-  "/page-visuals/cbam.webp",
-  "/page-visuals/cbam.jpg",
-  "/page-visuals/cbam.jpeg",
-  "/page-visuals/cbam-solutions-hero.png",
-] as const;
-
-const CBAM_HERO_FALLBACK = "/file.svg";
+/** Canonical CBAM solutions hero (deterministic URL for static hosting). */
+const CBAM_HERO_SRC = "/assets/page-visuals/cbam-solutions-hero.png";
 
 function resolveCbamHeroSrc(): string {
-  for (const p of CBAM_HERO_CANDIDATES) {
-    if (publicFileExists(p)) return p;
-  }
-  return CBAM_HERO_FALLBACK;
+  return CBAM_HERO_SRC;
 }
 
 type CbamCopy = {

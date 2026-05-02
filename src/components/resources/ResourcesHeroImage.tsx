@@ -15,7 +15,7 @@ import {
   visualImageInnerClipClass,
 } from "@/lib/visualImage";
 
-const DEFAULT_SRC = "/page-visuals/resources-hero.png";
+const DEFAULT_SRC = "/assets/page-visuals/resources-hero.png";
 
 type Props = {
   alt?: string;

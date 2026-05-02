@@ -242,7 +242,7 @@ export type Dictionary = {
         title: string;
         status: string;
         body: string;
-        /** Alt text for the optional hero visual (`/page-visuals/…`). */
+        /** Alt text for the optional hero visual (`/assets/page-visuals/…`). */
         heroImageAlt: string;
       };
       /** Sub-navigation on the accreditation route (accreditation hub). */
@@ -330,7 +330,7 @@ export type Dictionary = {
         eyebrow: string;
         title: string;
         body: string;
-        /** Alt for `public/page-visuals/documents-hero.png`. */
+        /** Alt for `public/assets/page-visuals/documents-hero.png`. */
         heroImageAlt: string;
       };
       sectionLabel: string;
@@ -360,7 +360,7 @@ export type Dictionary = {
     contact: {
       title: string;
       intro: string;
-      /** Alt text for `public/page-visuals/contact-hero.png` (contact hero). */
+      /** Alt text for `public/assets/page-visuals/contact-hero.png` (contact hero). */
       heroImageAlt: string;
       officesTitle: string;
       formsTitle: string;

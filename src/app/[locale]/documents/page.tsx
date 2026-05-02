@@ -13,29 +13,12 @@ import {
 } from "@/lib/premiumUi";
 import { DocumentsHeroFrame } from "@/components/documents/DocumentsHeroFrame";
 import { TechnicalResourceCard } from "@/components/documents/TechnicalResourceCard";
-import { publicFileExists } from "@/lib/publicFileExists";
 import { resolveLocalizedPublicHref } from "@/lib/resolveLocalizedPublicHref";
 
-const HERO_CANDIDATES = [
-  "/page-visuals/resources-hero.png",
-  "/page-visuals/resources-hero.webp",
-  "/page-visuals/resources-hero.jpg",
-  "/page-visuals/resources-hero.jpeg",
-  "/page-visuals/documents-hero.png",
-  "/page-visuals/documents-hero.webp",
-  "/page-visuals/documents-hero.jpg",
-  "/page-visuals/documents-hero.jpeg",
-  "/page-visuals/resources.png",
-  "/page-visuals/documents.png",
-] as const;
-
-const HERO_FALLBACK = "/file.svg";
+const DOCUMENTS_HERO_SRC = "/assets/page-visuals/documents-hero.png";
 
 function resolveHeroSrc(): string {
-  for (const p of HERO_CANDIDATES) {
-    if (publicFileExists(p)) return p;
-  }
-  return HERO_FALLBACK;
+  return DOCUMENTS_HERO_SRC;
 }
 
 type Copy = {

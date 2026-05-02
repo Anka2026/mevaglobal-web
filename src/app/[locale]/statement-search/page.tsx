@@ -16,7 +16,7 @@ const statementHeroDescriptionClass =
 const STATEMENT_SEARCH_VISUAL_WRAP =
   "w-full max-w-full flex-col min-h-[260px] max-h-[min(58vh,24rem)] sm:min-h-[300px] sm:max-h-[min(56vh,25rem)] lg:min-h-[340px] lg:max-h-[420px]";
 
-const STATEMENT_SEARCH_HERO_SRC = "/page-visuals/statement-search-hero.png";
+const STATEMENT_SEARCH_HERO_SRC = "/assets/page-visuals/statement-search-hero.png";
 
 export async function generateMetadata({
   params,

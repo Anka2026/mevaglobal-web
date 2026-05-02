@@ -20,23 +20,21 @@ import {
 } from "@/lib/premiumUi";
 
 const HERO_CANDIDATES = [
-  "/page-visuals/verification-process-hero.png",
-  "/page-visuals/verification-process-hero.webp",
-  "/page-visuals/verification-process-hero.jpg",
-  "/page-visuals/verification-process-hero.jpeg",
-  "/page-visuals/accreditation-hero.png",
-  "/page-visuals/accreditation-hero.webp",
-  "/page-visuals/accreditation-hero.jpg",
-  "/page-visuals/accreditation-hero.jpeg",
-  "/page-visuals/verification-process.png",
-  "/page-visuals/accreditation.png",
-  "/page-visuals/accreditation-process-hero.png",
+  "/assets/page-visuals/verification-process-hero.png",
+  "/assets/page-visuals/verification-process-hero.webp",
+  "/assets/page-visuals/verification-process-hero.jpg",
+  "/assets/page-visuals/verification-process-hero.jpeg",
+  "/assets/page-visuals/accreditation-hero.png",
+  "/assets/page-visuals/accreditation-hero.webp",
+  "/assets/page-visuals/accreditation-hero.jpg",
+  "/assets/page-visuals/accreditation-hero.jpeg",
+  "/assets/page-visuals/verification-process.png",
+  "/assets/page-visuals/accreditation.png",
+  "/assets/page-visuals/accreditation-process-hero.png",
 ] as const;
 
-const HERO_FALLBACK = "/file.svg";
-
 function resolveHeroSrc(): string {
-  return resolveHeroWithSharedFallbacks(HERO_CANDIDATES) ?? HERO_FALLBACK;
+  return resolveHeroWithSharedFallbacks(HERO_CANDIDATES);
 }
 
 type Principle = { title: string; description: string };

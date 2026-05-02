@@ -8,17 +8,12 @@ import { ButtonLink } from "@/components/ui/Button";
 import { PremiumHeroCoverImage } from "@/components/visual/PremiumHeroCoverImage";
 import { RepresentationsCards } from "./RepresentationsCards";
 import { getRepresentationsPageBundle } from "./representations-data";
-import { publicFileExists } from "@/lib/publicFileExists";
 import { cn } from "@/lib/cn";
 
-const REPRESENTATIONS_HERO_SRC = "/page-visuals/representations-hero.png";
-
-/** Local only: ensure a real asset is always used for logos (no broken image icons). */
-const LOGO_FALLBACK_SRC = "/file.svg";
+const REPRESENTATIONS_HERO_SRC = "/assets/page-visuals/representations-hero.png";
 
 function resolveLogoSrc(stated: string): string {
-  if (stated && stated.startsWith("/") && publicFileExists(stated)) return stated;
-  return LOGO_FALLBACK_SRC;
+  return stated.startsWith("/") ? stated : REPRESENTATIONS_HERO_SRC;
 }
 
 type PageCopy = {
@@ -229,11 +224,11 @@ export default async function RepresentationsPage({
     ...bundle,
     representations: bundle.representations.map((e) => {
       const logoSrc = resolveLogoSrc(e.logoSrc);
-      return { ...e, logoSrc, logoIsPlaceholder: logoSrc === LOGO_FALLBACK_SRC };
+      return { ...e, logoSrc, logoIsPlaceholder: !e.logoSrc.startsWith("/") };
     }),
     partners: bundle.partners.map((e) => {
       const logoSrc = resolveLogoSrc(e.logoSrc);
-      return { ...e, logoSrc, logoIsPlaceholder: logoSrc === LOGO_FALLBACK_SRC };
+      return { ...e, logoSrc, logoIsPlaceholder: !e.logoSrc.startsWith("/") };
     }),
   };
 

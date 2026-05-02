@@ -1,21 +1,6 @@
 import Image from "next/image";
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 import { cn } from "@/lib/cn";
 import { heroEditorialMatteBgClass, visualImageClipClass } from "@/lib/visualImage";
-
-function publicPathExists(src: string) {
-  if (!src.startsWith("/")) return false;
-  try {
-    // Strip leading slash so path.join does not treat segments as absolute (Windows-safe).
-    const relative = src.replace(/^\/+/, "");
-    const candidate = join(process.cwd(), "public", relative);
-    return existsSync(candidate);
-  } catch {
-    // Avoid crashing the RSC tree if fs/cwd is unavailable in an unusual runtime.
-    return false;
-  }
-}
 
 /**
  * Global image treatment: rounded corners on the photo itself (single clip layer).
@@ -49,7 +34,7 @@ export function VisualAnchor({
   detailEditorial?: boolean;
   detailEditorialFit?: "cover" | "contain";
 }) {
-  const hasImage = src ? publicPathExists(src) : false;
+  const hasImage = Boolean(src);
 
   if (photoPresentation && hasImage) {
     return (

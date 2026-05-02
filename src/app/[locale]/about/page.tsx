@@ -20,21 +20,19 @@ import {
   premiumTrustChip,
 } from "@/lib/premiumUi";
 
-/** Candidate order matches deployment checklist; first existing file wins. */
+/** Candidate order for deployment; first path is the canonical marketing asset. */
 const ABOUT_RASTER_CANDIDATES = [
-  "/page-visuals/about-hero.png",
-  "/page-visuals/about-hero.webp",
-  "/page-visuals/about-hero.jpg",
-  "/page-visuals/about-hero.jpeg",
-  "/page-visuals/about.png",
-  "/page-visuals/about.webp",
-  "/page-visuals/about.jpg",
-  "/page-visuals/about.jpeg",
+  "/assets/page-visuals/about-hero.png",
+  "/assets/page-visuals/about-hero.webp",
+  "/assets/page-visuals/about-hero.jpg",
+  "/assets/page-visuals/about-hero.jpeg",
+  "/assets/page-visuals/about.png",
+  "/assets/page-visuals/about.webp",
+  "/assets/page-visuals/about.jpg",
+  "/assets/page-visuals/about.jpeg",
 ] as const;
 
-const ABOUT_REPO_FALLBACK_SRC = "/file.svg";
-
-function resolveAboutHeroRasterSrc(): string | null {
+function resolveAboutHeroRasterSrc(): string {
   return resolveHeroWithSharedFallbacks(ABOUT_RASTER_CANDIDATES);
 }
 
@@ -259,8 +257,7 @@ export default async function AboutPage({
   const metaAbout = dict.meta?.pages?.about;
   const copy = ABOUT_COPY[l];
 
-  const aboutRasterSrc = resolveAboutHeroRasterSrc();
-  const aboutHeroSrc = aboutRasterSrc ?? ABOUT_REPO_FALLBACK_SRC;
+  const aboutHeroSrc = resolveAboutHeroRasterSrc();
   const aboutHeroIsSvgFallback = aboutHeroSrc.endsWith(".svg");
   const heroAlt = metaAbout?.title ?? copy.heroTitle ?? dict.brand?.legalName ?? "";
 

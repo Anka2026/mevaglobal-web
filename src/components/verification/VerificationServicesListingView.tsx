@@ -64,12 +64,12 @@ export function VerificationServicesListingView({
 }) {
   const s = servicesCopy;
   const servicesListingHeroCandidates = [
-    "/page-visuals/services-hero-approved.png",
-    "/page-visuals/services-hero.png",
-    "/page-visuals/verification-services-hero.png",
-    "/page-visuals/verification-services.png",
+    "/assets/page-visuals/services-hero-approved.png",
+    "/assets/page-visuals/services-hero.png",
+    "/assets/page-visuals/verification-services-hero.png",
+    "/assets/page-visuals/verification-services.png",
   ] as const;
-  const servicesListingHero = resolveHeroWithSharedFallbacks(servicesListingHeroCandidates) ?? "/file.svg";
+  const servicesListingHero = resolveHeroWithSharedFallbacks(servicesListingHeroCandidates);
 
   return (
     <>

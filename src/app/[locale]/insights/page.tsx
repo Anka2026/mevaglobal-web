@@ -58,7 +58,7 @@ export default async function InsightsPage({
         description={dict.pages.insights.intro}
         visual={
           <VisualAnchor
-            src="/page-visuals/insights.png"
+            src="/assets/page-visuals/insights.png"
             icon={<BookOpen className="h-5 w-5" aria-hidden="true" />}
             eyebrow={dict.nav.insights}
           />
