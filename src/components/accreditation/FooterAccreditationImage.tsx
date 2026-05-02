@@ -7,7 +7,7 @@ import {
   ACCREDITATION_IMAGE_STORAGE_KEY,
 } from "@/lib/accreditationImageStorage";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { visualImageClipClass } from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/assets/page-visuals/accreditation-hero.png";
 
@@ -15,7 +15,7 @@ type Props = {
   alt: string;
 };
 
-/** Mirrors the hero accreditation upload (same localStorage key) for a premium footer reference strip. */
+/** Footer accreditation strip — same upload key as hero; single rounded full-bleed shell. */
 export function FooterAccreditationImage({ alt }: Props) {
   const [dataUrl, setDataUrl] = useState<string | null>(null);
   const [defaultFailed, setDefaultFailed] = useState(false);
@@ -46,26 +46,19 @@ export function FooterAccreditationImage({ alt }: Props) {
   if (!displaySrc && !showDefault) return null;
 
   return (
-    <div
-      className={cn(
-        visualImageClipClass,
-        "relative mt-6 h-36 w-full max-w-[640px] bg-white/[0.06] sm:h-40",
-      )}
-    >
+    <div className={cn(visualImageClipClass, "relative mt-6 h-36 w-full max-w-[640px] sm:h-40")}>
       {displaySrc ? (
-        <div className={visualImageInnerClipClass}>
-          <Image
-            src={displaySrc}
-            alt={alt}
-            fill
-            sizes="(max-width: 1024px) 100vw, 640px"
-            className="object-contain object-center"
-            unoptimized={displaySrc.startsWith("data:")}
-            onError={() => {
-              if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
-            }}
-          />
-        </div>
+        <Image
+          src={displaySrc}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 640px"
+          className="object-cover object-center"
+          unoptimized={displaySrc.startsWith("data:")}
+          onError={() => {
+            if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
+          }}
+        />
       ) : null}
     </div>
   );

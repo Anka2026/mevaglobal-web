@@ -25,7 +25,7 @@ export function VerificationServiceDetailVisual({
       alt={alt}
       imageClassName={visual.imageClassName}
       detailEditorial
-      detailEditorialFit={visual.editorialFit ?? "contain"}
+      detailEditorialFit={visual.editorialFit ?? "cover"}
       className={cn("w-full min-h-0 flex-1", className)}
     />
   );

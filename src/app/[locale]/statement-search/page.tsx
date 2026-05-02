@@ -75,9 +75,6 @@ export default async function StatementSearchPage({
             src={STATEMENT_SEARCH_HERO_SRC}
             alt={dict.pages.statementSearch.heroImageAlt}
             priority
-            presentation="cover"
-            showShadow
-            editorialMatte={false}
             imageClassName="object-[50%_16%]"
             className="h-full w-full flex-1 min-h-[240px] sm:min-h-[280px] lg:min-h-[340px]"
           />

@@ -4,7 +4,7 @@ import type { Dictionary } from "@/i18n/types";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { editorialPhotoShellClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { editorialPhotoShellClass } from "@/lib/visualImage";
 import { premiumHeroBackdrop } from "@/lib/premiumUi";
 
 const HOME_HERO_SRC = "/assets/page-visuals/home-hero.png";
@@ -47,16 +47,14 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
                 "h-[260px] w-full sm:h-[320px] lg:h-full lg:min-h-[min(100%,28rem)]",
               )}
             >
-              <div className={visualImageInnerClipClass}>
-                <Image
-                  src={HOME_HERO_SRC}
-                  alt={dict.home.hero.heroImageAlt}
-                  fill
-                  priority
-                  className="object-cover brightness-[1.07]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
+              <Image
+                src={HOME_HERO_SRC}
+                alt={dict.home.hero.heroImageAlt}
+                fill
+                priority
+                className="object-cover object-center brightness-[1.07]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

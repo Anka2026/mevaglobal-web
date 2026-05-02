@@ -8,7 +8,7 @@ import {
   dispatchAccreditationImageChanged,
 } from "@/lib/accreditationImageStorage";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass, visualImageHeroShadowClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { visualImageClipClass } from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/assets/page-visuals/accreditation-hero.png";
 
@@ -66,27 +66,19 @@ export function AccreditationHeroImage({ alt, imageNote, uploadLabel }: Props) {
 
   return (
     <div className="flex min-h-0 w-full max-w-[520px] flex-col gap-3 lg:ml-auto">
-      <div
-        className={cn(
-          visualImageClipClass,
-          visualImageHeroShadowClass,
-          "relative aspect-[4/3] w-full",
-        )}
-      >
+      <div className={cn(visualImageClipClass, "relative aspect-[4/3] w-full")}>
         {displaySrc ? (
-          <div className={visualImageInnerClipClass}>
-            <Image
-              src={displaySrc}
-              alt={alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 520px"
-              className="object-contain object-center"
-              unoptimized={displaySrc.startsWith("data:")}
-              onError={() => {
-                if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
-              }}
-            />
-          </div>
+          <Image
+            src={displaySrc}
+            alt={alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 520px"
+            className="object-cover object-center"
+            unoptimized={displaySrc.startsWith("data:")}
+            onError={() => {
+              if (displaySrc === DEFAULT_SRC) setDefaultFailed(true);
+            }}
+          />
         ) : (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-[color:var(--brand-accent-soft)] via-white to-[#eef5fa] p-6 text-center"
@@ -109,13 +101,7 @@ export function AccreditationHeroImage({ alt, imageNote, uploadLabel }: Props) {
         >
           {uploadLabel}
         </button>
-        <input
-          ref={inputRef}
-          type="file"
-          accept="image/*"
-          className="sr-only"
-          onChange={onFile}
-        />
+        <input ref={inputRef} type="file" accept="image/*" className="sr-only" onChange={onFile} />
       </div>
 
       <p className="text-xs leading-relaxed text-[color:var(--text-muted)] sm:text-[0.8125rem] sm:leading-relaxed">

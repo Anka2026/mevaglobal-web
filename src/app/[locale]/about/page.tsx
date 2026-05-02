@@ -9,12 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
-import {
-  heroEditorialMatteBgClass,
-  visualImageClipClass,
-  visualImageHeroShadowClass,
-  visualImageInnerClipClass,
-} from "@/lib/visualImage";
+import { visualImageClipClass } from "@/lib/visualImage";
 import {
   premiumCard,
   premiumCardMuted,
@@ -292,31 +287,23 @@ export default async function AboutPage({
               <div
                 className={cn(
                   visualImageClipClass,
-                  visualImageHeroShadowClass,
-                  "w-full ring-0",
+                  "w-full",
                   "aspect-[5/4] min-h-[15rem] max-h-[min(30rem,52vh)] sm:min-h-[16.5rem] sm:max-h-[min(32rem,54vh)] lg:min-h-[17rem] lg:max-h-[min(34rem,56vh)]",
                 )}
               >
-                <div
-                  className={cn(
-                    visualImageInnerClipClass,
-                    aboutHeroIsSvgFallback ? heroEditorialMatteBgClass : "bg-transparent",
-                  )}
-                >
-                  <Image
-                    src={aboutHeroSrc}
-                    alt={aboutHeroIsSvgFallback ? "" : heroAlt}
-                    fill
-                    unoptimized={aboutHeroIsSvgFallback}
-                    className={
-                      aboutHeroIsSvgFallback
-                        ? "object-contain object-center p-[min(12%,3rem)] opacity-[0.22]"
-                        : "object-contain object-center"
-                    }
-                    sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 58vw, 720px"
-                    priority
-                  />
-                </div>
+                <Image
+                  src={aboutHeroSrc}
+                  alt={aboutHeroIsSvgFallback ? "" : heroAlt}
+                  fill
+                  unoptimized={aboutHeroIsSvgFallback}
+                  className={
+                    aboutHeroIsSvgFallback
+                      ? "object-contain object-center opacity-[0.22]"
+                      : "object-cover object-[50%_46%]"
+                  }
+                  sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 58vw, 720px"
+                  priority
+                />
               </div>
             </div>
           </div>

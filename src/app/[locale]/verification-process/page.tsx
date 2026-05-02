@@ -11,7 +11,7 @@ import { AccreditationPageNav } from "@/components/accreditation/AccreditationPa
 import { CorporateDocumentsSection } from "@/components/accreditation/CorporateDocumentsSection";
 import { cn } from "@/lib/cn";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
-import { editorialPhotoShellClass, heroEditorialMatteBgClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { editorialPhotoShellClass } from "@/lib/visualImage";
 import {
   premiumCard,
   premiumHeroBackdrop,
@@ -437,29 +437,22 @@ export default async function VerificationProcessPage({
               <div
                 className={cn(
                   editorialPhotoShellClass,
-                  "min-h-[280px] sm:min-h-[340px] lg:min-h-[380px]",
+                  "min-h-[300px] sm:min-h-[380px] lg:min-h-[420px]",
                 )}
               >
-                <div
-                  className={cn(
-                    visualImageInnerClipClass,
-                    heroIsSvgFallback ? heroEditorialMatteBgClass : "bg-transparent",
-                  )}
-                >
-                  <Image
-                    src={heroSrc}
-                    alt={heroIsSvgFallback ? "" : copy.heroAlt}
-                    fill
-                    priority
-                    unoptimized={heroIsSvgFallback}
-                    className={
-                      heroIsSvgFallback
-                        ? "object-contain object-center p-[min(12%,3rem)] opacity-[0.18]"
-                        : "object-contain object-center p-2 sm:p-3 lg:p-3.5"
-                    }
-                    sizes="(max-width: 1023px) 100vw, 520px"
-                  />
-                </div>
+                <Image
+                  src={heroSrc}
+                  alt={heroIsSvgFallback ? "" : copy.heroAlt}
+                  fill
+                  priority
+                  unoptimized={heroIsSvgFallback}
+                  className={
+                    heroIsSvgFallback
+                      ? "object-contain object-center opacity-[0.18]"
+                      : "object-cover object-[42%_32%] sm:object-[44%_34%] lg:object-[45%_36%]"
+                  }
+                  sizes="(max-width: 1023px) 100vw, 520px"
+                />
               </div>
             </div>
           </div>

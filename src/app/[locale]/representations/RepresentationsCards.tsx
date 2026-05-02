@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { visualImageClipClass } from "@/lib/visualImage";
 
 export type OrganizationEntity = {
   id: string;
@@ -395,12 +394,7 @@ export function RepresentationsCards({
           {items.map((r) => (
             <article key={r.id} id={r.id} className={cn(cardClass, "scroll-mt-[5.5rem]")}>
               <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-start sm:gap-9 sm:p-7 lg:gap-11 lg:p-9">
-                <div
-                  className={cn(
-                    visualImageClipClass,
-                    "flex shrink-0 justify-center rounded-[var(--visual-image-radius)] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_34%,white)] p-4 sm:w-[min(100%,17.5rem)] lg:w-[18.5rem]",
-                  )}
-                >
+                <div className="flex shrink-0 justify-center sm:w-[min(100%,17.5rem)] lg:w-[18.5rem]">
                   <PartnerLogoArea entity={r} variant="featured" />
                 </div>
 

@@ -25,7 +25,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <Link
                 href={`/${locale}`}
                 className={cn(
-                  "inline-flex w-fit max-w-full items-center pl-2",
+                  "inline-flex w-fit max-w-full items-center",
                   "transition-opacity duration-200 hover:opacity-90",
                   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40",
                 )}
@@ -36,7 +36,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                   alt=""
                   width={704}
                   height={224}
-                  className="block h-32 w-auto max-w-full rounded-[var(--visual-image-radius)] object-contain sm:h-36"
+                  className="block h-[7.25rem] w-auto max-w-full rounded-[var(--visual-image-radius)] object-contain sm:h-[8rem]"
                   sizes="(max-width:1024px) 90vw, 704px"
                   aria-hidden
                 />
