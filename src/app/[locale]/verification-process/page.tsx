@@ -440,7 +440,12 @@ export default async function VerificationProcessPage({
                   "min-h-[280px] sm:min-h-[340px] lg:min-h-[380px]",
                 )}
               >
-                <div className={cn(visualImageInnerClipClass, heroIsSvgFallback ? heroEditorialMatteBgClass : undefined)}>
+                <div
+                  className={cn(
+                    visualImageInnerClipClass,
+                    heroIsSvgFallback ? heroEditorialMatteBgClass : "bg-transparent",
+                  )}
+                >
                   <Image
                     src={heroSrc}
                     alt={heroIsSvgFallback ? "" : copy.heroAlt}
@@ -450,7 +455,7 @@ export default async function VerificationProcessPage({
                     className={
                       heroIsSvgFallback
                         ? "object-contain object-center p-[min(12%,3rem)] opacity-[0.18]"
-                        : "object-cover object-center"
+                        : "object-cover object-[50%_42%]"
                     }
                     sizes="(max-width: 1023px) 100vw, 520px"
                   />

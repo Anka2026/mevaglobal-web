@@ -8,12 +8,7 @@ import {
   dispatchResourcesImageChanged,
 } from "@/lib/resourcesImageStorage";
 import { cn } from "@/lib/cn";
-import {
-  heroEditorialMatteBgClass,
-  visualImageClipClass,
-  visualImageHeroShadowClass,
-  visualImageInnerClipClass,
-} from "@/lib/visualImage";
+import { visualImageClipClass, visualImageHeroShadowClass, visualImageInnerClipClass } from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/assets/page-visuals/resources-hero.png";
 
@@ -79,7 +74,7 @@ export function ResourcesHeroImage({ alt = "", imageNote = "", uploadLabel = "" 
         )}
       >
         {displaySrc ? (
-          <div className={cn(visualImageInnerClipClass, heroEditorialMatteBgClass)}>
+          <div className={visualImageInnerClipClass}>
             <Image
               src={displaySrc}
               alt={alt}

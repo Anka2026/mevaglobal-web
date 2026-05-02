@@ -14,7 +14,7 @@ export const visualImageClipClass =
 export const visualImageInnerClipClass =
   "absolute inset-0 overflow-hidden rounded-[var(--visual-image-radius)]";
 
-/** Matte behind `object-contain` heroes — soft tint, not a white card frame. */
+/** Optional soft tint behind letterboxed `object-contain` imagery (avoid unless explicitly desired). */
 export const heroEditorialMatteBgClass =
   "bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_32%,white)]";
 

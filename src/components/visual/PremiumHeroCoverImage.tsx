@@ -32,7 +32,7 @@ export function PremiumHeroCoverImage({
   imageClassName?: string;
 }) {
   const contain = presentation === "contain";
-  const showMatte = editorialMatte ?? contain;
+  const showMatte = editorialMatte ?? false;
   const padContain = containPadding ?? contain;
 
   return (
@@ -58,7 +58,7 @@ export function PremiumHeroCoverImage({
           className={cn(
             contain
               ? cn("object-contain object-center", padContain && "p-3 sm:p-5")
-              : "object-cover",
+              : "object-cover object-center",
             imageClassName,
           )}
           sizes="(max-width: 1024px) 100vw, 48vw"

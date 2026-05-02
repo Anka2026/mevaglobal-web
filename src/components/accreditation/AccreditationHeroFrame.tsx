@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { editorialPhotoShellClass, heroEditorialMatteBgClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import { editorialPhotoShellClass, visualImageInnerClipClass } from "@/lib/visualImage";
 import { cn } from "@/lib/cn";
 
 const DEFAULT_HERO_SRC = "/assets/page-visuals/accreditation-process-hero.png";
@@ -22,7 +22,7 @@ export function AccreditationHeroFrame({
         "aspect-[16/10] max-h-[min(17rem,38vh)] w-full sm:max-h-[min(18rem,40vh)] lg:max-h-[min(16.5rem,36vh)]",
       )}
     >
-      <div className={cn(visualImageInnerClipClass, heroEditorialMatteBgClass)}>
+      <div className={visualImageInnerClipClass}>
         <Image
           src={src}
           alt={alt}

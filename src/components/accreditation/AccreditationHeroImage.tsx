@@ -8,12 +8,7 @@ import {
   dispatchAccreditationImageChanged,
 } from "@/lib/accreditationImageStorage";
 import { cn } from "@/lib/cn";
-import {
-  heroEditorialMatteBgClass,
-  visualImageClipClass,
-  visualImageHeroShadowClass,
-  visualImageInnerClipClass,
-} from "@/lib/visualImage";
+import { visualImageClipClass, visualImageHeroShadowClass, visualImageInnerClipClass } from "@/lib/visualImage";
 
 const DEFAULT_SRC = "/assets/page-visuals/accreditation-hero.png";
 
@@ -79,7 +74,7 @@ export function AccreditationHeroImage({ alt, imageNote, uploadLabel }: Props) {
         )}
       >
         {displaySrc ? (
-          <div className={cn(visualImageInnerClipClass, heroEditorialMatteBgClass)}>
+          <div className={visualImageInnerClipClass}>
             <Image
               src={displaySrc}
               alt={alt}

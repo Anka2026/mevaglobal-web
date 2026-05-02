@@ -25,8 +25,8 @@
   --shadow-soft: 0 12px 28px rgba(29, 37, 47, 0.10);
   --shadow-float: 0 18px 44px rgba(29, 37, 47, 0.14);
 
-  /* Photography / illustration / logo corners — one radius site-wide (~rounded-3xl / 24px) */
-  --visual-image-radius: 1.5rem;
+  /* Photography / illustration / logo corners — one radius site-wide (~28px / premium rounded shell) */
+  --visual-image-radius: 1.75rem;
 }
 
 @theme inline {

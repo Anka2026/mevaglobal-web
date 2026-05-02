@@ -9,7 +9,12 @@ import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
-import { heroEditorialMatteBgClass, visualImageClipClass, visualImageInnerClipClass } from "@/lib/visualImage";
+import {
+  heroEditorialMatteBgClass,
+  visualImageClipClass,
+  visualImageHeroShadowClass,
+  visualImageInnerClipClass,
+} from "@/lib/visualImage";
 import {
   premiumCard,
   premiumCardMuted,
@@ -287,8 +292,9 @@ export default async function AboutPage({
               <div
                 className={cn(
                   visualImageClipClass,
-                  "w-full bg-transparent shadow-none ring-0",
-                  "aspect-[16/11] min-h-[17.5rem] max-h-[min(32rem,56vh)] sm:aspect-[5/3] sm:min-h-[20rem] lg:min-h-0 lg:max-h-[min(34rem,58vh)]",
+                  visualImageHeroShadowClass,
+                  "w-full ring-0",
+                  "aspect-[5/4] min-h-[15rem] max-h-[min(30rem,52vh)] sm:min-h-[16.5rem] sm:max-h-[min(32rem,54vh)] lg:min-h-[17rem] lg:max-h-[min(34rem,56vh)]",
                 )}
               >
                 <div
@@ -305,7 +311,7 @@ export default async function AboutPage({
                     className={
                       aboutHeroIsSvgFallback
                         ? "object-contain object-center p-[min(12%,3rem)] opacity-[0.22]"
-                        : "object-cover object-center"
+                        : "object-contain object-center"
                     }
                     sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 58vw, 720px"
                     priority
