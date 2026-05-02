@@ -97,6 +97,7 @@ export const nl: Dictionary = {
   footer: {
     description:
       "Een onafhankelijke organisatie voor verificatie, validatie en technische beoordeling van koolstofgegevens, milieudeclaraties en CBAM-rapportage.",
+    linkedInLabel: "Meva Global op LinkedIn",
     offices: "Onze kantoren",
     quickLinks: "Verkennen",
     contactTitle: "Contact",

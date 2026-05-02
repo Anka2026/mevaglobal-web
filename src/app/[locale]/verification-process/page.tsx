@@ -455,7 +455,7 @@ export default async function VerificationProcessPage({
                     className={
                       heroIsSvgFallback
                         ? "object-contain object-center p-[min(12%,3rem)] opacity-[0.18]"
-                        : "object-cover object-[50%_42%]"
+                        : "object-contain object-center p-2 sm:p-3 lg:p-3.5"
                     }
                     sizes="(max-width: 1023px) 100vw, 520px"
                   />

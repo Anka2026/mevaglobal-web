@@ -97,6 +97,7 @@ export const tr: Dictionary = {
   footer: {
     description:
       "Karbon verileri, çevresel beyanlar ve SKDM (CBAM) raporlaması için bağımsız doğrulama, validasyon ve teknik inceleme kuruluşu.",
+    linkedInLabel: "LinkedIn’de Meva Global",
     offices: "Ofislerimiz",
     quickLinks: "Keşfet",
     contactTitle: "İletişim",

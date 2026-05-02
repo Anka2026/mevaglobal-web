@@ -7,6 +7,9 @@ import { navItems } from "@/lib/nav";
 import { offices } from "@/data/offices";
 import { cn } from "@/lib/cn";
 
+const FOOTER_LINKEDIN_URL =
+  "https://www.linkedin.com/company/meva-global-certification/?viewAsMember=true";
+
 /** Stable NL then TR so both jurisdictions read consistently in the footer. */
 const OFFICE_ORDER: Record<(typeof offices)[number]["id"], number> = { nl: 0, tr: 1 };
 
@@ -39,6 +42,16 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 />
               </Link>
               <p className="mt-5 text-sm leading-relaxed text-white/75">{dict.footer.description}</p>
+              <p className="mt-3">
+                <a
+                  href={FOOTER_LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-white/70 underline-offset-[3px] transition-colors hover:text-white/95 hover:underline"
+                >
+                  {dict.footer.linkedInLabel}
+                </a>
+              </p>
             </div>
           </div>
 

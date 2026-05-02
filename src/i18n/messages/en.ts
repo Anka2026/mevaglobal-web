@@ -97,6 +97,7 @@ export const en: Dictionary = {
   footer: {
     description:
       "An independent verification, validation and technical review body for carbon data, environmental declarations and CBAM reporting.",
+    linkedInLabel: "Meva Global on LinkedIn",
     offices: "Our offices",
     quickLinks: "Explore",
     contactTitle: "Contact",

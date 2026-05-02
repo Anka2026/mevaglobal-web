@@ -67,6 +67,7 @@ export type Dictionary = {
   };
   footer: {
     description: string;
+    linkedInLabel: string;
     offices: string;
     quickLinks: string;
     contactTitle: string;
