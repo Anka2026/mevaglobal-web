@@ -6,9 +6,9 @@ import { serviceDetailsExtraNl } from "./extras/serviceDetailsExtra.nl";
 
 export const nl: Dictionary = {
   meta: {
-    siteName: "Meva Global Certification B.V.",
+    siteName: "Meva Global Certification",
     siteDescription:
-      "Onafhankelijke organisatie voor verificatie, validatie en technische beoordeling rond carbon-, milieuclaims en CBAM-gerelateerde rapportagecontexten—geleverd via gestructureerde technische beoordeling en bewijsdiscipline.",
+      "Onafhankelijke verificatie-, validatie- en technische beoordelingsdiensten.",
     pages: {
       home: {
         title: "Onafhankelijke verificatie, validatie en technische beoordeling",
@@ -1654,6 +1654,21 @@ export const nl: Dictionary = {
         accreditation: "Accreditatie",
         verificationProcess: "Verificatieproces",
         documents: "Bedrijfsdocumenten",
+      },
+      verificationProcessHeroVisual: {
+        ariaLabel:
+          "Illustratie van verificatieprocesreview met de fasen proces, bewijs, checklist en reviewflow.",
+        title: "Verificatieprocesreview",
+        tabs: ["Proces", "Bewijs", "Checklist", "Reviewflow"] as const,
+        evidenceCard: {
+          title: "Bewijs",
+          line1: "Procesregistraties",
+          line2: "Gegevens & documenten",
+        },
+        checklistTitle: "Checklist",
+        checklistRows: ["Proces", "Bewijs", "Checklist", "Reviewflow"] as const,
+        reviewFlowStrip: "Reviewflow",
+        flowBoxes: ["Proces", "Bewijs", "Checklist", "Reviewflow"] as const,
       },
       corporateDocumentsSection: {
         title: "Bedrijfsdocumenten",

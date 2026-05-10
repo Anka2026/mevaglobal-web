@@ -10,7 +10,9 @@
     "start": "next start -p 3003",
     "lint": "next lint",
     "audit:verification": "npx --yes tsx scripts/audit-verification-isolation.ts",
-    "bisect:verification": "npx --yes tsx scripts/bisect-verification-registry.ts"
+    "bisect:verification": "npx --yes tsx scripts/bisect-verification-registry.ts",
+    "generate:icons": "node scripts/generate-brand-icons.mjs",
+    "signature:photo": "node scripts/create-signature-photo.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,7 +35,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^15.5.15",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
+    "to-ico": "^1.1.5",
     "typescript": "^5",
     "wrangler": "^4.84.1"
   }

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
@@ -9,33 +8,14 @@ import { AccreditationProcessCard } from "@/components/cards/AccreditationProces
 import { PremiumVerificationServiceCtaPanel } from "@/components/sections/PremiumVerificationServiceCtaPanel";
 import { AccreditationPageNav } from "@/components/accreditation/AccreditationPageNav";
 import { CorporateDocumentsSection } from "@/components/accreditation/CorporateDocumentsSection";
+import { VerificationProcessHeroVisual } from "@/components/verification/VerificationProcessHeroVisual";
 import { cn } from "@/lib/cn";
-import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
-import { editorialPhotoShellClass } from "@/lib/visualImage";
 import {
   premiumCard,
   premiumHeroBackdrop,
   premiumSectionMuted,
   premiumTrustChip,
 } from "@/lib/premiumUi";
-
-const HERO_CANDIDATES = [
-  "/assets/page-visuals/verification-process-hero.png",
-  "/assets/page-visuals/verification-process-hero.webp",
-  "/assets/page-visuals/verification-process-hero.jpg",
-  "/assets/page-visuals/verification-process-hero.jpeg",
-  "/assets/page-visuals/accreditation-hero.png",
-  "/assets/page-visuals/accreditation-hero.webp",
-  "/assets/page-visuals/accreditation-hero.jpg",
-  "/assets/page-visuals/accreditation-hero.jpeg",
-  "/assets/page-visuals/verification-process.png",
-  "/assets/page-visuals/accreditation.png",
-  "/assets/page-visuals/accreditation-process-hero.png",
-] as const;
-
-function resolveHeroSrc(): string {
-  return resolveHeroWithSharedFallbacks(HERO_CANDIDATES);
-}
 
 type Principle = { title: string; description: string };
 
@@ -402,8 +382,6 @@ export default async function VerificationProcessPage({
   const partner = PARTNER_SECTION[l];
 
   const steps = copy.steps;
-  const heroSrc = resolveHeroSrc();
-  const heroIsSvgFallback = heroSrc.endsWith(".svg");
 
   return (
     <>
@@ -414,15 +392,15 @@ export default async function VerificationProcessPage({
         className={cn("scroll-mt-[4.5rem] border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}
       >
         <Container className="py-10 sm:py-12 lg:py-14">
-          <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-11 xl:gap-12">
-            <div className="min-w-0 lg:col-span-7">
+          <div className="grid items-start gap-8 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-11 xl:gap-12">
+            <div className="min-w-0 max-w-[38.75rem]">
               <p className="text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-[0.8125rem]">
                 {copy.heroEyebrow}
               </p>
               <h1 className="mt-4 text-[2rem] font-semibold leading-[1.06] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.35rem] lg:text-[2.55rem]">
                 {copy.heroTitle}
               </h1>
-              <p className="mt-5 max-w-[42rem] text-[0.9375rem] leading-[1.82] text-[color:var(--ink-dark)]/92 sm:text-[1.0625rem] sm:leading-[1.78]">
+              <p className="mt-5 max-w-[38.75rem] text-[0.9375rem] leading-[1.82] text-[color:var(--ink-dark)]/92 sm:text-[1.0625rem] sm:leading-[1.78]">
                 {copy.heroBody}
               </p>
               <ul className="mt-7 flex list-none flex-wrap gap-2 p-0 sm:mt-8 sm:gap-2.5">
@@ -433,26 +411,9 @@ export default async function VerificationProcessPage({
                 ))}
               </ul>
             </div>
-            <div className={cn("min-w-0 lg:col-span-5 lg:pl-2")}>
-              <div
-                className={cn(
-                  editorialPhotoShellClass,
-                  "min-h-[300px] sm:min-h-[380px] lg:min-h-[420px]",
-                )}
-              >
-                <Image
-                  src={heroSrc}
-                  alt={heroIsSvgFallback ? "" : copy.heroAlt}
-                  fill
-                  priority
-                  unoptimized={heroIsSvgFallback}
-                  className={
-                    heroIsSvgFallback
-                      ? "object-contain object-center opacity-[0.18]"
-                      : "object-cover object-[42%_32%] sm:object-[44%_34%] lg:object-[45%_36%]"
-                  }
-                  sizes="(max-width: 1023px) 100vw, 520px"
-                />
+            <div className="min-w-0 w-full self-start lg:pl-2 xl:pl-4">
+              <div className="mx-auto w-full max-w-[720px] lg:mx-0 lg:max-w-none">
+                <VerificationProcessHeroVisual visual={dict.pages.process.verificationProcessHeroVisual} />
               </div>
             </div>
           </div>

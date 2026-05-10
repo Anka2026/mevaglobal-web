@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { cookies } from "next/headers";
+import { OrganizationJsonLd } from "@/components/site/OrganizationJsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,23 +15,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/icon",
-  },
-  title: {
-    default: "Meva Global Certification B.V.",
-    template: "%s | Meva Global Certification B.V.",
-  },
-  description:
-    "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
   metadataBase: new URL("https://mevaglobalcertification.com"),
+  themeColor: "#005691",
+  title: {
+    default: "Meva Global Certification",
+    template: "%s | Meva Global Certification",
+  },
+  description: "Independent verification, validation and technical review services.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
-    siteName: "Meva Global Certification B.V.",
-    title: "Meva Global Certification B.V.",
-    description:
-      "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
+    siteName: "Meva Global Certification",
+    title: "Meva Global Certification",
+    description: "Independent verification, validation and technical review services.",
     url: "/",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "Meva Global Certification",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meva Global Certification",
+    description: "Independent verification, validation and technical review services.",
+    images: ["/icon.png"],
   },
 };
 
@@ -47,6 +66,7 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[color:var(--background)] text-[color:var(--foreground)]">
+        <OrganizationJsonLd />
         {children}
       </body>
     </html>

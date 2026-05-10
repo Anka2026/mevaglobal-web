@@ -6,9 +6,8 @@ import { serviceDetailsExtraEn } from "./extras/serviceDetailsExtra.en";
 
 export const en: Dictionary = {
   meta: {
-    siteName: "Meva Global Certification B.V.",
-    siteDescription:
-      "Independent verification and validation organisation for carbon, environmental claims and CBAM-related reporting—structured technical review and evidence discipline.",
+    siteName: "Meva Global Certification",
+    siteDescription: "Independent verification, validation and technical review services.",
     pages: {
       home: {
         title: "Independent Verification, Validation And Technical Review",
@@ -1653,6 +1652,21 @@ export const en: Dictionary = {
         accreditation: "Accreditation",
         verificationProcess: "Verification Process",
         documents: "Corporate Documents",
+      },
+      verificationProcessHeroVisual: {
+        ariaLabel:
+          "Verification process review illustration showing process, evidence, checklist and review flow stages.",
+        title: "Verification Process Review",
+        tabs: ["Process", "Evidence", "Checklist", "Review Flow"] as const,
+        evidenceCard: {
+          title: "Evidence",
+          line1: "Process Records",
+          line2: "Data & Documents",
+        },
+        checklistTitle: "Checklist",
+        checklistRows: ["Process", "Evidence", "Checklist", "Review Flow"] as const,
+        reviewFlowStrip: "Review Flow",
+        flowBoxes: ["Process", "Evidence", "Checklist", "Review Flow"] as const,
       },
       corporateDocumentsSection: {
         title: "Corporate Documents",

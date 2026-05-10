@@ -6,9 +6,8 @@ import { serviceDetailsExtraTr } from "./extras/serviceDetailsExtra.tr";
 
 export const tr: Dictionary = {
   meta: {
-    siteName: "Meva Global Certification B.V.",
-    siteDescription:
-      "Karbon, çevresel iddialar ve SKDM (CBAM) raporlama bağlamları için bağımsız doğrulama, validasyon ve teknik inceleme kuruluşu—yapılandırılmış teknik inceleme ve kanıt disipliniyle.",
+    siteName: "Meva Global Certification",
+    siteDescription: "Bağımsız doğrulama, validasyon ve teknik inceleme hizmetleri.",
     pages: {
       home: {
         title: "Bağımsız Doğrulama, Validasyon ve Teknik İnceleme",
@@ -1652,6 +1651,21 @@ export const tr: Dictionary = {
         accreditation: "Akreditasyon",
         verificationProcess: "Doğrulama Süreci",
         documents: "Kurumsal Dokümanlar",
+      },
+      verificationProcessHeroVisual: {
+        ariaLabel:
+          "Doğrulama süreci incelemesi; süreç, kanıt, kontrol listesi ve inceleme akışı aşamalarını gösteren görsel özet.",
+        title: "Doğrulama Süreci İncelemesi",
+        tabs: ["Süreç", "Kanıt", "Kontrol Listesi", "İnceleme Akışı"] as const,
+        evidenceCard: {
+          title: "Kanıt",
+          line1: "Süreç Kayıtları",
+          line2: "Veriler & Belgeler",
+        },
+        checklistTitle: "Kontrol Listesi",
+        checklistRows: ["Süreç", "Kanıt", "Kontrol Listesi", "İnceleme Akışı"] as const,
+        reviewFlowStrip: "İnceleme Akışı",
+        flowBoxes: ["Süreç", "Kanıt", "Kontrol Listesi", "İnceleme Akışı"] as const,
       },
       corporateDocumentsSection: {
         title: "Kurumsal Dokümanlar",

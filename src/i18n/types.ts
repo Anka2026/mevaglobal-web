@@ -254,6 +254,21 @@ export type Dictionary = {
         verificationProcess: string;
         documents: string;
       };
+      /** Locale-aware hero illustration on `/verification-process` (SVG/HTML infographic). */
+      verificationProcessHeroVisual: {
+        ariaLabel: string;
+        title: string;
+        tabs: readonly [string, string, string, string];
+        evidenceCard: {
+          title: string;
+          line1: string;
+          line2: string;
+        };
+        checklistTitle: string;
+        checklistRows: readonly [string, string, string, string];
+        reviewFlowStrip: string;
+        flowBoxes: readonly [string, string, string, string];
+      };
       corporateDocumentsSection: {
         title: string;
         intro: string;
