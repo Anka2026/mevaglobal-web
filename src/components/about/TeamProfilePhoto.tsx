@@ -11,14 +11,20 @@ type Props = {
   className?: string;
   /** Stretch to match adjacent column height on large screens. */
   fillColumn?: boolean;
+  /** Smaller executive portrait for balanced leadership layout. */
+  compact?: boolean;
 };
 
-export function TeamProfilePhoto({ src, alt, className, fillColumn = false }: Props) {
+export function TeamProfilePhoto({ src, alt, className, fillColumn = false, compact = false }: Props) {
   const [failed, setFailed] = useState(false);
 
   const shellClass = cn(
-    "relative w-full overflow-hidden rounded-2xl border border-[color:var(--border-soft)] bg-[color:var(--brand-accent-soft)]",
-    fillColumn ? "aspect-[4/5] min-h-[15.5rem] lg:aspect-auto lg:h-full lg:min-h-[17.5rem]" : "aspect-[4/5]",
+    "relative w-full overflow-hidden rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-gold)_18%,var(--border-soft))] bg-[color:var(--brand-accent-soft)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_10%,transparent)]",
+    compact
+      ? "aspect-[3/4] max-h-[17.5rem] sm:max-h-[18.5rem] lg:max-h-[19rem]"
+      : fillColumn
+        ? "aspect-[4/5] min-h-[15.5rem] lg:aspect-auto lg:h-full lg:min-h-[17.5rem]"
+        : "aspect-[4/5]",
     className,
   );
 

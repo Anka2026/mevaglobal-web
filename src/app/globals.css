@@ -17,13 +17,19 @@
   --grey-logo: #8c8f95;
   --footer-deep: #1f2746;
 
+  /* Premium champagne gold — visible accents (lines, rings, hover); not large fills */
+  --brand-gold: #c8a24a;
+  --brand-gold-soft: #f4e7c3;
+  --brand-teal-muted: #5a8f94;
+
   /* Semantic tokens */
   --background: var(--background-main);
   --foreground: var(--ink-dark);
   --ring: color-mix(in oklab, var(--brand-accent) 40%, white);
-  --shadow-card: 0 1px 2px rgba(29, 37, 47, 0.06);
-  --shadow-soft: 0 12px 28px rgba(29, 37, 47, 0.10);
+  --shadow-card: 0 2px 8px -2px rgba(29, 37, 47, 0.08), 0 1px 2px rgba(29, 37, 47, 0.05);
+  --shadow-soft: 0 14px 32px -12px rgba(29, 37, 47, 0.12);
   --shadow-float: 0 18px 44px rgba(29, 37, 47, 0.14);
+  --shadow-premium-hover: 0 20px 40px -16px rgba(29, 37, 47, 0.14), 0 0 0 1px color-mix(in oklab, var(--brand-gold) 18%, transparent);
 
   /* Photography / illustration / logo corners — one radius site-wide (~28px / premium rounded shell) */
   --visual-image-radius: 1.75rem;

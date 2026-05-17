@@ -5,7 +5,8 @@ import { isLocale, type Locale } from "@/i18n/locales";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { PremiumHeroCoverImage } from "@/components/visual/PremiumHeroCoverImage";
-import { premiumEditorialHeroSurface } from "@/lib/premiumUi";
+import { premiumEditorialHeroSurface, premiumSectionStatement } from "@/lib/premiumUi";
+import { cn } from "@/lib/cn";
 import { StatementSearchClient } from "./StatementSearchClient";
 
 const statementHeroTitleClass =
@@ -80,9 +81,11 @@ export default async function StatementSearchPage({
           />
         }
       />
-      <Container className="py-8 sm:py-9 lg:py-10">
-        <StatementSearchClient dict={dict} />
-      </Container>
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionStatement)}>
+        <Container className="py-8 sm:py-9 lg:py-10">
+          <StatementSearchClient dict={dict} />
+        </Container>
+      </section>
     </>
   );
 }

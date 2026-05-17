@@ -61,7 +61,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
       title: "Doğrulama ve Teknik İnceleme İhtiyaçlarınızı Birlikte Netleştirelim",
       subtitle:
         "Kapsamınızı, uygulanabilir standardı ve dokümantasyon durumunuzu paylaşın; size en uygun doğrulama, teknik inceleme veya hazırlık çerçevesini netleştirelim.",
-      primaryCta: "Mesaj Gönderin",
+      primaryCta: "Teknik Görüşme Talep Et",
       secondaryCta: "Hizmetleri İnceleyin",
     },
     companyCard: {
@@ -179,8 +179,8 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
           body: "Uygulanabilir standart, veri durumu, dokümantasyon seviyesi ve hedef takvimi birlikte netleştiririz.",
         },
         {
-          title: "Teklif ve İş Akışı",
-          body: "Gerekli olduğunda görüşme planlar, uygun hizmet çerçevesi ve teklif yaklaşımını paylaşırız.",
+          title: "Teknik Çerçeve ve Süreç",
+          body: "Gerekli olduğunda teknik görüşme planlar, uygun doğrulama çerçevesi ve süreç adımlarını paylaşırız.",
         },
       ],
     },
@@ -188,7 +188,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
       title: "Doğru Doğrulama Çerçevesini Birlikte Oluşturalım",
       subtitle:
         "Talebinizi paylaşın; kapsam, kanıt beklentisi ve zaman çizelgesi için net bir çerçeve sunalım.",
-      primaryCta: "Mesaj Gönderin",
+      primaryCta: "Teknik Görüşme Talep Et",
       secondaryCta: "Hizmetleri İnceleyin",
     },
   },
@@ -198,7 +198,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
       title: "Let’s Clarify Your Verification And Technical Review Needs",
       subtitle:
         "Share your scope, applicable standard and documentation status so we can identify the right verification, technical review or readiness pathway.",
-      primaryCta: "Send an Enquiry",
+      primaryCta: "Request a Technical Meeting",
       secondaryCta: "Explore Services",
     },
     companyCard: {
@@ -315,15 +315,15 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
           body: "We clarify the applicable standard, data status, documentation maturity and target timeline.",
         },
         {
-          title: "Proposal And Engagement Shape",
-          body: "Where appropriate, we schedule a discussion and share the suitable service framework or proposal approach.",
+          title: "Technical Scope And Process",
+          body: "Where appropriate, we schedule a technical discussion and share the suitable verification framework and process steps.",
         },
       ],
     },
     finalCta: {
       title: "Let’s Define the Right Verification Pathway",
       subtitle: "Share your enquiry and we will help clarify the scope, evidence expectations and delivery timeline.",
-      primaryCta: "Send an Enquiry",
+      primaryCta: "Request a Technical Meeting",
       secondaryCta: "Explore Services",
     },
   },
@@ -333,7 +333,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
       title: "Laten We Verificatie En Technische Beoordeling Samen Afstemmen",
       subtitle:
         "Deel uw scope, toepasselijke norm en documentatiestatus, zodat we het juiste traject voor verificatie, technische beoordeling of voorbereiding kunnen bepalen.",
-      primaryCta: "Stuur een aanvraag",
+      primaryCta: "Vraag een technisch gesprek aan",
       secondaryCta: "Bekijk diensten",
     },
     companyCard: {
@@ -452,15 +452,15 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
           body: "We verduidelijken de toepasselijke norm, datastatus, documentatiematuriteit en gewenste planning.",
         },
         {
-          title: "Voorstel En Opdrachtvorm",
-          body: "Waar passend plannen we een gesprek en delen we het geschikte dienstkader of voorsteltraject.",
+          title: "Technisch Kader En Proces",
+          body: "Waar passend plannen we een technisch gesprek en delen we het geschikte verificatiekader en processtappen.",
         },
       ],
     },
     finalCta: {
       title: "Laten we het juiste verificatietraject bepalen",
       subtitle: "Deel uw aanvraag; wij helpen de scope, bewijsverwachtingen en het leveringsplan te verduidelijken.",
-      primaryCta: "Stuur een aanvraag",
+      primaryCta: "Vraag een technisch gesprek aan",
       secondaryCta: "Bekijk diensten",
     },
   },

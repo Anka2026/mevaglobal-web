@@ -44,7 +44,7 @@ export const serviceDetailsExtraNl: Record<
     ],
     bottomCta:
       "Deel uw organisatorische grenzen, rapportagejaar, opgenomen categorieën en huidige rekenstructuur met ons, dan bepalen we samen een passende beoordelingsdiepte voor uw rapportagecontext.",
-    primaryButton: "Offerte Aanvragen",
+    primaryButton: "Vraag een technisch gesprek aan",
     secondaryButton: "Terug Naar Diensten",
     detailLink: "Details",
   },
@@ -537,7 +537,7 @@ export const serviceDetailsExtraNl: Record<
     cta: {
       title: "",
       body: "Deel uw verklaringsafgrenzing, rapportageaanpak en huidige bewijsstructuur; samen stemmen we verificatieomvang en beoordelingsverwachtingen af op uw situatie.",
-      primaryButton: "Offerte Aanvragen",
+      primaryButton: "Vraag een technisch gesprek aan",
       secondaryButton: "Terug Naar Diensten",
       detailLink: "Details",
     },

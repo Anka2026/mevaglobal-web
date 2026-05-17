@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Scale, FileText, Shield } from "lucide-react";
 import { BRAND_POSITIONING_LINE } from "@/i18n/brandPositioning";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
+import { AboutCorporateSection } from "@/components/about/AboutCorporateSection";
+import { AboutDifferentiatorsSection } from "@/components/about/AboutDifferentiatorsSection";
 import { AboutLeadershipSection } from "@/components/about/AboutLeadershipSection";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
 import { visualImageClipClass } from "@/lib/visualImage";
 import {
-  premiumCard,
-  premiumCardMuted,
+  premiumAboutMotif,
   premiumEditorialHeroSurface,
-  premiumInstitutionalPanel,
-  premiumSectionMuted,
-  premiumSectionWhite,
+  premiumEyebrowRow,
+  premiumEyebrowRule,
+  premiumGoldTopLine,
+  premiumHeroVisualPanel,
   premiumTrustChip,
 } from "@/lib/premiumUi";
 
@@ -56,6 +57,9 @@ type AboutCopy = {
   assuranceBody: string;
   founderPerspectiveTitle: string;
   founderPerspectiveBody: string;
+  corporateEyebrow: string;
+  corporateTitle: string;
+  differentiatorsTitle: string;
   valuesEyebrow: string;
   values: readonly [
     { title: string; body: string },
@@ -75,6 +79,9 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     heroSubtitle:
       "Meva Global Certification B.V. provides independent technical review support for verification-related work, certification readiness, and technical file evaluation processes. Based in the Netherlands, we operate with a disciplined service approach built on traceability, impartiality, and clear technical scope.",
     trust: ["Netherlands Based", "Independent Technical Review", "International Regulatory Focus"],
+    corporateEyebrow: "Corporate structure",
+    corporateTitle: "Independent verification and technical review",
+    differentiatorsTitle: "What defines our work",
     whyExistsTitle: "Why Meva Global",
     whyExistsBody:
       "Organisations do not only need calculations for sustainability, product and regulatory disclosures; they need information that is traceable, auditable and defensible in front of external stakeholders. Meva Global was structured to respond through impartial technical review, documentation discipline and validation aligned with commonly referenced standards.",
@@ -114,7 +121,7 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     ctaTitle: "Discuss Scope And Timing",
     ctaIntro:
       "Share your standards context, programme boundaries and reporting objectives. We respond with a structured view of evidence expectations and a proportionate delivery timeline.",
-    ctaPrimary: "Request a Proposal",
+    ctaPrimary: "Request a Technical Meeting",
     ctaSecondary: "Explore Services",
   },
   tr: {
@@ -123,6 +130,9 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     heroSubtitle:
       "Meva Global Certification B.V.; disiplinli doğrulama çalışmaları, sertifikasyon hazırlığı ve teknik dosya değerlendirme süreçlerinde kuruluşlara bağımsız teknik inceleme desteği sunar. Hollanda merkezli yapımızla; izlenebilirlik, tarafsızlık ve net teknik kapsam ilkeleriyle uluslararası beklentilere uyumlu bir hizmet yaklaşımı yürütürüz.",
     trust: ["Hollanda Merkezi", "Bağımsız Teknik İnceleme", "Uluslararası Düzenleyici Odak"],
+    corporateEyebrow: "Kurumsal yapı",
+    corporateTitle: "Bağımsız doğrulama ve teknik inceleme modeli",
+    differentiatorsTitle: "Meva Global'i ayıran ilkeler",
     whyExistsTitle: "Neden Meva Global?",
     whyExistsBody:
       "Kuruluşların sürdürülebilirlik, ürün beyanı ve regülasyon raporlamasında temel ihtiyaç yalnızca hesaplama yapmak değildir; teknik dosya ve beyanların izlenebilir, denetlenebilir ve dış denetime dayanıklı olması gerekir. Meva Global; tarafsız teknik inceleme, dokümantasyon disiplini ve uluslararası çerçevelere uyumlu bağımsız değerlendirme ile bu yapılandırmayı sürdürür.",
@@ -162,7 +172,7 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     ctaTitle: "Kapsam ve zamanlamayı görüşün",
     ctaIntro:
       "Standart bağlamınızı, program sınırlarınızı ve raporlama hedeflerinizi paylaşın; kanıt beklentileri ve gerçekçi zaman çizelgesi için yapılandırılmış bir görüş sunarız.",
-    ctaPrimary: "Teklif Talep Et",
+    ctaPrimary: "Teknik Görüşme Talep Et",
     ctaSecondary: "Hizmetleri İncele",
   },
   nl: {
@@ -171,6 +181,9 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     heroSubtitle:
       "Meva Global Certification B.V. biedt onafhankelijke technische beoordelingsondersteuning voor verificatiegerelateerde werkzaamheden, certificeringsvoorbereiding en de beoordeling van technische dossiers. Vanuit Nederland werken wij met een gedisciplineerde aanpak, gebaseerd op traceerbaarheid, onpartijdigheid en een heldere technische scope.",
     trust: ["Gevestigd In Nederland", "Onafhankelijke Technische Beoordeling", "Internationale Regelgevende Focus"],
+    corporateEyebrow: "Organisatiestructuur",
+    corporateTitle: "Onafhankelijke verificatie en technische beoordeling",
+    differentiatorsTitle: "Wat ons werk definieert",
     whyExistsTitle: "Waarom Meva Global",
     whyExistsBody:
       "Organisaties hebben voor duurzaamheids-, product- en regelgevingsinformatie niet alleen berekeningen nodig; zij hebben informatie nodig die traceerbaar, controleerbaar en verdedigbaar is voor externe stakeholders. Meva Global is opgezet om daaraan te voldoen met onpartijdige technische beoordeling, documentatiediscipline en validatie in lijn met veelgebruikte internationale normen.",
@@ -210,7 +223,7 @@ const ABOUT_COPY: Record<Locale, AboutCopy> = {
     ctaTitle: "Scope en timing bespreken",
     ctaIntro:
       "Deel uw normenkader, programmagrenzen en rapportagedoelen. We reageren met een gestructureerd beeld van bewijsverwachtingen en een proportioneel leveringsplan.",
-    ctaPrimary: "Offerte aanvragen",
+    ctaPrimary: "Vraag een technisch gesprek aan",
     ctaSecondary: "Bekijk diensten",
   },
 };
@@ -262,36 +275,44 @@ export default async function AboutPage({
   const aboutHeroIsSvgFallback = aboutHeroSrc.endsWith(".svg");
   const heroAlt = metaAbout?.title ?? copy.heroTitle ?? dict.brand?.legalName ?? "";
 
-  const valueIcons = [Scale, FileText, Shield] as const;
-
-  const sectionLabelClass =
-    "text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)] sm:text-xs sm:tracking-[0.18em]";
-
   return (
     <>
-      <section className={cn("border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
-        <Container className="py-12 sm:py-14 lg:py-[4.25rem]">
-          <div className="mx-auto grid max-w-7xl items-stretch gap-10 lg:grid-cols-12 lg:gap-11 xl:gap-12">
+      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <div className={premiumAboutMotif} aria-hidden />
+        <Container className="relative py-12 sm:py-14 lg:py-[4.5rem]">
+          <div className="mx-auto grid max-w-[76rem] items-stretch gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="flex min-w-0 flex-col justify-center lg:col-span-5">
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)]/95">
-                {copy.heroEyebrow}
-              </p>
-              <h1 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[2.25rem] sm:leading-[1.08] lg:text-[2.5rem] lg:leading-[1.06]">
+              <div className={premiumEyebrowRow}>
+                <span className={premiumEyebrowRule} aria-hidden />
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)]">
+                  {copy.heroEyebrow}
+                </p>
+              </div>
+              <h1 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[2.35rem] sm:leading-[1.07] lg:text-[2.55rem] lg:leading-[1.05]">
                 {copy.heroTitle}
               </h1>
-              <p className="mt-5 max-w-[42rem] text-[0.9375rem] leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-lg sm:leading-[1.72]">
+              <p className="mt-5 max-w-[44rem] text-[0.9375rem] leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-lg sm:leading-[1.7]">
                 {copy.heroSubtitle}
               </p>
+              <div className="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
+                {copy.trust.map((line) => (
+                  <span key={line} className={premiumTrustChip}>
+                    {line}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <div className="flex min-h-0 min-w-0 self-stretch lg:col-span-7 lg:h-full lg:items-center">
+            <div className="flex min-h-0 min-w-0 self-stretch lg:col-span-7 lg:items-center">
               <div
                 className={cn(
+                  premiumHeroVisualPanel,
                   visualImageClipClass,
-                  "w-full",
-                  "aspect-[5/4] min-h-[15rem] max-h-[min(30rem,52vh)] sm:min-h-[16.5rem] sm:max-h-[min(32rem,54vh)] lg:min-h-[17rem] lg:max-h-[min(34rem,56vh)]",
+                  "relative w-full",
+                  "aspect-[5/4] min-h-[14.5rem] max-h-[min(28rem,50vh)] sm:min-h-[16rem] sm:max-h-[min(30rem,52vh)] lg:min-h-[16.5rem] lg:max-h-[min(32rem,54vh)]",
                 )}
               >
+                <div className={premiumGoldTopLine} aria-hidden />
                 <Image
                   src={aboutHeroSrc}
                   alt={aboutHeroIsSvgFallback ? "" : heroAlt}
@@ -299,7 +320,7 @@ export default async function AboutPage({
                   unoptimized={aboutHeroIsSvgFallback}
                   className={
                     aboutHeroIsSvgFallback
-                      ? "object-contain object-center opacity-[0.22]"
+                      ? "object-contain object-center opacity-[0.2]"
                       : "object-cover object-[50%_46%]"
                   }
                   sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 58vw, 720px"
@@ -308,113 +329,39 @@ export default async function AboutPage({
               </div>
             </div>
           </div>
-
-          <div className="mx-auto mt-10 flex max-w-7xl flex-wrap gap-3 sm:mt-11 sm:gap-4">
-            {copy.trust.map((line) => (
-              <span key={line} className={premiumTrustChip}>
-                {line}
-              </span>
-            ))}
-          </div>
         </Container>
       </section>
 
-      <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionWhite)}>
-        <Container>
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:gap-8">
-            <article className={premiumCard}>
-              <h2 className={sectionLabelClass}>{copy.whyExistsTitle}</h2>
-              <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-                {copy.whyExistsBody}
-              </p>
-            </article>
-            <article className={premiumCardMuted}>
-              <h2 className={sectionLabelClass}>{copy.positioningTitle}</h2>
-              <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-                {copy.positioningBody}
-              </p>
-            </article>
-          </div>
-        </Container>
-      </section>
-
-      <section className={cn("border-b border-[color:var(--border-soft)] py-9 sm:py-10", premiumSectionMuted)}>
-        <Container>
-          <article className={cn(premiumCard, "mx-auto max-w-4xl")}>
-            <h2 className={sectionLabelClass}>{copy.missionTitle}</h2>
-            <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-              {copy.missionBody}
-            </p>
-          </article>
-        </Container>
-      </section>
-
-      <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionWhite)}>
-        <Container>
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:gap-8">
-            <article className={premiumCard}>
-              <h2 className={sectionLabelClass}>{copy.whoTitle}</h2>
-              <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-                {copy.whoBody}
-              </p>
-            </article>
-            <article className={premiumCard}>
-              <h2 className={sectionLabelClass}>{copy.howTitle}</h2>
-              <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-                {copy.howBody}
-              </p>
-            </article>
-          </div>
-        </Container>
-      </section>
+      <AboutCorporateSection
+        copy={{
+          eyebrow: copy.corporateEyebrow,
+          title: copy.corporateTitle,
+          narrativeTitle: copy.whyExistsTitle,
+          narrativeLead: copy.whyExistsBody,
+          narrativeSupport: copy.positioningBody,
+          pillars: [
+            { title: copy.missionTitle, body: copy.missionBody },
+            { title: copy.howTitle, body: copy.howBody },
+          ],
+        }}
+      />
 
       <AboutLeadershipSection leadership={dict.aboutLeadership} />
 
-      <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionMuted)}>
-        <Container>
-          <div className={cn(premiumInstitutionalPanel, "mx-auto max-w-4xl")}>
-            <h2 className="text-xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.35rem]">{copy.assuranceHeading}</h2>
-            <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/88 sm:text-[0.9375rem] sm:leading-relaxed">
-              {copy.assuranceBody}
-            </p>
-          </div>
-        </Container>
-      </section>
+      <AboutDifferentiatorsSection
+        copy={{
+          eyebrow: copy.valuesEyebrow,
+          title: copy.differentiatorsTitle,
+          statementTitle: copy.assuranceHeading,
+          statementBody: copy.assuranceBody,
+          statementNote: copy.founderPerspectiveBody,
+          principles: copy.values,
+        }}
+      />
 
-      <section className={cn("border-b border-[color:var(--border-soft)] py-9 sm:py-10", premiumSectionWhite)}>
+      <section className="border-t border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-primary)_92%,#0a1628)] py-10 text-white sm:py-12">
         <Container>
-          <article className={cn(premiumCardMuted, "mx-auto max-w-4xl")}>
-            <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">{copy.founderPerspectiveTitle}</h2>
-            <p className="mt-4 text-sm leading-[1.78] text-[color:var(--ink-dark)]/88 sm:text-[0.9375rem] sm:leading-relaxed">
-              {copy.founderPerspectiveBody}
-            </p>
-          </article>
-        </Container>
-      </section>
-
-      <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionMuted)}>
-        <Container>
-          <p className={cn(sectionLabelClass, "mx-auto max-w-5xl")}>{copy.valuesEyebrow}</p>
-          <div className="mx-auto mt-6 grid max-w-5xl gap-5 sm:grid-cols-3 sm:gap-6">
-            {copy.values.map((v, idx) => {
-              const Icon = valueIcons[idx] ?? Shield;
-              return (
-                <div key={v.title} className={cn(premiumCard, "flex h-full flex-col")}>
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color:var(--brand-accent-soft)] text-[color:var(--brand-primary)] ring-1 ring-black/[0.06]">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </span>
-                  <h3 className="mt-5 text-base font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)]">{v.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[color:var(--text-muted)] sm:text-[0.9375rem] sm:leading-relaxed">{v.body}</p>
-                </div>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-primary)_92%,#0a1628)] py-10 text-white sm:py-11">
-        <Container>
-          <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+          <div className="mx-auto flex max-w-[76rem] flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="min-w-0 max-w-xl">
               <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{copy.ctaTitle}</h2>
               <p className="mt-3 text-sm leading-relaxed text-white/78 sm:text-[0.9375rem]">{copy.ctaIntro}</p>

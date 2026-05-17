@@ -81,6 +81,7 @@ export function VerificationServiceDetailPage({
           eyebrowFallback={dict.nav.services}
           ctas={dict.ctas}
           taglineTopBar={dict.brand.taglineTopBar}
+          ctaPanelBody={dict.serviceDetail.ctaPanelBody}
         />
         <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
       </>
@@ -100,6 +101,7 @@ export function VerificationServiceDetailPage({
             eyebrowFallback={dict.nav.services}
             ctas={dict.ctas}
             taglineTopBar={dict.brand.taglineTopBar}
+            ctaPanelBody={dict.serviceDetail.ctaPanelBody}
           />
           <VerificationRelatedServices locale={l} slugs={relatedSlugs} dict={dict} />
         </>

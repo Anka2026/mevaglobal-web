@@ -1,12 +1,40 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import {
+  BarChart3,
+  Building2,
+  Calculator,
+  ClipboardList,
+  Factory,
+  FileSearch,
+  FolderOpen,
+  Globe2,
+  Inbox,
+  Map,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { VisualAnchor } from "@/components/visual/VisualAnchor";
+import { SectionHeading } from "@/components/sections/SectionHeading";
+import { PremiumContentCard } from "@/components/premium/PremiumContentCard";
 import { cn } from "@/lib/cn";
-import { premiumHeroBackdrop, premiumSectionMuted } from "@/lib/premiumUi";
+import {
+  premiumAboutMotif,
+  premiumCardElevated,
+  premiumEditorialHeroSurface,
+  premiumEyebrowRow,
+  premiumEyebrowRule,
+  premiumGoldTopLine,
+  premiumInstitutionalPanel,
+  premiumNavyStatement,
+  premiumSectionMuted,
+  premiumSectionWhite,
+  premiumStepBadge,
+} from "@/lib/premiumUi";
 
 /** Canonical CBAM solutions hero (deterministic URL for static hosting). */
 const CBAM_HERO_SRC = "/assets/page-visuals/cbam-solutions-hero.png";
@@ -21,12 +49,16 @@ type CbamCopy = {
   heroSubtitle: string;
   chips: readonly [string, string, string];
   legalNote: string;
+  readinessPanelTitle: string;
   whyTitle: string;
   whyBody: string;
+  whatEyebrow: string;
   whatTitle: string;
   whatCards: readonly { title: string; body: string }[];
+  flowEyebrow: string;
   flowTitle: string;
   flowSteps: readonly { title: string; body: string }[];
+  audienceEyebrow: string;
   audienceTitle: string;
   audience: readonly { title: string; body: string }[];
   ctaTitle: string;
@@ -42,9 +74,11 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
     chips: ["Embedded emissions", "Supplier evidence", "Pre-verification readiness"],
     legalNote:
       "Final outcomes sit with competent authorities and applicable rules. Meva Global provides independent technical review and readiness work—not statutory acceptance decisions.",
-    whyTitle: "Why This Matters for Trade and Disclosure",
+    readinessPanelTitle: "CBAM technical readiness summary",
+    whyTitle: "Why It Matters for Trade and Claims",
     whyBody:
       "CBAM-facing reporting requires embedded emissions of covered goods with traceable evidence. Buyers and reviewers expect consistent calculation logic, plant and supplier records that can be retraced, and a consolidated reporting file—not an isolated figure.",
+    whatEyebrow: "Support scope",
     whatTitle: "What We Support",
     whatCards: [
       {
@@ -60,7 +94,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
         body: "Practical templates, request discipline and triage to improve supplier response quality and reduce gaps before reporting deadlines.",
       },
       {
-        title: "Calculation Logic & Evidence Alignment",
+        title: "Calculation Logic & Evidence Consistency",
         body: "Cross-checks between source data, factors, allocation choices and working papers so the explanation matches the numbers you intend to disclose.",
       },
       {
@@ -68,6 +102,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
         body: "A focused pass on documentation completeness, traceability and obvious inconsistencies before third-party verification or independent technical review.",
       },
     ],
+    flowEyebrow: "Structured pathway",
     flowTitle: "Practical Workflow",
     flowSteps: [
       { title: "Scope & Product Mapping", body: "Confirm goods, sites and the reporting boundary; align the monitoring approach with the product mix you export." },
@@ -75,6 +110,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
       { title: "Calculation Review & Documentation", body: "Align calculation steps, factors and working papers; tighten narrative to match the evidence on file." },
       { title: "Readiness File And Follow-Through", body: "Assemble a consolidated pack, highlight residual risks, and set realistic follow-up for verification or independent review cycles." },
     ],
+    audienceEyebrow: "Engagement scope",
     audienceTitle: "Who This Is For",
     audience: [
       { title: "Importers", body: "EU-facing teams coordinating CBAM returns and internal governance." },
@@ -93,9 +129,11 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
     chips: ["Gömülü emisyonlar", "Tedarikçi kanıtları", "Ön doğrulama hazırlığı"],
     legalNote:
       "Nihai sonuçlar yetkili makam ve yürürlükteki kurallara bağlıdır. Meva Global bağımsız teknik inceleme ve hazırlık çalışması yürütür; resmî kabul veya garanti vermez.",
-    whyTitle: "Ticaret ve Açıklama İçin Neden Önemli",
+    readinessPanelTitle: "CBAM teknik hazırlık özeti",
+    whyTitle: "Ticaret ve Beyan İçin Neden Önemli",
     whyBody:
       "SKDM odaklı raporlama; kapsamdaki ürünler için gömülü emisyonların izlenebilir kanıt yapısıyla birlikte sunulmasını gerektirir. Alıcılar ve inceleme tarafları tutarlı hesaplama mantığı, tesis ve tedarikçi kayıtları ile yeniden izlenebilir dokümantasyon bekler. Amaç tek bir rakam değil; bütünleşik teknik raporlama dosyasıdır.",
+    whatEyebrow: "Destek alanları",
     whatTitle: "Neleri Destekliyoruz",
     whatCards: [
       {
@@ -111,7 +149,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
         body: "Şablonlar, disiplinli talep ve önceliklendirme ile tedarikçi cevap kalitesini artırır, son vadiler öncesinde açıkları görünür kılarız.",
       },
       {
-        title: "Hesaplama Mantığı ve Kanıt Hizalaması",
+        title: "Hesaplama Mantığı ve Kanıt Tutarlılığı",
         body: "Kaynak veri, faktörler, paylaştırma tercihleri ve çalışma kağıtları arasında çapraz kontrol; açıklamanın kullandığınız rakamlarla örtüştüğünü teyit eder.",
       },
       {
@@ -119,6 +157,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
         body: "Üçüncü taraf doğrulama veya bağımsız inceleme öncesi dokümantasyon tamlığı, izlenebilirlik ve belirgin tutarsızlıklar üzerine odaklı geçiş.",
       },
     ],
+    flowEyebrow: "Yapılandırılmış süreç",
     flowTitle: "Pratik İş Akışı",
     flowSteps: [
       { title: "Kapsam ve Ürün Eşlemesi", body: "Ürünleri, tesisleri ve raporlama sınırını netleştirir; izleme yaklaşımını ihraç ettiğiniz ürün karışımıyla hizalarız." },
@@ -126,6 +165,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
       { title: "Hesaplama İncelemesi ve Dokümantasyon", body: "Hesaplama adımlarını, faktörleri ve çalışma notlarını hizalar; açıklamayı dosyadaki kanıtla eşleştiririz." },
       { title: "Hazırlık Dosyası ve Takvim", body: "Bütünleşik bir paket oluşturur, kalan riskleri vurgular; doğrulama veya bağımsız inceleme döngüleri için gerçekçi takvim ve iş akışı tanımlarız." },
     ],
+    audienceEyebrow: "Kapsam",
     audienceTitle: "Kimler İçin",
     audience: [
       { title: "İthalatçılar", body: "CBAM beyanlarını ve iç yönetişimi koordine eden AB odaklı ekipler." },
@@ -144,9 +184,11 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
     chips: ["Ingebedde emissies", "Leveranciersbewijs", "Gereedheid vóór verificatie"],
     legalNote:
       "Definitieve uitkomsten liggen bij bevoegde autoriteiten en de van toepassing zijnde regels. Meva Global levert onafhankelijke technische beoordeling en voorbereiding—geen wettelijke aanvaardingsbeslissing.",
-    whyTitle: "Waarom dit relevant is voor inkoop en disclosure",
+    readinessPanelTitle: "Samenvatting technische CBAM-gereedheid",
+    whyTitle: "Waarom dit belangrijk is voor handel en verklaringen",
     whyBody:
       "CBAM-gerichte rapportage vereist ingebedde emissies van gedekte goederen met traceerbaar bewijs. Inkopers en reviewers verwachten consistente rekenlogica, fabrieks- en leveranciersgegevens die terug te voeren zijn en een samenhangend rapportagedossier—niet een los cijfer.",
+    whatEyebrow: "Ondersteuningsgebieden",
     whatTitle: "Waar wij bij ondersteunen",
     whatCards: [
       {
@@ -170,6 +212,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
         body: "Een gerichte controle op volledigheid, traceerbaarheid en duidelijke inconsistenties vóór onafhankelijke verificatie of externe technische review.",
       },
     ],
+    flowEyebrow: "Gestructureerd traject",
     flowTitle: "Praktische werkwijze",
     flowSteps: [
       { title: "Reikwijdte en goederenmapping", body: "Goederen, vestigingen en de rapportagegrens afgrenzen; de monitoring afstemmen op uw productmix." },
@@ -177,6 +220,7 @@ const CBAM_COPY: Record<Locale, CbamCopy> = {
       { title: "Berekeningsbeoordeling en documentatie", body: "Stappen, factoren en werkdocumenten op elkaar afstemmen; toelichting verbinden met de onderliggende bewijsstukken." },
       { title: "Gereedheidsdossier en vervolg", body: "Een samenhangend pakket, explicitering van resterende risico’s, en realistische opvolging voor verificatie of herhaalde cycli." },
     ],
+    audienceEyebrow: "Doelgroep",
     audienceTitle: "Voor wie",
     audience: [
       { title: "Importeurs", body: "Teams die CBAM-returns en interne beheersing coördineren." },
@@ -231,32 +275,29 @@ export default async function CbamSolutionsPage({
   const copy = CBAM_COPY[l];
   const heroSrc = resolveCbamHeroSrc();
   const heroAlt = dict.pages.cbam.heroImageAlt;
+  const whatIcons = [ClipboardList, BarChart3, Truck, Calculator, FileSearch] as const;
+  const flowIcons = [Map, Inbox, FileSearch, FolderOpen] as const;
+  const audienceIcons = [Building2, Factory, Globe2, ShieldCheck] as const;
 
   return (
     <>
-      <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
-        <Container className="py-9 sm:py-10 lg:py-11">
-          <div className="mx-auto grid max-w-7xl items-stretch gap-7 lg:grid-cols-12 lg:gap-9">
+      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <div className={premiumAboutMotif} aria-hidden />
+        <Container className="relative py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto grid max-w-[76rem] items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
             <div className="flex min-w-0 flex-col justify-center lg:col-span-7">
-              <p className="text-[11px] font-semibold tracking-[0.2em] text-[color:var(--brand-primary)] sm:text-xs">
-                {copy.heroEyebrow}
-              </p>
-              <h1 className="mt-3 text-balance text-[1.75rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.125rem] lg:text-[2.35rem]">
+              <div className={premiumEyebrowRow}>
+                <span className={premiumEyebrowRule} aria-hidden />
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)]">
+                  {copy.heroEyebrow}
+                </p>
+              </div>
+              <h1 className="mt-4 text-balance text-[1.85rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.2rem] lg:text-[2.4rem]">
                 {copy.heroTitle}
               </h1>
-              <p className="mt-3 max-w-[46rem] text-sm leading-[1.72] text-[color:var(--ink-dark)]/88 sm:text-[1.0625rem] sm:leading-[1.74]">
+              <p className="mt-4 max-w-[46rem] text-[0.9375rem] leading-[1.76] text-[color:var(--ink-dark)]/90 sm:text-lg sm:leading-[1.72]">
                 {copy.heroSubtitle}
               </p>
-              <div className="mt-5 flex flex-wrap gap-2 sm:gap-2.5" role="presentation">
-                {copy.chips.map((c) => (
-                  <span
-                    key={c}
-                    className="rounded-full border border-[color:var(--border-soft)] bg-[color:var(--brand-accent-soft)] px-3 py-1.5 text-[11px] font-semibold tracking-[0.12em] text-[color:var(--brand-primary)] sm:text-xs"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
             </div>
             <div className="relative min-h-[260px] w-full min-w-0 sm:min-h-[300px] lg:col-span-5 lg:min-h-0">
               <VisualAnchor
@@ -269,101 +310,130 @@ export default async function CbamSolutionsPage({
               />
             </div>
           </div>
-        </Container>
-      </section>
 
-      <section className={cn("border-b border-[color:var(--border-soft)] py-9 sm:py-10", premiumSectionMuted)}>
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-xs font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]">{copy.whyTitle}</h2>
-            <p className="mt-3 text-sm leading-[1.78] text-[color:var(--ink-dark)]/88 sm:text-[0.9375rem] sm:leading-relaxed">
-              {copy.whyBody}
-            </p>
+          <div className={cn("relative mx-auto mt-8 max-w-[76rem] sm:mt-10", premiumNavyStatement)}>
+            <div className={premiumGoldTopLine} aria-hidden />
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/75">{copy.readinessPanelTitle}</p>
+            <ul className="mt-4 flex list-none flex-wrap gap-2 p-0 sm:gap-2.5" role="presentation">
+              {copy.chips.map((c) => (
+                <li key={c}>
+                  <span className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/95 sm:text-xs">
+                    {c}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 max-w-[52rem] text-sm leading-[1.72] text-white/82 sm:text-[0.9375rem]">{copy.legalNote}</p>
           </div>
         </Container>
       </section>
 
-      <section className="border-b border-[color:var(--border-soft)] bg-white py-9 sm:py-10">
-        <Container>
-          <h2 className="mx-auto max-w-5xl text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">{copy.whatTitle}</h2>
-          <div className="mx-auto mt-5 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-            {copy.whatCards.map((card) => (
-              <div
-                key={card.title}
-                className="flex h-full flex-col rounded-2xl border border-[color:var(--border-soft)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-6"
-              >
-                <h3 className="text-[0.9375rem] font-semibold leading-snug text-[color:var(--ink-dark)] sm:text-base">{card.title}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[color:var(--text-muted)] sm:text-[0.9375rem]">{card.body}</p>
-              </div>
-            ))}
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionMuted)}>
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className={cn("mx-auto max-w-[76rem]", premiumInstitutionalPanel)}>
+            <div className={premiumGoldTopLine} aria-hidden />
+            <SectionHeading title={copy.whyTitle} description={copy.whyBody} withTitleAccent />
           </div>
         </Container>
       </section>
 
-      <section className={cn("border-b border-[color:var(--border-soft)] py-9 sm:py-10", premiumSectionMuted)}>
-        <Container>
-          <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">{copy.flowTitle}</h2>
-          <ol className="mt-5 grid max-w-5xl gap-4 sm:grid-cols-2">
-            {copy.flowSteps.map((step, i) => (
-              <li
-                key={step.title}
-                className="flex gap-4 rounded-2xl border border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_32%,white)] p-4 sm:p-5"
-              >
-                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-sm font-semibold text-[color:var(--brand-primary)] ring-1 ring-[color:var(--border-soft)]">
-                  {i + 1}
-                </span>
-                <div>
-                  <p className="text-[0.9375rem] font-semibold text-[color:var(--ink-dark)]">{step.title}</p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-[color:var(--text-muted)]">{step.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </section>
-
-      <section className="border-b border-[color:var(--border-soft)] bg-white py-9 sm:py-10">
-        <Container>
-          <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">{copy.audienceTitle}</h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {copy.audience.map((a) => (
-              <div
-                key={a.title}
-                className="rounded-2xl border border-[color:var(--border-soft)] bg-white/90 p-4 shadow-sm sm:p-5"
-              >
-                <h3 className="text-sm font-semibold text-[color:var(--ink-dark)] sm:text-base">{a.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-[color:var(--text-muted)]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-[color:var(--border-soft)] bg-white py-6 sm:py-7">
-        <Container>
-          <p className="mx-auto max-w-3xl text-xs leading-relaxed text-[color:var(--text-muted)] sm:text-[0.8125rem]">{copy.legalNote}</p>
-        </Container>
-      </section>
-
-      <section className={cn("py-9 sm:py-10", premiumSectionMuted)}>
-        <Container>
-          <div className="mx-auto flex max-w-3xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
-            <div className="min-w-0">
-              <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">{copy.ctaTitle}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-[color:var(--text-muted)] sm:text-[0.9375rem]">{copy.ctaIntro}</p>
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionWhite)}>
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto max-w-[76rem]">
+            <SectionHeading
+              eyebrow={copy.whatEyebrow}
+              title={copy.whatTitle}
+              titleClassName="text-[1.5rem] sm:text-[1.65rem]"
+            />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+              {copy.whatCards.map((card, index) => {
+                const Icon = whatIcons[index] ?? ClipboardList;
+                return (
+                  <PremiumContentCard key={card.title} icon={Icon} title={card.title} body={card.body} />
+                );
+              })}
             </div>
-            <div className="flex w-full shrink-0 flex-col gap-2.5 sm:w-auto sm:flex-row">
-              <ButtonLink href={`/${l}/contact`} variant="primary" size="sm" className="w-full justify-center sm:w-auto">
-                {dict.nav.contact}
-              </ButtonLink>
-              <ButtonLink
-                href={`/${l}/verification-services`}
-                variant="secondary"
-                size="sm"
-                className="w-full justify-center sm:w-auto"
-              >
-                {dict.ctas.exploreServices}
-              </ButtonLink>
+          </div>
+        </Container>
+      </section>
+
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionMuted)}>
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto max-w-[76rem]">
+            <SectionHeading
+              eyebrow={copy.flowEyebrow}
+              title={copy.flowTitle}
+              titleClassName="text-[1.5rem] sm:text-[1.65rem]"
+            />
+            <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:gap-6">
+              {copy.flowSteps.map((step, i) => {
+                const Icon = flowIcons[i] ?? Map;
+                return (
+                  <li key={step.title} className={cn(premiumCardElevated, "relative flex gap-4 p-6 sm:p-7")}>
+                    <div className={premiumGoldTopLine} aria-hidden />
+                    <span className={premiumStepBadge}>{String(i + 1).padStart(2, "0")}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-3 flex items-center gap-2.5">
+                        <Icon className="h-4 w-4 shrink-0 text-[color:var(--brand-primary)]" aria-hidden />
+                        <p className="text-[0.9375rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-base">
+                          {step.title}
+                        </p>
+                      </div>
+                      <p className="text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]">{step.body}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </Container>
+      </section>
+
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionWhite)}>
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto max-w-[76rem]">
+            <SectionHeading
+              eyebrow={copy.audienceEyebrow}
+              title={copy.audienceTitle}
+              titleClassName="text-[1.5rem] sm:text-[1.65rem]"
+            />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:gap-6">
+              {copy.audience.map((a, index) => {
+                const Icon = audienceIcons[index] ?? Building2;
+                return <PremiumContentCard key={a.title} icon={Icon} title={a.title} body={a.body} />;
+              })}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white pb-12 pt-8 sm:pb-14 sm:pt-10">
+        <Container>
+          <div className={cn(premiumNavyStatement, "relative mx-auto max-w-[76rem]")}>
+            <div className={premiumGoldTopLine} aria-hidden />
+            <div className="relative z-[1] flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
+              <div className="min-w-0 max-w-2xl">
+                <h2 className="text-lg font-semibold tracking-tight text-white sm:text-xl">{copy.ctaTitle}</h2>
+                <p className="mt-3 text-sm leading-[1.75] text-white/78 sm:text-[0.9375rem]">{copy.ctaIntro}</p>
+              </div>
+              <div className="flex w-full shrink-0 flex-col gap-3 sm:flex-row sm:items-center lg:w-auto">
+                <ButtonLink
+                  href={`/${l}/contact`}
+                  variant="secondary"
+                  size="md"
+                  className="w-full justify-center border-transparent bg-white !text-[color:var(--brand-primary)] shadow-sm hover:bg-white/95 sm:w-auto lg:min-w-[11rem]"
+                >
+                  {dict.nav.contact}
+                </ButtonLink>
+                <ButtonLink
+                  href={`/${l}/verification-services`}
+                  variant="secondary"
+                  size="md"
+                  className="w-full justify-center border-white/35 bg-transparent !text-white shadow-none hover:bg-white/10 sm:w-auto lg:min-w-[11rem]"
+                >
+                  {dict.ctas.exploreServices}
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </Container>

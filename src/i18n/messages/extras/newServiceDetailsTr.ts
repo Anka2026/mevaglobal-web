@@ -98,7 +98,7 @@ export const newServiceDetailsTr = {
     cta: {
       title: "",
       body: "Mevcut HPD dosyanızı, içerik verilerinizi ve destekleyici tedarikçi belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-      primaryButton: "Teklif Talep Et",
+      primaryButton: "Teknik Görüşme Talep Et",
       secondaryButton: "Hizmetlere Dön",
       detailLink: "Detayları İncele",
     },
@@ -151,7 +151,7 @@ export const newServiceDetailsTr = {
     cta: {
       title: "",
       body: "Mevcut içerik şeffaflığı dokümanlarınızı, bileşim verilerinizi ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-      primaryButton: "Teklif Talep Et",
+      primaryButton: "Teknik Görüşme Talep Et",
       secondaryButton: "Hizmetlere Dön",
       detailLink: "Detayları İncele",
     },
@@ -173,7 +173,7 @@ export const newServiceDetailsTr = {
       title: "Kimler İçin",
       bullets: [
         "Yeşil bina sertifikasyon başvurularını daha güvenilir teknik dosyalarla sunmak isteyen proje ekipleri",
-        "Mimarlık, mühendislik, danışmanlık ve yatırım tarafında başvuru kalitesini güçlendirmek isteyen kuruluşlar",
+        "Mimarlık, mühendislik ve yatırım paydaşlarında başvuru kalitesini güçlendirmek isteyen kuruluşlar",
         "Kredi bazlı teknik dosyalarını daha düzenli, izlenebilir ve profesyonel hale getirmek isteyen ekipler",
       ],
     },
@@ -204,7 +204,7 @@ export const newServiceDetailsTr = {
     cta: {
       title: "",
       body: "Mevcut yeşil bina başvuru dosyanızı, teknik kayıtlarınızı ve destekleyici belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-      primaryButton: "Teklif Talep Et",
+      primaryButton: "Teknik Görüşme Talep Et",
       secondaryButton: "Hizmetlere Dön",
       detailLink: "Detayları İncele",
     },

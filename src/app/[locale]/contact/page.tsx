@@ -13,7 +13,7 @@ import type { Office } from "@/data/offices";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { CONTACT_PAGE_COPY } from "@/app/[locale]/contact/contact-page-copy";
-import { premiumHeroBackdrop } from "@/lib/premiumUi";
+import { premiumCard, premiumCardMuted, premiumHeroBackdrop } from "@/lib/premiumUi";
 
 /** Published inbox used across the site; enquiry form opens mailto with prefilled body (no server POST). */
 const CONTACT_EMAIL = "info@mevaglobalcertification.com";
@@ -130,7 +130,7 @@ export default async function ContactPage({
       <section className="border-b border-[color:var(--border-soft)] bg-white">
         <Container className="py-10 sm:py-12">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:gap-8">
-            <div className="rounded-2xl border border-[color:var(--border-soft)] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-black/[0.03] sm:p-8">
+            <div className={premiumCard}>
               <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">
                 {copy.companyCard.title}
               </h2>
@@ -172,7 +172,7 @@ export default async function ContactPage({
               </dl>
             </div>
 
-            <div className="rounded-2xl border border-[color:var(--border-soft)] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-black/[0.03] sm:p-8">
+            <div className={premiumCard}>
               <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">
                 {copy.officesCard.title}
               </h2>
@@ -261,7 +261,7 @@ export default async function ContactPage({
               {copy.support.cards.map((card) => (
                 <div
                   key={card.title}
-                  className="rounded-2xl border border-[color:var(--border-soft)] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-black/[0.03] sm:p-7"
+                  className={cn(premiumCard, "motion-safe:hover:-translate-y-px")}
                 >
                   <h3 className="text-base font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)]">
                     {card.title}
@@ -290,7 +290,7 @@ export default async function ContactPage({
 
             <div className="mt-7 grid gap-8 lg:grid-cols-12 lg:gap-10">
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_22%,white)] p-6 shadow-[var(--shadow-card)] ring-1 ring-black/[0.03] sm:p-8 lg:p-9">
+                <div className={cn(premiumCardMuted, "lg:p-9")}>
                   <ContactEnquiryForm id="enquiry-form" contactEmail={CONTACT_EMAIL} copy={copy.form} />
                 </div>
               </div>

@@ -111,6 +111,9 @@ export type Dictionary = {
       title: string;
       body: string;
       cta: string;
+      previewFieldLabel: string;
+      previewFieldExample: string;
+      previewHint: string;
     };
     cbamEyebrow: string;
     cbamTitle: string;
@@ -367,6 +370,22 @@ export type Dictionary = {
         heroImageAlt: string;
       };
       sectionLabel: string;
+      ui: {
+        reviewTechnicalNote: string;
+        readingTime: string;
+        backToHub: string;
+        technicalNoteBadge: string;
+        verificationGuideBadge: string;
+        updatedContent: string;
+        keyPointsTitle: string;
+        takeawayTitle: string;
+        technicalNotePanelTitle: string;
+        technicalNotePanelItems: readonly [string, string, string];
+        metaPills: readonly [string, string, string, string];
+        articleClosingTitle: string;
+        articleClosingBody: string;
+        requestTechnicalMeeting: string;
+      };
       cards: {
         category: string;
         date: string;
@@ -448,6 +467,7 @@ export type Dictionary = {
     whatWeDo: string;
     deliverables: string;
     relatedServicesTitle: string;
+    ctaPanelBody: string;
   };
 };
 

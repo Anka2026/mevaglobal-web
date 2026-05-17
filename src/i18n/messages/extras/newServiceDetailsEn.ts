@@ -90,7 +90,7 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current HPD file, composition data, and supporting supplier documents; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request a Proposal",
+      primaryButton: "Request a Technical Meeting",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
@@ -143,7 +143,7 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current ingredient transparency documentation, composition data, and supporting records; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request a Proposal",
+      primaryButton: "Request a Technical Meeting",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },
@@ -165,7 +165,7 @@ export const newServiceDetailsEn = {
       title: "Who It Is For",
       bullets: [
         "Project teams seeking to present green building certification applications with stronger technical files",
-        "Organisations strengthening application quality across architecture, engineering, consultancy, and investment stakeholders",
+        "Organisations strengthening application quality across architecture, engineering, and investment stakeholders",
         "Teams aiming to make credit-based technical files more controlled, more traceable, and more professional",
       ],
     },
@@ -196,7 +196,7 @@ export const newServiceDetailsEn = {
     cta: {
       title: "",
       body: "Share your current green building application file, technical records, and supporting documentation; together we can clarify verification scope matched to your use context.",
-      primaryButton: "Request a Proposal",
+      primaryButton: "Request a Technical Meeting",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },

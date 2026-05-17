@@ -26,21 +26,21 @@ const HOME_HERO_COPY: Record<
     title: "Güvenilir Beyanlar İçin Bağımsız Teknik İnceleme",
     subtitle:
       "Meva Global; sera gazı verileri, ürün beyanları, CBAM raporlaması ve sürdürülebilirlik raporlamasında izlenebilir kanıt, net kapsam ve teknik dosya tutarlılığı ekseninde bağımsız teknik inceleme ile doğrulama ve validasyon hazırlığı sunar.",
-    primaryCta: "Teklif Talep Et",
+    primaryCta: "Teknik Görüşme Talep Et",
     secondaryCta: "Hizmetleri İncele",
   },
   en: {
     title: "Independent Technical Review For Defensible Reporting",
     subtitle:
       "Meva Global provides independent technical review and verification-readiness support for greenhouse gas data, product declarations, CBAM reporting and sustainability disclosures—with traceable evidence, disciplined scope and defensible outputs.",
-    primaryCta: "Request a Proposal",
+    primaryCta: "Request a Technical Meeting",
     secondaryCta: "Explore Services",
   },
   nl: {
     title: "Onafhankelijke Technische Beoordeling Voor Verdedigbare Rapportage",
     subtitle:
       "Meva Global ondersteunt broeikasgasgegevens, productverklaringen, CBAM-rapportage en duurzaamheidsinformatie met onafhankelijke technische beoordeling en voorbereiding op verificatie — gericht op traceerbaar bewijs, duidelijke scope en verdedigbare uitkomsten.",
-    primaryCta: "Offerte aanvragen",
+    primaryCta: "Vraag een technisch gesprek aan",
     secondaryCta: "Bekijk diensten",
   },
 };
@@ -176,7 +176,7 @@ export default async function HomePage({
         items={effectiveDict.home.trustHighlights}
       />
 
-      <section className="py-11 sm:py-12">
+      <section className="border-b border-[color:var(--border-soft)] bg-gradient-to-b from-[color:color-mix(in_oklab,var(--footer-deep)_4%,white)] to-[color:color-mix(in_oklab,var(--brand-accent-soft)_38%,white)] py-12 sm:py-14">
         <Container>
           <div className="mx-auto w-full max-w-[76rem]">
             <SectionHeading
@@ -186,7 +186,7 @@ export default async function HomePage({
               titleClassName="text-[1.65rem] sm:text-[2rem]"
               descriptionClassName="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--text-muted)] sm:text-base sm:leading-relaxed"
             />
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
               {effectiveDict.home.serviceAreas.slice(0, 3).map((s, idx) => {
                 const Icon = serviceIcons[idx] ?? Leaf;
                 return (

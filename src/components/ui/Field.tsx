@@ -16,7 +16,7 @@ export function Label({
 }
 
 const inputBase =
-  "mt-2 w-full rounded-2xl border border-[color:var(--border-soft)] bg-white px-4 py-3 text-sm text-[color:var(--ink-dark)] shadow-[var(--shadow-card)] outline-none transition-[border-color,box-shadow] placeholder:text-[color:var(--text-muted)] focus:border-[color:var(--brand-accent)]/70 focus:shadow-[var(--shadow-soft)] focus:ring-2 focus:ring-[color:var(--ring)]";
+  "mt-2 w-full rounded-xl border border-[color:color-mix(in_oklab,var(--brand-accent)_12%,var(--border-soft))] bg-white px-4 py-3 text-sm text-[color:var(--ink-dark)] shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] outline-none transition-[border-color,box-shadow,ring-color] duration-200 placeholder:text-[color:var(--text-muted)] focus:border-[color:color-mix(in_oklab,var(--brand-gold)_42%,var(--border-soft))] focus:shadow-[0_0_0_1px_color-mix(in_oklab,var(--brand-gold)_25%,transparent),var(--shadow-card)] focus:ring-2 focus:ring-[color:color-mix(in_oklab,var(--brand-gold)_22%,var(--ring))] focus:ring-offset-1";
 
 export function Input({
   className,

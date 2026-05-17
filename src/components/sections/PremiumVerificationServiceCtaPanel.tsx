@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/locales";
 import type { Dictionary } from "@/i18n/types";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import { premiumGoldTopLine, premiumNavyStatement } from "@/lib/premiumUi";
 
 type CtaShape = {
   title: string;
@@ -36,8 +37,8 @@ export function PremiumVerificationServiceCtaPanel({
   taglineTopBar: string;
   compact?: boolean;
 }) {
-  const primary = cta.primaryButton ?? ctas.requestQuote;
-  const secondary = cta.secondaryButton ?? ctas.exploreServices;
+  const primary = ctas.contact;
+  const secondary = ctas.exploreServices;
   const tertiary = cta.detailLink ?? ctas.learnMore;
 
   const primaryHref = hrefOverrides?.primary ?? `/${locale}/contact`;
@@ -49,27 +50,13 @@ export function PremiumVerificationServiceCtaPanel({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden rounded-[1.125rem]",
-        compact ? "rounded-xl sm:rounded-[1.0625rem]" : "rounded-[1.125rem]",
+        premiumNavyStatement,
+        "relative w-full",
         compact ? "mt-0" : "mt-12 sm:mt-14 lg:mt-16",
-        "border border-[color:color-mix(in_oklab,var(--brand-accent)_24%,var(--border-soft))]",
-        "bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_92%,white)] via-white to-[#f3f8fb]",
-        compact
-          ? "p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_10px_28px_-14px_rgba(29,37,47,0.1)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_9%,transparent)]"
-          : "p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_18px_44px_-22px_rgba(29,37,47,0.16),0_6px_20px_-10px_rgba(0,86,145,0.09)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_11%,transparent)]",
-        !compact &&
-          "transition-[transform,box-shadow,border-color] duration-300 ease-out motion-reduce:transition-colors motion-reduce:hover:translate-y-0 motion-safe:hover:-translate-y-[1px] hover:border-[color:color-mix(in_oklab,var(--brand-accent)_34%,var(--border-soft))] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_24px_52px_-22px_rgba(29,37,47,0.2),0_10px_28px_-12px_rgba(0,86,145,0.12)]",
-        compact ? "sm:p-6 lg:px-8 lg:py-6" : "sm:p-8 lg:px-11 lg:py-10",
+        compact ? "p-5 sm:p-6 lg:px-8 lg:py-6" : "p-6 sm:p-8 lg:px-11 lg:py-10",
       )}
     >
-      <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(155deg,color-mix(in_oklab,var(--brand-accent-soft)_55%,white)_0%,transparent_38%)] opacity-90"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:color-mix(in_oklab,var(--brand-primary)_40%,white)]/45 to-transparent"
-        aria-hidden
-      />
+      <div className={premiumGoldTopLine} aria-hidden />
       <div
         className={cn(
           "relative z-[1] flex flex-col lg:flex-row lg:items-center lg:justify-between",
@@ -77,13 +64,13 @@ export function PremiumVerificationServiceCtaPanel({
         )}
       >
         <div className={cn("min-w-0", compact ? "max-w-2xl lg:max-w-[38rem]" : "max-w-2xl lg:max-w-[40rem]")}>
-          <p className={cn("font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]", compact ? "text-[11px]" : "text-xs")}>
+          <p className={cn("font-semibold uppercase tracking-[0.16em] text-white/75", compact ? "text-[11px]" : "text-xs")}>
             {firstLine}
           </p>
           {(cta.title ?? "").trim() ? (
             <p
               className={cn(
-                "font-semibold tracking-tight text-[color:var(--ink-dark)]",
+                "font-semibold tracking-tight text-white",
                 compact ? "mt-1.5 text-base sm:text-[1.0625rem]" : "mt-2 text-lg sm:text-xl",
               )}
             >
@@ -92,7 +79,7 @@ export function PremiumVerificationServiceCtaPanel({
           ) : null}
           <p
             className={cn(
-              "text-[color:var(--ink-dark)]/90 antialiased",
+              "text-white/82 antialiased",
               compact ? "mt-1.5 text-sm leading-relaxed sm:text-[0.9375rem]" : "mt-2 text-[0.9375rem] leading-[1.78] sm:text-base sm:leading-[1.76]",
               (cta.title ?? "").trim() ? "" : compact ? "mt-2" : "mt-3",
             )}
@@ -108,9 +95,12 @@ export function PremiumVerificationServiceCtaPanel({
         >
           <ButtonLink
             href={primaryHref}
-            variant="primary"
+            variant="secondary"
             size={compact ? "sm" : "md"}
-            className={cn("w-full justify-center sm:w-auto", compact ? "lg:min-w-[10rem]" : "lg:min-w-[11rem]")}
+            className={cn(
+              "w-full justify-center border-transparent bg-white !text-[color:var(--brand-primary)] shadow-sm hover:bg-white/95 sm:w-auto",
+              compact ? "lg:min-w-[10rem]" : "lg:min-w-[11rem]",
+            )}
           >
             {primary}
           </ButtonLink>
@@ -118,7 +108,10 @@ export function PremiumVerificationServiceCtaPanel({
             href={secondaryHref}
             variant="secondary"
             size={compact ? "sm" : "md"}
-            className={cn("w-full justify-center sm:w-auto", compact ? "lg:min-w-[10rem]" : "lg:min-w-[11rem]")}
+            className={cn(
+              "w-full justify-center border-white/35 bg-transparent !text-white shadow-none hover:bg-white/10 sm:w-auto",
+              compact ? "lg:min-w-[10rem]" : "lg:min-w-[11rem]",
+            )}
           >
             {secondary}
           </ButtonLink>
@@ -126,7 +119,7 @@ export function PremiumVerificationServiceCtaPanel({
             <Link
               href={tertiaryHref}
               className={cn(
-                "inline-flex justify-center text-center text-sm font-semibold text-[color:var(--brand-primary)] underline-offset-4 transition-colors hover:text-[color:var(--brand-primary-hover)] hover:underline",
+                "inline-flex justify-center text-center text-sm font-semibold text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline",
                 compact ? "sm:self-center sm:px-1" : "sm:px-1 lg:w-full xl:w-auto",
               )}
             >

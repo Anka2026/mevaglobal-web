@@ -85,7 +85,7 @@ export const tr: Dictionary = {
   },
   ctas: {
     verifyStatement: "Beyan Sorgulama",
-    requestQuote: "Teklif Talep Et",
+    requestQuote: "Teknik Görüşme Talep Et",
     contact: "İletişim",
     learnMore: "Detayları İncele",
     exploreCbam: "SKDM Çözümlerini İnceleyin",
@@ -116,10 +116,10 @@ export const tr: Dictionary = {
     bio:
       "Dilan Arslan, Meva Global Certification B.V.’nin kurumsal yönetiminden ve bağımsız teknik inceleme süreçlerinin tutarlı, tarafsız ve kanıt temelli bir yapı içinde yürütülmesinden sorumludur. Çalışmalar; sürdürülebilirlik beyanları, ürün ve karbon temelli teknik dosyalar, doğrulama hazırlığı ve SKDM/CBAM süreçlerinde metodolojik disiplin ve izlenebilirlik odağıyla yapılandırılır.",
     focusAreas: [
-      "Bağımsız teknik inceleme disiplini",
-      "Sürdürülebilirlik ve ürün beyanları",
-      "CBAM / SKDM teknik hazırlığı",
-      "Kanıt izlenebilirliği ve dosya tutarlılığı",
+      "Bağımsız teknik inceleme",
+      "Kanıt temelli değerlendirme",
+      "SKDM / CBAM hazırlığı",
+      "Beyan ve dosya tutarlılığı",
     ],
     photoAlt: "Dilan Arslan — Genel Müdür",
   },
@@ -131,7 +131,7 @@ export const tr: Dictionary = {
         "Meva Global; sera gazı verileri, ürün beyanları, SKDM (CBAM) raporlaması ve sürdürülebilirlik raporlaması için izlenebilir kanıt, disiplinli kapsam ve teknik çıktı tutarlılığı ekseninde bağımsız doğrulama, validasyon ve teknik inceleme sunar.",
       heroImageAlt:
         "Meva Global teknik değerlendiricilerinin endüstriyel bir tesiste kanıt, kayıt ve süreç kontrollerini yerinde incelemesi.",
-      primaryCta: "Teklif Talep Et",
+      primaryCta: "Teknik Görüşme Talep Et",
       secondaryCta: "Hizmetleri İncele",
     },
     trustHighlightsTitle: "Güvenin Temeli",
@@ -251,6 +251,9 @@ export const tr: Dictionary = {
       title: "Kamuya Açık Beyan Sorgulama",
       body: "Meva Global tarafından yayımlanan doğrulama ve teknik inceleme kayıtları, referans numarası ile sorgulanabilir.",
       cta: "Beyan Sorgula",
+      previewFieldLabel: "Referans numarası",
+      previewFieldExample: "Örn. MEVA-2024-00124",
+      previewHint: "Yalnızca kamuya açık yayımlanmış kayıtlar",
     },
     cbamEyebrow: "SKDM (CBAM) • Ön Doğrulama Hazırlığı",
     cbamTitle: "SKDM (CBAM) Ön Doğrulama İçin Teknik Hazırlık",
@@ -385,9 +388,9 @@ export const tr: Dictionary = {
               "Çıktılar; düzenleyici kurumlar, alıcılar, finans ekipleri ve teknik paydaşların beklentilerine uygun açıklık ve disiplinle yapılandırılır.",
           },
           {
-            title: "Daha Güçlü Açıklama Çerçevesi",
+            title: "Daha Güçlü Beyan Çerçevesi",
             description:
-              "İnceleme süreci; kapsamı, yöntemi, veri mantığını ve kullanılan dili netleştirerek dış kullanıma daha uygun bir açıklama zemini oluşturur.",
+              "İnceleme süreci; kapsamı, yöntemi, veri mantığını ve kullanılan dili netleştirerek dış kullanıma daha uygun bir beyan zemini oluşturur.",
           },
           {
             title: "İzlenebilirlik ve Kontrol",
@@ -487,7 +490,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Organizasyon sınırlarınızı, raporlama yılınızı ve mevcut envanter yapınızı paylaşın; dış kullanım bağlamınıza uygun inceleme derinliği ile doğrulama stratejisini birlikte şekillendirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -496,13 +499,13 @@ export const tr: Dictionary = {
         heroEyebrow: "Proje bazlı sera gazı doğrulaması",
         title: "ISO 14064-2 — Proje Sera Gazı Doğrulaması",
         intro:
-          "Proje bazlı sera gazı beyanlarının güvenilirliği; yalnızca bildirilen azaltım veya giderim miktarlarına değil, aynı zamanda baz senaryonun sağlamlığına, proje sınırlarının netliğine, miktarlandırma yaklaşımının tutarlılığına ve izleme sisteminin kanıt üretme kapasitesine bağlıdır. Meva Global, ISO 14064-2 ile uyumlu proje sera gazı beyanları için bağımsız ve yapılandırılmış bir teknik doğrulama yaklaşımı sunar. Bu hizmet; proje mantığının, izleme düzeninin, hesaplama metodolojisinin ve destekleyici kayıt yapısının sistematik biçimde değerlendirilmesi yoluyla raporlanan sonuçların güvenilirliğini ve teknik dosya tutarlılığını güçlendirir.",
+          "Proje bazlı sera gazı beyanlarının güvenilirliği; yalnızca bildirilen azaltım veya giderim miktarlarına değil, baz senaryonun sağlamlığına, proje sınırlarının netliğine, miktarlandırma tutarlılığına ve izleme sisteminin kanıt üretme kapasitesine bağlıdır. Meva Global, ISO 14064-2 ile uyumlu proje beyanlarında kapsam, metodoloji, veri akışı ve kayıt yapısını bağımsız teknik çerçevede değerlendirir. Amaç; program, paydaş veya piyasa incelemesine uygun, izlenebilir ve teknik olarak savunulabilir bir proje dosyası oluşturmaktır.",
         covers: {
           title: "Hizmet Kapsamı",
           bullets: [
-            "Proje sınırları, baz senaryo, azaltım veya giderim mantığı, miktarlandırma yöntemi, raporlama dönemi ve teknik varsayımlar",
-            "İzleme planı, veri kaynakları, hesaplama yapısı ve sonucu belirleyen temel parametreler bir bütün olarak",
-            "Yalnızca bildirilen sonucu kontrol etmek değil; teknik zemini ve kanıtla desteklenme derecesini netleştirmek",
+            "Proje sınırları, baz senaryo, azaltım veya giderim mantığı, miktarlandırma yöntemi, raporlama dönemi ve kritik varsayımların yazılı netliği",
+            "İzleme planı, veri kaynakları, hesaplama yapısı ve sonucu belirleyen parametrelerin birlikte okunması; kanıt dosyası ile beyan katmanının eşleştirilmesi",
+            "Bildirilen sonuçların yanı sıra teknik zeminin, varsayımların ve kayıtların kanıtla desteklenme derecesinin değerlendirilmesi",
           ],
         },
         forWho: {
@@ -516,31 +519,31 @@ export const tr: Dictionary = {
         typicalScope: {
           title: "İncelemenin Odak Noktaları",
           bullets: [
-            "Baz senaryonun makullüğü, faaliyet tanımı, veri akışı, izleme kontrolleri, hesaplama ve belge izi birlikte",
-            "Gerektiğinde örnekleme, yeniden hesaplama, veri eşleştirme ve kanıt incelemesi",
-            "Nihai sonuç ile üretim, izleme ve kanıt hattının teknik tutarlılığı",
+            "Baz senaryonun makullüğü, faaliyet tanımı, veri akışı, izleme kontrolleri, hesaplama mantığı ve belge izinin birlikte değerlendirilmesi",
+            "Örnekleme, yeniden hesaplama, veri eşleştirme ve kanıt incelemesiyle kritik girdilerin doğrulanması",
+            "Nihai sonuç ile üretim, izleme ve kanıt hattının teknik tutarlılığının; beyan metniyle çelişmeden sunulması",
           ],
         },
         whyMatters: {
           title: "Neden Önemli",
           bullets: [
-            "Proje beyanları; program, paydaş raporu, finans ve karbon piyasası hazırlığında giderek belirleyici",
-            "Disiplinli doğrulama; sonuca güveni artırır, metodolojik boşlukları görünür kılar ve karar riskini düşürür",
-            "Veri kalitesi, izleme disiplini ve sonraki raporlama dönemleri için daha sağlam temel",
+            "Proje beyanları; program başvuruları, paydaş raporları, finansman ve karbon piyasası süreçlerinde belirleyici hale gelmektedir",
+            "Yapılandırılmış teknik inceleme; sonuca güveni artırır, metodolojik boşlukları görünür kılar ve karar riskini düşürür",
+            "Veri kalitesi, izleme disiplini ve sonraki raporlama dönemleri için daha sağlam bir teknik temel oluşturur",
           ],
         },
         approach: {
           title: "Meva Yaklaşımı",
           bullets: [
-            "Metodoloji odaklı teknik değerlendirme, izlenebilir kanıt yapısı ve bağımsız karar disiplini",
-            "Yalnızca raporlanan sonuç değil; baz senaryo, izleme güvenilirliği, veri akışı ve varsayımlar birlikte",
-            "Güncel beyanı güçlü zeminde sunma ve sonraki dönemler için sağlam izleme altyapısı",
+            "Metodoloji odaklı teknik değerlendirme, izlenebilir kanıt yapısı ve tarafsız karar disiplini ile bağımsız inceleme",
+            "Raporlanan sonuçla birlikte baz senaryo, izleme güvenilirliği, veri akışı ve varsayımların bütüncül okunması",
+            "Güncel beyanın güçlü teknik dosyayla sunulması ve sonraki dönemler için sürdürülebilir izleme kaydı",
           ],
         },
         cta: {
           title: "",
-          body: "Baz senaryonuzu, izleme planınızı ve raporlama döneminizi paylaşın; projenize uygun doğrulama kapsamını ve kanıt beklentilerini birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          body: "Kapsam, ölçütler ve kanıt beklentilerini birlikte netleştirelim.",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -593,7 +596,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "PCF özetinizi, veri kaynaklarınızı ve kullanacağınız beyan formatını paylaşın; ürün ve pazar bağlamınıza uygun inceleme derinliği ile doğrulama stratejisini birlikte şekillendirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -646,7 +649,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Su ayak izi çalışmanızın sistem sınırlarını, veri yapısını ve mevcut açıklama çerçevenizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -699,7 +702,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "LCA çalışmanızın amaç ve kapsam yapısını, veri setlerinizi ve mevcut modelleme çerçevenizi paylaşın; kullanım bağlamınıza uygun teknik inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -752,7 +755,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "PCR yapınızı, beyan kapsamınızı ve mevcut EPD modelinizi paylaşın; yayımlama bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -805,7 +808,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut içerik beyanınızı, kütle dengesi yapınızı ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -858,7 +861,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut biyobazlı içerik beyanınızı, metodolojik yapınızı ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -911,7 +914,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut ASI hazırlık dosyanızı, politika ve kayıt setlerinizi paylaşın; kullanım bağlamınıza uygun doğrulama inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -964,7 +967,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut FSC / PEFC / EUDR hazırlık dosyalarınızı, tedarikçi kayıtlarınızı ve izlenebilirlik yapınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1017,7 +1020,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "GRI / ESRS veri setlerinizi, gösterge tanımlarınızı ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1070,7 +1073,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "KPI tanımlarınızı, kaynak veri setlerinizi ve destekleyici belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1123,7 +1126,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut raporlama yapınızı, kontrol noktalarınızı ve destekleyici belgelerinizi paylaşın; sınırlı bağımsız inceleme öncesi hazırlık kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1176,7 +1179,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut finansal olmayan veri setlerinizi, kontrol noktalarınızı ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1229,7 +1232,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut VOC test raporlarınızı, ürün tanımınızı ve açıklama çerçevenizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1281,7 +1284,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "SKDM kapsamındaki veri yapınızı, tedarikçi girdilerinizi ve mevcut emisyon hesaplama çerçevenizi paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1334,7 +1337,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut EU ETS veri setlerinizi, izleme planınızı ve destekleyici kayıtlarınızı paylaşın; kullanım bağlamınıza uygun doğrulama inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1387,7 +1390,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut F-gazları kayıtlarınızı, ekipman envanterinizi ve servis belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1440,7 +1443,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut Denizcilik MRV veri setlerinizi, yakıt kayıtlarınızı ve destekleyici belgelerinizi paylaşın; kullanım bağlamınıza uygun doğrulama inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1542,7 +1545,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Mevcut doğrulama veya geçerli kılma sürecinizi, kriter yapınızı ve kanıt dosyalarınızı paylaşın; kullanım bağlamınıza uygun inceleme kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1595,7 +1598,7 @@ export const tr: Dictionary = {
         cta: {
           title: "",
           body: "Geçiş yolunuzu, hedef çerçevenizi ve mevcut teknik dayanaklarınızı paylaşın; kullanım bağlamınıza uygun doğrulama kapsamını birlikte netleştirelim.",
-          primaryButton: "Teklif Talep Et",
+          primaryButton: "Teknik Görüşme Talep Et",
           secondaryButton: "Hizmetlere Dön",
           detailLink: "Detayları İncele",
         },
@@ -1655,7 +1658,7 @@ export const tr: Dictionary = {
       cta: {
         title: "",
         body: "Güncel veri setlerinizi, tesis bazlı hesaplama tasarımınızı ve tedarikçi kanıt durumunuzu paylaşın; inceleme derinliğini raporlama bağlamınız ve takviminizle hizalayalım.",
-        primaryLabel: "Teklif Talep Et",
+        primaryLabel: "Teknik Görüşme Talep Et",
         secondaryLabel: "Hizmetleri İncele",
         tertiaryLabel: "Detayları İncele",
       },
@@ -1692,7 +1695,7 @@ export const tr: Dictionary = {
         flowBoxes: ["Süreç", "Kanıt", "Kontrol Listesi", "İnceleme Akışı"] as const,
       },
       corporateDocumentsSection: {
-        title: "Kurumsal Dokümanlar",
+        title: "Kurumsal Dokümanlar ve Kayıtlar",
         intro:
           "Doğrulama, geçerli kılma, tarafsızlık, gizlilik ve beyan kullanımına ilişkin temel kurumsal dokümanlarımızı bu bölümde inceleyebilirsiniz.",
         fileUnavailableNote:
@@ -1749,20 +1752,20 @@ export const tr: Dictionary = {
         title: "Kapsamlı Teknik İnceleme Talep Edin",
         body:
           "Kapsamınızı, uygulanacak standartları ve hedef takviminizi paylaşın. Raporlama bağlamınıza uygun inceleme yaklaşımı, kanıt beklentileri ve net zaman çizelgesiyle size geri dönelim.",
-        primaryLabel: "Teklif Talep Et",
+        primaryLabel: "Teknik Görüşme Talep Et",
         secondaryLabel: "Hizmetleri İncele",
       },
     },
     statementSearch: {
       title: "Beyan Kayıtları Ve Durum Sorgulama",
       intro:
-        "Yayımlanmış beyan kayıtlarını referans bilgileri üzerinden sorgulayabilirsiniz. Bu alanda yer alan kayıt özeti ve durum bilgileri, kamuya açık referans kontrolü amacıyla sunulur; hukuki görüş, resmî danışmanlık veya tek başına bağlayıcı karar niteliği taşımaz.",
+        "Yayımlanmış beyan kayıtları, referans numarası ve ilgili beyan bilgileri üzerinden sorgulanabilir. Bu alan, kayıt görünürlüğü ve referans kontrolü amacıyla sunulur; hukuki görüş veya tek başına bağlayıcı karar niteliği taşımaz.",
       heroEyebrow: "Beyan Kayıtları • Durum Sorgulama • Referans Kontrolü",
       heroImageAlt:
         "Masaüstünde beyan kaydı sorgulama ekranı ve doğrulanmış kayıt özeti—doğrulama kuruluşu kayıt görünümü.",
       panelTitle: "Kayıt sorgulama",
       note:
-        "Görüntülenen alanlar şeffaflık için sınırlıdır; hukuki danışmanlık veya tek başına resmi kabul anlamına gelmez. Yazışmalarda referans numarasını belirtiniz.",
+        "Görüntülenen özet alanlar kamuya açık referans kontrolü içindir; bağımsız doğrulama kararı veya tek başına resmi kabul anlamına gelmez. Yazışmalarda referans numarasını belirtiniz.",
       fields: {
         statementNumber: "Referans no.",
         companyName: "Şirket Adı",
@@ -1817,6 +1820,27 @@ export const tr: Dictionary = {
           "Standart referansları, düzenli ciltler, LCA materyalleri ve analitik notların bulunduğu kurumsal çalışma alanı.",
       },
       sectionLabel: "Öne Çıkan İçerikler",
+      ui: {
+        reviewTechnicalNote: "Teknik Notu İncele",
+        readingTime: "{minutes} dk okuma",
+        backToHub: "Bilgi Merkezi'ne Dön",
+        technicalNoteBadge: "Teknik not",
+        verificationGuideBadge: "Doğrulama rehberi",
+        updatedContent: "Güncel içerik",
+        keyPointsTitle: "Bu notta ele alınanlar",
+        takeawayTitle: "Teknik sonuç",
+        technicalNotePanelTitle: "Teknik inceleme çerçevesi",
+        technicalNotePanelItems: [
+          "Teknik İnceleme Notu",
+          "Kanıt Temelli Değerlendirme",
+          "Metodoloji ve Kapsam",
+        ],
+        metaPills: ["Kanıt", "Metodoloji", "Kapsam", "Beyan"],
+        articleClosingTitle: "Bağlamınız için yapılandırılmış teknik görüşme",
+        articleClosingBody:
+          "Standardınızı, teknik dosya sınırlarınızı ve bilginin dış kullanımını paylaşın; kapsam, kanıt beklentisi ve zaman çizelgesini birlikte hizalayalım.",
+        requestTechnicalMeeting: "Teknik Görüşme Talep Et",
+      },
       cards: [
         {
           category: "SKDM",
@@ -1830,7 +1854,7 @@ export const tr: Dictionary = {
         {
           category: "Karbon",
           date: "2026-04-19",
-          title: "Karbon Doğrulamada Kapsam, Metodoloji ve Paydaş Beklentileri Nasıl Hizalanır?",
+          title: "Karbon Doğrulamada Kapsam, Metodoloji ve Paydaş Beklentileri",
           body:
             "İzlenebilir varsayımlar, açık kontrol noktaları ve bilinçli metodoloji seçiminin teknik tartışmaya dayanıklı raporlamaya nasıl dönüştüğü.",
           cta: "Teknik Notu İncele",
@@ -1899,7 +1923,7 @@ export const tr: Dictionary = {
         message: "Kapsam, standartlar, raporlama yılı ve hedef teslim tarihini kısaca paylaşın.",
       },
       quoteForm: {
-        title: "Teklif Talebi",
+        title: "Teknik Görüşme Talebi",
         service: "Hizmet Alanı",
         standard: "Standart / Şema",
         reportingYear: "Raporlama Yılı",
@@ -1916,9 +1940,9 @@ export const tr: Dictionary = {
         privacyNote: "Başvuru detaylarını gizli kabul eder, yalnızca inceleme kapsamını belirlemek için kullanırız.",
       },
       cta: {
-        title: "Kapsamlı bir teklif mi gerekiyor?",
-        body: "Kapsam ve teslim tarihinizi iletin. İnceleme yolu, kanıt beklentileri ve takvimi içeren net bir öneri sunalım; beyan kullanım amacınıza göre hizalayalım.",
-        primaryLabel: "Teklif Talep Et",
+        title: "Kapsam ve süreç netleştirmesi mi gerekiyor?",
+        body: "Kapsam ve teslim tarihinizi iletin. Doğrulama yolu, kanıt beklentileri ve takvimi içeren net bir teknik çerçeve sunalım; beyan kullanım amacınıza göre hizalayalım.",
+        primaryLabel: "Teknik Görüşme Talep Et",
         secondaryLabel: "Hizmetleri İncele",
       },
     },
@@ -1929,6 +1953,7 @@ export const tr: Dictionary = {
     whatWeDo: "Ne yapıyoruz",
     deliverables: "Çıktılar",
     relatedServicesTitle: "İlgili Hizmetler",
+    ctaPanelBody: "Kapsam, ölçütler ve kanıt beklentilerini birlikte netleştirelim.",
   },
 };
 

@@ -40,31 +40,31 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
     eyebrow: "Teknik not",
     title: "Karbon Doğrulamada Kapsam, Metodoloji ve Paydaş Beklentileri",
     intro:
-      "Karbon doğrulama; kapsam, metodoloji ve okuyucu beklentileri ayrıştığında sessizce zayıflar: teknik dosya eksiksiz görünürken dışarıya dönük anlatım hâlâ itiraza açık kalabilir. Güçlü süreçler; kanıt testleri yoğunlaşmadan önce nelerin kapsamda olduğunu, hangi standardın ve yöntemin geçerli olduğunu ve dış okuyucunun ne gördüğünü tek çerçevede hizalar.",
+      "Karbon doğrulamasında güvenilirlik; kapsam netliği, metodolojik tutarlılık ve dış okuyucunun neyi gördüğünü anlaması birlikte oluşur. Teknik dosya eksiksiz görünse bile beyan dili, kapsam sınırları veya varsayımlar zayıfsa inceleme kolayca itiraza açık hale gelir. Bu not; bağımsız teknik inceleme öncesinde bu üç katmanın nasıl birlikte yapılandırılması gerektiğini özetler.",
     sections: [
       {
-        title: "Kapsam sözleşme gibi ele alınır",
+        title: "Kapsam ve sınırların netleştirilmesi",
         body:
-          "Kapsam yalnızca bir sınır şeması değildir; kurumsal ve operasyonel limitleri, raporlama dönemlerini ve tahminin rolünü sabitler. Kapsam örtük bırakıldığında inceleyenler ve paydaşlar boşlukları kendi varsayımlarıyla doldurur. İyi hazırlık; kapsamı yazılı tanımlar, veri yapılarına bağlar ve yorum için önemli istisnaları açıkça belirtir.",
+          "Kapsam; organizasyonel ve operasyonel sınırları, raporlama dönemini ve tahminin nerede devreye girdiğini yazılı olarak sabitler. Sınır şeması tek başına yeterli değildir—veri modeli, tesis listesi ve dışlanan faaliyetlerin gerekçesi aynı dosyada okunabilir olmalıdır. Net kapsam; inceleyenin boşlukları kendi varsayımlarıyla doldurmasını engeller ve beyanın hangi iddiayı taşıdığını görünür kılar.",
       },
       {
-        title: "Metodoloji karar kaydıdır",
+        title: "Metodolojik tutarlılık ve varsayım yönetimi",
         body:
-          "Metodoloji yalnızca formül değildir; aktivite sınıflandırması, faktör seçimi ve eksik veri işleme için belgelenmiş gerekçedir. Doğrulama ekipleri; seçimlerin dönem boyunca tutarlı olup olmadığını, hassas durumların işaretlenip işaretlenmediğini ve değişikliklerin disiplinli biçimde yönetilip yönetilmediğini test eder. Savunulabilir metodoloji, yalnızca tanıdık olanı değil, izlenebilir kararı ifade eder.",
+          "Metodoloji; formüllerden ibaret değil, aktivite sınıflandırması, emisyon faktörü seçimi ve eksik veri işleme için belgelenmiş karar setidir. Dönemler arası tutarlılık, hassas kalemlerin işaretlenmesi ve metodoloji değişikliklerinin kontrollü yönetimi teknik incelemenin merkezindedir. Varsayımlar gizlenmemeli; etkileri ve makul alternatiflere duyarlılık açıkça tartışılmalıdır.",
       },
       {
-        title: "Paydaş beklentileri ve abartısız iddia",
+        title: "Paydaş beklentileri ve beyan güvenilirliği",
         body:
-          "Yatırımcı, alıcı ve düzenleyici okuyucular genelde farklı vurgu bekler—bütünlük, karşılaştırılabilirlik veya denetime hazırlık. Hizalama; doğrulama amacını bu beklentilere açıkça eşler: hangi iddiaları desteklediğini, hangilerini desteklemediğini ve daha derin bir bağımsız inceleme düzeyi veya farklı kullanım için nelerin gerekli olduğunu netleştirir.",
+          "Yatırımcı, alıcı ve düzenleyici okuyucular farklı vurgu bekleyebilir: bütünlük, karşılaştırılabilirlik veya denetime hazırlık. Doğrulama amacı bu beklentilere açıkça bağlanmalı; hangi sonuçların desteklendiği, hangi sınırlamaların geçerli olduğu ve daha derin inceleme için ne gerektiği net yazılmalıdır. Abartılı iddia dili, teknik dosyanın taşıdığı kanıt derinliğini aşmamalıdır.",
       },
       {
-        title: "Bütünlüğü koruyan kontrol noktaları",
+        title: "Bulguların izlenebilir kayıtlarla desteklenmesi",
         body:
-          "İyi tasarlanmış mutabakatlar, yüksek etkili akışlarda bağımsız kontroller ve metodoloji değişikliklerinde onay gibi kontrol noktaları geç sürpriz riskini azaltır. Sorunlar dış itirazda değil, iç gözden geçirmede erken yüzeye çıkar.",
+          "Mutabakatlar, yüksek etkili akışlarda bağımsız kontroller ve metodoloji değişikliklerinde onay adımları; bulguların kayıtlarla desteklenmesini güçlendirir. İyi yapılandırılmış teknik dosya; çalışma kağıtları, kaynak veri bağlantıları ve karar izini bir arada sunar. Böylece sorunlar dış itirazda değil, iç gözden geçirmede erken aşamada görünür hale gelir.",
       },
     ],
     closing:
-      "Kapsam, metodoloji ve beklentiler tek tutarlı çerçevede birleştiğinde doğrulama, sonradan “neler dahil edilmeliydi” tartışması değil o çerçevenin yapılandırılmış testine dönüşür.",
+      "Kapsam, metodoloji ve paydaş beklentileri tek tutarlı çerçevede tanımlandığında doğrulama; sonradan tartışılan bir kapsam meselesi değil, o çerçevenin kanıt temelli ve belgelenmiş testine dönüşür.",
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
@@ -104,27 +104,27 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
     eyebrow: "Teknik not",
     title: "Sürdürülebilirlik İddialarında İnceleme Derinliği Seçimi",
     intro:
-      "Bağımsız inceleme düzeyleri (ör. limited assurance ile reasonable assurance); uygulayıcının kanıt derinliğini ve ifade edilebilecek sonuç türünü çerçeveler. Yüksek riskli dış kullanımda yüzeysel bir paket itibar ve düzenleyici sürtüşme riskini artırır; kanıt altyapısı olmadan aşırı iddialı bir paket ise kaynak kaybına yol açar. Seviye; kullanım durumu, önemlilik ve paydaş beklentilerine göre seçilmeli—şablona veya pazarlama diline göre değil.",
+      "Bağımsız inceleme düzeyleri; kanıt derinliği, yöntem kontrolleri ve ifade edilebilecek sonuç türünü çerçeveler. Seviye; kullanım bağlamı, karar riski ve paydaş beklentilerine göre seçilmelidir—şablona veya pazarlama diline göre değil.",
     sections: [
       {
-        title: "Limited assurance ile reasonable assurance",
+        title: "Limited assurance ile reasonable assurance arasındaki fark",
         body:
-          "Limited assurance (sınırlı bağımsız inceleme) sorgu ve analitik prosedürlerle sınırlı kanıt derinliğini ifade eder. Reasonable assurance (makul düzeyde bağımsız inceleme) daha derin test ve kanıt genişliği hedefler; mutlak kesinlik değildir. Aralık sermaye piyasaları, tedarik zinciri programları ve raporu birincil kanıt olarak kullanan kamu açıklamalarında bu ayrım pratikte belirleyicidir.",
+          "Limited assurance ile reasonable assurance arasındaki fark yalnızca güvence seviyesi değildir; veri derinliği, kanıt kapsamı, yöntem kontrolleri ve paydaş beklentileri açısından farklı inceleme yoğunlukları gerektirir. Sınırlı inceleme sorgu ve analitik prosedürlerle sınırlı kanıt derinliğini ifade eder; makul düzeyde inceleme daha geniş test ve kanıt genişliği hedefler—mutlak kesinlik değildir.",
       },
       {
         title: "Kullanım bağlamı ve karar riski",
         body:
-          "Aynı veri seti iç yönetim için sınırlı paketi gerektirirken; ihraç belgesi tarzı bir iddia veya alıcı sertifikasyon kapısı daha derin kanıt ve kontrol olgunluğu isteyebilir. Finansal maruziyet, marka etkisi ve düzenleyici ilgiyi haritalamak, kuruluşun gerçek riskine uygun inceleme derinliğini netleştirir.",
+          "Kullanım bağlamı ve karar riski, hangi inceleme derinliğinin uygun olduğunu belirleyen temel unsurlardır. Aynı veri seti iç yönetim için daha hafif bir paketi gerektirirken; ihraç belgesi tarzı bir iddia veya alıcı kapısı daha derin kanıt ve kontrol olgunluğu isteyebilir. Finansal maruziyet, marka etkisi ve düzenleyici ilgi birlikte okunmalıdır.",
       },
       {
         title: "Kamu açıklaması ve üçüncü taraf güveni",
         body:
-          "Sürdürülebilirlik bilgisi müşteri, kredi veren veya düzenleyici tarafından atıfta bulunulduğunda güven artar. Yayımlanan inceleme metni ile operasyonel gerçeklik uyumlu olmalıdır: hangi tesisler, dönemler, metrikler ve sınırlar. Pazarlama dilinin teknik çıktıya göre abartılması sık uyuşmazlık kaynağıdır.",
+          "Kamu açıklaması ve üçüncü taraf güveni söz konusu olduğunda, beyanın kapsamı, metodolojisi ve kanıt seti daha güçlü bir teknik dosya yapısıyla desteklenmelidir. Yayımlanan inceleme metni ile operasyonel gerçeklik uyumlu olmalıdır: hangi tesisler, dönemler, metrikler ve sınırlar kapsam dahilindedir. Pazarlama dilinin teknik çıktıya göre abartılması sık uyuşmazlık kaynağıdır.",
       },
       {
         title: "Çalışma öncesi hazırlık",
         body:
-          "Daha derin bağımsız inceleme daha güçlü kontroller, daha net dokümantasyon ve çoğu zaman daha fazla zaman ister. Önce seviye seçip kanıtı sonradan uyduran kuruluşlar temiz sonuç almakta zorlanır. Veri soy ağacı, kontrol tasarımı ve yönetişim sahipliği disiplinli bir hazırlık görünümü hem verimli süreci hem inandırıcı dış iletişimi destekler.",
+          "Çalışma öncesi hazırlık; veri sahipliği, metodoloji kayıtları, sınır tanımları ve doğrulanabilir kanıtların düzenli hale getirilmesini kapsar. Daha derin bağımsız inceleme daha güçlü kontroller, daha net dokümantasyon ve çoğu zaman daha fazla zaman ister. Önce seviye seçip kanıtı sonradan uyduran kuruluşlar tutarlı sonuç almakta zorlanır.",
       },
     ],
     closing:

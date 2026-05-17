@@ -7,6 +7,7 @@ import { navItems } from "@/lib/nav";
 import { offices } from "@/data/offices";
 import { MEVA_KVK_NUMBER } from "@/data/companyRegistry";
 import { cn } from "@/lib/cn";
+import { premiumGoldTopLine } from "@/lib/premiumUi";
 
 const FOOTER_LINKEDIN_URL =
   "https://www.linkedin.com/company/meva-global-certification/?viewAsMember=true";
@@ -18,7 +19,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const orderedOffices = [...offices].sort((a, b) => OFFICE_ORDER[a.id] - OFFICE_ORDER[b.id]);
 
   return (
-    <footer className="mt-8 border-t border-white/[0.07] bg-[color:var(--footer-deep)] text-white">
+    <footer className="relative mt-8 border-t border-white/[0.07] bg-[color:var(--footer-deep)] text-white">
+      <div className={cn(premiumGoldTopLine, "h-1")} aria-hidden />
       <Container className="py-10 sm:py-11 lg:py-12">
         <div className="grid gap-9 lg:grid-cols-12 lg:items-start lg:gap-8">
           <div className="min-w-0 lg:col-span-4">
@@ -73,7 +75,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">{dict.footer.offices}</h3>
             <div className="mt-3 grid min-w-0 gap-5 sm:grid-cols-2 sm:gap-6">
               {orderedOffices.map((o) => (
-                <div key={o.id} className="min-w-0 rounded-xl border border-white/[0.09] bg-white/[0.03] px-5 py-5 sm:px-6 sm:py-5">
+                <div
+                  key={o.id}
+                  className="relative min-w-0 overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.03] px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-6 sm:py-5"
+                >
+                  <div
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:color-mix(in_oklab,var(--brand-gold)_35%,transparent)] to-transparent"
+                    aria-hidden
+                  />
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/55">
                     {o.id === "tr" ? dict.shared.offices.turkey : dict.shared.offices.netherlands}
                   </p>

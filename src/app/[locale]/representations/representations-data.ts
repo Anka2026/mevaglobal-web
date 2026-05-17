@@ -21,19 +21,27 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
       "Temsilcilik yapısı yerel iletişim ve dokümantasyon koordinasyonunu destekler; teknik değerlendirme, karar disiplini ve kurumsal yönetişim Meva Global’in merkezi süreçleri altında yürütülür.",
     representationsTitle: "Temsilciliklerimiz",
     representationsBody:
-      "Temsilcilik ve iş birliği kanallarımız üzerinden yerel erişim, dokümantasyon koordinasyonu ve uluslararası teknik hizalanma.",
+      "Türkiye başta olmak üzere Avrupa, Asya, Afrika ve Kafkasya bölgelerinde yerel iletişim, belge koordinasyonu ve doğrulama süreçlerinin merkezi koordinasyonu.",
     solutionTitle: "İş Birliği Kanalları ve Ortaklar",
     solutionBody:
       "Tamamlayıcı uzmanlık alanlarıyla iş birliği yürütülen ortak yapılar.",
     ui: {
       viewDetails: "Temsilcilik Detaylarını İncele",
       close: "Kapat",
-      summaryHeading: "Kısa Özet",
-      regionLabel: "Bölge / pazar",
-      networkRoleLabel: "Rol özeti",
-      technicalFocusLabel: "Teknik odak",
+      summaryHeading: "İş birliği özeti",
+      cooperationScopeLabel: "İş Birliği Kapsamı",
+      localCoordinationLabel: "Yerel Koordinasyon",
+      localCoordinationScope:
+        "Türkiye başta olmak üzere Avrupa, Asya, Afrika ve Kafkasya bölgelerinde yerel iletişim ve belge akışı koordinasyonu.",
+      documentCoordinationLabel: "Belge Koordinasyonu",
+      applicationRoutingLabel: "Başvuru ve Süreç Yönlendirme",
+      verificationCoordinationLabel: "Doğrulama Süreci Koordinasyonu",
+      applicationRoutingNote:
+        "Başvuru ve dosya iletimi yerel kanaldan yürütülür; kapsam ve süreç eşlemesi Meva Global merkezinde netleştirilir.",
+      verificationCoordinationNote:
+        "Doğrulama kapsamı, teknik inceleme ve çıktılar Meva Global’in merkezi süreçleri altında koordine edilir.",
       judgementBoundaryNote:
-        "Temsilcilik yapısı yerel iletişim ve dokümantasyon koordinasyonunu kolaylaştırır; teknik değerlendirme, karar mantığı ve çıktılar Meva Global’in merkezi süreçleri ve kurumsal yönetişimi altında yürütülür.",
+        "Temsilcilik yapısı yerel iletişim ve belge koordinasyonunu kolaylaştırır; teknik değerlendirme, karar mantığı ve çıktılar Meva Global’in merkezi süreçleri altında yürütülür.",
       corporateProfile: "Kurumsal Profil",
       serviceAndCompetenceAreas: "Hizmet ve Yetkinlik Alanları",
       accreditationAndCompetence: "Akreditasyon ve Yetkinlik",
@@ -120,15 +128,15 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         logoSrc: "/partner-logos/anka-sustainability.png",
         region: "Hollanda (Utrecht); Türkiye (İstanbul ofis yapılanması)",
         networkRole:
-          "MEVA görev yollarıyla uyumlu sürdürülebilirlik danışmanlığı, uygulama desteği ve dijital çözüm ortağı",
+          "Doğrulama ve teknik inceleme süreçlerine yönlendirme; dokümantasyon koordinasyonu ve yerel iletişim desteği",
         technicalFocus:
           "ESG raporlaması, karbon ve iklim yönetimi, regülasyon uyumu, sertifikasyon ve izlenebilirlik hazırlığı",
         cardSummary:
-          "Raporlama, uyum, karbon yönetimi ve uygulama süreçlerini güçlendirmeye odaklanan stratejik sürdürülebilirlik danışmanlığı ve dijital çözüm ortağıdır.",
+          "ESG raporlaması, uyum, karbon yönetimi ve uygulama süreçlerinde iş birliği ve teknik koordinasyon desteği sunan ortak yapıdır.",
         modalSummary:
-          "ANKA Sustainability Consulting B.V., kuruluşların sürdürülebilirlik raporlaması, regülasyon uyumu, karbon yönetimi ve uygulama süreçlerini güçlendirmelerine destek olan stratejik bir sürdürülebilirlik danışmanlık firmasıdır.",
+          "ANKA Sustainability Consulting B.V.; sürdürülebilirlik raporlaması, regülasyon uyumu, karbon yönetimi ve uygulama süreçlerinde iş birliği ve teknik koordinasyon sağlayan bir ortaktır.",
         corporateProfile:
-          "Danışmanlık yaklaşımını dijital çözümlerle birleştirerek daha sistematik, izlenebilir ve uygulanabilir yapılar geliştirmeye odaklanır.",
+          "Dijital araçlarla desteklenen yapılandırılmış süreçler üzerinden izlenebilir ve uygulanabilir raporlama hazırlığına odaklanır.",
         serviceAreas: [
           "ESG ve sürdürülebilirlik raporlaması",
           "Karbon ve iklim yönetimi",
@@ -138,7 +146,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
           "Sertifikasyon ve izlenebilirlik yapıları",
         ],
         sectorExperience:
-          "İmalat ve sanayi, ambalaj, inşaat, alüminyum ve metaller, gıda ve tarım, kimyasallar, enerji ve çok uluslu kurumsal yapılar dahil çok sektörlü danışmanlık deneyimi.",
+          "İmalat ve sanayi, ambalaj, inşaat, alüminyum ve metaller, gıda ve tarım, kimyasallar, enerji ve çok uluslu kurumsal yapılar dahil çok sektörlü teknik koordinasyon deneyimi.",
         corporateStructure:
           "Şirketin merkezi Hollanda’nın Utrecht şehrindedir. Türkiye’de ise İstanbul Ümraniye’de genel merkez ve Avcılar Teknopark’ta şube yapılanması bulunmaktadır.",
       },
@@ -150,19 +158,27 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
       "Representatives support local communication and documentation coordination. Technical assessment, decision discipline and governance follow Meva Global’s central technical processes.",
     representationsTitle: "Representations",
     representationsBody:
-      "Representation and cooperation channels for local access, documentation coordination and alignment with central technical review.",
+      "Local contact, document coordination and central coordination of verification processes across Türkiye, Europe, Asia, Africa and the Caucasus.",
     solutionTitle: "Cooperation Partners And Channels",
     solutionBody:
-      "Partners engaged where complementary expertise supports delivery while technical judgement follows Meva Global’s defined pathways.",
+      "Partners engaged where complementary expertise supports delivery while technical assessment and decision discipline remain governed by Meva Global’s central processes.",
     ui: {
       viewDetails: "View Representation Details",
       close: "Close",
-      summaryHeading: "Summary",
-      regionLabel: "Region / market",
-      networkRoleLabel: "Role summary",
-      technicalFocusLabel: "Technical focus",
+      summaryHeading: "Cooperation summary",
+      cooperationScopeLabel: "Cooperation Scope",
+      localCoordinationLabel: "Local Coordination",
+      localCoordinationScope:
+        "Local contact and document flow coordination across Türkiye, Europe, Asia, Africa and the Caucasus.",
+      documentCoordinationLabel: "Document Coordination",
+      applicationRoutingLabel: "Application and Process Routing",
+      verificationCoordinationLabel: "Verification Process Coordination",
+      applicationRoutingNote:
+        "Applications and file transmission run through the local channel; scope and process mapping are clarified centrally by Meva Global.",
+      verificationCoordinationNote:
+        "Verification scope, technical review and outputs are coordinated under Meva Global’s central processes.",
       judgementBoundaryNote:
-        "Representatives facilitate communication and documentation coordination; technical assessment, decision logic and outputs are managed under Meva Global’s central processes and governance.",
+        "Representatives facilitate local contact and document coordination; technical assessment, decision logic and outputs are managed under Meva Global’s central processes.",
       corporateProfile: "Corporate Profile",
       serviceAndCompetenceAreas: "Service and Competence Areas",
       accreditationAndCompetence: "Accreditation and Competence",
@@ -246,15 +262,15 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         logoSrc: "/partner-logos/anka-sustainability.png",
         region: "Netherlands (Utrecht); Türkiye (Istanbul offices)",
         networkRole:
-          "Solution partner for sustainability advisory, implementation support and digital tooling aligned with MEVA engagement pathways",
+          "Cooperation channel for process routing, documentation coordination and local contact aligned with Meva Global technical review pathways",
         technicalFocus:
           "ESG reporting, carbon and climate management, regulatory compliance, certification and traceability readiness",
         cardSummary:
-          "A strategic sustainability advisory and digital solutions partner focused on strengthening reporting, compliance, carbon management, and implementation processes.",
+          "A cooperation partner supporting reporting, compliance, carbon management and implementation readiness through structured technical coordination.",
         modalSummary:
-          "ANKA Sustainability Consulting B.V. is a strategic sustainability advisory firm that supports organizations in strengthening sustainability reporting, regulatory compliance, carbon management, and implementation processes.",
+          "ANKA Sustainability Consulting B.V. supports organizations in sustainability reporting, regulatory compliance, carbon management and implementation processes through structured cooperation with Meva Global.",
         corporateProfile:
-          "It focuses on developing more systematic, traceable, and implementable structures by combining advisory approaches with digital solutions.",
+          "It focuses on systematic, traceable and implementable structures supported by digital tooling for documentation and reporting readiness.",
         serviceAreas: [
           "ESG and sustainability reporting",
           "Carbon and climate management",
@@ -276,19 +292,27 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
       "Vertegenwoordigers ondersteunen lokale communicatie en documentatiecoördinatie. Technische beoordeling, besluitdiscipline en governance worden centraal door Meva Global uitgevoerd.",
     representationsTitle: "Vertegenwoordigingen",
     representationsBody:
-      "Vertegenwoordigings- en samenwerkingskanalen voor lokale toegang, documentatiecoördinatie en afstemming op centrale technische beoordeling.",
+      "Lokale contact, documentcoördinatie en centrale coördinatie van verificatieprocessen in Türkiye, Europa, Azië, Afrika en de Kaukasus.",
     solutionTitle: "Samenwerkingspartners en -kanalen",
     solutionBody:
       "Partners waar aanvullende expertise de uitvoering ondersteunt, met technisch oordeel volgens de vastgelegde routes van Meva Global.",
     ui: {
       viewDetails: "Bekijk vertegenwoordigingsdetails",
       close: "Sluiten",
-      summaryHeading: "Korte samenvatting",
-      regionLabel: "Regio / markt",
-      networkRoleLabel: "Rol (kern)",
-      technicalFocusLabel: "Technische focus",
+      summaryHeading: "Samenvatting samenwerking",
+      cooperationScopeLabel: "Samenwerkingsomvang",
+      localCoordinationLabel: "Lokale coördinatie",
+      localCoordinationScope:
+        "Coördinatie van lokaal contact en documentstromen in Türkiye, Europa, Azië, Afrika en de Kaukasus.",
+      documentCoordinationLabel: "Documentcoördinatie",
+      applicationRoutingLabel: "Aanvraag- en procesdoorverwijzing",
+      verificationCoordinationLabel: "Coördinatie van verificatieprocessen",
+      applicationRoutingNote:
+        "Aanvragen en dossieroverdracht lopen via het lokale kanaal; scope en proceskoppeling worden centraal door Meva Global vastgelegd.",
+      verificationCoordinationNote:
+        "Verificatiescope, technische beoordeling en outputs worden gecoördineerd binnen de centrale processen van Meva Global.",
       judgementBoundaryNote:
-        "Vertegenwoordigers vergemakkelijken communicatie en documentatiecoördinatie; technische beoordeling, beslislogica en outputs worden centraal onder de processen en governance van Meva Global beheerd.",
+        "Vertegenwoordigers ondersteunen lokaal contact en documentcoördinatie; technische beoordeling, beslislogica en outputs worden centraal door Meva Global beheerd.",
       corporateProfile: "Bedrijfsprofiel",
       serviceAndCompetenceAreas: "Dienstverlening en competentiegebieden",
       accreditationAndCompetence: "Accreditatie en competentie",
@@ -374,15 +398,15 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         logoSrc: "/partner-logos/anka-sustainability.png",
         region: "Nederland (Utrecht); Türkiye (kantoren in Istanbul)",
         networkRole:
-          "Oplossingspartner voor duurzaamheidsadvies, implementatieondersteuning en digitale tooling in lijn met MEVA-opdrachtroutes",
+          "Samenwerkingskanaal voor procesdoorverwijzing, documentatiecoördinatie en lokaal contact in lijn met de technische beoordelingsroutes van Meva Global",
         technicalFocus:
           "ESG-rapportage, koolstof- en klimaatbeheer, regelgevingsnaleving, certificatie- en traceerbaarheidsgereedheid",
         cardSummary:
-          "Een strategische duurzaamheidsadvies- en digitale oplossingspartner gericht op het versterken van rapportage, naleving, koolstofbeheer en implementatieprocessen.",
+          "Samenwerkingspartner die rapportage, naleving, koolstofbeheer en implementatiegereedheid ondersteunt via gestructureerde technische coördinatie.",
         modalSummary:
-          "ANKA Sustainability Consulting B.V. is een strategisch duurzaamheidsadviesbureau dat organisaties ondersteunt bij het versterken van duurzaamheidsrapportage, regelgevingsnaleving, koolstofbeheer en implementatieprocessen.",
+          "ANKA Sustainability Consulting B.V. ondersteunt organisaties bij duurzaamheidsrapportage, regelgevingsnaleving, koolstofbeheer en implementatieprocessen via gestructureerde samenwerking met Meva Global.",
         corporateProfile:
-          "Zij richt zich op het ontwikkelen van meer systematische, traceerbare en uitvoerbare structuren door adviesbenaderingen te combineren met digitale oplossingen.",
+          "Zij richt zich op systematische, traceerbare en uitvoerbare structuren met digitale ondersteuning voor documentatie- en rapportagegereedheid.",
         serviceAreas: [
           "ESG- en duurzaamheidsrapportage",
           "Koolstof- en klimaatbeheer",

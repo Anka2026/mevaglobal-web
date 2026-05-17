@@ -97,7 +97,7 @@ export const newServiceDetailsNl = {
     cta: {
       title: "",
       body: "Deel uw huidige HPD-dossier, samenstellingsdata en ondersteunende leveranciersdocumenten; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-      primaryButton: "Offerte aanvragen",
+      primaryButton: "Vraag een technisch gesprek aan",
       secondaryButton: "Terug naar diensten",
       detailLink: "Details",
     },
@@ -150,7 +150,7 @@ export const newServiceDetailsNl = {
     cta: {
       title: "",
       body: "Deel uw huidige documentatie over transparantie van ingrediënten, samenstellingsdata en ondersteunende registraties; samen bepalen we een verificatiescope die past bij uw gebruikscontext.",
-      primaryButton: "Offerte aanvragen",
+      primaryButton: "Vraag een technisch gesprek aan",
       secondaryButton: "Terug naar diensten",
       detailLink: "Details",
     },
@@ -172,7 +172,7 @@ export const newServiceDetailsNl = {
       title: "Voor wie",
       bullets: [
         "Projectteams die green building-certificatieaanvragen met sterkere technische dossiers willen indienen",
-        "Organisaties die aanvraagkwaliteit willen versterken over architectuur, engineering, advies en investeerders heen",
+        "Organisaties die aanvraagkwaliteit willen versterken over architectuur, engineering en investeerders heen",
         "Teams die credit-gerichte technische dossiers gedisciplineerder, traceerbaarder en professioneler willen maken",
       ],
     },
@@ -203,7 +203,7 @@ export const newServiceDetailsNl = {
     cta: {
       title: "",
       body: "Deel uw huidige green building-aanvraagdossier, technische registraties en ondersteunende documenten; samen bepalen we een verificatiescope die past bij uw gebruikscontext.",
-      primaryButton: "Offerte aanvragen",
+      primaryButton: "Vraag een technisch gesprek aan",
       secondaryButton: "Terug naar diensten",
       detailLink: "Details",
     },

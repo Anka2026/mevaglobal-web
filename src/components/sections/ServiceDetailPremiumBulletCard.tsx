@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { premiumGoldTopLine } from "@/lib/premiumUi";
 
 /** Premium bullet-list card for standard service detail pages (e.g. ISO 14067)—aligned with editorial `premiumModule` chrome. */
 export function ServiceDetailPremiumBulletCard({
@@ -29,10 +30,7 @@ export function ServiceDetailPremiumBulletCard({
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(165deg,color-mix(in_oklab,var(--brand-accent-soft)_65%,white)_0%,transparent_42%,transparent_100%)] opacity-[0.95]"
         aria-hidden
       />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:color-mix(in_oklab,var(--brand-primary)_35%,white)]/50 to-transparent"
-        aria-hidden
-      />
+      <div className={premiumGoldTopLine} aria-hidden />
       <div
         className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--brand-accent)_14%,white)_0%,transparent_68%)]"
         aria-hidden

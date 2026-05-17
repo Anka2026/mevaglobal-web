@@ -21,6 +21,7 @@ export function PremiumFourCardServiceDetail({
   eyebrowFallback,
   ctas,
   taglineTopBar,
+  ctaPanelBody,
 }: {
   l: Locale;
   content: PremiumFourCardServiceDetailContent;
@@ -29,6 +30,7 @@ export function PremiumFourCardServiceDetail({
   eyebrowFallback: string;
   ctas: Dictionary["ctas"];
   taglineTopBar: string;
+  ctaPanelBody: string;
 }) {
   const eyebrow = content.heroEyebrow?.trim() ? content.heroEyebrow : eyebrowFallback;
 
@@ -44,7 +46,7 @@ export function PremiumFourCardServiceDetail({
       />
 
       <Container className="py-8 sm:py-9 lg:py-10">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-[76rem]">
           <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-12 lg:items-stretch lg:gap-6 lg:[&>*]:min-h-0">
             <ServiceDetailPremiumBulletCard
               className="lg:col-span-6"
@@ -68,7 +70,12 @@ export function PremiumFourCardServiceDetail({
             />
           </div>
 
-          <PremiumVerificationServiceCtaPanel locale={l} cta={content.cta} ctas={ctas} taglineTopBar={taglineTopBar} />
+          <PremiumVerificationServiceCtaPanel
+            locale={l}
+            cta={{ ...content.cta, body: content.cta.body?.trim() || ctaPanelBody }}
+            ctas={ctas}
+            taglineTopBar={taglineTopBar}
+          />
         </div>
       </Container>
     </>

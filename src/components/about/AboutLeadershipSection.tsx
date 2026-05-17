@@ -1,58 +1,63 @@
 import type { Dictionary } from "@/i18n/types";
 import { Container } from "@/components/ui/Container";
 import { TeamProfilePhoto } from "@/components/about/TeamProfilePhoto";
+import { SectionHeading } from "@/components/sections/SectionHeading";
 import { cn } from "@/lib/cn";
-import { premiumCard, premiumSectionWhite } from "@/lib/premiumUi";
+import {
+  premiumCardElevated,
+  premiumFocusPill,
+  premiumGoldTopLine,
+  premiumSectionWhite,
+} from "@/lib/premiumUi";
 
 const LEADERSHIP_PHOTO_SRC = "/images/team/dilan-arslan.png";
-
-const focusPillClass =
-  "inline-flex items-center rounded-full border border-[color:color-mix(in_oklab,var(--brand-primary)_16%,var(--border-soft))] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] px-3 py-1.5 text-[0.6875rem] font-medium leading-snug text-[color:var(--ink-dark)]/88 sm:text-xs";
 
 type Props = {
   leadership: Dictionary["aboutLeadership"];
 };
 
 export function AboutLeadershipSection({ leadership }: Props) {
-  const sectionLabelClass =
-    "text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)] sm:text-xs sm:tracking-[0.18em]";
-
   return (
-    <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionWhite)}>
+    <section className={cn("border-b border-[color:var(--border-soft)] py-12 sm:py-14", premiumSectionWhite)}>
       <Container>
-        <div className="mx-auto max-w-7xl">
-          <h2 className={sectionLabelClass}>{leadership.title}</h2>
-          <p className="mt-4 max-w-3xl text-sm leading-[1.78] text-[color:var(--ink-dark)]/90 sm:text-[0.9375rem] sm:leading-relaxed">
-            {leadership.intro}
-          </p>
+        <div className="mx-auto max-w-[76rem]">
+          <SectionHeading
+            title={leadership.title}
+            description={leadership.intro}
+            className="max-w-[44rem]"
+            titleClassName="text-[1.65rem] sm:text-[1.85rem]"
+            descriptionClassName="text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]"
+            withTitleAccent
+          />
           <article
             className={cn(
-              premiumCard,
-              "mt-8 flex flex-col gap-8 p-6 sm:p-8 lg:grid lg:grid-cols-[minmax(13.5rem,17.5rem)_minmax(0,1fr)] lg:items-stretch lg:gap-10",
+              premiumCardElevated,
+              "mt-8 p-6 sm:p-7 lg:grid lg:grid-cols-[minmax(10.5rem,13rem)_minmax(0,1fr)] lg:items-start lg:gap-8 lg:p-8",
             )}
           >
-            <div className="mx-auto w-full max-w-[17.5rem] shrink-0 lg:mx-0 lg:max-w-none lg:self-stretch">
+            <div className={premiumGoldTopLine} aria-hidden />
+            <div className="mx-auto w-full max-w-[13rem] shrink-0 lg:mx-0">
               <TeamProfilePhoto
                 src={LEADERSHIP_PHOTO_SRC}
                 alt={leadership.photoAlt}
-                fillColumn
-                className="h-full w-full"
+                compact
+                className="w-full"
               />
             </div>
-            <div className="flex min-h-0 flex-col gap-6 lg:min-h-full lg:justify-between lg:gap-8">
-              <div className="min-w-0">
-                <p className="text-xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.35rem]">
+            <div className="mt-6 flex min-w-0 flex-col gap-5 lg:mt-0 lg:gap-6">
+              <div>
+                <p className="text-xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.3rem]">
                   {leadership.name}
                 </p>
                 <p className="mt-1.5 text-sm font-semibold text-[color:var(--brand-primary)]">{leadership.role}</p>
-                <p className="mt-4 max-w-[42rem] text-sm leading-[1.78] text-[color:var(--text-muted)] sm:text-[0.9375rem] sm:leading-[1.76]">
+                <p className="mt-4 max-w-[40rem] text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]">
                   {leadership.bio}
                 </p>
               </div>
-              <ul className="flex list-none flex-wrap gap-2 p-0 lg:mt-auto" aria-label={leadership.role}>
+              <ul className="flex list-none flex-wrap gap-2 p-0" aria-label={leadership.role}>
                 {leadership.focusAreas.map((area) => (
                   <li key={area}>
-                    <span className={focusPillClass}>{area}</span>
+                    <span className={premiumFocusPill}>{area}</span>
                   </li>
                 ))}
               </ul>

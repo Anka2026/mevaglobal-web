@@ -48,7 +48,7 @@ export function VisualAnchor({
   }
 
   const frameHeights = detailEditorial
-    ? "min-h-[280px] w-full flex-1 sm:min-h-[300px] lg:min-h-0 lg:h-full"
+    ? "min-h-[320px] w-full flex-1 sm:min-h-[400px] lg:min-h-0 lg:h-full"
     : "h-[220px] sm:h-[260px] lg:h-[280px]";
 
   return (

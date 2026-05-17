@@ -38,33 +38,33 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
     category: "Koolstof",
     date: "2026-04-19",
     eyebrow: "Technische notitie",
-    title: "Scope, Methodologie En Stakeholderverwachtingen Op Één Lijn Bij Koolstofverificatie",
+    title: "Scope, methodologie en stakeholderverwachtingen bij koolstofverificatie",
     intro:
-      "Koolstofverificatie faalt stilletjes als scope, methodologie en publiek uit de pas lopen: het technische dossier kan compleet zijn terwijl het externe verhaal nog weerbaar blijft. Sterke trajecten brengen drie lagen in één kader—wat binnen scope valt, welke norm en methode gelden, en wat externe lezers menen te zien—voordat bewijstests versnellen.",
+      "Geloofwaardigheid bij koolstofverificatie hangt af van grenshelderheid, methodologische consistentie en wat externe lezers begrijpen te beoordelen. Een compleet technisch dossier kan toch kwetsbaar blijven als toelichting, scopegrenzen of aannames zwak zijn. Deze notitie vat samen hoe die drie lagen worden opgebouwd vóór onafhankelijke technische beoordeling verscherpt.",
     sections: [
       {
-        title: "Scope als contract",
+        title: "Afbakening van scope en grenzen",
         body:
-          "Scope is meer dan een grensdiagram. Het legt organisatorische en operationele grenzen, rapportageperioden en de rol van schattingen vast. Blijft scope impliciet, dan vullen reviewers en stakeholders gaten met eigen aannames. Een sterke voorbereiding definieert scope schriftelijk, koppelt die aan datastructuren en noemt uitsluitingen die voor interpretatie tellen.",
+          "Scope legt organisatorische en operationele grenzen, de rapportageperiode en waar schatting wordt toegepast vast. Een grensdiagram alleen volstaat niet—datamodel, vestigingenlijst en motivering van uitgesloten activiteiten moeten als één dossier leesbaar zijn. Heldere scope voorkomt dat reviewers gaten invullen met eigen aannames.",
       },
       {
-        title: "Methodologie als besluitspoor",
+        title: "Methodologische consistentie en beheer van aannames",
         body:
-          "Methodologie is niet alleen formules; het is de gedocumenteerde onderbouwing voor activiteitsclassificatie, factorkeuze en omgaan met ontbrekende gegevens. Verificatieteams testen of keuzes stabiel over de periode zijn, gevoelige gevallen worden gemarkeerd en wijzigingen traceerbaar en onderbouwd verlopen. Dat spoor maakt een methodologie verdedigbaar in plaats van alleen bekend.",
+          "Methodologie is niet alleen formules; het is een gedocumenteerde besluitenset voor activiteitsclassificatie, emissiefactoren en ontbrekende gegevens. Consistentie over perioden, markering van gevoelige posten en gecontroleerd beheer van wijzigingen staan centraal. Aannames blijven zichtbaar; effect en gevoeligheid voor redelijke alternatieven worden expliciet besproken.",
       },
       {
-        title: "Stakeholders zonder overclaim",
+        title: "Verwachtingen van belanghebbenden en betrouwbaarheid van verklaringen",
         body:
-          "Investeerders, inkopers en toezichthouders leggen vaak andere nadruk—volledigheid, vergelijkbaarheid of auditgereedheid. Afstemming betekent het verificatiedoel expliciet te mappen: welke claims worden ondersteund, welke niet, en wat nodig is voor een diepere externe toets of een andere gebruikscontext.",
+          "Investeerders, inkopers en toezichthouders kunnen volledigheid, vergelijkbaarheid of auditgereedheid anders benadrukken. Het verificatiedoel moet daar expliciet op worden afgestemd: welke uitkomsten worden ondersteund, welke beperkingen gelden en welke verdere beoordeling nodig is. Toelichting mag de bewijsdiepte van het dossier niet overschrijden.",
       },
       {
-        title: "Controlepunten die integriteit beschermen",
+        title: "Onderbouwing van bevindingen met traceerbare registraties",
         body:
-          "Goed ontworpen controlepunten—afstemmingen, onafhankelijke checks op grootste stromen, vastleggen van methodologiewijzigingen—verkleinen de kans op late verrassingen. Ze verkorten ook cycli omdat issues eerder in interne review naar boven komen dan bij externe weerlegging.",
+          "Afstemmingen, onafhankelijke controles op grootste stromen en vastlegging van methodologiewijzigingen versterken hoe bevindingen door registraties worden gedragen. Een goed dossier presenteert werkdocumenten, bronkoppelingen en een besluitenspoor samen. Issues komen dan naar voren in interne review in plaats van bij externe weerlegging.",
       },
     ],
     closing:
-      "Als scope, methodologie en verwachtingen in één coherent kader staan, wordt verificatie een gestructureerde toets van dat kader—geen achteraf debat over wat had moeten worden meegenomen.",
+      "Wanneer scope, methodologie en verwachtingen in één coherent kader zijn vastgelegd, wordt verificatie een gedocumenteerde, op bewijs gebaseerde toets van dat kader—geen achteraf debat over wat had moeten worden meegenomen.",
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
@@ -99,35 +99,35 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
       "Sterke critical-review-resultaten hangen minder af van het polijsten van tabellen dan van het aanscherpen van de logische keten van doel en scope via data naar interpretatie—voordat de verklaring publieke stakeholders bereikt.",
   },
   "sustainability-assurance-levels": {
-    category: "Assurance",
+    category: "Technische beoordeling",
     date: "2026-04-19",
     eyebrow: "Technische notitie",
-    title: "Waarom De Keuze Van Het Assurance-Niveau Ertoe Doet Bij Duurzaamheidsclaims",
+    title: "Keuze Van Beoordelingsdiepte Bij Duurzaamheidsclaims",
     intro:
-      "Assurance-niveaus geven aan hoeveel werk een onafhankelijke beoefenaar heeft verricht en welk type conclusie verantwoord kan worden getrokken. Te laag kiezen voor hoogrisico extern gebruik nodigt reputatie- en regelgevingsfrictie uit; te hoog kiezen zonder bewijs gereedheid verspilt moeite. De keuze hoort te volgen op gebruiksgeval, materialiteit en publiek—niet op gewoonte of sjabloontaal.",
+      "Onafhankelijke beoordelingsniveaus kaderen bewijsdiepte, methodcontroles en het type conclusie dat kan worden geformuleerd. Het niveau moet volgen op gebruikscontext, beslissingsrisico en verwachtingen van belanghebbenden—niet op sjablonen of marketingtaal.",
     sections: [
       {
-        title: "Beperkte versus redelijke assurance—wat verandert er",
+        title: "Beperkte versus redelijke assurance",
         body:
-          "Beperkte assurance draait om vragen en analytische procedures; redelijke assurance voegt bewijsdiepte en tests toe die zijn ontworpen om een hoge maar niet absolute mate van zekerheid te bereiken. Het verschil weegt voor kapitaalmarkten, ketenprogramma’s en publieke verklaringen waar lezers het rapport als primair bewijs lezen.",
+          "Het verschil tussen beperkte en redelijke assurance is niet alleen een label; het vereist verschillende beoordelingsintensiteit op het gebied van datadiepte, bewijsdekking, methodcontroles en verwachtingen van belanghebbenden. Beperkte assurance steunt op vragen en analytische procedures met smallere bewijsdiepte; redelijke assurance richt zich op bredere tests en bewijsbreedte—zonder absolute zekerheid te suggereren.",
       },
       {
         title: "Gebruikscontext en beslissingsrisico",
         body:
-          "Dezelfde dataset kan beperkte assurance rechtvaardigen voor intern management en een hogere lat vereisen voor prospectusachtige claims of een inkoper-certificatiedrempel. Het in kaart brengen van beslissingsrisico—financiële blootstelling, merkimpact en regelgevende aandacht—maakt duidelijk welk niveau past bij de echte blootstelling van de organisatie.",
+          "Gebruikscontext en beslissingsrisico zijn de belangrijkste drijfveren van een passende beoordelingsdiepte. Dezelfde dataset kan een lichter pakket rechtvaardigen voor intern management, terwijl een prospectusachtige claim of inkopersdrempel sterkere bewijzen en control-volwassenheid vereist. Financiële blootstelling, merkimpact en regelgevende aandacht horen samen te worden gelezen.",
       },
       {
-        title: "Openbare openbaarmaking en derdenvertrouwen",
+        title: "Openbare openbaarmaking en vertrouwen van derden",
         body:
-          "Wanneer duurzaamheidsinformatie door klanten, kredietverstrekkers of toezichthouders wordt geciteerd, neemt afhankelijkheid toe. Assurance-tekst moet matchen met wat feitelijk is onderzocht: welke sites, perioden, metrieken en grenzen. Overschat geruststelling in marketing ten opzichte van het assurance-rapport is een terugkerende bron van geschillen.",
+          "Waar openbare openbaarmaking en vertrouwen van derden spelen, moeten scope, methodologie en bewijsset van de verklaring worden ondersteund door een sterkere technische dossierstructuur. Gepubliceerde assurance-tekst moet aansluiten op de operationele werkelijkheid: welke locaties, perioden, metrieken en grenzen in scope waren. Marketingtaal die de technische output overtreft, is een terugkerende bron van geschillen.",
       },
       {
-        title: "Gereedheid vóór de opdracht",
+        title: "Voorbereiding vóór de opdracht",
         body:
-          "Hogere assurance vraagt sterkere controls, duidelijkere documentatie en vaak meer tijd. Organisaties die eerst een niveau kiezen en bewijs achteraf bijpassen, slagen zelden schoon. Een gedisciplineerd gereedheidsoverzicht—datalijnage, control-ontwerp en eigenaarschap in governance—ondersteunt zowel efficiënte assurance als geloofwaardige externe communicatie.",
+          "Voorbereiding vóór de opdracht omvat data-eigenaarschap, methodologieregistraties, grensdefinities en verifieerbaar bewijs dat is geordend voor beoordeling. Diepere onafhankelijke beoordeling vraagt doorgaans sterkere controls, duidelijkere documentatie en meer tijd. Organisaties die eerst een niveau kiezen en bewijs achteraf bijpassen, bereiken zelden consistente uitkomsten.",
       },
     ],
     closing:
-      "Het assurance-niveau wordt het best gekozen als onderdeel van een bewuste openbaarmakingsstrategie: wat u moet zeggen, aan wie, onder welke scrutinite—en welke bewijsarchitectuur die houding geloofwaardig draagt.",
+      "Beoordelingsdiepte wordt het best gekozen als onderdeel van een bewuste openbaarmakingsstrategie: wat moet worden gezegd, aan wie, onder welk technisch kader—en of de bewijsarchitectuur die houding geloofwaardig draagt.",
   },
 };

@@ -9,9 +9,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "border-transparent bg-[color:var(--brand-primary)] text-white !text-white shadow-sm hover:bg-[color:var(--brand-primary-hover)] hover:shadow-[var(--shadow-soft)]",
+    "border-transparent bg-[color:var(--brand-primary)] text-white !text-white shadow-sm hover:bg-[color:var(--brand-primary-hover)] hover:shadow-[var(--shadow-premium-hover)] motion-safe:hover:-translate-y-px",
   secondary:
-    "border-[color:var(--border-soft)] bg-white text-[color:var(--ink-dark)] !text-[color:var(--ink-dark)] shadow-[var(--shadow-card)] hover:border-[color:var(--brand-accent)]/35 hover:bg-[color:var(--brand-accent-soft)]",
+    "border-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))] bg-white text-[color:var(--ink-dark)] !text-[color:var(--ink-dark)] shadow-[var(--shadow-card)] hover:border-[color:var(--brand-gold)] hover:bg-[color:color-mix(in_oklab,var(--brand-gold-soft)_65%,white)] hover:shadow-[var(--shadow-premium-hover)] motion-safe:hover:-translate-y-px",
   ghost:
     "border-transparent bg-transparent text-[color:var(--ink-dark)] hover:bg-[color:var(--brand-accent-soft)]",
 };

@@ -85,11 +85,11 @@ export const en: Dictionary = {
   },
   ctas: {
     verifyStatement: "Statement Search",
-    requestQuote: "Request a Proposal",
+    requestQuote: "Request a Technical Meeting",
     contact: "Contact",
     learnMore: "Explore Details",
     exploreCbam: "Explore CBAM Solutions",
-    exploreServices: "Explore Services",
+    exploreServices: "Review Services",
     search: "Search",
     submit: "Send",
   },
@@ -116,10 +116,10 @@ export const en: Dictionary = {
     bio:
       "Dilan Arslan is responsible for the corporate management of Meva Global Certification B.V. and for ensuring independent technical review processes are conducted within a consistent, impartial and evidence-based framework. Her work is structured around sustainability disclosures, product and carbon-based technical files, verification readiness, and CBAM processes—with methodological discipline and traceability at the centre.",
     focusAreas: [
-      "Independent technical review discipline",
-      "Sustainability and product declarations",
-      "CBAM technical readiness",
-      "Evidence traceability and file consistency",
+      "Independent technical review",
+      "Evidence-based assessment",
+      "CBAM readiness",
+      "Declaration and file consistency",
     ],
     photoAlt: "Dilan Arslan — General Manager",
   },
@@ -131,7 +131,7 @@ export const en: Dictionary = {
         "Meva Global delivers independent verification, validation and technical review for greenhouse gas information, product declarations, CBAM-facing reporting and sustainability disclosures—with traceable evidence, disciplined scope and defensible outputs.",
       heroImageAlt:
         "Meva Global technical reviewers examining evidence, records, and process controls on site at an industrial facility.",
-      primaryCta: "Request a Proposal",
+      primaryCta: "Request a Technical Meeting",
       secondaryCta: "Explore Services",
     },
     trustHighlightsTitle: "The Basis Of Trust",
@@ -251,6 +251,9 @@ export const en: Dictionary = {
       title: "Public Statement Lookup",
       body: "Verification and technical review records issued by Meva Global can be searched by reference number.",
       cta: "Look Up Statement",
+      previewFieldLabel: "Reference number",
+      previewFieldExample: "e.g. MEVA-2024-00124",
+      previewHint: "Published public records only",
     },
     cbamEyebrow: "CBAM • Pre-Verification Readiness",
     cbamTitle: "Technical Preparation For CBAM Pre-Verification",
@@ -385,9 +388,9 @@ export const en: Dictionary = {
               "Deliverables are structured with the clarity and discipline that regulators, buyers, finance teams, and technical reviewers expect from independent review work.",
           },
           {
-            title: "A Stronger Disclosure Frame",
+            title: "A Stronger Statement Framework",
             description:
-              "The review sharpens scope, method, data logic, and language—creating a more defensible basis for external use.",
+              "The review sharpens scope, method, data logic, and language—creating a more defensible basis for external claims and statements.",
           },
           {
             title: "Traceability and Control",
@@ -488,7 +491,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your organisational boundaries, reporting year, and current inventory architecture—we will align review depth and verification strategy with how you report to the outside world.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -497,7 +500,7 @@ export const en: Dictionary = {
         heroEyebrow: "Project-level GHG verification",
         title: "ISO 14064-2 — Project Greenhouse Gas Verification",
         intro:
-          "Project-level greenhouse gas figures invite technical challenge unless baseline design, monitoring logic and supporting records tell the same story as the reported volumes. Meva Global provides independent, structured technical verification for project statements prepared under ISO 14064-2. Boundaries, monitoring design, calculation methodology and documentation are assessed as an integrated file—raising both reliability and defensibility for external use.",
+          "Project-level greenhouse gas statements depend on baseline robustness, boundary clarity, quantification consistency and whether monitoring systems produce traceable evidence—not on reported volumes alone. Meva Global assesses scope, methodology, data flow and records for ISO 14064-2-aligned project statements through an independent technical framework. The objective is a traceable, defensible project file suitable for programme, stakeholder or market scrutiny.",
         covers: {
           title: "Service Scope",
           bullets: [
@@ -540,8 +543,8 @@ export const en: Dictionary = {
         },
         cta: {
           title: "",
-          body: "Share your baseline scenario, monitoring plan, and reporting period—we will align verification scope and evidence expectations with the specifics of your project.",
-          primaryButton: "Request a Proposal",
+          body: "Clarify the scope, criteria and evidence expectations together.",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -594,7 +597,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your PCF summary, data sources, and the disclosure format you plan to use; together we can shape review depth and verification strategy around your product and market context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -647,7 +650,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your study's system boundaries, data structure, and current disclosure framework; together we can clarify verification scope aligned to your intended use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -700,7 +703,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your LCA’s goal-and-scope structure, datasets, and current modelling framework; together we can clarify technical review scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -753,7 +756,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your PCR, declared scope, and current EPD model; together we can define verification scope suited to your publication context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -806,7 +809,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current content claim, mass-balance structure, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -859,7 +862,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current bio-based content claim, methodological framework, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -912,7 +915,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current ASI readiness file and policy and record sets; together we can clarify a verification review scope suited to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -965,7 +968,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current FSC / PEFC / EUDR readiness files, supplier records, and traceability architecture; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1018,7 +1021,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your GRI / ESRS data sets, indicator definitions, and supporting records; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1071,7 +1074,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your KPI definitions, source data sets, and supporting documents; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1124,7 +1127,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current reporting structure, control points, and supporting documents; together we can clarify the scope of preparation ahead of limited assurance, matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1177,7 +1180,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current non-financial data sets, control points, and supporting records; together we can clarify verification scope appropriate to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1230,7 +1233,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current VOC test reports, product definition, and disclosure framework; together we can clarify verification scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1282,7 +1285,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your CBAM data architecture, supplier inputs, and current emissions calculation framework; together we can align verification scope with your intended use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1335,7 +1338,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current EU ETS data sets, monitoring plan, and supporting records; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1388,7 +1391,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current F-gas records, equipment inventory, and service documentation; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1441,7 +1444,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current Maritime MRV data sets, fuel records, and supporting documents; together we can clarify verification review scope matched to your use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1543,7 +1546,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your current verification or validation process, criteria architecture, and evidence files; together we can clarify review scope aligned to your intended use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1596,7 +1599,7 @@ export const en: Dictionary = {
         cta: {
           title: "",
           body: "Share your transition pathway, target framework, and existing technical foundations; together we can clarify verification scope aligned to your intended use context.",
-          primaryButton: "Request a Proposal",
+          primaryButton: "Request a Technical Meeting",
           secondaryButton: "Back to Services",
           detailLink: "Details",
         },
@@ -1656,7 +1659,7 @@ export const en: Dictionary = {
       cta: {
         title: "",
         body: "Share your current datasets, installation-level calculation design, and supplier evidence posture—we can align review depth with your reporting context and timeline.",
-        primaryLabel: "Request a Proposal",
+        primaryLabel: "Request a Technical Meeting",
         secondaryLabel: "Explore Services",
         tertiaryLabel: "Explore Details",
       },
@@ -1693,7 +1696,7 @@ export const en: Dictionary = {
         flowBoxes: ["Process", "Evidence", "Checklist", "Review Flow"] as const,
       },
       corporateDocumentsSection: {
-        title: "Corporate Documents",
+        title: "Corporate Documents and Records",
         intro:
           "Key corporate documents related to verification, validation, impartiality, confidentiality and statement usage are available in this section.",
         fileUnavailableNote:
@@ -1754,14 +1757,14 @@ export const en: Dictionary = {
         title: "Request a structured technical review",
         body:
           "Share your scope, applicable standards, and target timeline. We respond with a review approach aligned to your reporting context, explicit evidence expectations, and a clear schedule.",
-        primaryLabel: "Request a Proposal",
+        primaryLabel: "Request a Technical Meeting",
         secondaryLabel: "Explore Services",
       },
     },
     statementSearch: {
       title: "Statement Records And Status Review",
       intro:
-        "Use this registry to review published statement records through reference information. The record summary and status fields displayed here are provided for public reference checking only; they do not constitute legal advice, formal consulting, or a binding decision on their own.",
+        "Published statement records can be searched by reference number and related statement information. This area is provided for record visibility and reference control; it does not constitute legal advice or a standalone binding decision.",
       heroEyebrow: "Statement Records • Status Review • Reference Check",
       heroImageAlt:
         "Desk scene with statement registry search on screen and verified record summary—institutional verification body context.",
@@ -1822,6 +1825,27 @@ export const en: Dictionary = {
           "Desk with technical standards references, binders, LCA materials, and analytical notes in a bright corporate office.",
       },
       sectionLabel: "Featured Content",
+      ui: {
+        reviewTechnicalNote: "Review Technical Note",
+        readingTime: "{minutes} min read",
+        backToHub: "Back to Knowledge Hub",
+        technicalNoteBadge: "Technical note",
+        verificationGuideBadge: "Verification guide",
+        updatedContent: "Current content",
+        keyPointsTitle: "Covered in this note",
+        takeawayTitle: "Technical takeaway",
+        technicalNotePanelTitle: "Technical review frame",
+        technicalNotePanelItems: [
+          "Technical Review Note",
+          "Evidence-Based Assessment",
+          "Methodology & Scope",
+        ],
+        metaPills: ["Evidence", "Methodology", "Scope", "Claims"],
+        articleClosingTitle: "Structured technical discussion for your context",
+        articleClosingBody:
+          "Share your standard, technical file boundaries, and how the information will be used externally—we align scope, evidence expectations, and timeline.",
+        requestTechnicalMeeting: "Request a Technical Meeting",
+      },
       cards: [
         {
           category: "CBAM",
@@ -1829,7 +1853,7 @@ export const en: Dictionary = {
           title: 'What Does “Reliable Emissions Data” Really Mean in CBAM Preparation?',
           body:
             "A concise framework for judging boundary discipline, evidence sufficiency, and data quality before CBAM-facing information is assembled for declaration.",
-          cta: "View Technical Note",
+          cta: "Review Technical Note",
           href: "/documents/cbam-reliable-emissions-data",
         },
         {
@@ -1838,7 +1862,7 @@ export const en: Dictionary = {
           title: "How to Align Scope, Methodology, and Stakeholder Expectations in Carbon Verification",
           body:
             "How traceable assumptions, explicit control points, and deliberate methodology choices translate into reporting that withstands technical scrutiny.",
-          cta: "View Technical Note",
+          cta: "Review Technical Note",
           href: "/documents/carbon-verification-alignment",
         },
         {
@@ -1847,7 +1871,7 @@ export const en: Dictionary = {
           title: "Common Weak Points in EPD and LCA Critical Review",
           body:
             "Recurring review themes—PCR alignment, foreground traceability, allocation defensibility, scenario transparency, and consistency from model to report.",
-          cta: "View Technical Note",
+          cta: "Review Technical Note",
           href: "/documents/epd-lca-critical-weaknesses",
         },
         {
@@ -1856,7 +1880,7 @@ export const en: Dictionary = {
           title: "Why Review Depth Selection Matters In Sustainability Claims",
           body:
             "Aligning limited and deeper independent review to decision risk, third-party reliance, and the evidence depth implied by the technical language you intend to use.",
-          cta: "View Technical Note",
+          cta: "Review Technical Note",
           href: "/documents/sustainability-assurance-levels",
         },
       ],
@@ -1905,7 +1929,7 @@ export const en: Dictionary = {
         message: "Share your scope, standards, reporting year and deadline.",
       },
       quoteForm: {
-        title: "Request a quote",
+        title: "Request a technical meeting",
         service: "Service Area",
         standard: "Standard / Scheme",
         reportingYear: "Reporting Year",
@@ -1922,9 +1946,9 @@ export const en: Dictionary = {
         privacyNote: "We treat enquiry details as confidential and use them only to scope the requested review.",
       },
       cta: {
-        title: "Need a scoped proposal?",
+        title: "Need scope and process clarity?",
         body: "Send your scope and deadline. We will propose a structured review pathway, evidence expectations and timeline—aligned to your intended statement use.",
-        primaryLabel: "Request a quote",
+        primaryLabel: "Request a technical meeting",
         secondaryLabel: "Explore services",
       },
     },
@@ -1935,6 +1959,7 @@ export const en: Dictionary = {
     whatWeDo: "What we do",
     deliverables: "Deliverables",
     relatedServicesTitle: "Related Services",
+    ctaPanelBody: "Clarify the scope, criteria and evidence expectations together.",
   },
 };
 

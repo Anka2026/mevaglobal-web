@@ -34,9 +34,9 @@ export function VerificationServiceDetailVisual({
 /** Shared right-column shell for the hero image — same min-heights everywhere contain vs cover is used. */
 export function verificationServiceDetailMediaColumnClassName(visual: ServiceHeroVisual) {
   return cn(
-    "relative flex h-full min-w-0 flex-col lg:col-span-5 lg:min-h-0",
+    "relative flex h-full min-w-0 flex-col lg:col-span-7 lg:min-h-0",
     visual.editorialFit === "contain"
-      ? "min-h-[280px] sm:min-h-[320px] lg:min-h-0"
-      : "min-h-[260px] sm:min-h-[300px] lg:min-h-0",
+      ? "min-h-[320px] sm:min-h-[400px] lg:min-h-0"
+      : "min-h-[300px] sm:min-h-[380px] lg:min-h-0",
   );
 }

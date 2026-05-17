@@ -86,11 +86,11 @@ export const nl: Dictionary = {
   },
   ctas: {
     verifyStatement: "Verklaring zoeken",
-    requestQuote: "Offerte aanvragen",
+    requestQuote: "Vraag een technisch gesprek aan",
     contact: "Contact",
     learnMore: "Bekijk details",
     exploreCbam: "Bekijk CBAM-oplossingen",
-    exploreServices: "Bekijk diensten",
+    exploreServices: "Diensten bekijken",
     search: "Zoeken",
     submit: "Versturen",
   },
@@ -117,10 +117,10 @@ export const nl: Dictionary = {
     bio:
       "Dilan Arslan is verantwoordelijk voor het corporate management van Meva Global Certification B.V. en voor het waarborgen dat onafhankelijke technische reviewprocessen binnen een consistent, onpartijdig en bewijsgericht kader worden uitgevoerd. Haar werk is gestructureerd rond duurzaamheidsverklaringen, product- en koolstofgerichte technische dossiers, verificatievoorbereiding en CBAM-processen—met methodologische discipline en traceerbaarheid als uitgangspunt.",
     focusAreas: [
-      "Onafhankelijke technische reviewediscipline",
-      "Duurzaamheids- en productverklaringen",
-      "CBAM / SKDM technische voorbereiding",
-      "Bewijstraceerbaarheid en dossierconsistentie",
+      "Onafhankelijke technische beoordeling",
+      "Bewijsgerichte beoordeling",
+      "CBAM / SKDM-voorbereiding",
+      "Verklaring- en dossierconsistentie",
     ],
     photoAlt: "Dilan Arslan — algemeen directeur",
   },
@@ -132,7 +132,7 @@ export const nl: Dictionary = {
         "Meva Global levert onafhankelijke verificatie, validatie en technische beoordeling voor broeikasgasinformatie, productverklaringen, CBAM-gerichte rapportage en duurzaamheidsinformatie—met traceerbaar bewijs, gedisciplineerde scope en verdedigbare uitkomsten.",
       heroImageAlt:
         "Technische beoordelaars van Meva Global die ter plaatse bewijsstukken, registraties en procescontroles op een industriële locatie beoordelen.",
-      primaryCta: "Offerte aanvragen",
+      primaryCta: "Vraag een technisch gesprek aan",
       secondaryCta: "Bekijk diensten",
     },
     trustHighlightsTitle: "De basis van vertrouwen",
@@ -253,6 +253,9 @@ export const nl: Dictionary = {
       title: "Openbare verklaring opzoeken",
       body: "Verificatie- en technische reviewregistraties van Meva Global kunnen worden opgezocht via referentienummer.",
       cta: "Verklaring opzoeken",
+      previewFieldLabel: "Referentienummer",
+      previewFieldExample: "bijv. MEVA-2024-00124",
+      previewHint: "Alleen gepubliceerde openbare registraties",
     },
     cbamEyebrow: "CBAM • Voorbereiding Op Pre-Verificatie",
     cbamTitle: "Technische Voorbereiding Voor CBAM Pre-Verificatie",
@@ -387,9 +390,9 @@ export const nl: Dictionary = {
               "Deliverables worden opgebouwd met de helderheid en discipline die toezichthouders, afnemers, finance en technische reviewers bij onafhankelijke review verwachten.",
           },
           {
-            title: "Een Sterker Toelichtingskader",
+            title: "Een Sterker Verklaringskader",
             description:
-              "De review scherpt scope, methodiek, datalogica en formulering aan—voor een beter verdedigbaar kader naar buiten toe.",
+              "De review scherpt scope, methodiek, datalogica en formulering aan—voor een beter verdedigbaar verklaringskader naar buiten toe.",
           },
           {
             title: "Traceerbaarheid En Controle",
@@ -490,7 +493,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw organisatiegrenzen, rapportagejaar en huidige inventarisarchitectuur; samen stemmen we beoordelingsdiepte en verificatiestrategie af op uw externe rapportagecontext.",
-          primaryButton: "Offerte Aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -542,8 +545,8 @@ export const nl: Dictionary = {
         },
         cta: {
           title: "",
-          body: "Deel uw basisscenario, monitoringsplan en rapportageperiode; samen stemmen we verificatieomvang en bewijsverwachtingen af op uw project.",
-          primaryButton: "Offerte Aanvragen",
+          body: "Laten we de scope, criteria en bewijsverwachtingen gezamenlijk verduidelijken.",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -596,7 +599,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw PCF-samenvatting, databronnen en het beoogde publicatieformat; samen bepalen we reviewdiepte en verificatiestrategie passend bij product en marktcontext.",
-          primaryButton: "Offerte Aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -649,7 +652,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel de systeemgrenzen, datastructuur en het huidige disclosure-kader van uw water footprint-werk; samen brengen we de verificatieomvang in lijn met uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -702,7 +705,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel de doel- en scope-structuur van uw LCA, uw datasets en het huidige modelleerkader; samen bepalen we een technische beoordelingsomvang die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -755,7 +758,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw PCR, de gedeclareerde scope en uw huidige EPD-model; samen verduidelijken we een verificatiescope die past bij uw publicatiecontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -808,7 +811,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige inhoudsclaim, massabalansstructuur en ondersteunende registraties; samen bepalen we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -861,7 +864,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige claim over biobased inhoud, uw methodologische structuur en ondersteunende registraties; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -914,7 +917,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige ASI-voorbereidingsdossier en uw beleids- en registratiesets; samen verduidelijken we een verificatiebeoordeling die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -967,7 +970,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige FSC / PEFC / EUDR-voorbereidingsdossiers, leveranciersregistraties en traceerbaarheidsarchitectuur; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1020,7 +1023,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw GRI / ESRS-datasets, indicatordefinities en ondersteunende registraties; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1073,7 +1076,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw KPI-definities, brongegevensets en ondersteunende documenten; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1126,7 +1129,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige rapportagestructuur, controlepunten en ondersteunende documenten; samen verduidelijken we de scope van de voorbereiding vóór limited assurance, passend bij uw context.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1179,7 +1182,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige niet-financiële datasets, controlepunten en ondersteunende registraties; samen verduidelijken we de verificatiescope passend bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1232,7 +1235,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige VOC-testrapporten, productdefinitie en disclosure-kader; samen verduidelijken we een verificatiescope die past bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1284,7 +1287,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw CBAM-data-architectuur, leveranciersinput en huidige emissieberekeningskader; samen brengen we de verificatieomvang in lijn met uw gebruikscontext.",
-          primaryButton: "Offerte Aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -1337,7 +1340,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige EU ETS-datasets, monitoringplan en ondersteunende registraties; samen verduidelijken we de verificatiebeoordelingsscope passend bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1390,7 +1393,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige F-gasregistraties, apparatuurinventaris en servicedocumentatie; samen verduidelijken we de verificatiebeoordelingsscope passend bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1443,7 +1446,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige Maritime MRV-datasets, brandstofregistraties en ondersteunende documenten; samen verduidelijken we de verificatiebeoordelingsscope passend bij uw gebruikscontext.",
-          primaryButton: "Offerte aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug naar diensten",
           detailLink: "Details",
         },
@@ -1545,7 +1548,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw huidige verificatie- of validatieproces, criteriastructuur en bewijsdossiers; samen brengen we de reviewediepte in lijn met uw beoogde gebruikscontext.",
-          primaryButton: "Offerte Aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -1598,7 +1601,7 @@ export const nl: Dictionary = {
         cta: {
           title: "",
           body: "Deel uw transitietraject, doelkader en bestaande technische onderbouwing; samen brengen we de verificatieomvang in lijn met uw beoogde gebruikscontext.",
-          primaryButton: "Offerte Aanvragen",
+          primaryButton: "Vraag een technisch gesprek aan",
           secondaryButton: "Terug Naar Diensten",
           detailLink: "Details",
         },
@@ -1658,7 +1661,7 @@ export const nl: Dictionary = {
       cta: {
         title: "",
         body: "Deel uw actuele datasets, installatiegebonden rekenontwerp en leveranciersbewijs—we stemmen reviewediepte af op uw rapportagecontext en planning.",
-        primaryLabel: "Offerte aanvragen",
+        primaryLabel: "Vraag een technisch gesprek aan",
         secondaryLabel: "Bekijk diensten",
         tertiaryLabel: "Bekijk details",
       },
@@ -1695,7 +1698,7 @@ export const nl: Dictionary = {
         flowBoxes: ["Proces", "Bewijs", "Checklist", "Reviewflow"] as const,
       },
       corporateDocumentsSection: {
-        title: "Bedrijfsdocumenten",
+        title: "Bedrijfsdocumenten en registraties",
         intro:
           "In deze sectie vindt u kern-documenten over verificatie, validatie, onpartijdigheid, vertrouwelijkheid en het gebruik van verklaringen.",
         fileUnavailableNote:
@@ -1758,14 +1761,14 @@ export const nl: Dictionary = {
         title: "Vraag een gestructureerde technische beoordeling aan",
         body:
           "Deel uw scope, toepasselijke normen en gewenste planning. Wij reageren met een beoordelingsaanpak die past bij uw rapportagecontext, met duidelijke bewijsverwachtingen en een vastgelegde tijdlijn.",
-        primaryLabel: "Offerte aanvragen",
+        primaryLabel: "Vraag een technisch gesprek aan",
         secondaryLabel: "Bekijk diensten",
       },
     },
     statementSearch: {
       title: "Verklaringsregister En Statuscontrole",
       intro:
-        "Via dit register kunt u gepubliceerde verklaringsrecords controleren aan de hand van referentiegegevens. De samenvatting en statusvelden die hier worden getoond, dienen uitsluitend voor openbare referentiecontrole en vormen op zichzelf geen juridisch advies, formeel consultancy-oordeel of bindende beslissing.",
+        "Gepubliceerde verklaringsregistraties kunnen worden opgezocht op referentienummer en gerelateerde verklaringgegevens. Dit onderdeel is bedoeld voor registratie-inzicht en referentiecontrole; het vormt geen juridisch advies of zelfstandige bindende beslissing.",
       heroEyebrow: "Verklaringsregister • Statuscontrole • Referentiecontrole",
       heroImageAlt:
         "Werkplek met registerscherm voor verklaringen en samenvatting van openbare registratie-informatie.",
@@ -1827,6 +1830,27 @@ export const nl: Dictionary = {
           "Werkplek met standaardreferenties, ordners, LCA-materialen en analytische aantekeningen in een heldere kantooromgeving.",
       },
       sectionLabel: "Uitgelichte inhoud",
+      ui: {
+        reviewTechnicalNote: "Technische notitie bekijken",
+        readingTime: "{minutes} min lezen",
+        backToHub: "Terug naar kennisbank",
+        technicalNoteBadge: "Technische notitie",
+        verificationGuideBadge: "Verificatiegids",
+        updatedContent: "Actuele inhoud",
+        keyPointsTitle: "Behandeld in deze notitie",
+        takeawayTitle: "Technische conclusie",
+        technicalNotePanelTitle: "Kader voor technische beoordeling",
+        technicalNotePanelItems: [
+          "Technische beoordelingsnotitie",
+          "Op bewijs gebaseerde beoordeling",
+          "Methodologie en scope",
+        ],
+        metaPills: ["Bewijs", "Methodologie", "Scope", "Claims"],
+        articleClosingTitle: "Gestructureerd technisch gesprek voor uw context",
+        articleClosingBody:
+          "Deel uw norm, technische dossiergrenzen en het beoogde externe gebruik—we stemmen scope, bewijsverwachtingen en tijdlijn hierop af.",
+        requestTechnicalMeeting: "Vraag een technisch gesprek aan",
+      },
       cards: [
         {
           category: "CBAM",
@@ -1834,7 +1858,7 @@ export const nl: Dictionary = {
           title: "Wat Betekent “Betrouwbare Emissiegegevens” Werkelijk Bij CBAM-Voorbereiding?",
           body:
             "Een compact kader om grensdiscipline, bewijsvoldoendeheid en datakwaliteit technisch te beoordelen vóór CBAM-informatie voor aangifte wordt samengebracht.",
-          cta: "Bekijk de technische notitie",
+          cta: "Technische notitie bekijken",
           href: "/documents/cbam-reliable-emissions-data",
         },
         {
@@ -1843,7 +1867,7 @@ export const nl: Dictionary = {
           title: "Hoe Breng Je Scope, Methodologie En Stakeholderverwachtingen Op Eén Lijn Bij Koolstofverificatie?",
           body:
             "Hoe traceerbare aannames, expliciete controlepunten en bewuste methodologiekeuzes leiden tot rapportage die technische beoordeling weerstaat.",
-          cta: "Bekijk de technische notitie",
+          cta: "Technische notitie bekijken",
           href: "/documents/carbon-verification-alignment",
         },
         {
@@ -1852,7 +1876,7 @@ export const nl: Dictionary = {
           title: "Veelvoorkomende Zwakke Punten In EPD- En LCA-Critical Review",
           body:
             "Terugkerende thema’s—PCR-afstemming, voorgrondtraceerbaarheid, allocatieverdedigbaarheid, scenariotransparantie en consistentie van model tot rapport.",
-          cta: "Bekijk de technische notitie",
+          cta: "Technische notitie bekijken",
           href: "/documents/epd-lca-critical-weaknesses",
         },
         {
@@ -1861,7 +1885,7 @@ export const nl: Dictionary = {
           title: "Waarom Reviewdiepte Belangrijk Is Bij Duurzaamheidsclaims",
           body:
             "Beperkte en diepere onafhankelijke review afstemmen op beslissingsrisico, derdenvertrouwen en de bewijsdiepte die uw technische formulering impliciteert.",
-          cta: "Bekijk de technische notitie",
+          cta: "Technische notitie bekijken",
           href: "/documents/sustainability-assurance-levels",
         },
       ],
@@ -1909,7 +1933,7 @@ export const nl: Dictionary = {
         message: "Deel scope, standaard(en), rapportagejaar en deadline.",
       },
       quoteForm: {
-        title: "Offerte Aanvragen",
+        title: "Technisch gesprek aanvragen",
         service: "Servicegebied",
         standard: "Standaard / schema",
         reportingYear: "Rapportagejaar",
@@ -1926,9 +1950,9 @@ export const nl: Dictionary = {
         privacyNote: "We behandelen aanvraagdetails vertrouwelijk en gebruiken ze alleen om de beoordeling af te bakenen.",
       },
       cta: {
-        title: "Een voorstel op maat nodig?",
-        body: "Deel scope en deadline. We doen een voorstel met beoordelingspad, bewijsverwachtingen en planning—afgestemd op het beoogde externe gebruik.",
-        primaryLabel: "Offerte aanvragen",
+        title: "Scope en proces verduidelijken?",
+        body: "Deel scope en deadline. We stellen een technisch kader voor met beoordelingspad, bewijsverwachtingen en planning—afgestemd op het beoogde externe gebruik.",
+        primaryLabel: "Vraag een technisch gesprek aan",
         secondaryLabel: "Bekijk diensten",
       },
     },
@@ -1939,6 +1963,7 @@ export const nl: Dictionary = {
     whatWeDo: "Wat we doen",
     deliverables: "Resultaten",
     relatedServicesTitle: "Gerelateerde Diensten",
+    ctaPanelBody: "Laten we de scope, criteria en bewijsverwachtingen gezamenlijk verduidelijken.",
   },
 };
 

@@ -50,7 +50,7 @@ export function VerificationServiceDetailHero({
         )}
 
         <div className={omitBackLink ? "grid items-stretch gap-6 lg:grid-cols-12 lg:gap-8 xl:gap-10" : "mt-5 grid items-stretch gap-6 lg:mt-5 lg:grid-cols-12 lg:gap-8 xl:gap-10"}>
-          <div className="flex min-w-0 flex-col gap-2.5 sm:gap-3 lg:col-span-7">
+          <div className="flex min-w-0 flex-col gap-2.5 sm:gap-3 lg:col-span-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-xs">
               {eyebrow}
             </p>
@@ -59,8 +59,8 @@ export function VerificationServiceDetailHero({
             </h1>
             <p
               className={cn(
-                "max-w-[44rem] text-sm leading-[1.72] sm:text-[1.0625rem] sm:leading-[1.74]",
-                "text-[color:var(--ink-dark)]/88 sm:max-w-[46rem]",
+                "max-w-[44rem] text-sm leading-[1.76] sm:text-[1.0625rem] sm:leading-[1.78]",
+                "text-[color:var(--ink-dark)]/88 lg:max-w-[40rem] xl:max-w-[44rem]",
               )}
             >
               {intro}

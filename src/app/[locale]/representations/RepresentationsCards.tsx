@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, Handshake, X } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { premiumCardInteractive, premiumGoldTopLine, premiumIconWellSoft } from "@/lib/premiumUi";
 
 export type OrganizationEntity = {
   id: string;
@@ -31,9 +32,14 @@ export type RepresentationsUiCopy = {
   viewDetails: string;
   close: string;
   summaryHeading: string;
-  regionLabel: string;
-  networkRoleLabel: string;
-  technicalFocusLabel: string;
+  cooperationScopeLabel: string;
+  localCoordinationLabel: string;
+  documentCoordinationLabel: string;
+  applicationRoutingLabel: string;
+  verificationCoordinationLabel: string;
+  localCoordinationScope: string;
+  applicationRoutingNote: string;
+  verificationCoordinationNote: string;
   judgementBoundaryNote: string;
   corporateProfile: string;
   serviceAndCompetenceAreas: string;
@@ -110,9 +116,9 @@ function PartnerLogoArea({
   );
 }
 
-function LabeledLine({ label, text }: { label: string; text: string }) {
+function LabeledLine({ label, text, className }: { label: string; text: string; className?: string }) {
   return (
-    <div className="text-sm leading-snug">
+    <div className={cn("text-sm leading-snug", className)}>
       <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]">{label}</p>
       <p className="mt-1 leading-relaxed text-[color:var(--ink-dark)]/90">{text}</p>
     </div>
@@ -241,9 +247,11 @@ function DetailModal({
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <LabeledLine label={ui.regionLabel} text={entity.region} />
-              <LabeledLine label={ui.networkRoleLabel} text={entity.networkRole} />
-              <LabeledLine label={ui.technicalFocusLabel} text={entity.technicalFocus} />
+              <LabeledLine label={ui.cooperationScopeLabel} text={entity.networkRole} />
+              <LabeledLine label={ui.localCoordinationLabel} text={ui.localCoordinationScope} />
+              <LabeledLine label={ui.documentCoordinationLabel} text={entity.technicalFocus} />
+              <LabeledLine label={ui.applicationRoutingLabel} text={ui.applicationRoutingNote} />
+              <LabeledLine label={ui.verificationCoordinationLabel} text={ui.verificationCoordinationNote} />
             </div>
 
             <p className="mt-4 rounded-xl border border-[color:color-mix(in_oklab,var(--brand-primary)_12%,var(--border-soft))] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_28%,white)] px-3.5 py-3 text-xs leading-relaxed text-[color:var(--ink-dark)]/88">
@@ -365,14 +373,7 @@ export function RepresentationsCards({
   const [active, setActive] = useState<OrganizationEntity | null>(null);
 
   const cardClass = useMemo(
-    () =>
-      cn(
-        "relative overflow-hidden rounded-[1.0625rem]",
-        "border border-[color:color-mix(in_oklab,var(--brand-accent)_16%,var(--border-soft))]",
-        "bg-gradient-to-br from-white via-[#fafcfd] to-[#f4f9fc]",
-        "shadow-[inset_0_1px_0_rgba(255,255,255,0.92)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_7%,transparent)]",
-        "transition-[box-shadow] duration-200 hover:shadow-[0_18px_42px_-28px_rgba(29,37,47,0.16)]",
-      ),
+    () => cn(premiumCardInteractive, "scroll-mt-[5.5rem]"),
     [],
   );
 
@@ -385,39 +386,52 @@ export function RepresentationsCards({
           <h2 className="text-[1.55rem] font-semibold leading-[1.15] tracking-tight text-[color:var(--ink-dark)] sm:text-[1.85rem]">
             {title}
           </h2>
-          <p className="mt-3.5 text-[0.9375rem] leading-[1.75] text-[color:var(--text-muted)] sm:text-[1.0625rem] sm:leading-[1.72]">
+          <p className="mt-3.5 max-w-[52rem] text-[0.9375rem] leading-[1.75] text-[color:var(--text-muted)] sm:text-[1.0625rem] sm:leading-[1.72]">
             {body}
           </p>
         </header>
 
         <div className="flex flex-col gap-9 sm:gap-11 lg:gap-12">
           {items.map((r) => (
-            <article key={r.id} id={r.id} className={cn(cardClass, "scroll-mt-[5.5rem]")}>
+            <article key={r.id} id={r.id} className={cardClass}>
+              <div className={premiumGoldTopLine} aria-hidden />
               <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-start sm:gap-9 sm:p-7 lg:gap-11 lg:p-9">
                 <div className="flex shrink-0 justify-center sm:w-[min(100%,17.5rem)] lg:w-[18.5rem]">
                   <PartnerLogoArea entity={r} variant="featured" />
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <h3 className="text-[1.0625rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-lg">
-                    {r.name}
-                  </h3>
-                  <div className="mt-3 space-y-3">
-                    <LabeledLine label={ui.regionLabel} text={r.region} />
-                    <LabeledLine label={ui.networkRoleLabel} text={r.networkRole} />
+                  <div className="flex items-start gap-3">
+                    <div className={premiumIconWellSoft}>
+                      <Handshake className="h-5 w-5" aria-hidden />
+                    </div>
+                    <h3 className="min-w-0 flex-1 text-[1.0625rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-lg">
+                      {r.name}
+                    </h3>
+                  </div>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    <LabeledLine label={ui.cooperationScopeLabel} text={r.networkRole} />
+                    <LabeledLine label={ui.localCoordinationLabel} text={ui.localCoordinationScope} />
+                    <LabeledLine label={ui.documentCoordinationLabel} text={r.technicalFocus} />
+                    <LabeledLine label={ui.applicationRoutingLabel} text={ui.applicationRoutingNote} />
+                    <LabeledLine
+                      label={ui.verificationCoordinationLabel}
+                      text={ui.verificationCoordinationNote}
+                      className="sm:col-span-2"
+                    />
                   </div>
                   <p className="mt-4 text-sm leading-[1.72] text-[color:var(--ink-dark)]/92 sm:text-[0.9375rem] sm:leading-[1.74]">
                     {r.cardSummary}
                   </p>
-                  <div className="mt-5 border-t border-[color:var(--border-soft)]/70 pt-5">
+                  <div className="mt-5 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_16%,var(--border-soft))] pt-5">
                     <button
                       type="button"
                       onClick={() => open(r)}
                       className={cn(
-                        "group/cta inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-primary)_18%,var(--border-soft))]",
+                        "group/cta inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))]",
                         "bg-white px-4 text-sm font-semibold text-[color:var(--brand-primary)]",
-                        "shadow-[var(--shadow-card)] transition-colors",
-                        "hover:bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)]",
+                        "shadow-[var(--shadow-card)] transition-[border-color,background-color,box-shadow]",
+                        "hover:border-[color:var(--brand-gold)] hover:bg-[color:color-mix(in_oklab,var(--brand-gold-soft)_60%,white)]",
                         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
                       )}
                     >

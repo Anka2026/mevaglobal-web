@@ -1,24 +1,40 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { FileStack, Package, Scale, ShieldCheck } from "lucide-react";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
+import { SectionHeading } from "@/components/sections/SectionHeading";
 import { cn } from "@/lib/cn";
 import {
-  premiumCard,
-  premiumHeroBackdrop,
+  premiumAboutMotif,
+  premiumEditorialHeroSurface,
+  premiumEyebrowRow,
+  premiumEyebrowRule,
+  premiumGoldDivider,
+  premiumGoldTopLine,
   premiumInstitutionalPanel,
+  premiumNavyStatement,
   premiumSectionMuted,
+  premiumSectionWhite,
 } from "@/lib/premiumUi";
+import { DocumentsCategoryCard } from "@/components/documents/DocumentsCategoryCard";
 import { DocumentsHeroFrame } from "@/components/documents/DocumentsHeroFrame";
 import { TechnicalResourceCard } from "@/components/documents/TechnicalResourceCard";
 import { resolveLocalizedPublicHref } from "@/lib/resolveLocalizedPublicHref";
 
 const DOCUMENTS_HERO_SRC = "/assets/page-visuals/documents-hero.png";
 
+const CATEGORY_ICONS = [ShieldCheck, FileStack, Package, Scale] as const;
+
 function resolveHeroSrc(): string {
   return DOCUMENTS_HERO_SRC;
+}
+
+function estimateCardReadingMinutes(title: string, body: string): number {
+  const words = `${title} ${body}`.split(/\s+/).filter(Boolean).length;
+  return Math.max(3, Math.min(9, Math.ceil(words / 180)));
 }
 
 type Copy = {
@@ -35,9 +51,9 @@ type Copy = {
 const COPY: Record<Locale, Copy> = {
   en: {
     heroEyebrow: "Resources • Guidance • Technical Notes",
-    heroTitle: "Knowledge Hub For Verification And Regulatory Readiness",
+    heroTitle: "Technical Publication Hub For Verification And Regulatory Readiness",
     heroBody:
-      "We publish regular insights on evidence discipline, documentation quality and technical readiness across verification, validation, CBAM, product declarations and sustainability reporting.",
+      "Structured technical notes on evidence discipline, documentation quality and verification readiness—covering independent review, validation, CBAM, product declarations and regulatory reporting contexts.",
     sectionLabel: "Featured Content",
     categoriesTitle: "Resource Categories",
     categories: [
@@ -64,9 +80,9 @@ const COPY: Record<Locale, Copy> = {
   },
   tr: {
     heroEyebrow: "Kaynaklar • Rehberlik • Teknik Notlar",
-    heroTitle: "Doğrulama ve Regülasyon Hazırlığı İçin Bilgi Merkezi",
+    heroTitle: "Doğrulama ve Regülasyon Hazırlığı İçin Teknik Yayın Merkezi",
     heroBody:
-      "Doğrulama, validasyon, SKDM, ürün beyanları ve sürdürülebilirlik raporlaması alanlarında kanıt disiplini, dokümantasyon kalitesi ve teknik hazırlık üzerine düzenli içerikler paylaşıyoruz.",
+      "Bağımsız doğrulama, validasyon, SKDM, ürün beyanları ve regülasyon hazırlığı bağlamlarında kanıt disiplini, dokümantasyon kalitesi ve teknik inceleme beklentilerine ilişkin yapılandırılmış teknik notlar.",
     sectionLabel: "Öne Çıkan İçerikler",
     categoriesTitle: "Kaynak Kategorileri",
     categories: [
@@ -93,9 +109,9 @@ const COPY: Record<Locale, Copy> = {
   },
   nl: {
     heroEyebrow: "Kennisbronnen • Richtlijnen • Technische Notities",
-    heroTitle: "Kennisbank voor verificatie en regelgevingsvoorbereiding",
+    heroTitle: "Technisch publicatiecentrum voor verificatie en regelgevingsvoorbereiding",
     heroBody:
-      "We delen regelmatig inhoud over bewijsdiscipline, documentatiekwaliteit en technische gereedheid rond verificatie, validatie, CBAM, productverklaringen en duurzaamheidsrapportage.",
+      "Gestructureerde technische notities over bewijsdiscipline, documentatiekwaliteit en verificatiegereedheid—in onafhankelijke beoordeling, validatie, CBAM, productverklaringen en regelgevingscontexten.",
     sectionLabel: "Uitgelichte inhoud",
     categoriesTitle: "Kenniscategorieën",
     categories: [
@@ -165,6 +181,7 @@ export default async function DocumentsPage({
   const doc = dict.pages?.documents;
   const cards = Array.isArray(doc?.cards) ? doc.cards : [];
   const copy = COPY[l];
+  const ui = doc?.ui;
   const heroSrc = resolveHeroSrc();
 
   const heroDefaults = {
@@ -183,66 +200,79 @@ export default async function DocumentsPage({
   const hero = { ...heroDefaults, ...(doc?.hero ?? {}) };
   const bottom = { ...bottomDefaults, ...(doc?.bottomCta ?? {}) };
   const sectionLabel = copy.sectionLabel || doc?.sectionLabel || "";
+  const reviewCta = ui?.reviewTechnicalNote ?? doc?.cards?.[0]?.cta ?? dict.ctas.learnMore;
 
   return (
     <>
-      <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
-        <Container className="py-8 sm:py-9 lg:py-10">
-          <div className="grid items-center gap-7 sm:gap-8 lg:grid-cols-12 lg:gap-9 xl:gap-10">
+      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <div className={premiumAboutMotif} aria-hidden />
+        <Container className="relative py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto grid max-w-[76rem] items-center gap-8 lg:grid-cols-12 lg:gap-10">
             <div className="min-w-0 lg:col-span-7">
-              <p className="text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-[0.8125rem]">
-                {copy.heroEyebrow || hero.eyebrow}
-              </p>
-              <h1 className="mt-2.5 text-[1.75rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.05rem] lg:text-[2.2rem]">
+              <div className={premiumEyebrowRow}>
+                <span className={premiumEyebrowRule} aria-hidden />
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)]">
+                  {copy.heroEyebrow || hero.eyebrow}
+                </p>
+              </div>
+              <h1 className="mt-4 text-[1.85rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--ink-dark)] sm:text-[2.2rem] lg:text-[2.4rem]">
                 {copy.heroTitle || hero.title}
               </h1>
-              <p className="mt-3 max-w-[44rem] text-sm leading-[1.75] text-[color:var(--ink-dark)]/90 sm:text-[1.0625rem] sm:leading-[1.74]">
+              <p className="mt-4 max-w-[44rem] text-[0.9375rem] leading-[1.76] text-[color:var(--ink-dark)]/90 sm:text-lg sm:leading-[1.72]">
                 {copy.heroBody || hero.body}
               </p>
             </div>
-            <div className="min-w-0 lg:col-span-5 lg:pl-1">
+            <div className="min-w-0 lg:col-span-5 lg:pl-2">
               <DocumentsHeroFrame alt={hero.heroImageAlt || copy.heroTitle || hero.title} src={heroSrc} />
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="border-b border-[color:var(--border-soft)] bg-white">
-        <Container className="py-8 sm:py-9 lg:py-10">
-          <div className="mx-auto max-w-7xl">
-            <h2 className="text-[1.35rem] font-semibold leading-tight tracking-tight text-[color:var(--ink-dark)] sm:text-[1.5rem]">
-              {copy.categoriesTitle}
-            </h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-              {copy.categories.map((c) => (
-                <div key={c.title} className={premiumCard}>
-                  <p className="text-[0.9375rem] font-semibold leading-snug text-[color:var(--ink-dark)]">{c.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[color:var(--text-muted)]">{c.body}</p>
-                </div>
-              ))}
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionWhite)}>
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto max-w-[76rem]">
+            <SectionHeading
+              title={copy.categoriesTitle}
+              className="max-w-[40rem]"
+              titleClassName="text-[1.5rem] sm:text-[1.65rem]"
+              withTitleAccent
+            />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              {copy.categories.map((c, index) => {
+                const Icon = CATEGORY_ICONS[index] ?? ShieldCheck;
+                return <DocumentsCategoryCard key={c.title} icon={Icon} title={c.title} body={c.body} />;
+              })}
             </div>
           </div>
         </Container>
       </section>
 
       <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionMuted)}>
-        <Container className="py-8 sm:py-9 lg:py-10">
-          <div className="mx-auto max-w-7xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--brand-primary)]/95">
-              {sectionLabel}
-            </p>
-            <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 md:items-stretch lg:gap-7">
+        <Container className="py-10 sm:py-12 lg:py-14">
+          <div className="mx-auto max-w-[76rem]">
+            <SectionHeading
+              eyebrow={sectionLabel}
+              title={doc?.title ?? copy.heroTitle}
+              className="max-w-[44rem]"
+              titleClassName="text-[1.5rem] sm:text-[1.65rem]"
+              withTitleAccent
+            />
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch lg:gap-7">
               {cards.map((c, index) => {
                 const href = resolveLocalizedPublicHref(c?.href, l, `/${l}/contact`);
+                const minutes = estimateCardReadingMinutes(c?.title ?? "", c?.body ?? "");
+                const readingTime = ui?.readingTime?.replace("{minutes}", String(minutes));
                 return (
                   <TechnicalResourceCard
                     key={`${c?.title ?? "card"}-${c?.date ?? index}`}
                     category={c?.category ?? ""}
                     date={c?.date ?? ""}
                     dateTime={c?.date ?? ""}
+                    readingTime={readingTime}
                     title={c?.title ?? ""}
                     body={c?.body ?? ""}
-                    cta={c?.cta ?? dict.ctas.learnMore}
+                    cta={c?.cta?.trim() ? c.cta : reviewCta}
                     href={href}
                   />
                 );
@@ -252,9 +282,10 @@ export default async function DocumentsPage({
         </Container>
       </section>
 
-      <section className={cn(premiumSectionMuted)}>
-        <Container className="py-8 sm:py-9 lg:py-10">
-          <div className={cn("mx-auto max-w-7xl", premiumInstitutionalPanel)}>
+      <section className={cn("border-b border-[color:var(--border-soft)]", premiumSectionMuted)}>
+        <Container className="py-8 sm:py-10">
+          <div className={cn("mx-auto max-w-[76rem]", premiumInstitutionalPanel)}>
+            <div className={premiumGoldTopLine} aria-hidden />
             <h2 className="text-base font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-[1.0625rem]">
               {copy.availabilityTitle}
             </h2>
@@ -265,34 +296,30 @@ export default async function DocumentsPage({
         </Container>
       </section>
 
-      <section className="bg-white pb-10 pt-7 sm:pb-11 sm:pt-8">
+      <section className="bg-white pb-12 pt-8 sm:pb-14 sm:pt-10">
         <Container>
-          <div
-            className={cn(
-              "relative overflow-hidden rounded-[1.0625rem] border border-[color:color-mix(in_oklab,var(--brand-accent)_22%,var(--border-soft))]",
-              "bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_92%,white)] via-white to-[#f3f8fb]",
-              "p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_14px_36px_-18px_rgba(29,37,47,0.12)] sm:p-8 lg:p-9",
-              "ring-1 ring-[color:color-mix(in_oklab,var(--brand-primary)_9%,transparent)]",
-            )}
-          >
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(155deg,color-mix(in_oklab,var(--brand-accent-soft)_50%,white)_0%,transparent_40%)] opacity-90" />
+          <div className={cn(premiumNavyStatement, "relative mx-auto max-w-[76rem]")}>
+            <div className={premiumGoldDivider} aria-hidden />
             <div className="relative z-[1] flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
               <div className="min-w-0 max-w-2xl">
-                <p className="text-xs font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]">{bottom.eyebrow}</p>
-                <h2 className="mt-2 text-lg font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-xl">
-                  {bottom.title}
-                </h2>
-                <p className="mt-2 text-sm leading-[1.75] text-[color:var(--ink-dark)]/88 sm:text-[0.9375rem]">{bottom.body}</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/75">{bottom.eyebrow}</p>
+                <h2 className="mt-2 text-lg font-semibold tracking-tight text-white sm:text-xl">{bottom.title}</h2>
+                <p className="mt-2 text-sm leading-[1.75] text-white/78 sm:text-[0.9375rem]">{bottom.body}</p>
               </div>
               <div className="flex w-full shrink-0 flex-col gap-3 sm:flex-row sm:items-center lg:w-auto">
-                <ButtonLink href={`/${l}/contact`} variant="primary" size="md" className="w-full justify-center sm:w-auto lg:min-w-[10.5rem]">
+                <ButtonLink
+                  href={`/${l}/contact`}
+                  variant="secondary"
+                  size="md"
+                  className="w-full justify-center border-transparent bg-white !text-[color:var(--brand-primary)] shadow-sm hover:bg-white/95 sm:w-auto lg:min-w-[11rem]"
+                >
                   {bottom.primary?.trim() ? bottom.primary : dict.ctas.contact}
                 </ButtonLink>
                 <ButtonLink
                   href={`/${l}/verification-services`}
                   variant="secondary"
                   size="md"
-                  className="w-full justify-center sm:w-auto lg:min-w-[10.5rem]"
+                  className="w-full justify-center border-white/35 bg-transparent !text-white shadow-none hover:bg-white/10 sm:w-auto lg:min-w-[11rem]"
                 >
                   {bottom.secondary}
                 </ButtonLink>

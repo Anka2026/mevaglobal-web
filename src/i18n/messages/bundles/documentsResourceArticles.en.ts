@@ -38,33 +38,33 @@ export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceAr
     category: "Carbon",
     date: "2026-04-19",
     eyebrow: "Technical note",
-    title: "Aligning Scope, Methodology, And Stakeholder Expectations In Carbon Verification",
+    title: "Scope, Methodology And Stakeholder Expectations In Carbon Verification",
     intro:
-      "Carbon verification fails quietly when scope, methodology, and audience expectations drift apart: the technical file may be complete while the reported narrative still invites challenge. Strong engagements align three layers—what is in scope, which standard and method apply, and what external readers believe they are seeing—before evidence testing intensifies.",
+      "Credibility in carbon verification depends on boundary clarity, methodological consistency and what external readers understand they are reviewing. A complete technical file can still invite challenge if disclosure language, scope limits or assumptions are weak. This note summarises how those three layers should be structured before independent technical review intensifies.",
     sections: [
       {
-        title: "Scope as a contract",
+        title: "Clarifying scope and boundaries",
         body:
-          "Scope is more than a boundary diagram. It fixes organisational and operational limits, reporting periods, and the role of estimation. When scope is left implicit, reviewers and stakeholders fill gaps with their own assumptions. A premium preparation defines scope in writing, links it to data structures, and states exclusions that matter for interpretation.",
+          "Scope fixes organisational and operational limits, the reporting period and where estimation is applied. A boundary diagram alone is insufficient—the data model, site list and rationale for excluded activities must read as one file. Clear scope prevents reviewers from filling gaps with their own assumptions and makes the claim the statement actually supports visible.",
       },
       {
-        title: "Methodology as decision record",
+        title: "Methodological consistency and assumption management",
         body:
-          "Methodology is not only formulas; it is the documented rationale for activity classification, factor selection, and handling of missing data. Verification teams test whether methodology choices are stable across the period, sensitive cases are flagged, and changes are controlled. That record is what makes a methodology defensible rather than merely familiar.",
+          "Methodology is not only formulas; it is a documented decision set for activity classification, emission factors and missing data. Consistency across periods, flagging of sensitive items and controlled management of methodology changes are central to technical review. Assumptions should not be hidden; their effect and sensitivity to reasonable alternatives should be discussed explicitly.",
       },
       {
-        title: "Stakeholder expectations without over-claiming",
+        title: "Stakeholder expectations and statement reliability",
         body:
-          "Investor, buyer, and regulatory readers often expect different emphasis—completeness, comparability, or audit readiness. Alignment means mapping the verification objective to those expectations explicitly: which claims the statement supports, which it does not, and what would be needed for a stronger assurance tier or a different use context.",
+          "Investor, buyer and regulatory readers may emphasise completeness, comparability or audit readiness differently. The verification objective must be linked to those expectations in writing: which outcomes are supported, which limitations apply, and what further review would be needed for a stronger tier. Disclosure language must not exceed the evidence depth the file actually carries.",
       },
       {
-        title: "Control points that protect integrity",
+        title: "Supporting findings with traceable records",
         body:
-          "Well-designed control points—reconciliations, independent checks on high-impact streams, and sign-off on methodology changes—reduce the risk of late surprises. They also shorten verification cycles because issues surface earlier in internal review rather than at external challenge.",
+          "Reconciliations, independent checks on high-impact streams and sign-off on methodology changes strengthen how findings are supported by records. A well-structured technical file presents working papers, source data links and a decision trail together. Issues then surface in internal review rather than at external challenge.",
       },
     ],
     closing:
-      "When scope, methodology, and expectations are aligned in one coherent frame, verification becomes a structured test of that frame—not a debate about what should have been included after the fact.",
+      "When scope, methodology and stakeholder expectations are defined in one coherent frame, verification becomes a documented, evidence-based test of that frame—not a retrospective debate about what should have been included.",
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
@@ -99,35 +99,35 @@ export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceAr
       "Strong critical review outcomes depend less on polishing tables than on tightening the logical chain from goal and scope through data to interpretation—before the declaration reaches public stakeholders.",
   },
   "sustainability-assurance-levels": {
-    category: "Assurance",
+    category: "Technical Review",
     date: "2026-04-19",
     eyebrow: "Technical note",
-    title: "Why Assurance Level Selection Matters In Sustainability Claims",
+    title: "Selecting Review Depth For Sustainability Claims",
     intro:
-      "Assurance levels signal how much work an independent practitioner performed and what type of conclusion can responsibly be drawn. Choosing too low a level for a high-stakes external use invites reputational and regulatory friction; choosing too high without evidence readiness wastes effort. The decision should be driven by use case, materiality, and audience—not by habit or template language.",
+      "Independent review levels frame evidence depth, method controls and the type of conclusion that can be stated. The level should follow use context, decision risk and stakeholder expectations—not templates or marketing language.",
     sections: [
       {
-        title: "Limited versus reasonable assurance—what changes",
+        title: "Limited versus reasonable assurance",
         body:
-          "Limited assurance centres on inquiry and analytical procedures; reasonable assurance adds evidence depth and testing designed to obtain a high but not absolute level of confidence. The gap is meaningful for capital markets, supply-chain programmes, and public statements where readers treat the report as a primary proof point.",
+          "The difference between limited and reasonable assurance is not only a confidence label; it requires different review intensity across data depth, evidence coverage, method controls and stakeholder expectations. Limited assurance relies on inquiry and analytical procedures with narrower evidence depth; reasonable assurance targets broader testing and evidence breadth—without implying absolute certainty.",
       },
       {
         title: "Use context and decision risk",
         body:
-          "The same dataset may justify limited assurance for internal management review and require a higher bar for a prospectus-style claim or a buyer certification gate. Mapping decision risk—financial exposure, brand impact, and regulatory attention—clarifies the assurance level that matches the organisation’s true exposure.",
+          "Use context and decision risk are the primary drivers of an appropriate review depth. The same dataset may support a lighter package for internal management while a prospectus-style claim or buyer gate requires stronger evidence and control maturity. Financial exposure, brand impact and regulatory attention should be read together.",
       },
       {
         title: "Public disclosure and third-party reliance",
         body:
-          "When sustainability information is cited by customers, lenders, or regulators, reliance increases. Assurance wording must match what was actually examined: which sites, periods, metrics, and boundaries. Overstated comfort in marketing copy relative to the assurance report is a recurring source of disputes.",
+          "Where public disclosure and third-party reliance apply, the statement’s scope, methodology and evidence set should be supported by a stronger technical file structure. Published assurance wording must align with operational reality: which sites, periods, metrics and boundaries were in scope. Marketing language that outruns the technical output is a recurring dispute source.",
       },
       {
-        title: "Building readiness before engagement",
+        title: "Pre-engagement readiness",
         body:
-          "Higher assurance requires stronger controls, clearer documentation, and often more time. Organisations that select a level first and retrofit evidence rarely succeed cleanly. A disciplined readiness view—data lineage, control design, and governance ownership—supports both efficient assurance and credible external communication.",
+          "Pre-engagement readiness covers data ownership, methodology records, boundary definitions and verifiable evidence organised for review. Deeper independent review typically requires stronger controls, clearer documentation and more time. Organisations that pick a level first and retrofit evidence rarely achieve consistent outcomes.",
       },
     ],
     closing:
-      "Assurance level is best chosen as part of a deliberate disclosure strategy: what you need to say, to whom, under what scrutiny—and what evidence architecture can credibly support that posture.",
+      "Review depth is best chosen as part of a deliberate disclosure strategy: what must be said, to whom, under which technical framework—and whether the evidence architecture can credibly support that posture.",
   },
 };

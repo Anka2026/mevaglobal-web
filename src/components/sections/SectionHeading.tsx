@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { premiumEyebrow, premiumEyebrowRow, premiumEyebrowRule, premiumTitleAccent } from "@/lib/premiumUi";
 
 export function SectionHeading({
   title,
@@ -12,6 +13,8 @@ export function SectionHeading({
   descriptionVariant = "default",
   /** Page-level marketing heroes should use `h1`; in-section headings stay `h2`. */
   titleAs = "h2",
+  /** Gold rule above the title (section headers). */
+  withTitleAccent = false,
 }: {
   title: string;
   eyebrow?: string;
@@ -24,6 +27,7 @@ export function SectionHeading({
   /** First paragraph stronger, following paragraphs lighter (e.g. services hero). */
   descriptionVariant?: "default" | "lead-support";
   titleAs?: "h1" | "h2";
+  withTitleAccent?: boolean;
 }) {
   return (
     <div
@@ -35,15 +39,13 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <p
-          className={cn(
-            "text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)]",
-            eyebrowClassName,
-          )}
-        >
-          {eyebrow}
-        </p>
+        <div className={premiumEyebrowRow}>
+          <span className={premiumEyebrowRule} aria-hidden />
+          <p className={cn(premiumEyebrow, "mt-0", eyebrowClassName)}>{eyebrow}</p>
+        </div>
       ) : null}
+      {withTitleAccent && !eyebrow ? <div className={premiumTitleAccent} aria-hidden /> : null}
+      {withTitleAccent && eyebrow ? <div className={cn(premiumTitleAccent, "mt-3")} aria-hidden /> : null}
       {titleAs === "h1" ? (
         <h1
           className={cn(

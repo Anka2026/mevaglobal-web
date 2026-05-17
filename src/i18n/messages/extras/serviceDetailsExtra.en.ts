@@ -44,7 +44,7 @@ export const serviceDetailsExtraEn: Record<
     ],
     bottomCta:
       "Share your organisational boundaries, reporting year, included categories, and current calculation structure with us, and we will define an appropriate review depth for your disclosure context.",
-    primaryButton: "Request a Proposal",
+    primaryButton: "Request a Technical Meeting",
     secondaryButton: "Back To Services",
     detailLink: "Details",
   },
@@ -537,7 +537,7 @@ export const serviceDetailsExtraEn: Record<
     cta: {
       title: "",
       body: "Share your statement scope, reporting approach, and existing evidence base—we will align verification scope and review expectations with your context.",
-      primaryButton: "Request a Proposal",
+      primaryButton: "Request a Technical Meeting",
       secondaryButton: "Back to Services",
       detailLink: "Details",
     },

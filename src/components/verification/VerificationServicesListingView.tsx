@@ -1,12 +1,9 @@
 import { PageHeader } from "@/components/sections/PageHeader";
 import { Container } from "@/components/ui/Container";
-import {
-  SERVICE_CARD_ICON_WELL_CLASSNAME,
-  ServiceCard,
-} from "@/components/cards/ServiceCard";
-import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ServiceCard } from "@/components/cards/ServiceCard";
 import { VisualAnchor } from "@/components/visual/VisualAnchor";
 import { VerificationServiceIcon } from "@/components/verification/VerificationServiceIcon";
+import { VerificationListingSectionHeader } from "@/components/verification/VerificationListingSectionHeader";
 import {
   VerificationServicesHowSection,
   VerificationServicesWhySection,
@@ -22,8 +19,7 @@ import {
 import { VerificationListingRecoverablePanel } from "@/components/verification/VerificationListingRecoverablePanel";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
 import { cn } from "@/lib/cn";
-
-const groupIconFrame = cn(SERVICE_CARD_ICON_WELL_CLASSNAME, "sm:mt-0.5");
+import { premiumNavPill, premiumSectionSlate } from "@/lib/premiumUi";
 
 const SERVICE_GROUP_NAV_ORDER: readonly VerificationServicesListingGroupKey[] = [
   "climateAndCarbonAssurance",
@@ -47,10 +43,6 @@ const SERVICE_GROUP_NAV_LABEL_KEY: Record<
   esgAndReportingAssurance: "esgReporting",
 };
 
-/**
- * Deterministic server-rendered shell for `/verification-services` — same layout chain as other premium pages
- * (`[locale]` Header/Footer + PageHeader + Container). All listing UI lives here; the route `page.tsx` only wires data.
- */
 export function VerificationServicesListingView({
   locale,
   servicesCopy,
@@ -88,73 +80,67 @@ export function VerificationServicesListingView({
           />
         }
       />
-      <Container className="py-10 sm:py-11">
-        <nav aria-label={s.serviceGroupNav.ariaLabel} className="mb-8 scroll-mt-[4.5rem]">
-          <ul className="flex list-none flex-wrap gap-2 p-0">
-            {SERVICE_GROUP_NAV_ORDER.map((groupKey) => {
-              const labelKey = SERVICE_GROUP_NAV_LABEL_KEY[groupKey];
-              const label = s.serviceGroupNav[labelKey];
-              const id = VERIFICATION_LISTING_GROUP_ANCHOR_IDS[groupKey];
-              return (
-                <li key={groupKey}>
-                  <a
-                    href={`#${id}`}
-                    className={cn(
-                      "inline-flex items-center rounded-full border border-[color:color-mix(in_oklab,var(--brand-primary)_14%,var(--border-soft))]",
-                      "bg-white px-3.5 py-1.5 text-sm font-semibold text-[color:var(--brand-primary)] shadow-[var(--shadow-card)]",
-                      "transition-[border-color,background-color] hover:border-[color:color-mix(in_oklab,var(--brand-primary)_26%,var(--border-soft))]",
-                      "hover:bg-[color:var(--brand-accent-soft)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
-                    )}
-                  >
-                    {label}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-
-        <VerificationServicesWhySection servicesCopy={s} />
-
-        {listingSections.length === 0 ? (
-          <VerificationListingRecoverablePanel
-            locale={locale}
-            title={s.listingRecoverableError.title}
-            body={s.listingRecoverableError.body}
-            contactCta={contactCta}
-          />
-        ) : (
-          <div className="mt-10 grid gap-10 lg:gap-12">
-            {listingSections.map((section) => {
-              const group = s.groups[section.groupKey];
-              if (!group?.title || group.intro == null) {
-                console.error(
-                  `[verification-services] Missing or invalid copy for services.groups.${section.groupKey} (locale ${locale}).`,
+      <section className={cn(premiumSectionSlate, "border-b border-[color:var(--border-soft)]")}>
+        <Container className="py-10 sm:py-12">
+          <nav aria-label={s.serviceGroupNav.ariaLabel} className="mb-9 scroll-mt-[4.5rem]">
+            <ul className="flex list-none flex-wrap gap-2 p-0">
+              {SERVICE_GROUP_NAV_ORDER.map((groupKey) => {
+                const labelKey = SERVICE_GROUP_NAV_LABEL_KEY[groupKey];
+                const label = s.serviceGroupNav[labelKey];
+                const id = VERIFICATION_LISTING_GROUP_ANCHOR_IDS[groupKey];
+                return (
+                  <li key={groupKey}>
+                    <a href={`#${id}`} className={premiumNavPill}>
+                      {label}
+                    </a>
+                  </li>
                 );
-                return null;
-              }
-              return (
-                <section
-                  key={section.groupKey}
-                  id={VERIFICATION_LISTING_GROUP_ANCHOR_IDS[section.groupKey]}
-                  className="scroll-mt-8"
-                >
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                    <div className="min-w-0 flex-1">
-                      <SectionHeading
-                        title={group.title}
-                        description={group.intro}
-                        className="max-w-[48rem]"
-                        titleClassName="sm:text-[1.65rem] sm:leading-snug"
-                      />
-                    </div>
-                    <div className={groupIconFrame} aria-hidden="true">
-                      <VerificationServiceIcon name={getVerificationGroupIconKey(section.groupKey)} />
-                    </div>
-                  </div>
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
-                    {section.cards.map((card) => {
-                      return (
+              })}
+            </ul>
+          </nav>
+
+          <VerificationServicesWhySection servicesCopy={s} />
+
+          {listingSections.length === 0 ? (
+            <VerificationListingRecoverablePanel
+              locale={locale}
+              title={s.listingRecoverableError.title}
+              body={s.listingRecoverableError.body}
+              contactCta={contactCta}
+            />
+          ) : (
+            <div className="mt-11 grid gap-12 lg:gap-14">
+              {listingSections.map((section, sectionIdx) => {
+                const group = s.groups[section.groupKey];
+                if (!group?.title || group.intro == null) {
+                  console.error(
+                    `[verification-services] Missing or invalid copy for services.groups.${section.groupKey} (locale ${locale}).`,
+                  );
+                  return null;
+                }
+                const navLabelKey = SERVICE_GROUP_NAV_LABEL_KEY[section.groupKey];
+                const badgeLabel = s.serviceGroupNav[navLabelKey];
+                const bandMuted =
+                  sectionIdx % 2 === 1
+                    ? "rounded-[1.0625rem] border border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_35%,white)] p-5 sm:p-6 lg:p-7"
+                    : "";
+
+                return (
+                  <section
+                    key={section.groupKey}
+                    id={VERIFICATION_LISTING_GROUP_ANCHOR_IDS[section.groupKey]}
+                    className={cn("scroll-mt-8", bandMuted)}
+                  >
+                    <VerificationListingSectionHeader
+                      title={group.title}
+                      description={group.intro}
+                      badgeLabel={badgeLabel}
+                      icon={
+                        <VerificationServiceIcon name={getVerificationGroupIconKey(section.groupKey)} />
+                      }
+                    />
+                    <div className="mt-7 grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+                      {section.cards.map((card) => (
                         <ServiceCard
                           key={card.slug}
                           title={card.title}
@@ -164,17 +150,17 @@ export function VerificationServicesListingView({
                           linkLabel={s.cardCta}
                           listingTone
                         />
-                      );
-                    })}
-                  </div>
-                </section>
-              );
-            })}
-          </div>
-        )}
+                      ))}
+                    </div>
+                  </section>
+                );
+              })}
+            </div>
+          )}
 
-        <VerificationServicesHowSection servicesCopy={s} />
-      </Container>
+          <VerificationServicesHowSection servicesCopy={s} />
+        </Container>
+      </section>
     </>
   );
 }

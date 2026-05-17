@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { premiumGoldTopLine } from "@/lib/premiumUi";
 
 /** Process step card aligned with premium service detail cards (e.g. bio-based verification). */
 export function AccreditationProcessCard({
@@ -28,10 +29,7 @@ export function AccreditationProcessCard({
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(165deg,color-mix(in_oklab,var(--brand-accent-soft)_65%,white)_0%,transparent_42%,transparent_100%)] opacity-[0.95]"
         aria-hidden
       />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:color-mix(in_oklab,var(--brand-primary)_35%,white)]/50 to-transparent"
-        aria-hidden
-      />
+      <div className={premiumGoldTopLine} aria-hidden />
 
       <div className="relative z-[1] flex min-h-0 flex-1 flex-col p-7 sm:p-8 lg:p-9">
         <div className="flex items-start gap-4">

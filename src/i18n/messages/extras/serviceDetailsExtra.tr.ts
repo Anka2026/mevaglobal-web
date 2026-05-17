@@ -44,7 +44,7 @@ export const serviceDetailsExtraTr: Record<
     ],
     bottomCta:
       "Organizasyonel sınırlarınızı, raporlama yılınızı, kapsamdaki kategorileri ve mevcut hesaplama yapınızı paylaşın; açıklama bağlamınıza uygun inceleme derinliğini birlikte netleştirelim.",
-    primaryButton: "Teklif Talep Et",
+    primaryButton: "Teknik Görüşme Talep Et",
     secondaryButton: "Hizmetlere Dön",
     detailLink: "Detayları İncele",
   },
@@ -153,7 +153,7 @@ export const serviceDetailsExtraTr: Record<
     covers: {
       title: "Kapsam",
       bullets: [
-        "Operasyonunuz için hangi şema unsurlarının tetiklenebileceğine yönelik üst düzey haritalama",
+        "Operasyonunuz için hangi şema unsurlarının devreye girebileceğine yönelik kapsam ön değerlendirmesi",
         "Yakıt, faaliyet ve tahsis yaklaşımları için tipik dış inceleme beklentilerine yönelik kontroller",
         "Harici inceleme beklentilerine karşı boşluk tanımlama",
       ],
@@ -332,7 +332,7 @@ export const serviceDetailsExtraTr: Record<
     approach: {
       title: "Meva yaklaşımı",
       bullets: [
-        "Düzenleme bilincine sahip; hukuki danışmanlık değil—teknik dosya ve kanıt odağı",
+        "Düzenleme bilincine sahip; hukuki görüş niteliği taşımaz—teknik dosya ve kanıt odağı",
         "Ön-doğrulamanın neyi sertifikalayıp neyi sertifikalamadığı açık ifade",
         "Uygun olduğunda mevcut ISO uyumlu çevresel çalışmalarla entegrasyon",
       ],
@@ -537,7 +537,7 @@ export const serviceDetailsExtraTr: Record<
     cta: {
       title: "",
       body: "Beyan kapsamınızı, raporlama yaklaşımınızı ve mevcut kanıt yapınızı paylaşın; size uygun doğrulama kapsamını ve inceleme beklentilerini birlikte netleştirelim.",
-      primaryButton: "Teklif Talep Et",
+      primaryButton: "Teknik Görüşme Talep Et",
       secondaryButton: "Hizmetlere Dön",
       detailLink: "Detayları İncele",
     },

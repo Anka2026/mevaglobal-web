@@ -9,8 +9,9 @@ import { PremiumHeroCoverImage } from "@/components/visual/PremiumHeroCoverImage
 import { RepresentationsCards } from "./RepresentationsCards";
 import { getRepresentationsPageBundle } from "./representations-data";
 import { cn } from "@/lib/cn";
+import { premiumSectionMuted, premiumStepBadge } from "@/lib/premiumUi";
 
-const REPRESENTATIONS_HERO_SRC = "/assets/page-visuals/representations-hero.png";
+const REPRESENTATIONS_HERO_SRC = "/images/representations/representation-network-hero.png";
 
 function resolveLogoSrc(stated: string): string {
   return stated.startsWith("/") ? stated : REPRESENTATIONS_HERO_SRC;
@@ -36,9 +37,9 @@ type PageCopy = {
 const COPY: Record<Locale, PageCopy> = {
   en: {
     eyebrow: "Representations • Cooperation network • Technical coordination",
-    title: "Local Representation, International Technical Coordination",
+    title: "Local Representation and International Verification Coordination",
     intro:
-      "Our representation structure supports local communication, documentation coordination and market access. Technical assessment, decision discipline and formal review pathways sit with Meva Global’s central organisation—not with advisory-style front offices.",
+      "Meva Global’s representation structure supports local contact, document coordination and the organised management of verification processes under a central framework. Across Türkiye, Europe, Asia, Africa and the Caucasus, application and documentation flows are coordinated in line with Meva Global’s technical review discipline.",
     heroImageAlt:
       "Corporate desk illustrating international representation, local access pins on a world map and coordinated technical engagement.",
     roleTitle: "Roles and responsibilities",
@@ -83,9 +84,9 @@ const COPY: Record<Locale, PageCopy> = {
   },
   tr: {
     eyebrow: "Temsilcilik • Yerel koordinasyon • Merkezi teknik inceleme",
-    title: "Yerel Temsil, Uluslararası Teknik Koordinasyon",
+    title: "Yerel Temsil, Uluslararası Doğrulama Koordinasyonu",
     intro:
-      "Meva Global’in temsilcilik yapısı; yerel iletişimi, dokümantasyon koordinasyonunu ve pazar erişimini destekler. Teknik değerlendirme, karar disiplini ve resmi inceleme yaklaşımı ise Meva Global’in merkez yapısı altında yürütülür.",
+      "Meva Global’in temsilcilik yapısı; yerel iletişim, belge koordinasyonu ve doğrulama süreçlerinin merkezi yapı altında düzenli biçimde yürütülmesini sağlar. Türkiye başta olmak üzere Avrupa, Asya, Afrika ve Kafkasya bölgelerinde, başvuru ve dokümantasyon akışı Meva Global’in teknik inceleme disipliniyle koordine edilir.",
     heroImageAlt:
       "Temsilcilik ağı ve yerel-ulusal koordinasyon temalı kurumsal görsel; dünya haritası ve teknik koordinasyon vurgusu.",
     roleTitle: "Rol ve Sorumluluk Çerçevesi",
@@ -130,9 +131,9 @@ const COPY: Record<Locale, PageCopy> = {
   },
   nl: {
     eyebrow: "Vertegenwoordigingen • Samenwerkingsnetwerk • Technische coördinatie",
-    title: "Lokale vertegenwoordiging, internationale technische coördinatie",
+    title: "Lokale vertegenwoordiging en internationale verificatiecoördinatie",
     intro:
-      "Onze vertegenwoordigingsstructuur ondersteunt lokale communicatie, documentatiecoördinatie en markttoegang. Technische beoordeling, besluitdiscipline en formele review zijn geborgd in het centrale organisatieonderdeel van Meva Global.",
+      "De vertegenwoordigingstructuur van Meva Global ondersteunt lokaal contact, documentcoördinatie en de georganiseerde uitvoering van verificatieprocessen binnen een centrale structuur. In Türkiye, Europa, Azië, Afrika en de Kaukasus worden aanvraag- en documentatiestromen gecoördineerd volgens de technische beoordelingsdiscipline van Meva Global.",
     heroImageAlt:
       "Professioneel kantoorbeeld met wereldkaart en nadruk op vertegenwoordigingsnetwerk en lokale coördinatie.",
     roleTitle: "Rollen en verantwoordelijkheden",
@@ -245,13 +246,20 @@ export default async function RepresentationsPage({
         eyebrow={copy.eyebrow}
         title={copy.title}
         description={copy.intro}
+        visualWrapperClassName="max-w-[min(44rem,100%)] sm:min-h-[300px] lg:max-w-none lg:min-h-[min(52rem,62vh)] lg:max-h-[min(52rem,64vh)]"
         visual={
-          <PremiumHeroCoverImage src={REPRESENTATIONS_HERO_SRC} alt={copy.heroImageAlt} priority className="w-full" />
+          <PremiumHeroCoverImage
+            src={REPRESENTATIONS_HERO_SRC}
+            alt={copy.heroImageAlt}
+            priority
+            imageClassName="object-contain object-center"
+            className="min-h-[300px] w-full bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] to-white sm:min-h-[340px] lg:min-h-0"
+          />
         }
       />
 
       <Container className="py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-[76rem]">
           <section className="border-b border-[color:var(--border-soft)] pb-12 sm:pb-14 lg:pb-16">
             <RepresentationsCards
               title={safeBundle.representationsTitle}
@@ -261,7 +269,12 @@ export default async function RepresentationsPage({
             />
           </section>
 
-          <section className="border-b border-[color:var(--border-soft)] py-12 sm:py-14 lg:py-16">
+          <section
+            className={cn(
+              "border-b border-[color:var(--border-soft)] py-12 sm:py-14 lg:py-16",
+              premiumSectionMuted,
+            )}
+          >
             <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
               <div className="lg:col-span-4">
                 <h2 className={sectionHeadingClass}>{copy.workflowTitle}</h2>
@@ -272,9 +285,7 @@ export default async function RepresentationsPage({
                     key={s.title}
                     className="flex gap-4 rounded-2xl border border-[color:var(--border-soft)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-6"
                   >
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] text-sm font-semibold text-[color:var(--brand-primary)] ring-1 ring-[color:var(--border-soft)]">
-                      {i + 1}
-                    </span>
+                    <span className={premiumStepBadge}>{i + 1}</span>
                     <div className="min-w-0">
                       <p className="text-[0.9375rem] font-semibold text-[color:var(--ink-dark)] sm:text-base">{s.title}</p>
                       <p className="mt-2 text-sm leading-relaxed text-[color:var(--text-muted)] sm:text-[0.9375rem] sm:leading-relaxed">

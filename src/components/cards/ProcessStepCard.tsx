@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/Card";
 import { cn } from "@/lib/cn";
+import { premiumStepBadge } from "@/lib/premiumUi";
 
 export function ProcessStepBadge({
   index,
@@ -9,14 +10,7 @@ export function ProcessStepBadge({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl",
-        "bg-[color:var(--brand-accent-soft)] text-sm font-semibold tabular-nums text-[color:var(--brand-primary)]",
-        "ring-1 ring-[color:var(--border-soft)]/60",
-        className,
-      )}
-    >
+    <div className={cn(premiumStepBadge, className)}>
       {String(index).padStart(2, "0")}
     </div>
   );
@@ -34,12 +28,7 @@ export function ProcessStepCard({
   className?: string;
 }) {
   return (
-    <Card
-      className={cn(
-        "h-full p-6 shadow-[var(--shadow-soft)] ring-1 ring-black/[0.04] sm:p-7",
-        className,
-      )}
-    >
+    <Card className={cn("group relative h-full p-6 sm:p-7", className)}>
       <div className="flex items-start gap-4">
         <ProcessStepBadge index={index} />
         <div className="min-w-0 flex-1">
