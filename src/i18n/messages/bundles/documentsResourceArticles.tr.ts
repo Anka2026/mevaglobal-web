@@ -4,7 +4,7 @@ import type { ResourceArticleSlug } from "@/data/resourceArticleSlugs";
 export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceArticleDetail> = {
   "cbam-reliable-emissions-data": {
     category: "SKDM",
-    date: "2026-04-19",
+    date: "2026-05-17",
     eyebrow: "Teknik not",
     title: "SKDM Hazırlığında “Güvenilir Emisyon Verisi” Ne Anlama Gelir?",
     intro:
@@ -36,7 +36,7 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
   },
   "carbon-verification-alignment": {
     category: "Karbon",
-    date: "2026-04-19",
+    date: "2026-05-10",
     eyebrow: "Teknik not",
     title: "Karbon Doğrulamada Kapsam, Metodoloji ve Paydaş Beklentileri",
     intro:
@@ -68,7 +68,7 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
-    date: "2026-04-19",
+    date: "2026-04-28",
     eyebrow: "Teknik not",
     title: "EPD ve LCA Kritik İncelemede Sık Görülen Zayıf Alanlar",
     intro:
@@ -100,7 +100,7 @@ export const documentsResourceArticlesTr: Record<ResourceArticleSlug, ResourceAr
   },
   "sustainability-assurance-levels": {
     category: "Teknik İnceleme",
-    date: "2026-04-19",
+    date: "2026-04-15",
     eyebrow: "Teknik not",
     title: "Sürdürülebilirlik İddialarında İnceleme Derinliği Seçimi",
     intro:

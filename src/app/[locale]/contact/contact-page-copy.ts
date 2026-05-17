@@ -350,7 +350,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
     officesCard: {
       title: "Onze kantoren",
       nlTitle: "Nederlands hoofdkantoor",
-      trTitle: "Coördinatiekantoor Türkiye",
+      trTitle: "Coördinatiekantoor Turkije",
     },
     support: {
       eyebrow: "Eerste Contact",

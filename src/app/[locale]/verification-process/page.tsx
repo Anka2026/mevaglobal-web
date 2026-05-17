@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { FileSearch, Scale, Shield } from "lucide-react";
@@ -48,15 +47,6 @@ type PageCopy = {
   ctaTitle: string;
   ctaBody: string;
   ctaSecondary: string;
-};
-
-type RepresentationLink = { anchorId: string; name: string; blurb: string };
-
-type PartnerSectionCopy = {
-  sectionTitle: string;
-  sectionBody: string;
-  links: readonly RepresentationLink[];
-  detailsCta: string;
 };
 
 const COPY: Record<Locale, PageCopy> = {
@@ -293,78 +283,6 @@ const COPY: Record<Locale, PageCopy> = {
   },
 };
 
-const PARTNER_SECTION: Record<Locale, PartnerSectionCopy> = {
-  en: {
-    sectionTitle: "Representation And Coordination Channels",
-    sectionBody:
-      "Our representation and cooperation channels support local communication and documentation flow while technical assessment and decision-making remain governed by Meva Global’s defined processes.",
-    links: [
-      {
-        anchorId: "emicert",
-        name: "EmiCert",
-        blurb: "Cooperation channel for greenhouse gas verification and emissions-reporting coordination.",
-      },
-      {
-        anchorId: "cetizion-verifica",
-        name: "Cetizion Verifica",
-        blurb: "Cooperation channel aligned with evidence discipline, technical integrity and process consistency.",
-      },
-      {
-        anchorId: "anka-sustainability",
-        name: "ANKA Sustainability",
-        blurb: "Cooperation channel for sustainability reporting readiness, documentation coordination and local contact aligned with Meva Global technical review.",
-      },
-    ],
-    detailsCta: "View Representation Details",
-  },
-  tr: {
-    sectionTitle: "Temsilcilik ve Koordinasyon Kanalları",
-    sectionBody:
-      "Yerel iletişim ve dokümantasyon akışını kolaylaştıran temsilcilik ve iş birliği kanallarımız, teknik değerlendirme ve karar süreçlerinden ayrı bir koordinasyon yapısı olarak konumlandırılır.",
-    links: [
-      {
-        anchorId: "emicert",
-        name: "EmiCert",
-        blurb: "Sera gazı doğrulaması ve emisyon raporlaması süreçlerinde iş birliği ve koordinasyon kanalı.",
-      },
-      {
-        anchorId: "cetizion-verifica",
-        name: "Cetizion Verifica",
-        blurb: "Kanıt disiplini, teknik bütünlük ve süreç tutumuyla uyumlu temsil ve iş birliği ilişkisi.",
-      },
-      {
-        anchorId: "anka-sustainability",
-        name: "ANKA Sustainability",
-        blurb: "Sürdürülebilirlik raporlaması hazırlığı, belge koordinasyonu ve Meva Global teknik inceleme süreçleriyle uyumlu yerel iletişim iş birliği kanalı.",
-      },
-    ],
-    detailsCta: "Temsilcilik Detaylarını İncele",
-  },
-  nl: {
-    sectionTitle: "Vertegenwoordigings- en coördinatiekanalen",
-    sectionBody:
-      "Onze vertegenwoordigings- en samenwerkingskanalen ondersteunen lokale communicatie en documentatiestroom, terwijl technische beoordeling en besluitvorming binnen de vastgelegde processen van Meva Global blijven.",
-    links: [
-      {
-        anchorId: "emicert",
-        name: "EmiCert",
-        blurb: "Samenwerkingskanaal voor broeikasgasverificatie en coördinatie rond emissierapportage.",
-      },
-      {
-        anchorId: "cetizion-verifica",
-        name: "Cetizion Verifica",
-        blurb: "Samenwerking met nadruk op bewijsdiscipline, technische integriteit en procesconsistentie.",
-      },
-      {
-        anchorId: "anka-sustainability",
-        name: "ANKA Sustainability",
-        blurb: "Samenwerkingskanaal voor gereedheid rond duurzaamheidsrapportage, documentatiecoördinatie en lokaal contact in lijn met de technische beoordeling van Meva Global.",
-      },
-    ],
-    detailsCta: "Bekijk de vertegenwoordigingsdetails",
-  },
-};
-
 export async function generateMetadata({
   params,
 }: {
@@ -405,7 +323,6 @@ export default async function VerificationProcessPage({
   const l = locale as Locale;
   const dict = await getDictionary(l);
   const copy = COPY[l];
-  const partner = PARTNER_SECTION[l];
 
   const steps = copy.steps;
   const principleIcons = [Scale, FileSearch, Shield] as const;
@@ -419,7 +336,7 @@ export default async function VerificationProcessPage({
         className={cn("scroll-mt-[4.5rem] border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}
       >
         <Container className="py-10 sm:py-12 lg:py-14">
-          <div className="mx-auto grid max-w-[76rem] items-stretch gap-8 sm:gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-11 xl:gap-12">
+          <div className="mx-auto grid max-w-[76rem] items-center gap-8 sm:gap-9 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:gap-10 xl:gap-11">
             <div className="min-w-0 max-w-[38.75rem]">
               <div className={premiumEyebrowRow}>
                 <span className={premiumEyebrowRule} aria-hidden />
@@ -441,15 +358,15 @@ export default async function VerificationProcessPage({
                 ))}
               </ul>
             </div>
-            <div className="min-w-0 w-full self-stretch lg:pl-2 xl:pl-4">
+            <div className="min-w-0 w-full lg:justify-self-end lg:pl-2">
               <div
                 className={cn(
                   premiumHeroVisualPanel,
-                  "relative flex h-full min-h-0 w-full flex-col p-3 sm:p-4 lg:min-h-[min(32rem,60vh)]",
+                  "relative mx-auto w-full max-w-[min(100%,680px)] p-3 sm:p-4 lg:mx-0 lg:ml-auto",
                 )}
               >
                 <div className={premiumGoldTopLine} aria-hidden />
-                <VerificationProcessHeroVisual alt={copy.heroAlt} className="min-h-0 flex-1" />
+                <VerificationProcessHeroVisual alt={copy.heroAlt} />
               </div>
             </div>
           </div>
@@ -531,38 +448,6 @@ export default async function VerificationProcessPage({
               <p className="mt-4 max-w-[52rem] text-sm leading-[1.82] text-[color:var(--text-muted)] sm:text-[0.9375rem] sm:leading-[1.76]">
                 {copy.isoBody}
               </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-[color:var(--border-soft)] bg-white py-10 sm:py-12 lg:py-14">
-        <Container>
-          <div className="mx-auto max-w-[76rem]">
-            <SectionHeading
-              title={partner.sectionTitle}
-              description={partner.sectionBody}
-              titleClassName="text-[1.5rem] sm:text-[1.75rem] lg:text-[1.875rem]"
-              withTitleAccent
-              className="max-w-3xl"
-            />
-            <div className="mt-10 grid gap-6 md:grid-cols-3 md:gap-7">
-              {partner.links.map((item) => (
-                <Link
-                  key={item.anchorId}
-                  href={`/${l}/representations#${item.anchorId}`}
-                  className={cn(premiumCardInteractive, "group flex min-h-0 flex-col p-7")}
-                >
-                  <div className={premiumGoldTopLine} aria-hidden />
-                  <h3 className="text-[1.0625rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)]">
-                    {item.name}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[color:var(--text-muted)]">{item.blurb}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[color:var(--brand-primary)]">
-                    {partner.detailsCta}
-                  </span>
-                </Link>
-              ))}
             </div>
           </div>
         </Container>

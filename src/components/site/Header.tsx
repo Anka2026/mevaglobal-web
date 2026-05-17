@@ -11,15 +11,14 @@ import { BrandLogo } from "@/components/site/BrandLogo";
 
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
-    <header className="relative z-10 bg-white">
+    <header className="sticky top-0 z-50 bg-white">
       <TopInfoBar dict={dict} />
       <div className="border-b border-[color:var(--border-soft)] bg-white shadow-[0_1px_0_rgba(29,37,47,0.06)]">
-        <Container className="flex w-full max-w-6xl min-h-[5rem] items-center justify-between gap-3 py-5 sm:min-h-[5.25rem] sm:py-5 sm:gap-4 lg:min-h-[5.75rem] lg:gap-5 lg:py-6">
-          <div className="flex min-w-0 shrink-0 items-center pr-2 sm:pr-2.5 lg:pr-3">
+        <Container className="flex w-full max-w-6xl min-h-[4.25rem] items-center justify-between gap-2 py-3.5 sm:min-h-[5.25rem] sm:gap-4 sm:py-5 lg:min-h-[5.75rem] lg:gap-5 lg:py-6">
+          <div className="flex min-w-0 flex-1 items-center pr-1 sm:flex-none sm:pr-2.5 lg:pr-3">
             <Link
               href={`/${locale}`}
-              className="group flex max-w-[220px] shrink-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--brand-primary)]"
-              style={{ maxWidth: "220px" }}
+              className="group flex max-w-[min(134px,40vw)] shrink-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--brand-primary)] sm:max-w-[176px]"
             >
               <BrandLogo alt={dict.brand.legalName} priority />
             </Link>
@@ -46,7 +45,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
 
           {/* Mobile: language + drawer */}
-          <div className="flex shrink-0 items-center gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
             <LanguageSwitcher locale={locale} />
             <MobileNavigation locale={locale} dict={dict} />
           </div>

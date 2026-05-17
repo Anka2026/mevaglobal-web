@@ -11,7 +11,7 @@ export type InsightPost = {
 export const insights: InsightPost[] = [
   {
     slug: "cbam-readiness-essentials",
-    date: "2026-04-19",
+    date: "2026-05-17",
     tag: { en: "CBAM", tr: "SKDM", nl: "CBAM" },
     title: {
       en: "CBAM readiness: what “credible emissions data” really means",
@@ -26,7 +26,7 @@ export const insights: InsightPost[] = [
   },
   {
     slug: "carbon-verification-for-stakeholders",
-    date: "2026-04-19",
+    date: "2026-05-10",
     tag: { en: "Carbon", tr: "Karbon", nl: "Carbon" },
     title: {
       en: "Carbon verification: aligning scope, methodology and stakeholder expectations",
@@ -56,7 +56,7 @@ export const insights: InsightPost[] = [
   },
   {
     slug: "assurance-for-sustainability-claims",
-    date: "2026-04-19",
+    date: "2026-04-15",
     tag: { en: "Technical Review", tr: "Teknik İnceleme", nl: "Technische Review" },
     title: {
       en: "Independent Review For Sustainability Claims: When Limited Assurance Is Not Enough",

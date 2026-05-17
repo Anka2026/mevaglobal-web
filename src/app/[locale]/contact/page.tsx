@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
-import { ContactHeroFrame } from "@/components/contact/ContactHeroFrame";
+import { ContactInquiryHeroPanel } from "@/components/contact/ContactInquiryHeroPanel";
 import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
 import { offices } from "@/data/offices";
 import { CompanyRegistryBlock } from "@/components/site/CompanyRegistryBlock";
@@ -17,12 +17,6 @@ import { premiumCard, premiumCardMuted, premiumHeroBackdrop } from "@/lib/premiu
 
 /** Published inbox used across the site; enquiry form opens mailto with prefilled body (no server POST). */
 const CONTACT_EMAIL = "info@mevaglobalcertification.com";
-
-const CONTACT_HERO_SRC = "/assets/page-visuals/contact-hero.png";
-
-function resolveContactHeroSrc(): string {
-  return CONTACT_HERO_SRC;
-}
 
 function isTurkeyPhone(phone?: string) {
   if (!phone) return false;
@@ -83,8 +77,6 @@ export default async function ContactPage({
   const l = locale as Locale;
   const dict = await getDictionary(l);
   const copy = CONTACT_PAGE_COPY[l];
-  const heroSrc = resolveContactHeroSrc();
-
   const sanitizedOffices = offices.map(sanitizeOfficeForDisplay);
   const nlOffice = sanitizedOffices.find((o) => o.id === "nl");
   const trOffice = sanitizedOffices.find((o) => o.id === "tr");
@@ -120,7 +112,7 @@ export default async function ContactPage({
               </div>
             </div>
             <div className="min-w-0 lg:col-span-5 lg:pl-2">
-              <ContactHeroFrame alt={dict.pages.contact.heroImageAlt} src={heroSrc} />
+              <ContactInquiryHeroPanel locale={l} />
             </div>
           </div>
         </Container>

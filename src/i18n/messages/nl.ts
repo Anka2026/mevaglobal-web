@@ -64,8 +64,8 @@ export const nl: Dictionary = {
   },
   shared: {
     offices: {
-      turkey: "Turkije — kantoor Ankara",
-      netherlands: "Nederland — kantoor Utrecht",
+      turkey: "Turkije — Ankara",
+      netherlands: "Nederland — Utrecht",
     },
     ui: {
       optional: "Optioneel",
@@ -105,7 +105,7 @@ export const nl: Dictionary = {
       "Kantoren in Utrecht en Ankara coördineren internationale levering met duidelijke lokale routing.",
     rights: "Alle rechten voorbehouden.",
     registryCompanyName: "Meva Global Certification B.V.",
-    registryCountry: "Geregistreerd in Nederland",
+    registryLocations: ["Nederland — Utrecht", "Turkije — Ankara"] as const,
     registryKvKLabel: "KvK No",
   },
   aboutLeadership: {
@@ -115,7 +115,7 @@ export const nl: Dictionary = {
     name: "Dilan Arslan",
     role: "Algemeen directeur",
     bio:
-      "Dilan Arslan is verantwoordelijk voor het corporate management van Meva Global Certification B.V. en voor het waarborgen dat onafhankelijke technische reviewprocessen binnen een consistent, onpartijdig en bewijsgericht kader worden uitgevoerd. Haar werk is gestructureerd rond duurzaamheidsverklaringen, product- en koolstofgerichte technische dossiers, verificatievoorbereiding en CBAM-processen—met methodologische discipline en traceerbaarheid als uitgangspunt.",
+      "Als Meva Global Certification B.V. bouwen wij verificatie- en technische beoordeling op heldere scopeafbakening, onpartijdige beoordeling, traceerbare bewijsstructuren en methodologische consistentie. Onze institutionele prioriteit is dat verklaringen en technische dossiers binnen een betrouwbaar kader worden behandeld—niet alleen qua uitkomst, maar ook wat betreft onderbouwing, scopegrenzen, registratiediscipline en besluitvorming. Deze lijn vormt de basis van ons werk, van duurzaamheidsverklaringen en product- en koolstofgerichte dossiers tot CBAM-voorbereiding en registraties die openstaan voor externe stakeholderbeoordeling.",
     focusAreas: [
       "Onafhankelijke technische beoordeling",
       "Bewijsgerichte beoordeling",
@@ -305,7 +305,7 @@ export const nl: Dictionary = {
         {
           title: "Internationale leveringsdiscipline",
           bullets: [
-            "Gedisciplineerd leveringsmodel ondersteund door onze structuur in Türkiye en Nederland",
+            "Gedisciplineerd leveringsmodel ondersteund door onze structuur in Turkije en Nederland",
             "Heldere coördinatie en professioneel procesmanagement voor exporteurs, producenten en multi-stakeholdercontexten",
             "Governance, beoordelingsdiscipline en leveringskwaliteit in lijn met internationale verwachtingen",
           ],
@@ -1700,18 +1700,23 @@ export const nl: Dictionary = {
       corporateDocumentsSection: {
         title: "Bedrijfsdocumenten en registraties",
         intro:
-          "In deze sectie vindt u kern-documenten over verificatie, validatie, onpartijdigheid, vertrouwelijkheid en het gebruik van verklaringen.",
+          "Meva Global Certification B.V. beheert bedrijfsdocumenten, algemene voorwaarden en procesregistraties die worden gebruikt bij verificatie, validatie, technische beoordeling en certificeringsvoorbereiding binnen een gecontroleerde documentstructuur. Openbaar beschikbare documenten en referentieregistraties worden in dit onderdeel gedeeld volgens hun scope en gebruiksvoorwaarden.",
         fileUnavailableNote:
           "Het actuele PDF-bestand voor dit document is in deze omgeving niet beschikbaar. Gerelateerde materie kan via de kennisbank worden benaderd; u kunt ook contact opnemen voor ondersteuning.",
         knowledgeHubLinkLabel: "Kennisbank bekijken",
+        emptyState:
+          "Openbare bedrijfsdocumenten worden in dit onderdeel weergegeven. Heeft u een actueel document nodig, dan kunt u dit via ons contactkanaal aanvragen.",
+        publiclyAvailable: "Openbaar beschikbaar",
         labels: {
-          publicationStatus: "Publicatiestatus",
+          documentCode: "Documentcode",
+          publicationStatus: "Status",
           firstPublished: "Eerste publicatie",
-          documentLanguage: "Taal",
+          scopeLanguage: "Taal / scope",
           view: "Document bekijken",
           download: "PDF downloaden",
+          contactForDocument: "Neem contact op voor documenttoegang",
         },
-        publicationStatusFirst: "Eerste publicatie",
+        publicationStatusFirst: "Openbaar beschikbaar",
         languageValue: "EN · TR · NL",
       },
       verification: {
@@ -1854,7 +1859,7 @@ export const nl: Dictionary = {
       cards: [
         {
           category: "CBAM",
-          date: "2026-04-19",
+          date: "2026-05-17",
           title: "Wat Betekent “Betrouwbare Emissiegegevens” Werkelijk Bij CBAM-Voorbereiding?",
           body:
             "Een compact kader om grensdiscipline, bewijsvoldoendeheid en datakwaliteit technisch te beoordelen vóór CBAM-informatie voor aangifte wordt samengebracht.",
@@ -1863,7 +1868,7 @@ export const nl: Dictionary = {
         },
         {
           category: "Koolstof",
-          date: "2026-04-19",
+          date: "2026-05-10",
           title: "Hoe Breng Je Scope, Methodologie En Stakeholderverwachtingen Op Eén Lijn Bij Koolstofverificatie?",
           body:
             "Hoe traceerbare aannames, expliciete controlepunten en bewuste methodologiekeuzes leiden tot rapportage die technische beoordeling weerstaat.",
@@ -1872,7 +1877,7 @@ export const nl: Dictionary = {
         },
         {
           category: "EPD / LCA",
-          date: "2026-04-19",
+          date: "2026-04-28",
           title: "Veelvoorkomende Zwakke Punten In EPD- En LCA-Critical Review",
           body:
             "Terugkerende thema’s—PCR-afstemming, voorgrondtraceerbaarheid, allocatieverdedigbaarheid, scenariotransparantie en consistentie van model tot rapport.",
@@ -1881,7 +1886,7 @@ export const nl: Dictionary = {
         },
         {
           category: "Technische beoordeling",
-          date: "2026-04-19",
+          date: "2026-04-15",
           title: "Waarom Reviewdiepte Belangrijk Is Bij Duurzaamheidsclaims",
           body:
             "Beperkte en diepere onafhankelijke review afstemmen op beslissingsrisico, derdenvertrouwen en de bewijsdiepte die uw technische formulering impliciteert.",

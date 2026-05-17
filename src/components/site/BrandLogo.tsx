@@ -11,19 +11,19 @@ export function BrandLogo({ alt, priority = false }: { alt: string; priority?: b
     <Image
       src="/assets/meva-logo.jpeg"
       alt={alt}
-      width={220}
-      height={62}
-      className={cn("h-11 w-auto max-h-[4.25rem] sm:h-[3.25rem] lg:h-[4.25rem]", visualImageRoundedClass)}
+      width={176}
+      height={50}
+      className={cn("h-9 w-auto max-h-[3.4rem] sm:h-[2.6rem] lg:h-[3.4rem]", visualImageRoundedClass)}
       style={{
-        maxHeight: "4.25rem",
-        maxWidth: "220px",
+        maxHeight: "3.4rem",
+        maxWidth: "176px",
         width: "auto",
         height: "auto",
         objectFit: "contain",
         display: "block",
         verticalAlign: "middle",
       }}
-      sizes="(max-width: 1024px) 180px, 220px"
+      sizes="(max-width: 1024px) 144px, 176px"
       priority={priority}
     />
   );

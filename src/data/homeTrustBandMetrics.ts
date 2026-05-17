@@ -27,13 +27,13 @@ export const HOME_TRUST_BAND_METRICS: Record<Locale, readonly HomeTrustBandMetri
     { ...HOME_TRUST_BAND_ROW_DEFS[2], label: "Hizmet Grubu" },
   ],
   en: [
-    { ...HOME_TRUST_BAND_ROW_DEFS[0], label: "Completed Technical Engagements" },
-    { ...HOME_TRUST_BAND_ROW_DEFS[1], label: "Sector Expertise Areas" },
-    { ...HOME_TRUST_BAND_ROW_DEFS[2], label: "Structured Service Lines" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[0], label: "Completed Technical Studies" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[1], label: "Sectoral Expertise Areas" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[2], label: "Service Groups" },
   ],
   nl: [
-    { ...HOME_TRUST_BAND_ROW_DEFS[0], label: "Afgeronde Technische Opdrachten" },
-    { ...HOME_TRUST_BAND_ROW_DEFS[1], label: "Sectorale Expertisegebieden" },
-    { ...HOME_TRUST_BAND_ROW_DEFS[2], label: "Gestructureerde Dienstlijnen" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[0], label: "Afgeronde technische studies" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[1], label: "Sectorale expertisegebieden" },
+    { ...HOME_TRUST_BAND_ROW_DEFS[2], label: "Dienstengroepen" },
   ],
 };

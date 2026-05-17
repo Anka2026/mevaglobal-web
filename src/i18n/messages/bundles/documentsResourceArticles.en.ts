@@ -4,7 +4,7 @@ import type { ResourceArticleSlug } from "@/data/resourceArticleSlugs";
 export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceArticleDetail> = {
   "cbam-reliable-emissions-data": {
     category: "CBAM",
-    date: "2026-04-19",
+    date: "2026-05-17",
     eyebrow: "Technical note",
     title: 'What “Reliable Emissions Data” Really Means In CBAM Preparation',
     intro:
@@ -36,7 +36,7 @@ export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceAr
   },
   "carbon-verification-alignment": {
     category: "Carbon",
-    date: "2026-04-19",
+    date: "2026-05-10",
     eyebrow: "Technical note",
     title: "Scope, Methodology And Stakeholder Expectations In Carbon Verification",
     intro:
@@ -68,7 +68,7 @@ export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceAr
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
-    date: "2026-04-19",
+    date: "2026-04-28",
     eyebrow: "Technical note",
     title: "Common Weak Points In EPD And LCA Critical Review",
     intro:
@@ -100,7 +100,7 @@ export const documentsResourceArticlesEn: Record<ResourceArticleSlug, ResourceAr
   },
   "sustainability-assurance-levels": {
     category: "Technical Review",
-    date: "2026-04-19",
+    date: "2026-04-15",
     eyebrow: "Technical note",
     title: "Selecting Review Depth For Sustainability Claims",
     intro:

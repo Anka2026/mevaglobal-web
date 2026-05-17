@@ -21,7 +21,7 @@ export function TeamProfilePhoto({ src, alt, className, fillColumn = false, comp
   const shellClass = cn(
     "relative w-full overflow-hidden rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-gold)_18%,var(--border-soft))] bg-[color:var(--brand-accent-soft)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_10%,transparent)]",
     compact
-      ? "aspect-[3/4] max-h-[17.5rem] sm:max-h-[18.5rem] lg:max-h-[19rem]"
+      ? "aspect-[3/4] max-h-[12.75rem] sm:max-h-[13.5rem] lg:max-h-[14rem]"
       : fillColumn
         ? "aspect-[4/5] min-h-[15.5rem] lg:aspect-auto lg:h-full lg:min-h-[17.5rem]"
         : "aspect-[4/5]",
@@ -42,9 +42,16 @@ export function TeamProfilePhoto({ src, alt, className, fillColumn = false, comp
         src={src}
         alt={alt}
         fill
-        className="object-cover object-[50%_18%]"
-        sizes="(max-width: 1024px) 80vw, 280px"
+        className={cn(
+          "object-cover",
+          compact ? "object-[58%_22%] scale-[1.02]" : "object-[50%_18%]",
+        )}
+        sizes={compact ? "(max-width: 1024px) 40vw, 200px" : "(max-width: 1024px) 80vw, 260px"}
         onError={() => setFailed(true)}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[color:color-mix(in_oklab,var(--ink-dark)_18%,transparent)] via-transparent to-transparent"
+        aria-hidden
       />
     </div>
   );

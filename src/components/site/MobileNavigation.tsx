@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -31,8 +31,17 @@ export function MobileNavigation({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   return (
-    <div className="lg:hidden">
+    <div className="relative z-[60] shrink-0 lg:hidden">
       <button
         type="button"
         aria-label={open ? "Close navigation" : "Open navigation"}
@@ -44,7 +53,7 @@ export function MobileNavigation({
 
       {open ? (
         <div
-          className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-black/35 backdrop-blur-[2px]"
           role="dialog"
           aria-modal="true"
           onClick={() => setOpen(false)}
@@ -56,8 +65,7 @@ export function MobileNavigation({
             <div className="flex items-center justify-between border-b border-[color:var(--border-soft)] px-5 py-4">
               <Link
                 href={`/${locale}`}
-                className="flex max-w-[220px] shrink-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--brand-primary)]"
-                style={{ maxWidth: "220px" }}
+                className="flex max-w-[176px] shrink-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--brand-primary)]"
                 onClick={() => setOpen(false)}
               >
                 <BrandLogo alt={dict.brand.legalName} />

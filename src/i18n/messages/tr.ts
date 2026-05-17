@@ -63,8 +63,8 @@ export const tr: Dictionary = {
   },
   shared: {
     offices: {
-      turkey: "Türkiye — Ankara Ofisi",
-      netherlands: "Hollanda — Utrecht Ofisi",
+      turkey: "Türkiye — Ankara",
+      netherlands: "Hollanda — Utrecht",
     },
     ui: {
       optional: "Opsiyonel",
@@ -104,7 +104,7 @@ export const tr: Dictionary = {
       "Utrecht ve Ankara ofisleri uluslararası koordinasyon ile yerel iletişimi birlikte yürütür.",
     rights: "Tüm hakları saklıdır.",
     registryCompanyName: "Meva Global Certification B.V.",
-    registryCountry: "Hollanda'da kayıtlı",
+    registryLocations: ["Hollanda — Utrecht", "Türkiye — Ankara"] as const,
     registryKvKLabel: "KvK No",
   },
   aboutLeadership: {
@@ -114,7 +114,7 @@ export const tr: Dictionary = {
     name: "Dilan Arslan",
     role: "Genel Müdür",
     bio:
-      "Dilan Arslan, Meva Global Certification B.V.’nin kurumsal yönetiminden ve bağımsız teknik inceleme süreçlerinin tutarlı, tarafsız ve kanıt temelli bir yapı içinde yürütülmesinden sorumludur. Çalışmalar; sürdürülebilirlik beyanları, ürün ve karbon temelli teknik dosyalar, doğrulama hazırlığı ve SKDM/CBAM süreçlerinde metodolojik disiplin ve izlenebilirlik odağıyla yapılandırılır.",
+      "Meva Global Certification B.V. olarak yaklaşımımız; doğrulama ve teknik inceleme çalışmalarını açık kapsam, tarafsız değerlendirme, izlenebilir kanıt yapısı ve metodolojik tutarlılık ilkeleri üzerine kurmaktır. Kurumsal önceliğimiz, beyanların ve teknik dosyaların yalnızca sonuç odaklı değil; dayanak, kapsam, kayıt düzeni ve karar disiplini bakımından da güvenilir bir çerçevede ele alınmasını sağlamaktır. Bu anlayış; sürdürülebilirlik beyanlarından ürün ve karbon temelli teknik dosyalara, SKDM/CBAM hazırlıklarından dış paydaş incelemesine açık kayıt yapılarına kadar tüm çalışma alanlarımızın temelini oluşturur.",
     focusAreas: [
       "Bağımsız teknik inceleme",
       "Kanıt temelli değerlendirme",
@@ -1697,18 +1697,23 @@ export const tr: Dictionary = {
       corporateDocumentsSection: {
         title: "Kurumsal Dokümanlar ve Kayıtlar",
         intro:
-          "Doğrulama, geçerli kılma, tarafsızlık, gizlilik ve beyan kullanımına ilişkin temel kurumsal dokümanlarımızı bu bölümde inceleyebilirsiniz.",
+          "Meva Global Certification B.V.; doğrulama, validasyon, teknik inceleme ve belgelendirme hazırlığı süreçlerinde kullanılan kurumsal dokümanları, genel şartları ve süreç kayıtlarını kontrollü bir doküman yapısı içinde yönetir. Yayına açık dokümanlar ve referans kayıtları, ilgili kapsam ve kullanım koşullarına göre bu alanda paylaşılır.",
         fileUnavailableNote:
           "Bu dokümanın güncel PDF dosyası şu anda bu ortamda bulunmuyor. İlgili içeriklere bilgi merkezinden veya iletişim kanalından ulaşabilirsiniz.",
         knowledgeHubLinkLabel: "Bilgi Merkezini İncele",
+        emptyState:
+          "Yayına açık kurumsal dokümanlar bu bölümde listelenir. Güncel bir dokümana ihtiyaç duyduğunuzda iletişim kanalından talep edebilirsiniz.",
+        publiclyAvailable: "Yayına açık",
         labels: {
-          publicationStatus: "Yayın durumu",
+          documentCode: "Doküman kodu",
+          publicationStatus: "Durum",
           firstPublished: "İlk yayın",
-          documentLanguage: "Dil",
-          view: "Görüntüle",
+          scopeLanguage: "Dil / kapsam",
+          view: "Dokümanı İncele",
           download: "PDF indir",
+          contactForDocument: "Doküman talebi için iletişime geçin",
         },
-        publicationStatusFirst: "İlk yayın",
+        publicationStatusFirst: "Yayına açık",
         languageValue: "EN · TR · NL",
       },
       verification: {
@@ -1844,7 +1849,7 @@ export const tr: Dictionary = {
       cards: [
         {
           category: "SKDM",
-          date: "2026-04-19",
+          date: "2026-05-17",
           title: "SKDM Hazırlığında “Güvenilir Emisyon Verisi” Gerçekte Ne Anlama Gelir?",
           body:
             "Beyan öncesi sınır disiplini, kanıt yeterliliği ve veri kalitesinin teknik inceleme açısından nasıl okunacağına dair özlü bir çerçeve.",
@@ -1853,7 +1858,7 @@ export const tr: Dictionary = {
         },
         {
           category: "Karbon",
-          date: "2026-04-19",
+          date: "2026-05-10",
           title: "Karbon Doğrulamada Kapsam, Metodoloji ve Paydaş Beklentileri",
           body:
             "İzlenebilir varsayımlar, açık kontrol noktaları ve bilinçli metodoloji seçiminin teknik tartışmaya dayanıklı raporlamaya nasıl dönüştüğü.",
@@ -1862,7 +1867,7 @@ export const tr: Dictionary = {
         },
         {
           category: "EPD / LCA",
-          date: "2026-04-19",
+          date: "2026-04-28",
           title: "EPD ve LCA Kritik İncelemede En Sık Karşılaşılan Zayıflıklar",
           body:
             "PCR hizası, ön plan izlenebilirliği, tahsis savunulabilirliği, senaryo şeffaflığı ve modelden rapora tutarlılık gibi tekrar eden inceleme temaları.",
@@ -1871,7 +1876,7 @@ export const tr: Dictionary = {
         },
         {
           category: "Teknik İnceleme",
-          date: "2026-04-19",
+          date: "2026-04-15",
           title: "Sürdürülebilirlik İddialarında İnceleme Derinliği Neden Kritik?",
           body:
             "Sınırlı ve daha derin bağımsız inceleme düzeyleri; karar riski, üçüncü taraf güveni ve kullanılacak teknik dilin ima ettiği kanıt derinliği ile birlikte değerlendirilir.",

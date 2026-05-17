@@ -338,7 +338,7 @@ export default async function AboutPage({
           title: copy.corporateTitle,
           narrativeTitle: copy.whyExistsTitle,
           narrativeLead: copy.whyExistsBody,
-          narrativeSupport: copy.positioningBody,
+          narrativeSupport: "",
           pillars: [
             { title: copy.missionTitle, body: copy.missionBody },
             { title: copy.howTitle, body: copy.howBody },

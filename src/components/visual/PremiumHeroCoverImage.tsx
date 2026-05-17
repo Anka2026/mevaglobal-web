@@ -30,7 +30,7 @@ export function PremiumHeroCoverImage({
         src={src}
         alt={alt}
         fill
-        priority={priority}
+        priority={priority ?? true}
         className={cn("object-cover object-center", imageClassName)}
         sizes="(max-width: 1024px) 100vw, 48vw"
       />

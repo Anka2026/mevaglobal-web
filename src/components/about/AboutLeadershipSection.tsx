@@ -32,11 +32,11 @@ export function AboutLeadershipSection({ leadership }: Props) {
           <article
             className={cn(
               premiumCardElevated,
-              "mt-8 p-6 sm:p-7 lg:grid lg:grid-cols-[minmax(10.5rem,13rem)_minmax(0,1fr)] lg:items-start lg:gap-8 lg:p-8",
+              "mt-8 p-6 sm:p-7 lg:grid lg:grid-cols-[minmax(7.75rem,9.25rem)_minmax(0,1fr)] lg:items-center lg:gap-9 lg:p-8 xl:gap-10",
             )}
           >
             <div className={premiumGoldTopLine} aria-hidden />
-            <div className="mx-auto w-full max-w-[13rem] shrink-0 lg:mx-0">
+            <div className="mx-auto w-full max-w-[9.25rem] shrink-0 lg:mx-0">
               <TeamProfilePhoto
                 src={LEADERSHIP_PHOTO_SRC}
                 alt={leadership.photoAlt}
@@ -50,7 +50,7 @@ export function AboutLeadershipSection({ leadership }: Props) {
                   {leadership.name}
                 </p>
                 <p className="mt-1.5 text-sm font-semibold text-[color:var(--brand-primary)]">{leadership.role}</p>
-                <p className="mt-4 max-w-[40rem] text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]">
+                <p className="mt-4 max-w-none text-sm leading-[1.78] text-[color:var(--ink-dark)]/88 sm:text-[0.9375rem] sm:leading-[1.76] lg:max-w-[52rem]">
                   {leadership.bio}
                 </p>
               </div>

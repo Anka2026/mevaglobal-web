@@ -66,8 +66,10 @@ export function VerificationServicesListingView({
   return (
     <>
       <PageHeader
-        compactVertical
+        denseHero
+        prominentVisual
         wideIntro
+        sectionSurfaceClassName="border-b border-[color:var(--border-soft)] bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_72%,var(--background-main))] via-[color:color-mix(in_oklab,var(--brand-accent-soft)_44%,var(--background-main))] to-[color:color-mix(in_oklab,var(--brand-primary)_7%,var(--background-main))]"
         eyebrow={s.heroEyebrow}
         title={s.title}
         description={[s.intro, s.introSupport]}

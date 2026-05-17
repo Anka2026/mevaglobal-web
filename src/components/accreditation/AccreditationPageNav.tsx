@@ -65,7 +65,12 @@ export function AccreditationPageNav({ dict }: { dict: Dictionary }) {
   const scrollToSection = (id: AccreditationSectionId) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const header = document.querySelector("header");
+      const subNav = document.querySelector<HTMLElement>('[aria-label="' + nav.navAriaLabel + '"]');
+      const offset =
+        (header?.getBoundingClientRect().height ?? 0) + (subNav?.getBoundingClientRect().height ?? 0) + 12;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
     }
     const url = new URL(window.location.href);
     url.hash = id;

@@ -4,7 +4,7 @@ import type { ResourceArticleSlug } from "@/data/resourceArticleSlugs";
 export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceArticleDetail> = {
   "cbam-reliable-emissions-data": {
     category: "CBAM",
-    date: "2026-04-19",
+    date: "2026-05-17",
     eyebrow: "Technische notitie",
     title: "Wat “Betrouwbare Emissiegegevens” In De Praktijk Betekent Bij CBAM-Voorbereiding",
     intro:
@@ -36,7 +36,7 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
   },
   "carbon-verification-alignment": {
     category: "Koolstof",
-    date: "2026-04-19",
+    date: "2026-05-10",
     eyebrow: "Technische notitie",
     title: "Scope, methodologie en stakeholderverwachtingen bij koolstofverificatie",
     intro:
@@ -68,7 +68,7 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
   },
   "epd-lca-critical-weaknesses": {
     category: "EPD / LCA",
-    date: "2026-04-19",
+    date: "2026-04-28",
     eyebrow: "Technische notitie",
     title: "Veelvoorkomende Zwakke Plekken Bij EPD- En LCA-Critical Review",
     intro:
@@ -100,7 +100,7 @@ export const documentsResourceArticlesNl: Record<ResourceArticleSlug, ResourceAr
   },
   "sustainability-assurance-levels": {
     category: "Technische beoordeling",
-    date: "2026-04-19",
+    date: "2026-04-15",
     eyebrow: "Technische notitie",
     title: "Keuze Van Beoordelingsdiepte Bij Duurzaamheidsclaims",
     intro:

@@ -5,16 +5,15 @@ import { isLocale, type Locale } from "@/i18n/locales";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
-import { PremiumHeroCoverImage } from "@/components/visual/PremiumHeroCoverImage";
+import { RepresentationsHeroVisual } from "@/components/representations/RepresentationsHeroVisual";
+import { premiumGoldTopLine, premiumHeroVisualPanel } from "@/lib/premiumUi";
 import { RepresentationsCards } from "./RepresentationsCards";
 import { getRepresentationsPageBundle } from "./representations-data";
 import { cn } from "@/lib/cn";
 import { premiumSectionMuted, premiumStepBadge } from "@/lib/premiumUi";
 
-const REPRESENTATIONS_HERO_SRC = "/images/representations/representation-network-hero.png";
-
 function resolveLogoSrc(stated: string): string {
-  return stated.startsWith("/") ? stated : REPRESENTATIONS_HERO_SRC;
+  return stated.startsWith("/") ? stated : "/images/representations/representation-network-hero.png";
 }
 
 type PageCopy = {
@@ -39,7 +38,7 @@ const COPY: Record<Locale, PageCopy> = {
     eyebrow: "Representations • Cooperation network • Technical coordination",
     title: "Local Representation and International Verification Coordination",
     intro:
-      "Meva Global’s representation structure supports local contact, document coordination and the organised management of verification processes under a central framework. Across Türkiye, Europe, Asia, Africa and the Caucasus, application and documentation flows are coordinated in line with Meva Global’s technical review discipline.",
+      "Meva Global’s representation structure supports local contact, document coordination and the organized management of verification processes under a central framework. Across Türkiye, Europe, Asia, Africa and the Caucasus, application, documentation and preliminary review flows are coordinated in line with Meva Global’s technical review discipline.",
     heroImageAlt:
       "Corporate desk illustrating international representation, local access pins on a world map and coordinated technical engagement.",
     roleTitle: "Roles and responsibilities",
@@ -86,7 +85,7 @@ const COPY: Record<Locale, PageCopy> = {
     eyebrow: "Temsilcilik • Yerel koordinasyon • Merkezi teknik inceleme",
     title: "Yerel Temsil, Uluslararası Doğrulama Koordinasyonu",
     intro:
-      "Meva Global’in temsilcilik yapısı; yerel iletişim, belge koordinasyonu ve doğrulama süreçlerinin merkezi yapı altında düzenli biçimde yürütülmesini sağlar. Türkiye başta olmak üzere Avrupa, Asya, Afrika ve Kafkasya bölgelerinde, başvuru ve dokümantasyon akışı Meva Global’in teknik inceleme disipliniyle koordine edilir.",
+      "Meva Global’in temsilcilik yapısı; yerel iletişim, belge koordinasyonu ve doğrulama süreçlerinin merkezi yapı altında düzenli biçimde yürütülmesini sağlar. Türkiye başta olmak üzere Avrupa, Asya, Afrika ve Kafkasya bölgelerinde başvuru, dokümantasyon ve ön inceleme akışı Meva Global’in teknik inceleme disipliniyle koordine edilir.",
     heroImageAlt:
       "Temsilcilik ağı ve yerel-ulusal koordinasyon temalı kurumsal görsel; dünya haritası ve teknik koordinasyon vurgusu.",
     roleTitle: "Rol ve Sorumluluk Çerçevesi",
@@ -133,7 +132,7 @@ const COPY: Record<Locale, PageCopy> = {
     eyebrow: "Vertegenwoordigingen • Samenwerkingsnetwerk • Technische coördinatie",
     title: "Lokale vertegenwoordiging en internationale verificatiecoördinatie",
     intro:
-      "De vertegenwoordigingstructuur van Meva Global ondersteunt lokaal contact, documentcoördinatie en de georganiseerde uitvoering van verificatieprocessen binnen een centrale structuur. In Türkiye, Europa, Azië, Afrika en de Kaukasus worden aanvraag- en documentatiestromen gecoördineerd volgens de technische beoordelingsdiscipline van Meva Global.",
+      "De vertegenwoordigingstructuur van Meva Global ondersteunt lokaal contact, documentcoördinatie en de georganiseerde uitvoering van verificatieprocessen binnen een centrale structuur. In Turkije, Europa, Azië, Afrika en de Kaukasus worden aanvraag-, documentatie- en voorlopige beoordelingsstromen gecoördineerd volgens de technische beoordelingsdiscipline van Meva Global.",
     heroImageAlt:
       "Professioneel kantoorbeeld met wereldkaart en nadruk op vertegenwoordigingsnetwerk en lokale coördinatie.",
     roleTitle: "Rollen en verantwoordelijkheden",
@@ -242,19 +241,15 @@ export default async function RepresentationsPage({
     <>
       <PageHeader
         denseHero
-        prominentVisual
         eyebrow={copy.eyebrow}
         title={copy.title}
         description={copy.intro}
-        visualWrapperClassName="max-w-[min(44rem,100%)] sm:min-h-[300px] lg:max-w-none lg:min-h-[min(52rem,62vh)] lg:max-h-[min(52rem,64vh)]"
+        visualWrapperClassName="mx-auto w-full min-h-0 max-w-[min(100%,640px)] lg:ml-auto lg:mr-0 lg:max-h-none"
         visual={
-          <PremiumHeroCoverImage
-            src={REPRESENTATIONS_HERO_SRC}
-            alt={copy.heroImageAlt}
-            priority
-            imageClassName="object-contain object-center"
-            className="min-h-[300px] w-full bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] to-white sm:min-h-[340px] lg:min-h-0"
-          />
+          <div className={cn(premiumHeroVisualPanel, "relative w-full p-2.5 sm:p-3")}>
+            <div className={premiumGoldTopLine} aria-hidden />
+            <RepresentationsHeroVisual alt={copy.heroImageAlt} />
+          </div>
         }
       />
 

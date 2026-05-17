@@ -16,7 +16,7 @@ export function VerificationProcessHeroVisual({
     <div
       className={cn(
         editorialPhotoShellClass,
-        "min-h-[320px] w-full bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] to-white sm:min-h-[420px] lg:min-h-[min(32rem,60vh)]",
+        "aspect-[4/3] w-full min-h-[200px] max-h-[min(17.5rem,48vh)] bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] to-white sm:min-h-[220px] sm:max-h-[min(19rem,44vh)] lg:min-h-0 lg:max-h-[min(18rem,36vh)]",
         className,
       )}
     >
@@ -25,8 +25,8 @@ export function VerificationProcessHeroVisual({
         alt={alt}
         fill
         priority
-        className="object-contain object-center p-1 sm:p-1.5"
-        sizes="(max-width: 1024px) 100vw, 52vw"
+        className="object-contain object-center p-1.5 sm:p-2"
+        sizes="(max-width: 1024px) 100vw, 640px"
       />
     </div>
   );

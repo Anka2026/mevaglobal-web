@@ -39,9 +39,11 @@ export function AboutCorporateSection({ copy }: { copy: AboutCorporateCopy }) {
               <p className="mt-4 text-[0.9375rem] leading-[1.76] text-[color:var(--ink-dark)]/92 sm:text-base sm:leading-[1.72]">
                 {copy.narrativeLead}
               </p>
-              <p className="mt-4 text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]">
-                {copy.narrativeSupport}
-              </p>
+              {copy.narrativeSupport.trim() ? (
+                <p className="mt-4 text-sm leading-[1.72] text-[color:var(--text-muted)] sm:text-[0.9375rem]">
+                  {copy.narrativeSupport}
+                </p>
+              ) : null}
             </article>
             <div className="flex flex-col gap-5 sm:gap-6">
               {copy.pillars.map((pillar) => (

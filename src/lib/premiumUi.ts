@@ -24,7 +24,7 @@ export const premiumSectionTrust =
 
 /** Statement lookup / registry features */
 export const premiumSectionStatement =
-  "border-b border-[color:var(--border-soft)] bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_42%,white)] via-white to-[color:color-mix(in_oklab,var(--brand-gold-soft)_75%,white)]";
+  "border-b border-[color:var(--border-soft)] bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_42%,white)] via-white to-[color:color-mix(in_oklab,var(--brand-accent-soft)_28%,white)]";
 
 export const premiumCard =
   "relative overflow-hidden rounded-[1.0625rem] border border-[color:color-mix(in_oklab,var(--brand-accent)_16%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_12%,transparent)] sm:p-7";

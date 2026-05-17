@@ -63,8 +63,8 @@ export const en: Dictionary = {
   },
   shared: {
     offices: {
-      turkey: "Türkiye — Ankara Office",
-      netherlands: "Netherlands — Utrecht Office",
+      turkey: "Türkiye — Ankara",
+      netherlands: "Netherlands — Utrecht",
     },
     ui: {
       optional: "Optional",
@@ -104,7 +104,7 @@ export const en: Dictionary = {
       "Utrecht and Ankara offices coordinate international delivery with clear local routing.",
     rights: "All rights reserved.",
     registryCompanyName: "Meva Global Certification B.V.",
-    registryCountry: "Registered in the Netherlands",
+    registryLocations: ["Netherlands — Utrecht", "Türkiye — Ankara"] as const,
     registryKvKLabel: "KvK No",
   },
   aboutLeadership: {
@@ -114,7 +114,7 @@ export const en: Dictionary = {
     name: "Dilan Arslan",
     role: "General Manager",
     bio:
-      "Dilan Arslan is responsible for the corporate management of Meva Global Certification B.V. and for ensuring independent technical review processes are conducted within a consistent, impartial and evidence-based framework. Her work is structured around sustainability disclosures, product and carbon-based technical files, verification readiness, and CBAM processes—with methodological discipline and traceability at the centre.",
+      "As Meva Global Certification B.V., our approach is built on clear scope definition, impartial assessment, traceable evidence structures and methodological consistency in verification and technical review work. Our institutional priority is to ensure that declarations and technical files are addressed within a reliable framework—not only in terms of outcomes, but also with respect to substantiation, scope boundaries, record discipline and decision structure. This orientation underpins our work from sustainability disclosures and product- and carbon-based technical files to CBAM readiness and record structures open to external stakeholder scrutiny.",
     focusAreas: [
       "Independent technical review",
       "Evidence-based assessment",
@@ -1698,18 +1698,23 @@ export const en: Dictionary = {
       corporateDocumentsSection: {
         title: "Corporate Documents and Records",
         intro:
-          "Key corporate documents related to verification, validation, impartiality, confidentiality and statement usage are available in this section.",
+          "Meva Global Certification B.V. manages corporate documents, general terms and process records used in verification, validation, technical review and certification-readiness activities within a controlled document structure. Publicly available documents and reference records are shared in this area according to their scope and conditions of use.",
         fileUnavailableNote:
           "The current PDF file for this document is not available in this deployment. Related orientation materials may be available through the Knowledge Hub, or you may contact us for assistance.",
         knowledgeHubLinkLabel: "Explore Knowledge Hub",
+        emptyState:
+          "Public corporate documents are listed in this section. If you need a current document, you may request it through our contact channel.",
+        publiclyAvailable: "Publicly available",
         labels: {
-          publicationStatus: "Publication status",
+          documentCode: "Document code",
+          publicationStatus: "Status",
           firstPublished: "First published",
-          documentLanguage: "Language",
-          view: "View Document",
+          scopeLanguage: "Language / scope",
+          view: "Review Document",
           download: "Download PDF",
+          contactForDocument: "Contact us for document access",
         },
-        publicationStatusFirst: "First publication",
+        publicationStatusFirst: "Publicly available",
         languageValue: "EN · TR · NL",
       },
       verification: {
@@ -1849,7 +1854,7 @@ export const en: Dictionary = {
       cards: [
         {
           category: "CBAM",
-          date: "2026-04-19",
+          date: "2026-05-17",
           title: 'What Does “Reliable Emissions Data” Really Mean in CBAM Preparation?',
           body:
             "A concise framework for judging boundary discipline, evidence sufficiency, and data quality before CBAM-facing information is assembled for declaration.",
@@ -1858,7 +1863,7 @@ export const en: Dictionary = {
         },
         {
           category: "Carbon",
-          date: "2026-04-19",
+          date: "2026-05-10",
           title: "How to Align Scope, Methodology, and Stakeholder Expectations in Carbon Verification",
           body:
             "How traceable assumptions, explicit control points, and deliberate methodology choices translate into reporting that withstands technical scrutiny.",
@@ -1867,7 +1872,7 @@ export const en: Dictionary = {
         },
         {
           category: "EPD / LCA",
-          date: "2026-04-19",
+          date: "2026-04-28",
           title: "Common Weak Points in EPD and LCA Critical Review",
           body:
             "Recurring review themes—PCR alignment, foreground traceability, allocation defensibility, scenario transparency, and consistency from model to report.",
@@ -1876,7 +1881,7 @@ export const en: Dictionary = {
         },
         {
           category: "Technical Review",
-          date: "2026-04-19",
+          date: "2026-04-15",
           title: "Why Review Depth Selection Matters In Sustainability Claims",
           body:
             "Aligning limited and deeper independent review to decision risk, third-party reliance, and the evidence depth implied by the technical language you intend to use.",

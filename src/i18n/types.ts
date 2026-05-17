@@ -74,7 +74,7 @@ export type Dictionary = {
     trustFootnote: string;
     rights: string;
     registryCompanyName: string;
-    registryCountry: string;
+    registryLocations: readonly string[];
     registryKvKLabel: string;
   };
   aboutLeadership: {
@@ -296,12 +296,16 @@ export type Dictionary = {
         fileUnavailableNote: string;
         /** Honest secondary route when the file is missing — not labelled as opening the PDF. */
         knowledgeHubLinkLabel: string;
+        emptyState: string;
+        publiclyAvailable: string;
         labels: {
+          documentCode: string;
           publicationStatus: string;
           firstPublished: string;
-          documentLanguage: string;
+          scopeLanguage: string;
           view: string;
           download: string;
+          contactForDocument: string;
         };
         publicationStatusFirst: string;
         /** Display line for language coverage (e.g. EN · TR · NL). */

@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 
 export type CompanyRegistryCopy = {
   registryCompanyName: string;
-  registryCountry: string;
+  registryLocations: readonly string[];
   registryKvKLabel: string;
 };
 
@@ -37,9 +37,14 @@ export function CompanyRegistryBlock({ copy, variant = "footer", className }: Pr
       >
         {copy.registryCompanyName}
       </p>
-      <p className={cn("leading-[1.55]", isFooter ? "text-xs text-white/58" : "text-sm text-[color:var(--text-muted)]")}>
-        {copy.registryCountry}
-      </p>
+      {copy.registryLocations.map((line) => (
+        <p
+          key={line}
+          className={cn("leading-[1.55]", isFooter ? "text-xs text-white/58" : "text-sm text-[color:var(--text-muted)]")}
+        >
+          {line}
+        </p>
+      ))}
       <p className={cn("leading-[1.55]", isFooter ? "text-xs text-white/58" : "text-sm text-[color:var(--text-muted)]")}>
         {copy.registryKvKLabel}: {MEVA_KVK_NUMBER}
       </p>

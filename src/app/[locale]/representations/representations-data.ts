@@ -292,7 +292,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
       "Vertegenwoordigers ondersteunen lokale communicatie en documentatiecoördinatie. Technische beoordeling, besluitdiscipline en governance worden centraal door Meva Global uitgevoerd.",
     representationsTitle: "Vertegenwoordigingen",
     representationsBody:
-      "Lokale contact, documentcoördinatie en centrale coördinatie van verificatieprocessen in Türkiye, Europa, Azië, Afrika en de Kaukasus.",
+      "Lokale contact, documentcoördinatie en centrale coördinatie van verificatieprocessen in Turkije, Europa, Azië, Afrika en de Kaukasus.",
     solutionTitle: "Samenwerkingspartners en -kanalen",
     solutionBody:
       "Partners waar aanvullende expertise de uitvoering ondersteunt, met technisch oordeel volgens de vastgelegde routes van Meva Global.",
@@ -303,7 +303,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
       cooperationScopeLabel: "Samenwerkingsomvang",
       localCoordinationLabel: "Lokale coördinatie",
       localCoordinationScope:
-        "Coördinatie van lokaal contact en documentstromen in Türkiye, Europa, Azië, Afrika en de Kaukasus.",
+        "Coördinatie van lokaal contact en documentstromen in Turkije, Europa, Azië, Afrika en de Kaukasus.",
       documentCoordinationLabel: "Documentcoördinatie",
       applicationRoutingLabel: "Aanvraag- en procesdoorverwijzing",
       verificationCoordinationLabel: "Coördinatie van verificatieprocessen",
@@ -360,7 +360,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
         region:
-          "Aanwezigheid in meerdere regio’s, waaronder Amerika, Azië, Europa en het Midden-Oosten, inclusief Türkiye",
+          "Aanwezigheid in meerdere regio’s, waaronder Amerika, Azië, Europa en het Midden-Oosten, inclusief Turkije",
         networkRole:
           "Samenwerkingskanaal voor duurzaamheidsverificatie, auditcoördinatie en conformiteitsgerelateerde beoordelingen",
         technicalFocus:
@@ -386,7 +386,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         accreditationAndCompetence:
           "Cetizion Verifica wordt door ASI erkend als geaccrediteerde auditorganisatie en voert ASI Performance Standard- en Chain of Custody (CoC)-audits uit in een brede geografische spreiding. Deze competentie vormt een belangrijk expertisegebied voor organisaties die onafhankelijke verificatie en auditondersteuning zoeken in aluminium en gerelateerde toeleveringsketens.",
         geographicScope:
-          "Cetizion Verifica levert diensten binnen een brede geografische dekking in de Amerika’s, Azië, Europa en het Midden-Oosten. Zij voert duurzaamheids- en conformiteitsbeoordelingen uit in vele landen, waaronder Türkiye.",
+          "Cetizion Verifica levert diensten binnen een brede geografische dekking in de Amerika’s, Azië, Europa en het Midden-Oosten. Zij voert duurzaamheids- en conformiteitsbeoordelingen uit in vele landen, waaronder Turkije.",
         referenceWorks:
           "De organisatie voerde de onafhankelijke derde-partij audit uit binnen het ASI Performance Standard V3-certificatieproces voor Egyptalum (Egypt Aluminium Company).",
       },
@@ -396,7 +396,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         id: "anka-sustainability",
         name: "ANKA Sustainability",
         logoSrc: "/partner-logos/anka-sustainability.png",
-        region: "Nederland (Utrecht); Türkiye (kantoren in Istanbul)",
+        region: "Nederland (Utrecht); Turkije (kantoren in Istanbul)",
         networkRole:
           "Samenwerkingskanaal voor procesdoorverwijzing, documentatiecoördinatie en lokaal contact in lijn met de technische beoordelingsroutes van Meva Global",
         technicalFocus:
@@ -418,7 +418,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         sectorExperience:
           "Zij levert gespecialiseerde ondersteuning in sectoren waaronder productie en industrie, verpakking, bouw, aluminium en metalen, voeding en landbouw, chemicaliën, energie en multinationale bedrijfsstructuren.",
         corporateStructure:
-          "Het hoofdkantoor bevindt zich in Utrecht, Nederland. In Türkiye zijn het hoofdkantoor in Ümraniye, Istanbul, en een vestiging in Avcılar Technopark.",
+          "Het hoofdkantoor bevindt zich in Utrecht, Nederland. In Turkije zijn het hoofdkantoor in Ümraniye, Istanbul, en een vestiging in Avcılar Technopark.",
       },
     ],
   },
