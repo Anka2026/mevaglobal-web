@@ -73,6 +73,18 @@ export type Dictionary = {
     contactTitle: string;
     trustFootnote: string;
     rights: string;
+    registryCompanyName: string;
+    registryCountry: string;
+    registryKvKLabel: string;
+  };
+  aboutLeadership: {
+    title: string;
+    intro: string;
+    name: string;
+    role: string;
+    bio: string;
+    focusAreas: readonly string[];
+    photoAlt: string;
   };
   home: {
     hero: {
@@ -95,6 +107,11 @@ export type Dictionary = {
     processSteps: { title: string; description: string }[];
     statementPreviewTitle: string;
     statementPreviewIntro: string;
+    publicStatementLookup: {
+      title: string;
+      body: string;
+      cta: string;
+    };
     cbamEyebrow: string;
     cbamTitle: string;
     cbamIntro: string;

@@ -5,6 +5,7 @@ import type { Dictionary } from "@/i18n/types";
 import { Container } from "@/components/ui/Container";
 import { navItems } from "@/lib/nav";
 import { offices } from "@/data/offices";
+import { MEVA_KVK_NUMBER } from "@/data/companyRegistry";
 import { cn } from "@/lib/cn";
 
 const FOOTER_LINKEDIN_URL =
@@ -42,7 +43,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 />
               </Link>
               <p className="mt-5 text-sm leading-relaxed text-white/75">{dict.footer.description}</p>
-              <p className="mt-3">
+              <p className="mt-4">
                 <a
                   href={FOOTER_LINKEDIN_URL}
                   target="_blank"
@@ -82,8 +83,13 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                       <p key={line}>{line}</p>
                     ))}
                   </div>
+                  {o.id === "nl" ? (
+                    <p className="mt-3 break-words text-sm leading-relaxed text-white/72">
+                      {dict.footer.registryKvKLabel}: {MEVA_KVK_NUMBER}
+                    </p>
+                  ) : null}
                   {o.email ? (
-                    <p className="mt-4 min-w-0 text-[0.8125rem] leading-normal sm:text-sm">
+                    <p className="mt-3 min-w-0 text-[0.8125rem] leading-normal sm:text-sm">
                       <a
                         className="whitespace-nowrap text-white/88 transition-colors hover:text-white"
                         href={`mailto:${o.email}`}

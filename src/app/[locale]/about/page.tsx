@@ -6,6 +6,7 @@ import { BRAND_POSITIONING_LINE } from "@/i18n/brandPositioning";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
+import { AboutLeadershipSection } from "@/components/about/AboutLeadershipSection";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { resolveHeroWithSharedFallbacks } from "@/lib/resolvePublicImage";
@@ -366,6 +367,8 @@ export default async function AboutPage({
           </div>
         </Container>
       </section>
+
+      <AboutLeadershipSection leadership={dict.aboutLeadership} />
 
       <section className={cn("border-b border-[color:var(--border-soft)] py-11 sm:py-12", premiumSectionMuted)}>
         <Container>

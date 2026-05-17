@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { ContactHeroFrame } from "@/components/contact/ContactHeroFrame";
 import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
 import { offices } from "@/data/offices";
+import { CompanyRegistryBlock } from "@/components/site/CompanyRegistryBlock";
 import type { Office } from "@/data/offices";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
@@ -136,7 +137,8 @@ export default async function ContactPage({
               <p className="mt-3 text-sm leading-relaxed text-[color:var(--text-muted)] sm:text-[0.9375rem]">
                 {copy.companyCard.description}
               </p>
-              <dl className="mt-8 space-y-5 text-sm">
+              <CompanyRegistryBlock copy={dict.footer} variant="panel" />
+              <dl className="mt-6 space-y-5 text-sm">
                 <div>
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-primary)]">
                     {copy.companyCard.labels.email}
@@ -149,12 +151,6 @@ export default async function ContactPage({
                       {CONTACT_EMAIL}
                     </a>
                   </dd>
-                </div>
-                <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-primary)]">
-                    {copy.companyCard.labels.company}
-                  </dt>
-                  <dd className="mt-1.5 font-medium text-[color:var(--ink-dark)]">{copy.companyCard.title}</dd>
                 </div>
                 {nlOffice ? (
                   <div>

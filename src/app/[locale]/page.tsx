@@ -8,6 +8,7 @@ import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HomeTrustStatsBand } from "@/components/sections/HomeTrustStatsBand";
+import { HomePublicStatementCta } from "@/components/sections/HomePublicStatementCta";
 import { TrustHighlightsSection } from "@/components/sections/TrustHighlightsSection";
 import { WhyMevaGlobalSection } from "@/components/sections/WhyMevaGlobalSection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
@@ -165,6 +166,11 @@ export default async function HomePage({
     <>
       <HeroSection locale={l} dict={effectiveDict} />
       <HomeTrustStatsBand items={trustBandMetrics} />
+      <HomePublicStatementCta
+        locale={l}
+        copy={effectiveDict.home.publicStatementLookup}
+        ctaLabel={effectiveDict.home.publicStatementLookup.cta}
+      />
       <TrustHighlightsSection
         title={effectiveDict.home.trustHighlightsTitle}
         items={effectiveDict.home.trustHighlights}

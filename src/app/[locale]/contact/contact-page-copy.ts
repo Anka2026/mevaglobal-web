@@ -15,7 +15,7 @@ export type ContactPageCopy = {
   companyCard: {
     title: string;
     description: string;
-    labels: { email: string; company: string; headOffice: string };
+    labels: { email: string; company: string; headOffice: string; kvk: string };
   };
   officesCard: {
     title: string;
@@ -72,6 +72,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
         email: "E-posta",
         company: "Şirket",
         headOffice: "Merkez",
+        kvk: "KvK No",
       },
     },
     officesCard: {
@@ -208,6 +209,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
         email: "Email",
         company: "Company",
         headOffice: "Head Office",
+        kvk: "KvK No",
       },
     },
     officesCard: {
@@ -342,6 +344,7 @@ export const CONTACT_PAGE_COPY: Record<Locale, ContactPageCopy> = {
         email: "E-mail",
         company: "Bedrijf",
         headOffice: "Hoofdkantoor",
+        kvk: "KvK-nummer",
       },
     },
     officesCard: {

@@ -104,6 +104,25 @@ export const nl: Dictionary = {
     trustFootnote:
       "Kantoren in Utrecht en Ankara coördineren internationale levering met duidelijke lokale routing.",
     rights: "Alle rechten voorbehouden.",
+    registryCompanyName: "Meva Global Certification B.V.",
+    registryCountry: "Geregistreerd in Nederland",
+    registryKvKLabel: "KvK No",
+  },
+  aboutLeadership: {
+    title: "Management en technisch leiderschap",
+    intro:
+      "Meva Global Certification B.V. structureert haar verificatie- en technische beoordelingsaanpak rond onpartijdigheid, bewijsgerichte beoordeling, methodologische consistentie en internationaal afgestemde conformiteitsexpectaties.",
+    name: "Dilan Arslan",
+    role: "Algemeen directeur",
+    bio:
+      "Dilan Arslan is verantwoordelijk voor het corporate management van Meva Global Certification B.V. en voor het waarborgen dat onafhankelijke technische reviewprocessen binnen een consistent, onpartijdig en bewijsgericht kader worden uitgevoerd. Haar werk is gestructureerd rond duurzaamheidsverklaringen, product- en koolstofgerichte technische dossiers, verificatievoorbereiding en CBAM-processen—met methodologische discipline en traceerbaarheid als uitgangspunt.",
+    focusAreas: [
+      "Onafhankelijke technische reviewediscipline",
+      "Duurzaamheids- en productverklaringen",
+      "CBAM / SKDM technische voorbereiding",
+      "Bewijstraceerbaarheid en dossierconsistentie",
+    ],
+    photoAlt: "Dilan Arslan — algemeen directeur",
   },
   home: {
     hero: {
@@ -230,6 +249,11 @@ export const nl: Dictionary = {
     statementPreviewTitle: "Verklaring zoeken",
     statementPreviewIntro:
       "Zoek beschikbare verklaringen en certificaten op referentienummer en bekijk—waar gepubliceerd—de openbare scopesamenvatting.",
+    publicStatementLookup: {
+      title: "Openbare verklaring opzoeken",
+      body: "Verificatie- en technische reviewregistraties van Meva Global kunnen worden opgezocht via referentienummer.",
+      cta: "Verklaring opzoeken",
+    },
     cbamEyebrow: "CBAM • Voorbereiding Op Pre-Verificatie",
     cbamTitle: "Technische Voorbereiding Voor CBAM Pre-Verificatie",
     cbamIntro:

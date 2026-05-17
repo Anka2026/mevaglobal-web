@@ -103,6 +103,25 @@ export const tr: Dictionary = {
     trustFootnote:
       "Utrecht ve Ankara ofisleri uluslararası koordinasyon ile yerel iletişimi birlikte yürütür.",
     rights: "Tüm hakları saklıdır.",
+    registryCompanyName: "Meva Global Certification B.V.",
+    registryCountry: "Hollanda'da kayıtlı",
+    registryKvKLabel: "KvK No",
+  },
+  aboutLeadership: {
+    title: "Yönetim ve Teknik Liderlik",
+    intro:
+      "Meva Global Certification B.V.’nin doğrulama ve teknik inceleme yaklaşımı; tarafsızlık, kanıt temelli değerlendirme, metodolojik tutarlılık ve uluslararası uygunluk beklentileri üzerine yapılandırılmıştır.",
+    name: "Dilan Arslan",
+    role: "Genel Müdür",
+    bio:
+      "Dilan Arslan, Meva Global Certification B.V.’nin kurumsal yönetiminden ve bağımsız teknik inceleme süreçlerinin tutarlı, tarafsız ve kanıt temelli bir yapı içinde yürütülmesinden sorumludur. Çalışmalar; sürdürülebilirlik beyanları, ürün ve karbon temelli teknik dosyalar, doğrulama hazırlığı ve SKDM/CBAM süreçlerinde metodolojik disiplin ve izlenebilirlik odağıyla yapılandırılır.",
+    focusAreas: [
+      "Bağımsız teknik inceleme disiplini",
+      "Sürdürülebilirlik ve ürün beyanları",
+      "CBAM / SKDM teknik hazırlığı",
+      "Kanıt izlenebilirliği ve dosya tutarlılığı",
+    ],
+    photoAlt: "Dilan Arslan — Genel Müdür",
   },
   home: {
     hero: {
@@ -228,6 +247,11 @@ export const tr: Dictionary = {
     statementPreviewTitle: "Beyan Sorgulama",
     statementPreviewIntro:
       "Referans numarasıyla beyan ve sertifika kayıtlarını sorgulayın; yayımlandıysa kamu kapsam özetini inceleyin.",
+    publicStatementLookup: {
+      title: "Kamuya Açık Beyan Sorgulama",
+      body: "Meva Global tarafından yayımlanan doğrulama ve teknik inceleme kayıtları, referans numarası ile sorgulanabilir.",
+      cta: "Beyan Sorgula",
+    },
     cbamEyebrow: "SKDM (CBAM) • Ön Doğrulama Hazırlığı",
     cbamTitle: "SKDM (CBAM) Ön Doğrulama İçin Teknik Hazırlık",
     cbamIntro:

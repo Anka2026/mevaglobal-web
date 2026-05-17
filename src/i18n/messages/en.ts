@@ -103,6 +103,25 @@ export const en: Dictionary = {
     trustFootnote:
       "Utrecht and Ankara offices coordinate international delivery with clear local routing.",
     rights: "All rights reserved.",
+    registryCompanyName: "Meva Global Certification B.V.",
+    registryCountry: "Registered in the Netherlands",
+    registryKvKLabel: "KvK No",
+  },
+  aboutLeadership: {
+    title: "Management & Technical Leadership",
+    intro:
+      "Meva Global Certification B.V. structures its verification and technical review approach on impartiality, evidence-based assessment, methodological consistency, and internationally aligned conformity expectations.",
+    name: "Dilan Arslan",
+    role: "General Manager",
+    bio:
+      "Dilan Arslan is responsible for the corporate management of Meva Global Certification B.V. and for ensuring independent technical review processes are conducted within a consistent, impartial and evidence-based framework. Her work is structured around sustainability disclosures, product and carbon-based technical files, verification readiness, and CBAM processes—with methodological discipline and traceability at the centre.",
+    focusAreas: [
+      "Independent technical review discipline",
+      "Sustainability and product declarations",
+      "CBAM technical readiness",
+      "Evidence traceability and file consistency",
+    ],
+    photoAlt: "Dilan Arslan — General Manager",
   },
   home: {
     hero: {
@@ -228,6 +247,11 @@ export const en: Dictionary = {
     statementPreviewTitle: "Statement Search",
     statementPreviewIntro:
       "Search statements and certificates by reference number and review the published public scope summary where available.",
+    publicStatementLookup: {
+      title: "Public Statement Lookup",
+      body: "Verification and technical review records issued by Meva Global can be searched by reference number.",
+      cta: "Look Up Statement",
+    },
     cbamEyebrow: "CBAM • Pre-Verification Readiness",
     cbamTitle: "Technical Preparation For CBAM Pre-Verification",
     cbamIntro:
