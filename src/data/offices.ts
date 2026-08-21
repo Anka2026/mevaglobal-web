@@ -19,8 +19,7 @@ export const offices: Office[] = [
     id: "tr",
     name: "Meva Global",
     addressLines: [
-      "Yıldızevler Mah. R. Tagore Cad. No: 10/4",
-      "Çankaya / Ankara",
+      "Yıldızevler Mah. R. Tagore Cad. No: 10/4, Çankaya / Ankara",
       "Türkiye",
     ],
     email: "info@mevaglobalcertification.com",
