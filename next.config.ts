@@ -47,6 +47,10 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  async rewrites() {
+    return [{ source: "/tr/gri-egitimleri", destination: "/tr/gri-training" }];
+  },
+
   /**
    * Dev-only: webpack keeps more compiled route entries alive longer. A tiny buffer + short TTL
    * evicts chunks aggressively; the browser then requests hashed files the dev server no longer has

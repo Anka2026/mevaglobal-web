@@ -4,7 +4,13 @@ import Image from "next/image";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ArrowRight, Handshake, X } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { premiumCardInteractive, premiumGoldTopLine, premiumIconWellSoft } from "@/lib/premiumUi";
+import { ButtonLink } from "@/components/ui/Button";
+import { premiumCardInteractive, premiumFocusPill, premiumGoldTopLine, premiumIconWellSoft } from "@/lib/premiumUi";
+
+export type RepresentationCardField = {
+  label: string;
+  text: string;
+};
 
 export type OrganizationEntity = {
   id: string;
@@ -26,6 +32,27 @@ export type OrganizationEntity = {
   referenceWorks?: string;
   sectorExperience?: string;
   corporateStructure?: string;
+  relationshipBadge?: string;
+  highlightStrip?: string;
+  detailsCtaLabel?: string;
+  judgementBoundaryNote?: string;
+  /** When set, replaces the shared cooperation-field labels/copy for this card and its detail modal. */
+  cardFields?: {
+    cooperationScope: RepresentationCardField;
+    localCoordination: RepresentationCardField;
+    documentCoordination: RepresentationCardField;
+    applicationRouting: RepresentationCardField;
+    verificationProcess: RepresentationCardField;
+  };
+  /** CETIZION Verifica only — GRI training via strategic partnership (CETIZION is the GRI CTP, not Meva). */
+  griTraining?: {
+    title: string;
+    paragraphs: readonly [string, string, string];
+    features: readonly [string, string, string];
+    ctaLabel: string;
+    ctaHref: string;
+    markAlt: string;
+  };
 };
 
 export type RepresentationsUiCopy = {
@@ -54,6 +81,31 @@ export type RepresentationsUiCopy = {
 
 function hasText(value?: string) {
   return Boolean(value && value.trim().length > 0);
+}
+
+function resolveCardFields(entity: OrganizationEntity, ui: RepresentationsUiCopy) {
+  return {
+    cooperationScope: entity.cardFields?.cooperationScope ?? {
+      label: ui.cooperationScopeLabel,
+      text: entity.networkRole,
+    },
+    localCoordination: entity.cardFields?.localCoordination ?? {
+      label: ui.localCoordinationLabel,
+      text: ui.localCoordinationScope,
+    },
+    documentCoordination: entity.cardFields?.documentCoordination ?? {
+      label: ui.documentCoordinationLabel,
+      text: entity.technicalFocus,
+    },
+    applicationRouting: entity.cardFields?.applicationRouting ?? {
+      label: ui.applicationRoutingLabel,
+      text: ui.applicationRoutingNote,
+    },
+    verificationProcess: entity.cardFields?.verificationProcess ?? {
+      label: ui.verificationCoordinationLabel,
+      text: ui.verificationCoordinationNote,
+    },
+  };
 }
 
 function PartnerLogoArea({
@@ -122,6 +174,90 @@ function LabeledLine({ label, text, className }: { label: string; text: string; 
       <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]">{label}</p>
       <p className="mt-1 leading-relaxed text-[color:var(--ink-dark)]/90">{text}</p>
     </div>
+  );
+}
+
+const GRI_TRAINING_MARK_SRC = "/partner-logos/gri-certified-training-partner.png";
+
+function GriTrainingModule({
+  module,
+}: {
+  module: NonNullable<OrganizationEntity["griTraining"]>;
+}) {
+  return (
+    <div className="mt-6 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_16%,var(--border-soft))] pt-6">
+      <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
+        <div className="flex justify-center lg:col-span-3 lg:justify-start">
+          <Image
+            src={GRI_TRAINING_MARK_SRC}
+            alt={module.markAlt}
+            width={640}
+            height={320}
+            className="h-auto w-full max-w-[13.5rem] lg:max-w-none"
+            sizes="(max-width: 1023px) 216px, 24vw"
+          />
+        </div>
+        <div className="min-w-0 lg:col-span-9">
+          <h4 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-primary)]">
+            {module.title}
+          </h4>
+          <div className="mt-3 space-y-3 text-sm leading-[1.74] text-[color:var(--ink-dark)]/92 sm:text-[0.9375rem] sm:leading-[1.76]">
+            {module.paragraphs.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+          <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+            {module.features.map((label) => (
+              <li key={label} className={premiumFocusPill}>
+                {label}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-5">
+            <ButtonLink
+              href={module.ctaHref}
+              variant="secondary"
+              size="sm"
+              className="group/gri inline-flex !text-[color:var(--brand-primary)]"
+            >
+              <span>{module.ctaLabel}</span>
+              <ArrowRight
+                className="h-4 w-4 shrink-0 transition-transform group-hover/gri:translate-x-0.5"
+                aria-hidden
+              />
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ViewDetailsButton({
+  label,
+  onClick,
+}: {
+  label: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        "group/cta inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))]",
+        "bg-white px-4 text-sm font-semibold text-[color:var(--brand-primary)]",
+        "shadow-[var(--shadow-card)] transition-[border-color,background-color,box-shadow]",
+        "hover:border-[color:var(--brand-gold)] hover:bg-[color:color-mix(in_oklab,var(--brand-gold-soft)_60%,white)]",
+        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
+      )}
+    >
+      <span>{label}</span>
+      <ArrowRight
+        className="h-4 w-4 shrink-0 transition-transform group-hover/cta:translate-x-0.5"
+        aria-hidden
+      />
+    </button>
   );
 }
 
@@ -195,6 +331,8 @@ function DetailModal({
   if (!open || !entity) return null;
 
   const ariaTitle = entity.name;
+  const fields = resolveCardFields(entity, ui);
+  const boundaryNote = entity.judgementBoundaryNote ?? ui.judgementBoundaryNote;
 
   return (
     <div
@@ -216,9 +354,14 @@ function DetailModal({
         )}
       >
         <div className="flex shrink-0 items-start justify-between gap-4 border-b border-[color:var(--border-soft)] px-5 py-4 sm:px-7 sm:py-4">
-          <p id={titleId} className="min-w-0 text-base font-semibold tracking-tight text-[color:var(--ink-dark)]">
-            {ariaTitle}
-          </p>
+          <div className="min-w-0">
+            <p id={titleId} className="text-base font-semibold tracking-tight text-[color:var(--ink-dark)]">
+              {ariaTitle}
+            </p>
+            {entity.relationshipBadge ? (
+              <p className={cn(premiumFocusPill, "mt-2")}>{entity.relationshipBadge}</p>
+            ) : null}
+          </div>
           <button
             ref={closeBtnRef}
             type="button"
@@ -247,15 +390,15 @@ function DetailModal({
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <LabeledLine label={ui.cooperationScopeLabel} text={entity.networkRole} />
-              <LabeledLine label={ui.localCoordinationLabel} text={ui.localCoordinationScope} />
-              <LabeledLine label={ui.documentCoordinationLabel} text={entity.technicalFocus} />
-              <LabeledLine label={ui.applicationRoutingLabel} text={ui.applicationRoutingNote} />
-              <LabeledLine label={ui.verificationCoordinationLabel} text={ui.verificationCoordinationNote} />
+              <LabeledLine label={fields.cooperationScope.label} text={fields.cooperationScope.text} />
+              <LabeledLine label={fields.localCoordination.label} text={fields.localCoordination.text} />
+              <LabeledLine label={fields.documentCoordination.label} text={fields.documentCoordination.text} />
+              <LabeledLine label={fields.applicationRouting.label} text={fields.applicationRouting.text} />
+              <LabeledLine label={fields.verificationProcess.label} text={fields.verificationProcess.text} />
             </div>
 
             <p className="mt-4 rounded-xl border border-[color:color-mix(in_oklab,var(--brand-primary)_12%,var(--border-soft))] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_28%,white)] px-3.5 py-3 text-xs leading-relaxed text-[color:var(--ink-dark)]/88">
-              {ui.judgementBoundaryNote}
+              {boundaryNote}
             </p>
 
             <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]">
@@ -392,10 +535,18 @@ export function RepresentationsCards({
         </header>
 
         <div className="flex flex-col gap-9 sm:gap-11 lg:gap-12">
-          {items.map((r) => (
+          {items.map((r) => {
+            const fields = resolveCardFields(r, ui);
+            const detailsLabel = r.detailsCtaLabel ?? ui.viewDetails;
+            return (
             <article key={r.id} id={r.id} className={cardClass}>
               <div className={premiumGoldTopLine} aria-hidden />
-              <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-start sm:gap-9 sm:p-7 lg:gap-11 lg:p-9">
+              <div
+                className={cn(
+                  "flex flex-col gap-6 p-6 sm:flex-row sm:items-start sm:gap-9 sm:p-7 lg:gap-11 lg:p-9",
+                  r.griTraining && "pb-2 sm:pb-2 lg:pb-2",
+                )}
+              >
                 <div className="flex shrink-0 justify-center sm:w-[min(100%,17.5rem)] lg:w-[18.5rem]">
                   <PartnerLogoArea entity={r} variant="featured" />
                 </div>
@@ -405,47 +556,52 @@ export function RepresentationsCards({
                     <div className={premiumIconWellSoft}>
                       <Handshake className="h-5 w-5" aria-hidden />
                     </div>
-                    <h3 className="min-w-0 flex-1 text-[1.0625rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-lg">
-                      {r.name}
-                    </h3>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-[1.0625rem] font-semibold leading-snug tracking-tight text-[color:var(--ink-dark)] sm:text-lg">
+                        {r.name}
+                      </h3>
+                      {r.relationshipBadge ? (
+                        <p className={cn(premiumFocusPill, "mt-2")}>{r.relationshipBadge}</p>
+                      ) : null}
+                    </div>
                   </div>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    <LabeledLine label={ui.cooperationScopeLabel} text={r.networkRole} />
-                    <LabeledLine label={ui.localCoordinationLabel} text={ui.localCoordinationScope} />
-                    <LabeledLine label={ui.documentCoordinationLabel} text={r.technicalFocus} />
-                    <LabeledLine label={ui.applicationRoutingLabel} text={ui.applicationRoutingNote} />
+                    <LabeledLine label={fields.cooperationScope.label} text={fields.cooperationScope.text} />
+                    <LabeledLine label={fields.localCoordination.label} text={fields.localCoordination.text} />
+                    <LabeledLine label={fields.documentCoordination.label} text={fields.documentCoordination.text} />
+                    <LabeledLine label={fields.applicationRouting.label} text={fields.applicationRouting.text} />
                     <LabeledLine
-                      label={ui.verificationCoordinationLabel}
-                      text={ui.verificationCoordinationNote}
+                      label={fields.verificationProcess.label}
+                      text={fields.verificationProcess.text}
                       className="sm:col-span-2"
                     />
                   </div>
+                  {r.highlightStrip ? (
+                    <p className="mt-4 text-[0.8125rem] leading-relaxed text-[color:var(--brand-primary)] sm:text-sm">
+                      {r.highlightStrip}
+                    </p>
+                  ) : null}
                   <p className="mt-4 text-sm leading-[1.72] text-[color:var(--ink-dark)]/92 sm:text-[0.9375rem] sm:leading-[1.74]">
                     {r.cardSummary}
                   </p>
-                  <div className="mt-5 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_16%,var(--border-soft))] pt-5">
-                    <button
-                      type="button"
-                      onClick={() => open(r)}
-                      className={cn(
-                        "group/cta inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl border border-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))]",
-                        "bg-white px-4 text-sm font-semibold text-[color:var(--brand-primary)]",
-                        "shadow-[var(--shadow-card)] transition-[border-color,background-color,box-shadow]",
-                        "hover:border-[color:var(--brand-gold)] hover:bg-[color:color-mix(in_oklab,var(--brand-gold-soft)_60%,white)]",
-                        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ring)]",
-                      )}
-                    >
-                      <span>{ui.viewDetails}</span>
-                      <ArrowRight
-                        className="h-4 w-4 shrink-0 transition-transform group-hover/cta:translate-x-0.5"
-                        aria-hidden
-                      />
-                    </button>
-                  </div>
+                  {r.griTraining ? null : (
+                    <div className="mt-5 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_16%,var(--border-soft))] pt-5">
+                      <ViewDetailsButton label={detailsLabel} onClick={() => open(r)} />
+                    </div>
+                  )}
                 </div>
               </div>
+              {r.griTraining ? (
+                <div className="px-6 pb-6 sm:px-7 sm:pb-7 lg:px-9 lg:pb-9">
+                  <GriTrainingModule module={r.griTraining} />
+                  <div className="mt-5 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_16%,var(--border-soft))] pt-5">
+                    <ViewDetailsButton label={detailsLabel} onClick={() => open(r)} />
+                  </div>
+                </div>
+              ) : null}
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
 

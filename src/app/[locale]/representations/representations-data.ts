@@ -86,6 +86,58 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         ],
       },
       {
+        id: "epd-hub",
+        name: "EPD Hub",
+        logoSrc: "/partner-logos/epd-hub.png",
+        relationshipBadge: "Reseller İş Ortağı",
+        detailsCtaLabel: "İş Birliği Detaylarını İncele",
+        highlightStrip:
+          "2–4 haftalık doğrulama ve yayın süreci • Tek şeffaf ücret yapısı • Dijital doğrulama iş akışı",
+        region: "Türkiye ve uluslararası müşteri portföyü üzerinden EPD Hub hizmet erişimi",
+        networkRole:
+          "EPD Hub doğrulama ve yayın hizmetleri kapsamında; müşteri kabulü, proje koordinasyonu ve Çevresel Ürün Beyanı projelerine yönelik ticari süreçleri kapsayan reseller iş birliği.",
+        technicalFocus:
+          "Ürün kapsamı, uygulanabilir PCR, veri hazırlığı, LCA dokümantasyonu ve proje dosyalarının EPD Hub doğrulama ve yayın sürecine sunulmadan önce koordinasyonu.",
+        cardSummary:
+          "EPD Hub, doğrulama ve yayın süreçlerinde dijital-native yaklaşımıyla öne çıkan, hızla büyüyen uluslararası bir EPD program operatörüdür. Bu reseller iş birliği sayesinde Meva Global müşterileri, EPD Hub hizmetlerine yerel olarak koordine edilen, şeffaf ve etkin bir proje süreci üzerinden erişebilir.",
+        modalSummary:
+          "EPD Hub, doğrulama ve yayın süreçlerinde dijital-native yaklaşımıyla öne çıkan, hızla büyüyen uluslararası bir EPD program operatörüdür. Bu reseller iş birliği sayesinde Meva Global müşterileri, EPD Hub hizmetlerine yerel olarak koordine edilen, şeffaf ve etkin bir proje süreci üzerinden erişebilir.",
+        judgementBoundaryNote:
+          "EPD doğrulama ve yayın süreçleri EPD Hub’ın kendi program operatörü ve doğrulama süreçleri kapsamında yürütülür. Meva Global; müşteri iletişimi, proje koordinasyonu, EPD/LCA hazırlık desteği, belge akışı koordinasyonu ve EPD Hub hizmetlerine ticari erişim sağlar. Bu yapı münhasır temsilcilik veya EPD Hub adına doğrulama kuruluşu sıfatı anlamına gelmez.",
+        corporateProfile:
+          "Meva Global, EPD Hub reseller iş ortağı olarak müşteri iletişimi, proje koordinasyonu, EPD/LCA hazırlık desteği, belge akışı koordinasyonu ve EPD Hub hizmetlerine ticari erişim sunar. Resmî doğrulama ve yayın, EPD Hub’ın program süreçleri içinde gerçekleştirilir.",
+        serviceAreas: [
+          "Müşteri iletişimi ve proje koordinasyonu",
+          "EPD/LCA hazırlık desteği",
+          "Belge akışı koordinasyonu",
+          "EPD Hub hizmetlerine ticari erişim",
+        ],
+        geographicScope:
+          "Meva Global’in Türkiye ve uluslararası müşteri portföyü için proje akışı Meva Global üzerinden koordine edilir; doğrulama ve yayın EPD Hub programında yürütülür.",
+        cardFields: {
+          cooperationScope: {
+            label: "İş Birliği Kapsamı",
+            text: "EPD Hub doğrulama ve yayın hizmetleri kapsamında; müşteri kabulü, proje koordinasyonu ve Çevresel Ürün Beyanı projelerine yönelik ticari süreçleri kapsayan reseller iş birliği.",
+          },
+          localCoordination: {
+            label: "Yerel Koordinasyon",
+            text: "Meva Global’in Türkiye ve uluslararası müşteri portföyü için müşteri iletişimi ve proje akışı koordinasyonu Meva Global üzerinden yürütülür.",
+          },
+          documentCoordination: {
+            label: "EPD ve LCA Koordinasyonu",
+            text: "Ürün kapsamı, uygulanabilir PCR, veri hazırlığı, LCA dokümantasyonu ve proje dosyalarının EPD Hub doğrulama ve yayın sürecine sunulmadan önce koordinasyonu.",
+          },
+          applicationRouting: {
+            label: "Başvuru ve Süreç Yönlendirme",
+            text: "Proje başlangıcı, doküman hazırlığı ve dosya aktarımı Meva Global tarafından koordine edilir; resmi doğrulama ve yayın süreçleri EPD Hub’ın program süreçleri kapsamında gerçekleştirilir.",
+          },
+          verificationProcess: {
+            label: "Doğrulama ve Yayın Süreci",
+            text: "EPD Hub; otomatik ön kontrolleri uzman insan doğrulamasıyla birleştiren dijital-native doğrulama ve yayın altyapısı sayesinde izlenebilir ve etkin bir proje akışı sunar.",
+          },
+        },
+      },
+      {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
@@ -119,6 +171,22 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
           "Cetizion Verifica; Amerika, Asya, Avrupa ve Orta Doğu’da geniş bir coğrafi kapsam içinde hizmet sunmaktadır. Türkiye dahil birçok ülkede sürdürülebilirlik ve uygunluk değerlendirme faaliyetleri yürütmektedir.",
         referenceWorks:
           "Kuruluş, Mısır Alüminyum Şirketi’nin (Egyptalum) ASI Performans Standardı V3 sertifikasyon sürecindeki bağımsız üçüncü taraf denetimini gerçekleştirmiştir.",
+        griTraining: {
+          title: "GRI Sertifikalı Eğitimler",
+          paragraphs: [
+            "CETIZION Verifica, GRI sertifikalı eğitimlerini uluslararası ölçekte sunma yetkisine sahip bir Global GRI Certified Training Partner’dır.",
+            "Meva Global Certification ile CETIZION Verifica arasındaki stratejik iş birliği kapsamında GRI Sertifikalı Eğitim Programları, Türkiye’de ve uluslararası pazarlarda kurumlara sunulmaktadır.",
+            "Eğitimler, ilgili GRI eğitim yetkisi ve kurs kapsamına bağlı olarak eğitmen liderliğinde, kuruma özel, açık katılımlı, online veya yüz yüze formatlarda sunulabilir.",
+          ],
+          features: [
+            "Global GRI Certified Training Partner",
+            "Türkiye ve Uluslararası Eğitim",
+            "Eğitmen Liderliğinde Eğitim",
+          ],
+          ctaLabel: "GRI Eğitimlerini İnceleyin",
+          ctaHref: "/tr/gri-egitimleri",
+          markAlt: "CETIZION Verifica Global GRI Certified Training Partner işareti",
+        },
       },
     ],
     partners: [
@@ -221,6 +289,58 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         ],
       },
       {
+        id: "epd-hub",
+        name: "EPD Hub",
+        logoSrc: "/partner-logos/epd-hub.png",
+        relationshipBadge: "Reseller Partner",
+        detailsCtaLabel: "View Partnership Details",
+        highlightStrip:
+          "2–4 week verification & publication pathway • Single transparent fee structure • Digital verification workflow",
+        region: "Access to EPD Hub services for Meva Global’s Türkiye and international client portfolio",
+        networkRole:
+          "Reseller partnership for EPD Hub verification and publication services, including client onboarding, project coordination and commercial support for Environmental Product Declaration projects.",
+        technicalFocus:
+          "Coordination of product scope, applicable PCR, data readiness, LCA documentation and project files prior to submission for EPD Hub verification and publication.",
+        cardSummary:
+          "EPD Hub is a rapidly growing international EPD program operator with a digital-native approach to verification and publication. Through this reseller partnership, Meva Global enables its clients to access EPD Hub services through a locally coordinated, transparent and efficient project pathway.",
+        modalSummary:
+          "EPD Hub is a rapidly growing international EPD program operator with a digital-native approach to verification and publication. Through this reseller partnership, Meva Global enables its clients to access EPD Hub services through a locally coordinated, transparent and efficient project pathway.",
+        judgementBoundaryNote:
+          "EPD verification and publication are performed within EPD Hub’s own program operator and verification processes. Meva Global provides customer communication, project coordination, EPD/LCA preparation support, document-flow coordination and commercial access to EPD Hub services. This is not an exclusive representation and Meva Global is not the verification body or program operator for EPD Hub.",
+        corporateProfile:
+          "Meva Global acts as an EPD Hub reseller partner, providing customer communication, project coordination, EPD/LCA preparation support, document-flow coordination and commercial access to EPD Hub services. Formal verification and publication are carried out within EPD Hub’s program processes.",
+        serviceAreas: [
+          "Customer communication and project coordination",
+          "EPD/LCA preparation support",
+          "Document-flow coordination",
+          "Commercial access to EPD Hub services",
+        ],
+        geographicScope:
+          "Project-flow coordination is managed through Meva Global for its Türkiye and international client portfolio; verification and publication take place in the EPD Hub program.",
+        cardFields: {
+          cooperationScope: {
+            label: "Cooperation Scope",
+            text: "Reseller partnership for EPD Hub verification and publication services, including client onboarding, project coordination and commercial support for Environmental Product Declaration projects.",
+          },
+          localCoordination: {
+            label: "Local Coordination",
+            text: "Client communication and project-flow coordination are managed through Meva Global for its Türkiye and international client portfolio.",
+          },
+          documentCoordination: {
+            label: "EPD & LCA Coordination",
+            text: "Coordination of product scope, applicable PCR, data readiness, LCA documentation and project files prior to submission for EPD Hub verification and publication.",
+          },
+          applicationRouting: {
+            label: "Application and Process Routing",
+            text: "Project onboarding, document preparation and file transmission are coordinated through Meva Global; formal verification and publication are carried out within EPD Hub’s program processes.",
+          },
+          verificationProcess: {
+            label: "Verification & Publication Process",
+            text: "EPD Hub provides a digital-native verification and publication workflow combining automated pre-checks with expert human verification, supporting efficient and traceable project delivery.",
+          },
+        },
+      },
+      {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
@@ -253,6 +373,22 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
           "Cetizion Verifica delivers services across a broad geographic scope in the Americas, Asia, Europe, and the Middle East. It carries out sustainability and conformity assessment activities in many countries, including Türkiye.",
         referenceWorks:
           "The organization performed the independent third-party audit within the ASI Performance Standard V3 certification process for Egyptalum (Egypt Aluminium Company).",
+        griTraining: {
+          title: "GRI Certified Training",
+          paragraphs: [
+            "CETIZION Verifica is a Global GRI Certified Training Partner, authorized to deliver GRI certified training internationally.",
+            "Through the strategic partnership between Meva Global Certification and CETIZION Verifica, GRI Certified Training Programs are made available to organizations in Türkiye and international markets.",
+            "Training may be delivered in instructor-led, in-company, open-enrollment, online or in-person formats, depending on the applicable GRI training authorization and course scope.",
+          ],
+          features: [
+            "Global GRI Certified Training Partner",
+            "Türkiye & International Delivery",
+            "Instructor-Led Training",
+          ],
+          ctaLabel: "Explore GRI Training",
+          ctaHref: "/en/gri-training",
+          markAlt: "CETIZION Verifica Global GRI Certified Training Partner mark",
+        },
       },
     ],
     partners: [
@@ -356,6 +492,58 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         ],
       },
       {
+        id: "epd-hub",
+        name: "EPD Hub",
+        logoSrc: "/partner-logos/epd-hub.png",
+        relationshipBadge: "Resellerpartner",
+        detailsCtaLabel: "Bekijk de samenwerkingsdetails",
+        highlightStrip:
+          "2–4 weken verificatie- en publicatietraject • Eén transparante tariefstructuur • Digitale verificatieworkflow",
+        region: "Toegang tot EPD Hub-diensten voor de klantenportefeuille van Meva Global in Türkiye en internationaal",
+        networkRole:
+          "Resellerpartnerschap voor verificatie- en publicatiediensten van EPD Hub, inclusief klantacceptatie, projectcoördinatie en commerciële ondersteuning voor Environmental Product Declaration-projecten.",
+        technicalFocus:
+          "Coördinatie van productscope, toepasselijke PCR, datagereedheid, LCA-documentatie en projectdossiers vóór indiening voor verificatie en publicatie bij EPD Hub.",
+        cardSummary:
+          "EPD Hub is een snelgroeiende internationale EPD-programma-operator met een digital-native aanpak van verificatie en publicatie. Via dit resellerpartnerschap kunnen klanten van Meva Global de diensten van EPD Hub benaderen via een lokaal gecoördineerd, transparant en efficiënt projecttraject.",
+        modalSummary:
+          "EPD Hub is een snelgroeiende internationale EPD-programma-operator met een digital-native aanpak van verificatie en publicatie. Via dit resellerpartnerschap kunnen klanten van Meva Global de diensten van EPD Hub benaderen via een lokaal gecoördineerd, transparant en efficiënt projecttraject.",
+        judgementBoundaryNote:
+          "EPD-verificatie en -publicatie vinden plaats binnen de eigen programma-operator- en verificatieprocessen van EPD Hub. Meva Global verzorgt klantcommunicatie, projectcoördinatie, EPD/LCA-voorbereidingsondersteuning, documentstroomcoördinatie en commerciële toegang tot de diensten van EPD Hub. Dit is geen exclusieve vertegenwoordiging en Meva Global is niet de verificatie-instelling of programma-operator van EPD Hub.",
+        corporateProfile:
+          "Meva Global treedt op als resellerpartner van EPD Hub en biedt klantcommunicatie, projectcoördinatie, EPD/LCA-voorbereidingsondersteuning, documentstroomcoördinatie en commerciële toegang tot de diensten van EPD Hub. Formele verificatie en publicatie worden uitgevoerd binnen de programmaprocessen van EPD Hub.",
+        serviceAreas: [
+          "Klantcommunicatie en projectcoördinatie",
+          "EPD/LCA-voorbereidingsondersteuning",
+          "Documentstroomcoördinatie",
+          "Commerciële toegang tot de diensten van EPD Hub",
+        ],
+        geographicScope:
+          "Projectstroomcoördinatie verloopt via Meva Global voor haar klantenportefeuille in Türkiye en internationaal; verificatie en publicatie vinden plaats in het programma van EPD Hub.",
+        cardFields: {
+          cooperationScope: {
+            label: "Samenwerkingsomvang",
+            text: "Resellerpartnerschap voor verificatie- en publicatiediensten van EPD Hub, inclusief klantacceptatie, projectcoördinatie en commerciële ondersteuning voor Environmental Product Declaration-projecten.",
+          },
+          localCoordination: {
+            label: "Lokale coördinatie",
+            text: "Klantcommunicatie en projectstroomcoördinatie worden via Meva Global beheerd voor haar klantenportefeuille in Türkiye en internationaal.",
+          },
+          documentCoordination: {
+            label: "EPD- en LCA-coördinatie",
+            text: "Coördinatie van productscope, toepasselijke PCR, datagereedheid, LCA-documentatie en projectdossiers vóór indiening voor verificatie en publicatie bij EPD Hub.",
+          },
+          applicationRouting: {
+            label: "Aanvraag- en procesdoorverwijzing",
+            text: "Projectstart, documentvoorbereiding en dossieroverdracht worden gecoördineerd via Meva Global; formele verificatie en publicatie vinden plaats binnen de programmaprocessen van EPD Hub.",
+          },
+          verificationProcess: {
+            label: "Verificatie- en publicatieproces",
+            text: "EPD Hub biedt een digital-native verificatie- en publicatieworkflow die geautomatiseerde pre-checks combineert met deskundige menselijke verificatie, voor een efficiënte en traceerbare projectlevering.",
+          },
+        },
+      },
+      {
         id: "cetizion-verifica",
         name: "Cetizion Verifica",
         logoSrc: "/partner-logos/cetizion-verifica.png",
@@ -389,6 +577,22 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
           "Cetizion Verifica levert diensten binnen een brede geografische dekking in de Amerika’s, Azië, Europa en het Midden-Oosten. Zij voert duurzaamheids- en conformiteitsbeoordelingen uit in vele landen, waaronder Turkije.",
         referenceWorks:
           "De organisatie voerde de onafhankelijke derde-partij audit uit binnen het ASI Performance Standard V3-certificatieproces voor Egyptalum (Egypt Aluminium Company).",
+        griTraining: {
+          title: "GRI Certified Training",
+          paragraphs: [
+            "CETIZION Verifica is een Global GRI Certified Training Partner, bevoegd om GRI-gecertificeerde training internationaal te verzorgen.",
+            "Via het strategische partnerschap tussen Meva Global Certification en CETIZION Verifica worden GRI Certified Training Programs beschikbaar gesteld voor organisaties in Türkiye en internationale markten.",
+            "Training kan, afhankelijk van de toepasselijke GRI-trainingsbevoegdheid en de cursusomvang, docentengeleid, in-company, via open inschrijving, online of fysiek worden verzorgd.",
+          ],
+          features: [
+            "Global GRI Certified Training Partner",
+            "Türkiye en internationale levering",
+            "Docentengeleide training",
+          ],
+          ctaLabel: "Bekijk GRI-training",
+          ctaHref: "/nl/gri-training",
+          markAlt: "Global GRI Certified Training Partner-merk van CETIZION Verifica",
+        },
       },
     ],
     partners: [
