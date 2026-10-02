@@ -255,6 +255,17 @@ export const tr: Dictionary = {
       previewFieldExample: "Örn. MEVA-2024-00124",
       previewHint: "Yalnızca kamuya açık yayımlanmış kayıtlar",
     },
+    emicertCbamAnnouncement: {
+      badge: "Dünyada ilk",
+      eyebrow: "Stratejik duyuru",
+      title: "CBAM’de dünyanın ilk akredite doğrulama kuruluşu: EmiCert",
+      body: "EmiCert, AB Karbon Sınır Düzenleme Mekanizması (CBAM) kapsamında dünyadaki ilk akredite doğrulama kuruluşu olmuştur. Bu gelişme, emisyon beyanlarında bağımsız ve kurumsal düzeyde güvenilir doğrulama yolunu güçlendirir.",
+      mevaLabel: "Türkiye’de tek temsilci",
+      mevaLine: "Meva Global Certification, EmiCert’in Türkiye’deki tek temsilcisidir.",
+      primaryCta: "CBAM Çözümlerini İncele",
+      secondaryCta: "Temsilcilikleri Gör",
+      videoLabel: "EmiCert CBAM akreditasyon duyuru videosu",
+    },
     cbamEyebrow: "SKDM (CBAM) • Ön Doğrulama Hazırlığı",
     cbamTitle: "SKDM (CBAM) Ön Doğrulama İçin Teknik Hazırlık",
     cbamIntro:

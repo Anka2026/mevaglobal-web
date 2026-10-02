@@ -115,6 +115,17 @@ export type Dictionary = {
       previewFieldExample: string;
       previewHint: string;
     };
+    emicertCbamAnnouncement: {
+      badge: string;
+      eyebrow: string;
+      title: string;
+      body: string;
+      mevaLabel: string;
+      mevaLine: string;
+      primaryCta: string;
+      secondaryCta: string;
+      videoLabel: string;
+    };
     cbamEyebrow: string;
     cbamTitle: string;
     cbamIntro: string;

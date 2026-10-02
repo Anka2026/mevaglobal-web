@@ -7,6 +7,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { HomeEmicertCbamAnnouncement } from "@/components/sections/HomeEmicertCbamAnnouncement";
 import { HomeTrustStatsBand } from "@/components/sections/HomeTrustStatsBand";
 import { HomePublicStatementCta } from "@/components/sections/HomePublicStatementCta";
 import { TrustHighlightsSection } from "@/components/sections/TrustHighlightsSection";
@@ -165,6 +166,7 @@ export default async function HomePage({
   return (
     <>
       <HeroSection locale={l} dict={effectiveDict} />
+      <HomeEmicertCbamAnnouncement locale={l} copy={effectiveDict.home.emicertCbamAnnouncement} />
       <HomeTrustStatsBand items={trustBandMetrics} />
       <HomePublicStatementCta
         locale={l}

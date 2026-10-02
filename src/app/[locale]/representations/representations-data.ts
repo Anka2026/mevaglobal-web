@@ -60,7 +60,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         region:
           "Yunanistan, İrlanda, Bulgaristan ve Kıbrıs; Avrupa genelinde müşteri erişimi",
         networkRole:
-          "Sera gazı doğrulaması ve emisyon raporlaması süreçlerinde temsil ve koordinasyon kanalı",
+          "Meva Global Certification, EmiCert’in Türkiye’deki tek temsilcisidir; sera gazı doğrulaması, CBAM ve emisyon raporlaması süreçlerinde koordinasyon kanalı",
         technicalFocus:
           "Endüstriyel emisyonlar, havacılık (EU ETS, CORSIA), denizcilik MRV, F-Gas ve ilişkili doğrulama bağlamları",
         cardSummary:
@@ -81,6 +81,8 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         corporateScale:
           "EmiCert, Yunanistan, İrlanda, Bulgaristan ve Kıbrıs’ta faaliyet göstermekte; Avrupa genelinde geniş müşteri ağına hizmet sunmaktadır. Kuruluşun sanayi, havacılık ve denizcilik alanlarında güçlü bir teknik doğrulama ağı bulunmaktadır.",
         milestones: [
+          "CBAM kapsamında dünyadaki ilk akredite doğrulama kuruluşu olmuştur.",
+          "Meva Global Certification, EmiCert’in Türkiye’deki tek temsilcisidir.",
           "Aralık 2016’da, Avrupa Tüzüğü 2015/757 (EU MRV) kapsamında Shipping MRV doğrulayıcısı olarak akreditasyon kapsamını genişleten dünya genelindeki ilk kuruluşlardan biri olmuştur.",
           "2024 yılında UK ETS ve UK MRV kapsamında havacılık ve denizcilik doğrulamaları için UKAS akreditasyonu elde ederek yetkinlik alanını daha da güçlendirmiştir.",
         ],
@@ -263,7 +265,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         name: "EmiCert",
         logoSrc: "/partner-logos/emicert.png",
         region: "Greece, Ireland, Bulgaria and Cyprus; European delivery footprint",
-        networkRole: "Cooperation channel for greenhouse gas verification and emissions-reporting coordination",
+        networkRole: "Exclusive Türkiye representation for EmiCert; cooperation channel for greenhouse gas verification, CBAM and emissions-reporting coordination",
         technicalFocus:
           "Industrial emissions, aviation (EU ETS, CORSIA), maritime MRV, F-Gas reports and related verification contexts",
         cardSummary:
@@ -284,6 +286,8 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         corporateScale:
           "EmiCert operates in Greece, Ireland, Bulgaria, and Cyprus, serving a broad customer base across Europe. The organization maintains a strong technical verification network across industry, aviation, and maritime sectors.",
         milestones: [
+          "Became the world’s first accredited verification body for CBAM.",
+          "Meva Global Certification is EmiCert’s exclusive representative in Türkiye.",
           "In December 2016, it was among the first organizations worldwide to expand accreditation scope as a Shipping MRV verifier under EU Regulation 2015/757 (EU MRV).",
           "In 2024, it strengthened its competence scope by obtaining UKAS accreditation for aviation and maritime verifications under UK ETS and UK MRV.",
         ],
@@ -466,7 +470,7 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         logoSrc: "/partner-logos/emicert.png",
         region: "Griekenland, Ierland, Bulgarije en Cyprus; Europese leveringsvoetafdruk",
         networkRole:
-          "Samenwerkingskanaal voor broeikasgasverificatie en coördinatie rond emissierapportage",
+          "Exclusieve vertegenwoordiging van EmiCert in Türkiye; samenwerkingskanaal voor broeikasgasverificatie, CBAM en emissierapportage",
         technicalFocus:
           "Industriële emissies, luchtvaart (EU ETS, CORSIA), maritieme MRV, F-gasrapporten en verwante verificatiecontexten",
         cardSummary:
@@ -487,6 +491,8 @@ const bundles: Record<Locale, RepresentationsPageBundle> = {
         corporateScale:
           "EmiCert is actief in Griekenland, Ierland, Bulgarije en Cyprus en bedient een breed klantenbestand in Europa. De organisatie heeft een sterk technisch verificatienetwerk in industrie, luchtvaart en maritieme sector.",
         milestones: [
+          "Werd ’s werelds eerste geaccrediteerde verificatie-instelling voor CBAM.",
+          "Meva Global Certification is de exclusieve vertegenwoordiger van EmiCert in Türkiye.",
           "In december 2016 behoorde zij tot de eerste organisaties wereldwijd die het accreditatiescope uitbreidden als Shipping MRV-verificateur onder EU-verordening 2015/757 (EU MRV).",
           "In 2024 versterkte zij het competentiegebied met UKAS-accreditatie voor luchtvaart- en maritieme verificaties onder UK ETS en UK MRV.",
         ],

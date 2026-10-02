@@ -255,6 +255,17 @@ export const en: Dictionary = {
       previewFieldExample: "e.g. MEVA-2024-00124",
       previewHint: "Published public records only",
     },
+    emicertCbamAnnouncement: {
+      badge: "World first",
+      eyebrow: "Strategic announcement",
+      title: "The world’s first accredited CBAM verification body: EmiCert",
+      body: "EmiCert is the world’s first accredited verification body under the EU Carbon Border Adjustment Mechanism (CBAM). This milestone strengthens the independent, institution-grade pathway for credible emissions disclosures.",
+      mevaLabel: "Exclusive representation in Türkiye",
+      mevaLine: "Meva Global Certification is EmiCert’s exclusive representative in Türkiye.",
+      primaryCta: "Explore CBAM Solutions",
+      secondaryCta: "View Representations",
+      videoLabel: "EmiCert CBAM accreditation announcement video",
+    },
     cbamEyebrow: "CBAM • Pre-Verification Readiness",
     cbamTitle: "Technical Preparation For CBAM Pre-Verification",
     cbamIntro:

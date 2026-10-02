@@ -257,6 +257,17 @@ export const nl: Dictionary = {
       previewFieldExample: "bijv. MEVA-2024-00124",
       previewHint: "Alleen gepubliceerde openbare registraties",
     },
+    emicertCbamAnnouncement: {
+      badge: "Werelds eerste",
+      eyebrow: "Strategische aankondiging",
+      title: "’s Werelds eerste geaccrediteerde CBAM-verificatie-instelling: EmiCert",
+      body: "EmiCert is ’s werelds eerste geaccrediteerde verificatie-instelling onder het EU Carbon Border Adjustment Mechanism (CBAM). Deze mijlpaal versterkt het onafhankelijke, institutionele traject voor geloofwaardige emissieverklaringen.",
+      mevaLabel: "Exclusieve vertegenwoordiging in Türkiye",
+      mevaLine: "Meva Global Certification is de exclusieve vertegenwoordiger van EmiCert in Türkiye.",
+      primaryCta: "Bekijk CBAM-oplossingen",
+      secondaryCta: "Bekijk vertegenwoordigingen",
+      videoLabel: "EmiCert CBAM-accreditatie aankondigingsvideo",
+    },
     cbamEyebrow: "CBAM • Voorbereiding Op Pre-Verificatie",
     cbamTitle: "Technische Voorbereiding Voor CBAM Pre-Verificatie",
     cbamIntro:
