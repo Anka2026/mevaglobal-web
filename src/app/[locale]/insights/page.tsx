@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/Card";
 import { insights } from "@/data/insights";
 import { VisualAnchor } from "@/components/visual/VisualAnchor";
 import { BookOpen } from "lucide-react";
+import { premiumGoldTopLine } from "@/lib/premiumUi";
 
 export async function generateMetadata({
   params,
@@ -67,7 +68,8 @@ export default async function InsightsPage({
       <Container className="py-14">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           {(Array.isArray(insights) ? insights : []).map((p) => (
-            <Card key={p.slug} className="min-w-0 p-7 sm:p-8" id={p.slug}>
+            <Card key={p.slug} className="relative min-w-0 overflow-hidden p-7 sm:p-8" id={p.slug}>
+              <div className={premiumGoldTopLine} aria-hidden />
               <div className="flex items-center justify-between gap-4">
                 <p className="min-w-0 text-xs font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]">
                   {p.tag[l] ?? p.tag.en ?? ""}

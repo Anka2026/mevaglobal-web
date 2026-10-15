@@ -66,8 +66,9 @@ export const premiumTitleAccent =
 export const premiumEyebrowRow =
   "flex items-center gap-3";
 
+/** Pulsing gold mark beside eyebrows — same signal as the CBAM flagship. */
 export const premiumEyebrowRule =
-  "h-0.5 w-8 shrink-0 rounded-full bg-[color:var(--brand-gold)]";
+  "executive-live-dot inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-[color:var(--brand-gold)] shadow-[0_0_12px_var(--brand-gold)]";
 
 /** Primary icon well — navy, for service / feature cards */
 export const premiumIconWell =

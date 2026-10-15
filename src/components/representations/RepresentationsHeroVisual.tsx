@@ -16,7 +16,7 @@ export function RepresentationsHeroVisual({
     <div
       className={cn(
         editorialPhotoShellClass,
-        "relative w-full aspect-[16/9] max-h-[min(13.5rem,52vw)] sm:max-h-[min(15rem,46vw)] lg:aspect-[16/9] lg:max-h-none",
+        "executive-sheen relative w-full aspect-[16/9] max-h-[min(13.5rem,52vw)] sm:max-h-[min(15rem,46vw)] lg:aspect-[16/9] lg:max-h-none",
         "bg-gradient-to-br from-[color:color-mix(in_oklab,var(--brand-accent-soft)_55%,white)] to-white",
         className,
       )}

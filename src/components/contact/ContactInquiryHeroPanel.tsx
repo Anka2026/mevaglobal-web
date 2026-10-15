@@ -1,7 +1,7 @@
 import { FileSearch, MapPin, ShieldCheck } from "lucide-react";
 import type { Locale } from "@/i18n/locales";
 import { cn } from "@/lib/cn";
-import { premiumGoldTopLine, premiumHeroVisualPanel } from "@/lib/premiumUi";
+import { premiumEyebrowRule, premiumGoldTopLine, premiumHeroVisualPanel } from "@/lib/premiumUi";
 
 const PANEL_COPY: Record<
   Locale,
@@ -74,7 +74,8 @@ export function ContactInquiryHeroPanel({ locale }: { locale: Locale }) {
         })}
       </ul>
       <div className="relative z-[1] mt-6 border-t border-[color:var(--border-soft)] pt-4">
-        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]">
+        <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--brand-primary)]">
+          <span className={premiumEyebrowRule} aria-hidden />
           {copy.officesLabel}
         </p>
         <ul className="mt-2 space-y-1 text-xs font-medium text-[color:var(--ink-dark)]/88 sm:text-sm">

@@ -4,18 +4,21 @@ import type { Dictionary } from "@/i18n/types";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { editorialPhotoShellClass } from "@/lib/visualImage";
-import { premiumHeroBackdrop } from "@/lib/premiumUi";
+import { premiumEyebrowRule, premiumHeroBackdrop } from "@/lib/premiumUi";
 
 const HOME_HERO_SRC = "/assets/page-visuals/home-hero.png";
 
 export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
-    <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
-      <Container className="py-14 sm:py-16 lg:py-[4.25rem]">
+    <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
+      <ExecutiveHeroGlow />
+      <Container className="relative py-14 sm:py-16 lg:py-[4.25rem]">
         <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-8">
           <div className="min-w-0 lg:col-span-6 lg:flex lg:flex-col lg:justify-center">
-            <p className="text-xs font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]">
+            <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-[color:var(--brand-primary)]">
+              <span className={premiumEyebrowRule} aria-hidden />
               {dict.home.hero.eyebrow}
             </p>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[2.35rem] sm:leading-[1.12] lg:text-[2.5rem]">
@@ -44,7 +47,7 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
             <div
               className={cn(
                 editorialPhotoShellClass,
-                "h-[260px] w-full sm:h-[320px] lg:h-full lg:min-h-[min(100%,28rem)]",
+                "executive-sheen h-[260px] w-full sm:h-[320px] lg:h-full lg:min-h-[min(100%,28rem)]",
               )}
             >
               <Image

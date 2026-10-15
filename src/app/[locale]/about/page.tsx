@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BRAND_POSITIONING_LINE } from "@/i18n/brandPositioning";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { Container } from "@/components/ui/Container";
 import { AboutCorporateSection } from "@/components/about/AboutCorporateSection";
 import { AboutDifferentiatorsSection } from "@/components/about/AboutDifferentiatorsSection";
@@ -277,7 +278,8 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+      <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <ExecutiveHeroGlow />
         <div className={premiumAboutMotif} aria-hidden />
         <Container className="relative py-12 sm:py-14 lg:py-[4.5rem]">
           <div className="mx-auto grid max-w-[76rem] items-stretch gap-10 lg:grid-cols-12 lg:gap-12">
@@ -308,7 +310,7 @@ export default async function AboutPage({
                 className={cn(
                   premiumHeroVisualPanel,
                   visualImageClipClass,
-                  "relative w-full",
+                  "executive-sheen relative w-full",
                   "aspect-[5/4] min-h-[14.5rem] max-h-[min(28rem,50vh)] sm:min-h-[16rem] sm:max-h-[min(30rem,52vh)] lg:min-h-[16.5rem] lg:max-h-[min(32rem,54vh)]",
                 )}
               >
@@ -359,8 +361,9 @@ export default async function AboutPage({
         }}
       />
 
-      <section className="border-t border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-primary)_92%,#0a1628)] py-10 text-white sm:py-12">
-        <Container>
+      <section className="relative overflow-hidden border-t border-[color:var(--border-soft)] bg-[color:color-mix(in_oklab,var(--brand-primary)_92%,#0a1628)] py-10 text-white sm:py-12">
+        <div className="executive-glow pointer-events-none absolute -left-8 top-0 h-36 w-36 rounded-full bg-[color:color-mix(in_oklab,var(--brand-gold)_42%,transparent)] blur-3xl" aria-hidden />
+        <Container className="relative">
           <div className="mx-auto flex max-w-[76rem] flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="min-w-0 max-w-xl">
               <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{copy.ctaTitle}</h2>

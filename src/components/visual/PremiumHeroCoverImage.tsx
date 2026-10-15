@@ -22,7 +22,7 @@ export function PremiumHeroCoverImage({
     <div
       className={cn(
         visualImageClipClass,
-        "h-full min-h-[220px] w-full sm:min-h-[260px] lg:min-h-0",
+        "executive-sheen h-full min-h-[220px] w-full sm:min-h-[260px] lg:min-h-0",
         className,
       )}
     >

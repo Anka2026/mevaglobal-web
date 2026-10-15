@@ -12,7 +12,7 @@ export function DocumentsHeroFrame({ alt, src = DEFAULT_SRC }: { alt: string; sr
       className={cn(
         premiumHeroVisualPanel,
         visualImageClipClass,
-        "relative aspect-[16/10] w-full max-h-[min(24rem,48vh)] sm:max-h-[min(26rem,50vh)] lg:max-h-[min(28rem,54vh)]",
+        "executive-sheen relative aspect-[16/10] w-full max-h-[min(24rem,48vh)] sm:max-h-[min(26rem,50vh)] lg:max-h-[min(28rem,54vh)]",
       )}
     >
       <div className={premiumGoldTopLine} aria-hidden />

@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { cn } from "@/lib/cn";
 
 export function PageHeader({
@@ -45,8 +46,9 @@ export function PageHeader({
   const heroGap = denseHero ? "gap-6 sm:gap-7" : compactVertical ? "gap-6 lg:gap-8" : "gap-8 lg:gap-10";
 
   return (
-    <section className={cn("border-b border-[color:var(--border-soft)]", sectionSurfaceClassName ?? "bg-white")}>
-      <Container className={heroPadding}>
+    <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", sectionSurfaceClassName ?? "bg-white")}>
+      <ExecutiveHeroGlow />
+      <Container className={cn("relative", heroPadding)}>
         {visual ? (
           <div
             className={cn(

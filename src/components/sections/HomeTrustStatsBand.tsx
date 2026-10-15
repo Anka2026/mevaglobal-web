@@ -105,8 +105,9 @@ export function HomeTrustStatsBand({ items }: { items: readonly HomeTrustStatIte
   }, [hasEnteredView, reducedMotion, targetsKey]);
 
   return (
-    <section ref={sectionRef} className="border-b border-white/10 bg-[#005691]">
-      <Container className="py-7 sm:py-8">
+    <section ref={sectionRef} className="relative overflow-hidden border-b border-white/10 bg-[#005691]">
+      <div className="executive-glow pointer-events-none absolute -left-10 top-0 h-40 w-40 rounded-full bg-[color:color-mix(in_oklab,var(--brand-gold)_45%,transparent)] blur-3xl" aria-hidden />
+      <Container className="relative py-7 sm:py-8">
         <ul className="grid grid-cols-1 sm:grid-cols-3">
           {items.map((item, index) => {
             const Icon = STAT_ICONS[index]!;

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { FileStack, Package, Scale, ShieldCheck } from "lucide-react";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/sections/SectionHeading";
@@ -204,7 +205,8 @@ export default async function DocumentsPage({
 
   return (
     <>
-      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+      <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <ExecutiveHeroGlow />
         <div className={premiumAboutMotif} aria-hidden />
         <Container className="relative py-10 sm:py-12 lg:py-14">
           <div className="mx-auto grid max-w-[76rem] items-center gap-8 lg:grid-cols-12 lg:gap-10">

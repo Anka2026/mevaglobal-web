@@ -9,6 +9,7 @@ import { PremiumVerificationServiceCtaPanel } from "@/components/sections/Premiu
 import { EmicertAccreditationTrust } from "@/components/accreditation/EmicertAccreditationTrust";
 import { AccreditationPageNav } from "@/components/accreditation/AccreditationPageNav";
 import { CorporateDocumentsSection } from "@/components/accreditation/CorporateDocumentsSection";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { VerificationProcessHeroVisual } from "@/components/verification/VerificationProcessHeroVisual";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { cn } from "@/lib/cn";
@@ -334,9 +335,10 @@ export default async function VerificationProcessPage({
 
       <section
         id="accreditation-hero"
-        className={cn("scroll-mt-[4.5rem] border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}
+        className={cn("relative scroll-mt-[4.5rem] overflow-hidden border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}
       >
-        <Container className="py-10 sm:py-12 lg:py-14">
+        <ExecutiveHeroGlow />
+        <Container className="relative py-10 sm:py-12 lg:py-14">
           <div className="mx-auto grid max-w-[76rem] items-center gap-8 sm:gap-9 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:gap-10 xl:gap-11">
             <div className="min-w-0 max-w-[38.75rem]">
               <div className={premiumEyebrowRow}>

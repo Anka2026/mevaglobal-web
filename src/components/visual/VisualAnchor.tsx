@@ -30,7 +30,7 @@ export function VisualAnchor({
       <div
         className={cn(
           visualImageClipClass,
-          "relative aspect-[4/3] w-full min-h-[200px] max-h-[min(26rem,50vh)] sm:min-h-[220px] sm:max-h-[min(28rem,48vh)] lg:aspect-auto lg:h-full lg:min-h-0 lg:max-h-[min(30rem,46vh)]",
+          "executive-sheen relative aspect-[4/3] w-full min-h-[200px] max-h-[min(26rem,50vh)] sm:min-h-[220px] sm:max-h-[min(28rem,48vh)] lg:aspect-auto lg:h-full lg:min-h-0 lg:max-h-[min(30rem,46vh)]",
           "flex min-h-0 min-w-0 flex-1 flex-col",
           className,
         )}
@@ -55,7 +55,7 @@ export function VisualAnchor({
     <div
       className={cn(
         visualImageClipClass,
-        "relative w-full min-h-0 flex-1",
+        "executive-sheen relative w-full min-h-0 flex-1",
         frameHeights,
         detailEditorial && "flex flex-col",
         className,

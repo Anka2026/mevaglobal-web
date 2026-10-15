@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/locales";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { Container } from "@/components/ui/Container";
 import { ContactInquiryHeroPanel } from "@/components/contact/ContactInquiryHeroPanel";
 import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
@@ -13,7 +14,7 @@ import type { Office } from "@/data/offices";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { CONTACT_PAGE_COPY } from "@/app/[locale]/contact/contact-page-copy";
-import { premiumCard, premiumCardMuted, premiumHeroBackdrop } from "@/lib/premiumUi";
+import { premiumCard, premiumCardMuted, premiumEyebrowRule, premiumHeroBackdrop } from "@/lib/premiumUi";
 
 /** Published inbox used across the site; enquiry form opens mailto with prefilled body (no server POST). */
 const CONTACT_EMAIL = "info@mevaglobalcertification.com";
@@ -84,11 +85,13 @@ export default async function ContactPage({
   return (
     <>
       {/* 1. Hero */}
-      <section className={cn("border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
-        <Container className="py-12 sm:py-14 lg:py-16">
+      <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", premiumHeroBackdrop)}>
+        <ExecutiveHeroGlow />
+        <Container className="relative py-12 sm:py-14 lg:py-16">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="min-w-0 lg:col-span-7 lg:flex lg:flex-col lg:justify-center">
-              <p className="text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-[0.8125rem]">
+              <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.22em] text-[color:var(--brand-primary)] sm:text-[0.8125rem]">
+                <span className={premiumEyebrowRule} aria-hidden />
                 {copy.hero.eyebrow}
               </p>
               <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[2.35rem] sm:leading-[1.12] lg:text-[2.5rem]">
@@ -240,7 +243,8 @@ export default async function ContactPage({
       <section className="border-b border-[color:var(--border-soft)] bg-[color:var(--brand-accent-soft)]">
         <Container className="py-8 sm:py-10">
           <div className="mx-auto max-w-7xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+            <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+              <span className={premiumEyebrowRule} aria-hidden />
               {copy.support.eyebrow}
             </p>
             <h2 className="mt-2 text-[1.5rem] font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.75rem]">
@@ -270,7 +274,8 @@ export default async function ContactPage({
       <section className="border-b border-[color:var(--border-soft)] bg-white">
         <Container className="py-8 sm:py-10 lg:py-11">
           <div className="mx-auto max-w-7xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+            <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+              <span className={premiumEyebrowRule} aria-hidden />
               {copy.formIntro.eyebrow}
             </p>
             <h2 className="mt-2 text-[1.5rem] font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.75rem]">
@@ -321,7 +326,8 @@ export default async function ContactPage({
       <section className="border-b border-[color:var(--border-soft)] bg-[color:var(--brand-accent-soft)]">
         <Container className="py-10 sm:py-12">
           <div className="mx-auto max-w-7xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+            <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-primary)]">
+              <span className={premiumEyebrowRule} aria-hidden />
               {copy.nextSteps.eyebrow}
             </p>
             <h2 className="mt-2 text-[1.5rem] font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-[1.75rem]">
@@ -336,7 +342,7 @@ export default async function ContactPage({
                   key={step.title}
                   className="rounded-2xl border border-[color:var(--border-soft)] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-black/[0.03]"
                 >
-                  <p className="text-[11px] font-semibold tabular-nums text-[color:var(--brand-primary)]">
+                  <p className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--brand-primary)] text-[11px] font-semibold tabular-nums text-[color:var(--brand-gold)] ring-2 ring-[color:color-mix(in_oklab,var(--brand-gold)_45%,transparent)]">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-2 text-base font-semibold tracking-tight text-[color:var(--ink-dark)]">{step.title}</h3>
@@ -349,8 +355,9 @@ export default async function ContactPage({
       </section>
 
       {/* 7. Final dark CTA */}
-      <section className="border-t border-white/10 bg-[#005691]">
-        <Container className="py-11 sm:py-12">
+      <section className="relative overflow-hidden border-t border-white/10 bg-[#005691]">
+        <div className="executive-glow pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-[color:color-mix(in_oklab,var(--brand-gold)_45%,transparent)] blur-3xl" aria-hidden />
+        <Container className="relative py-11 sm:py-12">
           <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="max-w-xl">
               <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{copy.finalCta.title}</h2>

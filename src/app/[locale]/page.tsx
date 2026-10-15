@@ -241,8 +241,9 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section className="bg-[#003A5C] py-7 sm:py-8">
-        <Container>
+      <section className="relative overflow-hidden bg-[#003A5C] py-7 sm:py-8">
+        <div className="executive-glow pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-[color:color-mix(in_oklab,var(--brand-gold)_40%,transparent)] blur-3xl" aria-hidden />
+        <Container className="relative">
           <div className="mx-auto grid w-full max-w-[76rem] gap-6 lg:grid-cols-12 lg:items-start lg:gap-8">
             <div className="flex flex-col lg:col-span-7">
               <SectionHeading

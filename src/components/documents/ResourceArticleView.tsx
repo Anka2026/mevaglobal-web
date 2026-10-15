@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Locale } from "@/i18n/locales";
 import type { Dictionary, ResourceArticleDetail } from "@/i18n/types";
+import { ExecutiveHeroGlow } from "@/components/motion/ExecutiveAtmosphere";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { ResourceArticleSectionCard } from "@/components/documents/ResourceArticleSectionCard";
@@ -36,7 +37,8 @@ export function ResourceArticleView({ locale, article, ui, bottomCta }: Props) {
 
   return (
     <>
-      <section className={cn("relative border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+      <section className={cn("relative overflow-hidden border-b border-[color:var(--border-soft)]", premiumEditorialHeroSurface)}>
+        <ExecutiveHeroGlow />
         <div className={premiumAboutMotif} aria-hidden />
         <Container className="relative py-10 sm:py-12 lg:py-14">
           <Link
