@@ -346,10 +346,10 @@ export const en: Dictionary = {
       ],
     },
     services: {
-      title: "Services",
+      title: "Independent Verification, Validation & Technical Assurance",
       heroEyebrow: BRAND_POSITIONING_LINE.en,
       intro:
-        "Our portfolio brings independent verification, validation and technical review together across climate and carbon data, product and environmental claims, responsible supply chains and sustainability reporting. Engagements are anchored in disciplined scope, traceable evidence, documented decision discipline and outputs proportionate to intended external use.",
+        "Internationally oriented verification and technical assessment services for greenhouse gas emissions, CBAM reporting, environmental information and industrial compliance.",
       introSupport:
         "One technical spine—not a loose catalogue: confirm criteria in writing, test the evidence chain, express findings with restraint, and align disclosure language with how regulators, buyers and reviewers will read the file—from corporate GHG inventories to product declarations and ESG data structures.",
       heroImageAlt:

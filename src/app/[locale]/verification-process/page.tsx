@@ -6,6 +6,7 @@ import { isLocale, type Locale } from "@/i18n/locales";
 import { Container } from "@/components/ui/Container";
 import { AccreditationProcessCard } from "@/components/cards/AccreditationProcessCard";
 import { PremiumVerificationServiceCtaPanel } from "@/components/sections/PremiumVerificationServiceCtaPanel";
+import { EmicertAccreditationTrust } from "@/components/accreditation/EmicertAccreditationTrust";
 import { AccreditationPageNav } from "@/components/accreditation/AccreditationPageNav";
 import { CorporateDocumentsSection } from "@/components/accreditation/CorporateDocumentsSection";
 import { VerificationProcessHeroVisual } from "@/components/verification/VerificationProcessHeroVisual";
@@ -51,10 +52,10 @@ type PageCopy = {
 
 const COPY: Record<Locale, PageCopy> = {
   en: {
-    heroEyebrow: "Verification Process • Impartiality • ISO/IEC 17029",
-    heroTitle: "Evidence-Based Verification And Technical Review Process",
+    heroEyebrow: "Accreditation • Independence • Recognition",
+    heroTitle: "Accreditation, Independence & International Recognition",
     heroBody:
-      "Meva Global structures verification, validation and certification-readiness work around clear scope definition, traceable evidence, impartial technical review and documented decision discipline. The objective is to establish a consistent and technically defensible review framework suitable for external stakeholder examination.",
+      "Transparent verification credentials and accreditation scope. Formal accreditation is held by the accredited legal entity and assessed by the accreditation body. MEVA Global Certification states representation and process discipline separately from any third-party accreditation it does not hold.",
     heroAlt: "Technical verification workflow with documented evidence review and structured technical sign-off.",
     heroTrustChips: ["Traceability", "Impartial review", "Documentation discipline"],
     assuranceSectionTitle: "Technical Review Principles",
@@ -128,10 +129,10 @@ const COPY: Record<Locale, PageCopy> = {
     ctaSecondary: "Review Services",
   },
   tr: {
-    heroEyebrow: "Doğrulama Süreci • Tarafsızlık • ISO/IEC 17029",
-    heroTitle: "Kanıta Dayalı Doğrulama ve Teknik İnceleme Süreci",
+    heroEyebrow: "Akreditasyon • Bağımsızlık • Tanınırlık",
+    heroTitle: "Akreditasyon, Bağımsızlık ve Uluslararası Tanınırlık",
     heroBody:
-      "Meva Global; doğrulama, validasyon ve belgelendirme hazırlığı çalışmalarını net kapsam, izlenebilir kanıt, tarafsız teknik değerlendirme ve belgelenmiş karar disiplini üzerine yapılandırır. Amaç; dış paydaş incelemesine uygun, tutarlı ve teknik olarak savunulabilir bir değerlendirme çerçevesi oluşturmaktır.",
+      "Şeffaf doğrulama yetkileri ve akreditasyon kapsamı. Resmî akreditasyon, akredite tüzel kişiliğe aittir ve akreditasyon kuruluşu tarafından değerlendirilir. MEVA Global Certification, sahibi olmadığı üçüncü taraf akreditasyonunu temsil ve süreç disiplininden ayrı tutar.",
     heroAlt: "Belgeli kanıt incelemesi ve yapılandırılmış teknik onay bağlamında doğrulama iş akışı.",
     heroTrustChips: ["İzlenebilirlik", "Tarafsız değerlendirme", "Dokümantasyon disiplini"],
     assuranceSectionTitle: "Teknik Değerlendirme İlkeleri",
@@ -205,10 +206,10 @@ const COPY: Record<Locale, PageCopy> = {
     ctaSecondary: "Hizmetleri İncele",
   },
   nl: {
-    heroEyebrow: "Verificatieproces • onpartijdigheid • ISO/IEC 17029",
-    heroTitle: "Op bewijs gebaseerde verificatie en technische beoordeling",
+    heroEyebrow: "Accreditatie • Onafhankelijkheid • Erkenning",
+    heroTitle: "Accreditatie, onafhankelijkheid en internationale erkenning",
     heroBody:
-      "Meva Global structureert verificatie-, validatie- en certificeringsvoorbereiding rond duidelijke scopebepaling, traceerbaar bewijs, onpartijdige technische beoordeling en gedocumenteerde besluitvorming. Het doel is een consistent en technisch verdedigbaar beoordelingskader te creëren dat geschikt is voor beoordeling door externe belanghebbenden.",
+      "Transparante verificatiegegevens en accreditatiescope. Formele accreditatie berust bij de geaccrediteerde rechtspersoon. MEVA Global Certification scheidt vertegenwoordiging van accreditaties die zij zelf niet houdt.",
     heroAlt: "Verificatieworkflow met gedocumenteerde bewijsbeoordeling en gestructureerde technische vaststelling.",
     heroTrustChips: ["Traceerbaarheid", "Onpartijdige beoordeling", "Procesdiscipline"],
     assuranceSectionTitle: "Principes voor technische beoordeling",
@@ -372,6 +373,8 @@ export default async function VerificationProcessPage({
           </div>
         </Container>
       </section>
+
+      <EmicertAccreditationTrust locale={l} />
 
       <section id="assurance-principles" className="scroll-mt-[4.5rem] border-b border-[color:var(--border-soft)] bg-white">
         <Container className="py-10 sm:py-12 lg:py-14">

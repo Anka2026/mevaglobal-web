@@ -101,6 +101,36 @@ export function VerificationServicesListingView({
             </ul>
           </nav>
 
+          <article className="relative mb-10 grid gap-6 overflow-hidden border border-[color:color-mix(in_oklab,var(--brand-gold)_40%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] sm:p-8 lg:grid-cols-[minmax(0,1.4fr)_auto] lg:items-center">
+            <div className="executive-glow pointer-events-none absolute -right-8 -top-10 h-40 w-40 rounded-full bg-[color:color-mix(in_oklab,var(--brand-gold)_50%,transparent)] blur-2xl" aria-hidden />
+            <div>
+              <p className="relative flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-primary)]">
+                <span className="executive-live-dot inline-block h-2.5 w-2.5 rounded-full bg-[color:var(--brand-gold)]" aria-hidden />
+                {locale === "tr" ? "Öne çıkan hizmet" : locale === "nl" ? "Uitgelichte dienst" : "Featured service"}
+              </p>
+              <h2 className="mt-2 text-xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-2xl">
+                {locale === "tr"
+                  ? "Akredite CBAM doğrulaması — EmiCert S.A. aracılığıyla"
+                  : locale === "nl"
+                    ? "Geaccrediteerde CBAM-verificatie — via EmiCert S.A."
+                    : "Accredited CBAM Verification — Through EmiCert S.A."}
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-[1.75] text-[color:var(--text-muted)]">
+                {locale === "tr"
+                  ? "Akredite CBAM doğrulaması EmiCert S.A.’nın akreditasyonu ve sorumluluğu altındadır. MEVA Global Certification, Türkiye’deki tek temsilci olarak başvuruyu koordine eder."
+                  : locale === "nl"
+                    ? "Geaccrediteerde CBAM-verificatie valt onder de accreditatie en verantwoordelijkheid van EmiCert S.A. MEVA coördineert de aanvraag als exclusieve vertegenwoordiger in Türkiye."
+                    : "Accredited CBAM verification is performed under the accreditation and responsibility of EmiCert S.A. MEVA Global Certification, exclusive representative in Türkiye, coordinates the application."}
+              </p>
+            </div>
+            <a
+              href={`/${locale}/cbam-solutions`}
+              className="relative inline-flex h-11 items-center justify-center rounded-2xl bg-[color:var(--brand-primary)] px-5 text-sm font-semibold text-white shadow-[0_0_0_1px_color-mix(in_oklab,var(--brand-gold)_40%,transparent)] hover:bg-[color:var(--brand-primary-hover)]"
+            >
+              {locale === "tr" ? "CBAM sayfası" : locale === "nl" ? "Naar CBAM" : "Open CBAM"}
+            </a>
+          </article>
+
           <VerificationServicesWhySection servicesCopy={s} />
 
           {listingSections.length === 0 ? (

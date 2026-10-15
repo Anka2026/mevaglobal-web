@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import type { Locale } from "@/i18n/locales";
 import type { Dictionary } from "@/i18n/types";
 import { headerNavItems } from "@/lib/nav";
+import { sectionMenus, type SectionMenus } from "@/content/sectionMenus";
 import { cn } from "@/lib/cn";
 import { ButtonLink } from "@/components/ui/Button";
 import { BrandLogo } from "@/components/site/BrandLogo";
@@ -96,20 +97,37 @@ export function MobileNavigation({
                 {headerNavItems.map((item) => {
                   const href = `/${locale}${item.href}`;
                   const active = isMainNavItemActive(pathname, href, item.href);
+                  const submenu = sectionMenus[locale][item.key as keyof SectionMenus];
                   return (
-                    <Link
-                      key={item.key}
-                      href={href}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "rounded-2xl px-4 py-3 text-sm font-semibold tracking-tight transition-colors",
-                        active
-                          ? "bg-[color:var(--brand-accent-soft)] text-[color:var(--brand-primary)]"
-                          : "text-[color:var(--ink-dark)] hover:bg-[color:var(--brand-accent-soft)]",
-                      )}
-                    >
-                      {dict.nav[item.key]}
-                    </Link>
+                    <div key={item.key}>
+                      <Link
+                        href={href}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "rounded-2xl px-4 py-3 text-sm font-semibold tracking-tight transition-colors",
+                          active
+                            ? "bg-[color:var(--brand-accent-soft)] text-[color:var(--brand-primary)]"
+                            : "text-[color:var(--ink-dark)] hover:bg-[color:var(--brand-accent-soft)]",
+                        )}
+                      >
+                        {dict.nav[item.key]}
+                      </Link>
+                      {submenu ? (
+                        <ul className="mb-1 ml-3 border-l border-[color:var(--border-soft)] pl-3">
+                          {submenu.map((link) => (
+                            <li key={link.href + link.label}>
+                              <Link
+                                href={`/${locale}${link.href}`}
+                                onClick={() => setOpen(false)}
+                                className="block rounded-xl px-3 py-2 text-[0.8125rem] font-medium text-[color:var(--ink-dark)]/80 hover:bg-[color:var(--brand-accent-soft)] hover:text-[color:var(--brand-primary)]"
+                              >
+                                {link.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
                   );
                 })}
                 <Link

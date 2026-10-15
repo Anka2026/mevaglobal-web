@@ -76,3 +76,59 @@ body {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
+
+@keyframes executive-heartbeat {
+  0%,
+  70%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  8% {
+    transform: scale(1.045);
+    box-shadow: 0 0 22px color-mix(in oklab, var(--brand-gold) 72%, transparent);
+  }
+  16% {
+    transform: scale(1);
+  }
+  26% {
+    transform: scale(1.028);
+    box-shadow: 0 0 16px color-mix(in oklab, var(--brand-gold) 48%, transparent);
+  }
+  38% {
+    transform: scale(1);
+  }
+}
+
+@keyframes executive-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+  }
+}
+
+.executive-heartbeat {
+  animation: executive-heartbeat 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.executive-glow {
+  animation: executive-glow 3.4s ease-in-out infinite;
+}
+
+.executive-live-dot {
+  animation: executive-heartbeat 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .executive-heartbeat,
+  .executive-glow,
+  .executive-live-dot {
+    animation: none;
+  }
+}

@@ -346,10 +346,10 @@ export const tr: Dictionary = {
       ],
     },
     services: {
-      title: "Hizmetler",
+      title: "Bağımsız Doğrulama, Validasyon ve Teknik Güvence",
       heroEyebrow: BRAND_POSITIONING_LINE.tr,
       intro:
-        "Portföyümüz; iklim ve karbon verisi, ürün ve çevresel beyanlar, sorumlu tedarik zincirleri ile sürdürülebilirlik raporlamasında bağımsız doğrulama, validasyon ve teknik inceleme disiplinini tek çatı altında sunar. Her görevde net kapsam, izlenebilir kanıt, belgelenmiş karar disiplini ve kullanım amacına orantılı çıktı esastır.",
+        "Sera gazı emisyonları, CBAM raporlaması, çevresel bilgi ve endüstriyel uygunluk için uluslararası yönelimli doğrulama ve teknik değerlendirme hizmetleri.",
       introSupport:
         "Tek tip teknik çerçeve: ölçütleri yazılı netleştirmek, kanıt zincirini sınamak, bulguları ölçülü dil ile aktarmak ve metni dış paydaş incelemesine uygun tutmak—kurumsal sera gazı dosyalarından ürün beyanlarına ve ESG veri yapılarına kadar.",
       heroImageAlt:

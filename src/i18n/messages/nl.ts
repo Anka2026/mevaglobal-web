@@ -348,10 +348,10 @@ export const nl: Dictionary = {
       ],
     },
     services: {
-      title: "Diensten",
+      title: "Onafhankelijke verificatie, validatie en technische assurance",
       heroEyebrow: BRAND_POSITIONING_LINE.nl,
       intro:
-        "Ons portfolio verenigt onafhankelijke verificatie, validatie en technische beoordeling rond klimaat- en koolstofdata, product- en milieuclaims, verantwoorde ketens en duurzaamheidsrapportage. Elke opdracht steunt op gedisciplineerde scope, traceerbaar bewijs, gedocumenteerde besluitvorming en uitkomsten die passen bij het beoogde externe gebruik.",
+        "Internationaal gerichte verificatie en technische beoordeling voor broeikasgasemissies, CBAM-rapportage, milieu-informatie en industriële conformiteit.",
       introSupport:
         "Eén technische ruggengraat in plaats van losse checks: criteria schriftelijk verankeren, de bewijsketen toetsen, bevindingen ingetogen formuleren en disclosure-taal afstemmen op toezichthouders, inkopers en reviewers—van broeikasgasdossiers tot productverklaringen en ESG-datastructuren.",
       heroImageAlt:
