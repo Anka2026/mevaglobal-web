@@ -24,7 +24,7 @@ export const sectionMenus: Record<Locale, SectionMenus> = {
       { label: "CBAM Sectors", href: "/cbam-solutions#sectors" },
       { label: "Verification Methodology", href: "/cbam-solutions#assessed" },
       { label: "Verification Process", href: "/cbam-solutions#process" },
-      { title: "Required Documentation", href: "/cbam-solutions#documentation" },
+      { label: "Required Documentation", href: "/cbam-solutions#documentation" },
       { label: "Request a Verification Proposal", href: "/cbam-solutions#proposal" },
     ],
     process: [
