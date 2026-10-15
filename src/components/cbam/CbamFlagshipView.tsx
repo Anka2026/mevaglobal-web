@@ -75,7 +75,7 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
               <ExecutiveFlyIn delay={0.08}>
                 <div className="relative">
                   <div className="executive-glow pointer-events-none absolute -inset-4 rounded-[1.5rem] bg-[color:color-mix(in_oklab,var(--brand-gold)_40%,transparent)] blur-2xl" aria-hidden />
-                  <div className="relative overflow-hidden rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_45%,var(--border-soft))] bg-[color:var(--brand-accent-soft)] shadow-[0_24px_50px_-24px_rgba(0,86,145,0.45)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_30%,transparent)]">
+                  <div className="executive-sheen relative overflow-hidden rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_45%,var(--border-soft))] bg-[color:var(--brand-accent-soft)] shadow-[0_24px_50px_-24px_rgba(0,86,145,0.45)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_30%,transparent)]">
                     <div className={premiumGoldTopLine} aria-hidden />
                     <Image
                       src={HERO_SRC}
@@ -85,6 +85,10 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
                       priority
                       className="aspect-[4/3] w-full object-cover"
                     />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[color:color-mix(in_oklab,var(--brand-primary)_78%,transparent)] via-transparent to-transparent" />
+                    <p className="absolute bottom-4 left-4 inline-flex items-center bg-[color:var(--brand-gold)] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[color:var(--ink-dark)] shadow-[0_10px_24px_-12px_rgba(0,0,0,0.55)]">
+                      ESYD · No. 874-9
+                    </p>
                   </div>
                 </div>
               </ExecutiveFlyIn>
@@ -99,7 +103,7 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
       <section id="emicert" className={cn("scroll-mt-28 border-b border-[color:var(--border-soft)]", premiumSectionMuted)}>
         <Container className="py-12 sm:py-14">
           <div className="grid items-stretch gap-6 lg:grid-cols-2">
-            <article className="flex h-full flex-col rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_40%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] sm:p-8">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_40%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] sm:p-8">
               <div className={premiumGoldTopLine} aria-hidden />
               <a href={EMICERT_CBAM_URL} target="_blank" rel="noreferrer" className="inline-flex w-fit">
                 <Image src={EMICERT_LOGO} alt="EmiCert, member of CTI Group" width={1024} height={341} className="h-14 w-auto sm:h-16" />
@@ -143,7 +147,7 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
                         <source src={VIDEO_SRC} type="video/mp4" />
                       </video>
                     </div>
-                    <p className="executive-heartbeat flex items-center justify-center bg-white px-4 py-3 text-xs font-semibold tracking-wide text-[color:var(--brand-primary)]">
+                    <p className="flex items-center justify-center bg-[color:var(--brand-gold)] px-4 py-3 text-xs font-semibold tracking-[0.14em] text-[color:var(--ink-dark)]">
                       ESYD · EmiCert S.A. · No. 874-9
                     </p>
                   </div>
@@ -209,9 +213,12 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
                     "Producers and the supply chain",
                     "EU buyers who require supplier data",
                   ]
-            ).map((line) => (
-              <li key={line} className="border border-white/15 bg-white/5 px-4 py-4 text-sm font-medium leading-snug">
-                {line}
+            ).map((line, index) => (
+              <li key={line} className="flex items-start gap-3 border border-white/15 bg-white/8 px-4 py-4 backdrop-blur-sm">
+                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center bg-[color:var(--brand-gold)] text-[11px] font-semibold tabular-nums text-[color:var(--ink-dark)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-sm font-medium leading-snug">{line}</span>
               </li>
             ))}
           </ul>
@@ -228,12 +235,15 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-4xl">{copy.sectorsTitle}</h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {copy.sectors.map((sector, index) => (
-              <article key={sector.id} className="group relative min-h-[18rem] overflow-hidden rounded-[1.05rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_35%,var(--border-soft))] shadow-[var(--shadow-card)]">
+              <article key={sector.id} className="group relative min-h-[23rem] overflow-hidden rounded-[1.05rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_48%,var(--border-soft))] shadow-[0_22px_44px_-24px_rgba(0,86,145,0.6)]">
                 <Image src={sector.image} alt={sector.imageAlt} fill className="object-cover transition duration-700 motion-safe:group-hover:scale-105" sizes="(min-width:1280px) 380px, 100vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--brand-primary)] via-[color:color-mix(in_oklab,var(--brand-primary)_55%,transparent)] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--brand-primary)] via-[color:color-mix(in_oklab,var(--brand-primary)_42%,transparent)] to-black/15" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
-                  <p className="text-[11px] font-semibold tabular-nums tracking-[0.18em] text-[color:var(--brand-gold)]">{String(index + 1).padStart(2, "0")}</p>
-                  <h3 className="mt-1 text-2xl font-semibold tracking-tight text-white">{sector.title}</h3>
+                  <span className="inline-flex h-8 w-8 items-center justify-center bg-[color:var(--brand-gold)] text-[11px] font-semibold tabular-nums text-[color:var(--ink-dark)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">{sector.title}</h3>
+                  <div className="mt-4 h-0.5 w-12 bg-[color:var(--brand-gold)] transition-all duration-500 motion-safe:group-hover:w-28" />
                 </div>
               </article>
             ))}
@@ -248,12 +258,13 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
           <p className="mt-4 max-w-3xl text-sm leading-[1.75] text-[color:var(--text-muted)] sm:text-base">{copy.assessedNote}</p>
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {copy.assessed.map((block, index) => (
-              <article key={block.title} className="border border-[color:color-mix(in_oklab,var(--brand-gold)_30%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] transition-[transform,box-shadow] duration-300 motion-safe:hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(200,162,74,0.45)]">
-                <p className="text-2xl font-semibold tabular-nums tracking-tight text-[color:var(--brand-gold)]">
+              <article key={block.title} className="relative overflow-hidden border border-[color:color-mix(in_oklab,var(--brand-gold)_30%,var(--border-soft))] bg-white p-6 shadow-[var(--shadow-card)] transition-[transform,box-shadow] duration-300 motion-safe:hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(200,162,74,0.45)]">
+                <div className={premiumGoldTopLine} aria-hidden />
+                <p className="pointer-events-none absolute right-4 top-3 text-5xl font-semibold tabular-nums leading-none text-[color:color-mix(in_oklab,var(--brand-gold)_34%,white)]" aria-hidden>
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-[color:var(--ink-dark)]">{block.title}</h3>
-                <p className="mt-2 text-sm leading-[1.75] text-[color:var(--text-muted)]">{block.body}</p>
+                <h3 className="relative mt-8 text-lg font-semibold text-[color:var(--ink-dark)]">{block.title}</h3>
+                <p className="relative mt-2 text-sm leading-[1.75] text-[color:var(--text-muted)]">{block.body}</p>
               </article>
             ))}
           </div>
@@ -266,12 +277,15 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[color:var(--ink-dark)] sm:text-4xl">{copy.processTitle}</h2>
           <ol className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {copy.process.map((step, index) => (
-              <li key={step.title} className="border-l-2 border-[color:var(--brand-gold)] bg-[color:color-mix(in_oklab,var(--brand-accent-soft)_45%,white)] p-5">
-                <p className="text-[11px] font-semibold tabular-nums tracking-[0.18em] text-[color:var(--brand-primary)]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-2 text-base font-semibold text-[color:var(--ink-dark)]">{step.title}</h3>
-                <p className="mt-2 text-sm leading-[1.7] text-[color:var(--text-muted)]">{step.body}</p>
+              <li key={step.title} className="relative overflow-hidden border border-[color:color-mix(in_oklab,var(--brand-gold)_32%,var(--border-soft))] bg-white p-5 shadow-[var(--shadow-card)]">
+                <div className={premiumGoldTopLine} aria-hidden />
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[color:var(--brand-primary)] text-xs font-semibold tabular-nums text-[color:var(--brand-gold)] ring-2 ring-[color:color-mix(in_oklab,var(--brand-gold)_50%,transparent)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-base font-semibold text-[color:var(--ink-dark)]">{step.title}</h3>
+                </div>
+                <p className="mt-3 text-sm leading-[1.7] text-[color:var(--text-muted)]">{step.body}</p>
               </li>
             ))}
           </ol>
@@ -284,7 +298,8 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
           <h2 className="max-w-none text-3xl font-semibold tracking-tight sm:text-4xl">{copy.whyTitle}</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {copy.why.map((item) => (
-              <article key={item.title} className="border border-white/15 bg-white/5 p-5">
+              <article key={item.title} className="relative overflow-hidden border border-white/15 bg-white/8 p-5">
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 bg-[color:var(--brand-gold)]" aria-hidden />
                 <h3 className="text-base font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm leading-[1.7] text-white/75">{item.body}</p>
               </article>
@@ -304,46 +319,62 @@ export function CbamFlagshipView({ locale }: { locale: Locale }) {
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-primary)]">{copy.docsEyebrow}</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[color:var(--ink-dark)]">{copy.docsTitle}</h2>
           <p className="mt-3 text-sm leading-[1.75] text-[color:var(--text-muted)]">{copy.docsNote}</p>
-          <div className="mt-8">
-            <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {copy.docs.map((row) => (
-                <div key={row.label} className="bg-white px-4 py-4 ring-1 ring-[color:var(--border-soft)]">
-                  <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--text-muted)]">{row.label}</dt>
-                  <dd className="mt-1 text-sm font-semibold text-[color:var(--ink-dark)]">{row.value}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="mt-8 grid items-start gap-8 lg:grid-cols-12">
+            <a href={EMICERT_SCOPE_PDF} className="group relative block lg:col-span-5" target="_blank" rel="noreferrer">
+              <div className="executive-glow pointer-events-none absolute -inset-4 rounded-[1.5rem] bg-[color:color-mix(in_oklab,var(--brand-gold)_42%,transparent)] blur-2xl" aria-hidden />
+              <div className="relative overflow-hidden rounded-[1.05rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_55%,var(--border-soft))] bg-white p-3 shadow-[0_28px_50px_-28px_rgba(0,86,145,0.55)] ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_25%,transparent)] transition-transform duration-300 motion-safe:group-hover:-translate-y-1">
+                <div className={premiumGoldTopLine} aria-hidden />
+                <Image
+                  src="/brand/emicert-esyd-874-9-preview.jpg"
+                  alt="Annex V1/20 to ESYD certificate No. 874-9"
+                  width={1191}
+                  height={1684}
+                  className="h-auto w-full"
+                />
+              </div>
+            </a>
+            <div className="lg:col-span-7">
+              <dl className="grid gap-3 sm:grid-cols-2">
+                {copy.docs.map((row) => (
+                  <div key={row.label} className="relative overflow-hidden bg-white px-4 py-4 ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))]">
+                    <div className={premiumGoldTopLine} aria-hidden />
+                    <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--text-muted)]">{row.label}</dt>
+                    <dd className="mt-1 text-sm font-semibold text-[color:var(--ink-dark)]">{row.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  className="inline-flex h-11 items-center justify-center bg-[color:var(--brand-primary)] px-5 text-sm font-semibold text-white hover:bg-[color:var(--brand-primary-hover)]"
+                  href={EMICERT_SCOPE_PDF}
+                  download
+                >
+                  {copy.certificateLink}
+                </a>
+                <a className="text-sm font-semibold text-[color:var(--brand-primary)] underline-offset-4 hover:underline" href={EMICERT_CBAM_URL} target="_blank" rel="noreferrer">
+                  {copy.officialLink}
+                </a>
+              </div>
+            </div>
           </div>
           <div className="mt-8">
             <h3 className="text-base font-semibold text-[color:var(--ink-dark)]">{copy.scopeHeading}</h3>
             <ol className="mt-4 grid gap-2 sm:grid-cols-2">
               {CBAM_SCOPE_GROUPS.map((group) => (
-                <li key={group.no} className="flex gap-3 bg-white px-4 py-3 ring-1 ring-[color:var(--border-soft)]">
-                  <span className="w-8 shrink-0 text-[11px] font-semibold tabular-nums tracking-[0.14em] text-[color:var(--brand-primary)]">{group.no}</span>
+                <li key={group.no} className="flex items-center gap-3 bg-white px-4 py-3 ring-1 ring-[color:color-mix(in_oklab,var(--brand-gold)_28%,var(--border-soft))]">
+                  <span className="inline-flex h-8 min-w-8 shrink-0 items-center justify-center bg-[color:var(--brand-primary)] px-1.5 text-[10px] font-semibold tabular-nums text-[color:var(--brand-gold)]">{group.no}</span>
                   <span className="text-sm font-medium leading-snug text-[color:var(--ink-dark)]">{group.name}</span>
                 </li>
               ))}
             </ol>
             <p className="mt-3 text-xs leading-relaxed text-[color:var(--text-muted)]">{copy.scopeSource}</p>
           </div>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              className="inline-flex h-11 items-center justify-center bg-[color:var(--brand-primary)] px-5 text-sm font-semibold text-white hover:bg-[color:var(--brand-primary-hover)]"
-              href={EMICERT_SCOPE_PDF}
-              download
-            >
-              {copy.certificateLink}
-            </a>
-            <a className="text-sm font-semibold text-[color:var(--brand-primary)] underline-offset-4 hover:underline" href={EMICERT_CBAM_URL} target="_blank" rel="noreferrer">
-              {copy.officialLink}
-            </a>
-          </div>
         </Container>
       </section>
 
       <section id="proposal" className="scroll-mt-28 border-t border-[color:color-mix(in_oklab,var(--brand-gold)_40%,var(--border-soft))] bg-white">
         <Container className="py-12 sm:py-14">
-          <div className="relative overflow-hidden rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_45%,var(--border-soft))] bg-white p-5 shadow-[0_24px_50px_-28px_rgba(0,86,145,0.45)] sm:p-8">
+          <div className="relative overflow-hidden rounded-[1.125rem] border border-[color:color-mix(in_oklab,var(--brand-gold)_45%,var(--border-soft))] bg-gradient-to-br from-white via-white to-[color:color-mix(in_oklab,var(--brand-gold-soft)_75%,white)] p-5 shadow-[0_24px_50px_-28px_rgba(0,86,145,0.45)] sm:p-8">
             <div className={premiumGoldTopLine} aria-hidden />
             <div className="flex flex-col gap-4 border-b border-[color:var(--border-soft)] pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div>

@@ -125,10 +125,31 @@ body {
   animation: executive-heartbeat 1.8s ease-in-out infinite;
 }
 
+@keyframes executive-sheen {
+  0%,
+  58% {
+    transform: translateX(-140%);
+  }
+  100% {
+    transform: translateX(460%);
+  }
+}
+
+.executive-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 28%;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  animation: executive-sheen 8.5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .executive-heartbeat,
   .executive-glow,
-  .executive-live-dot {
+  .executive-live-dot,
+  .executive-sheen::after {
     animation: none;
   }
 }
